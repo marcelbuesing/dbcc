@@ -34,7 +34,7 @@ fn main() {
         Ok(dbc_content) => {
             let opt = DbccOpt { with_tokio: opt.with_tokio };
             let code = can_code_gen(&opt, &dbc_content).expect("Failed to generate rust code");
-            println!("{}", code.to_string());
+            println!("{}", code);
         },
         Err(e) => {
             match e {
