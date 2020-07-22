@@ -1,5 +1,8 @@
 # Change Log
 ## [2.0.0](https://github.com/marcelbuesing/can-dbc/tree/2.0.0) (2019-04-09)
+- Migrate generation code from `codegen`-crate to `quote`-crate.
+- Add `ID` associated const to generated message structs.
+- Migrate demos from the `runtime` crate to `tokio 0.2` and `futures 0.3`
 - Change CAN message id type from `u64` to `u32`.
 - Update dependencies
 
