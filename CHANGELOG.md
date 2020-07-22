@@ -1,4 +1,8 @@
 # Change Log
+## [2.1.0](https://github.com/marcelbuesing/can-dbc/tree/2.1.0) (2020-07-22)
+- Internally migrate from `codegen`-crate to `quote`- and `proc-macro2`-crate.
+- Add `ID` associated const to message struct implementation.
+
 ## [2.0.0](https://github.com/marcelbuesing/can-dbc/tree/2.0.0) (2019-04-09)
 - Change CAN message id type from `u64` to `u32`.
 - Update dependencies
