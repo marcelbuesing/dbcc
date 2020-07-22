@@ -1,5 +1,3 @@
-#![feature(async_await, await_macro)]
-
 //! If you are using Rust 2018 no `external crate byteorder;` is necessary
 //! The `gen` module exists because `cargo test` fails
 //! if `j1939.rs` is directly in the examples folder
@@ -21,16 +19,15 @@ mod gen;
 
 /// Generated module
 use crate::gen::j1939;
-
-use futures_util::stream::StreamExt;
+use futures::StreamExt;
 use std::io;
 use std::time::Duration;
 
-#[runtime::main]
+#[tokio::main]
 async fn main() -> io::Result<()> {
     let ival = Duration::from_secs(0);
     let mut oel_stream = j1939::Oel::stream("vcan0", &ival, &ival)?;
-    let oel = await!(oel_stream.next()).expect("No next value")?;
+    let oel = oel_stream.next().await.expect("No next value")?;
 
     // Signal indicates the selected position of the operator's hazard light switch.
     match oel.hazard_light_switch() {

@@ -21,12 +21,12 @@ mod tests {
 
     #[bench]
     fn bench_read_signal(b: &mut Bencher) {
-        const byte_payload: &[u8] = &[
+        const BYTE_PAYLOAD: &[u8] = &[
             0x4, 0x2, 0xA, 0xA, 0xF, 0xF, 0xE, 0xE, 0xD, 0xD, 0xA, 0xA, 0xF, 0xF, 0xD, 0xD,
         ];
 
         b.iter(|| {
-            let frame_payload: u64 = LE::read_u64(byte_payload);
+            let frame_payload: u64 = LE::read_u64(BYTE_PAYLOAD);
             let bit_msk_const = 2u64.saturating_pow(8 as u32) - 1;
             let factor: f64 = test::black_box(2.0);
             let start_bit: u64 = test::black_box(8);
@@ -169,7 +169,7 @@ pub fn signal_fn_raw(dbc: &DBC, signal: &Signal, message_id: &MessageId) -> Resu
 
     let default_signal_comment = format!("Read {} signal from can frame", signal.name());
     let signal_comment = dbc
-        .signal_comment(message_id, signal.name())
+        .signal_comment(*message_id, signal.name())
         .unwrap_or(&default_signal_comment);
 
     let signal_unit = if !signal.unit().is_empty() {
@@ -256,14 +256,14 @@ fn calc_raw(
     };
 
     let factor = if *signal.factor() != 1.0 {
-        let factor = signal.factor();
+        let factor = *signal.factor();
         quote! { * #factor }
     } else {
         quote!()
     };
 
     let offset = if *signal.offset() != 0.0 && *signal.signal_size() <= 32 {
-        let offset = signal.offset();
+        let offset: f32 = *signal.offset() as f32;
         quote! { as f32 + #offset }
     } else if *signal.offset() != 0.0 {
         let offset = signal.offset();
@@ -290,12 +290,13 @@ fn calc_raw(
     };
 
     Ok(quote! {
-        ((#shift & #bit_msk_const) #cast #factor #offset) #signal_size #boolean_signal
+        ((#shift & #bit_msk_const) #cast #factor #cast #offset) #signal_size #boolean_signal
     })
 }
 
 fn signal_return_type(dbc: &DBC, message_id: &MessageId, signal: &Signal) -> (TokenStream, bool) {
-    if let Some(extended_value_type) = dbc.extended_value_type_for_signal(message_id, signal.name())
+    if let Some(extended_value_type) =
+        dbc.extended_value_type_for_signal(*message_id, signal.name())
     {
         match extended_value_type {
             SignalExtendedValueType::IEEEfloat32Bit => return (quote! { f32 }, false),
@@ -355,7 +356,7 @@ fn message_const(message: &Message) -> TokenStream {
 fn message_struct(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStream> {
     let struct_name = format_ident!("{}", &message.message_name().to_camel_case());
 
-    let doc_msg = if let Some(message_comment) = dbc.message_comment(message.message_id()) {
+    let doc_msg = if let Some(message_comment) = dbc.message_comment(*message.message_id()) {
         message_comment
     } else {
         ""
@@ -394,7 +395,7 @@ fn message_impl(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStre
 
         // Check if this signal can be turned into an enum
         let enum_type = dbc
-            .value_descriptions_for_signal(message.message_id(), signal.name())
+            .value_descriptions_for_signal(*message.message_id(), signal.name())
             .map(|_| to_enum_name(message.message_id(), signal.name()));
         let signal_fn_enum = if let Some(enum_type) = enum_type {
             signal_fn_enum(signal, enum_type).unwrap()
@@ -414,6 +415,7 @@ fn message_impl(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStre
             let sff_id = message.message_id().0 & SFF_MASK;
             quote! {
                 /// CAN Frame Identifier
+                #[allow(dead_code)]
                 pub const ID: u16 = #sff_id;
             }
         }
@@ -421,6 +423,7 @@ fn message_impl(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStre
             let eff_id = message.message_id().0 & EFF_MASK;
             quote! {
                 /// CAN Frame Identifier
+                #[allow(dead_code)]
                 pub const ID: u32 = #eff_id;
             }
         }
