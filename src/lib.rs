@@ -499,7 +499,7 @@ fn message_stream(message: &Message) -> TokenStream {
             let socket = BCMSocket::open_nb(&can_interface)?;
             #message_id
 
-            let frame_stream = socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?.compat();
+            let frame_stream = socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
             let f = frame_stream.map(|frame| frame.map(|frame| #message_name::new(frame.data().to_vec())));
             Ok(f)
         }
@@ -557,7 +557,6 @@ pub fn can_code_gen(
 
             use tokio_socketcan_bcm::{CANMessageId, BCMSocket};
             use futures::stream::Stream;
-            use futures_util::compat::Stream01CompatExt;
             use futures_util::stream::StreamExt;
         }
     } else {

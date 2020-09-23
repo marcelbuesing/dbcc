@@ -24,7 +24,7 @@ use futures_util::stream::StreamExt;
 use std::io;
 use std::time::Duration;
 
-#[async_std::main]
+#[tokio::main]
 async fn main() -> io::Result<()> {
     let ival = Duration::from_secs(0);
     let mut oel_stream = j1939::Oel::stream("vcan0", &ival, &ival)?;

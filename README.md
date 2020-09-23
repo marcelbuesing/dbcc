@@ -118,9 +118,9 @@ fn main() {
 ```YAML
 [dependencies]
 byteorder = "1.3"
-futures = "0.1"
-tokio = "0.1"
-tokio-socketcan-bcm = "0.3"
+futures = "0.3"
+tokio = "0.3"
+tokio-socketcan-bcm = "1.0"
 ```
 
 ```Rust

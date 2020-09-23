@@ -1,7 +1,6 @@
 #[doc = "Generated based on\nFile Name: j1939.dbc\nDBC Version: xyz\nBlake2b: 6B285187C2BFF6B100EC48A5404DD97A1181D1D39BD755AEC78F5B4007A59A46088BCC34AAEB59BE2C95096E2BA151EF94F74D8C0F38EC0384C57062AD667462"]
 use byteorder::{ByteOrder, BE, LE};
 use futures::stream::Stream;
-use futures_util::compat::Stream01CompatExt;
 use futures_util::stream::StreamExt;
 use tokio_socketcan_bcm::{BCMSocket, CANMessageId};
 #[allow(dead_code)]
@@ -27729,9 +27728,8 @@ impl Disp1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Disp1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -27775,9 +27773,8 @@ impl Drc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Drc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -27895,9 +27892,8 @@ impl Ec2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ec2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -27931,9 +27927,8 @@ impl Eec7 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec7::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -27973,9 +27968,8 @@ impl Eec8 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec8::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28009,9 +28003,8 @@ impl EflP5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28063,9 +28056,8 @@ impl EflP6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28117,9 +28109,8 @@ impl EflP7 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP7::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28171,9 +28162,8 @@ impl EflP8 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP8::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28225,9 +28215,8 @@ impl EflP9 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP9::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28279,9 +28268,8 @@ impl Egrbv {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Egrbv::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28315,9 +28303,8 @@ impl Esv1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esv1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28369,9 +28356,8 @@ impl Esv2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esv2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28423,9 +28409,8 @@ impl Esv3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esv3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28477,9 +28462,8 @@ impl Esv4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esv4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28531,9 +28515,8 @@ impl Esv5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esv5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28585,9 +28568,8 @@ impl Esv6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esv6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28639,9 +28621,8 @@ impl Flic {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Flic::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28681,9 +28662,8 @@ impl J2012 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| J2012::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28733,9 +28713,8 @@ impl Ptc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ptc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -28919,9 +28898,8 @@ impl Sas {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Sas::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29013,9 +28991,8 @@ impl Scr1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Scr1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29055,9 +29032,8 @@ impl Tci {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29095,9 +29071,8 @@ impl Trf2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Trf2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29147,9 +29122,8 @@ impl Vds2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vds2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29183,9 +29157,8 @@ impl Lf {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lf::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29243,9 +29216,8 @@ impl Ld {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ld::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -29617,9 +29589,8 @@ impl Lc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30017,9 +29988,8 @@ impl Lbc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lbc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30063,9 +30033,8 @@ impl It6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| It6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30117,9 +30086,8 @@ impl It5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| It5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30171,9 +30139,8 @@ impl It4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| It4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30225,9 +30192,8 @@ impl It3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| It3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30279,9 +30245,8 @@ impl It2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| It2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30333,9 +30298,8 @@ impl It1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| It1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30387,9 +30351,8 @@ impl Iso3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Iso3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30441,9 +30404,8 @@ impl Iso2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Iso2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30519,9 +30481,8 @@ impl Iso1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Iso1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30597,9 +30558,8 @@ impl Iscs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Iscs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30641,9 +30601,8 @@ impl Isc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Isc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30685,9 +30644,8 @@ impl Io {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Io::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30727,9 +30685,8 @@ impl Imt2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Imt2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30787,9 +30744,8 @@ impl Imt1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Imt1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30841,9 +30797,8 @@ impl Ic2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ic2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30901,9 +30856,8 @@ impl Ic1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ic1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -30973,9 +30927,8 @@ impl Htr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Htr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31073,9 +31026,8 @@ impl Hrw {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Hrw::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31127,9 +31079,8 @@ impl Hpg {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Hpg::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31197,9 +31148,8 @@ impl Hours {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Hours::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31239,9 +31189,8 @@ impl Hbs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Hbs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31361,9 +31310,8 @@ impl Gtfi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gtfi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31427,9 +31375,8 @@ impl Gfp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gfp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31481,9 +31428,8 @@ impl Gfi2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gfi2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31547,9 +31493,8 @@ impl Gfi1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gfi1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31595,9 +31540,8 @@ impl Gfd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gfd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31631,9 +31575,8 @@ impl Gfc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gfc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31673,9 +31616,8 @@ impl Sep2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Sep2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31715,9 +31657,8 @@ impl Sep1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Sep1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31769,9 +31710,8 @@ impl Ptode {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ptode::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -31967,9 +31907,8 @@ impl Gfi3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gfi3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32021,9 +31960,8 @@ impl EflP4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32093,9 +32031,8 @@ impl Eec6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32145,9 +32082,8 @@ impl Dc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32475,9 +32411,8 @@ impl Cri1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cri1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32545,9 +32480,8 @@ impl Ahi2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ahi2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32623,9 +32557,8 @@ impl Afc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Afc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32705,9 +32638,8 @@ impl Afc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Afc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32787,9 +32719,8 @@ impl Aac2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Aac2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32889,9 +32820,8 @@ impl Aac1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Aac1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -32991,9 +32921,8 @@ impl Ahi1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ahi1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33045,9 +32974,8 @@ impl Rgaaq {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rgaaq::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33081,9 +33009,8 @@ impl Tfac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tfac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33135,9 +33062,8 @@ impl Kl3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Kl3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33213,9 +33139,8 @@ impl Kl2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Kl2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33291,9 +33216,8 @@ impl Kl1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Kl1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33369,9 +33293,8 @@ impl Ccs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ccs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33639,9 +33562,8 @@ impl Rgtarp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rgtarp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33693,9 +33615,8 @@ impl Bi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33767,9 +33688,8 @@ impl Ebs11 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebs11::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33875,9 +33795,8 @@ impl Ebs12 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebs12::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -33951,9 +33870,8 @@ impl Ebs21 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebs21::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34059,9 +33977,8 @@ impl Ebs22 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebs22::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34241,9 +34158,8 @@ impl Ebs23 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebs23::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34395,9 +34311,8 @@ impl Gpm11 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm11::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34455,9 +34370,8 @@ impl Gpm12 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm12::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34503,9 +34417,8 @@ impl Gpm13 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm13::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34593,9 +34506,8 @@ impl Gpm14 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm14::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34737,9 +34649,8 @@ impl Gpm15 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm15::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34821,9 +34732,8 @@ impl Gpm16 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm16::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34857,9 +34767,8 @@ impl Gpm21 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm21::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34897,9 +34806,8 @@ impl Gpm22 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm22::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -34971,9 +34879,8 @@ impl Gpm23 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm23::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -35031,9 +34938,8 @@ impl Gpm24 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm24::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -35167,9 +35073,8 @@ impl Gpm25 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpm25::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -35419,9 +35324,8 @@ impl Iso15765Funct {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f =
             frame_stream.map(|frame| frame.map(|frame| Iso15765Funct::new(frame.data().to_vec())));
         Ok(f)
@@ -35518,9 +35422,8 @@ impl Iso15765Phys {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f =
             frame_stream.map(|frame| frame.map(|frame| Iso15765Phys::new(frame.data().to_vec())));
         Ok(f)
@@ -35617,9 +35520,8 @@ impl Network {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Network::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -35679,9 +35581,8 @@ impl Rge11 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rge11::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -35837,9 +35738,8 @@ impl Rge21 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rge21::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36011,9 +35911,8 @@ impl Rge22 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rge22::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36053,9 +35952,8 @@ impl Rge23 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rge23::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36135,9 +36033,8 @@ impl Dm26 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm26::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36435,9 +36332,8 @@ impl Dm18 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm18::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36487,9 +36383,8 @@ impl Xbr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Xbr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36565,9 +36460,8 @@ impl Wfi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Wfi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36605,9 +36499,8 @@ impl Vw {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vw::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36659,9 +36552,8 @@ impl Vep3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vep3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36701,9 +36593,8 @@ impl Vep2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vep2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36761,9 +36652,8 @@ impl Vp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36803,9 +36693,8 @@ impl Vi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36833,9 +36722,8 @@ impl Vh {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vh::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36875,9 +36763,8 @@ impl Vf {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vf::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36939,9 +36826,8 @@ impl Vds {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vds::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -36993,9 +36879,8 @@ impl Vdhr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vdhr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37035,9 +36920,8 @@ impl Vdc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vdc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37105,9 +36989,8 @@ impl Vdc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vdc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37205,9 +37088,8 @@ impl Vd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37247,9 +37129,8 @@ impl Tvi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tvi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37289,9 +37170,8 @@ impl Tti2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tti2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37349,9 +37229,8 @@ impl Tti1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tti1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37403,9 +37282,8 @@ impl Tsi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tsi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37457,9 +37335,8 @@ impl Tsc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tsc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37549,9 +37426,8 @@ impl Tr7 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr7::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37625,9 +37501,8 @@ impl Tr6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37675,9 +37550,8 @@ impl Tr5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37791,9 +37665,8 @@ impl Tr4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37897,9 +37770,8 @@ impl Tr3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -37997,9 +37869,8 @@ impl Tr2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38033,9 +37904,8 @@ impl Tr1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tr1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38087,9 +37957,8 @@ impl Tprs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tprs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38129,9 +37998,8 @@ impl Tpri {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tpri::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38171,9 +38039,8 @@ impl Tp3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tp3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38219,9 +38086,8 @@ impl Tp2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tp2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38267,9 +38133,8 @@ impl Tp1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tp1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38409,9 +38274,8 @@ impl Tire {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tire::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38503,9 +38367,8 @@ impl Ti1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ti1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38557,9 +38420,8 @@ impl Tfi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tfi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38611,9 +38473,8 @@ impl Tdi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tdi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38659,9 +38520,8 @@ impl Tda {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tda::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38737,9 +38597,8 @@ impl Td {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Td::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38815,9 +38674,8 @@ impl Tcw {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tcw::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -38875,9 +38733,8 @@ impl Tco1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tco1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39037,9 +38894,8 @@ impl Tci6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39091,9 +38947,8 @@ impl Tci5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39145,9 +39000,8 @@ impl Tci4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39199,9 +39053,8 @@ impl Tci3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39253,9 +39106,8 @@ impl Tci2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39307,9 +39159,8 @@ impl Tci1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tci1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39361,9 +39212,8 @@ impl Tcfg2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tcfg2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39397,9 +39247,8 @@ impl Tcfg {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tcfg::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39445,9 +39294,8 @@ impl Tc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39661,9 +39509,8 @@ impl Tc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39709,9 +39556,8 @@ impl Tavg {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tavg::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39751,9 +39597,8 @@ impl Spr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Spr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39817,9 +39662,8 @@ impl Sp2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Sp2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39853,9 +39697,8 @@ impl Soft {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Soft::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -39889,9 +39732,8 @@ impl Shutdow {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Shutdow::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40117,9 +39959,8 @@ impl Serv {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Serv::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40183,9 +40024,8 @@ impl S2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| S2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40225,9 +40065,8 @@ impl Rtc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rtc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40303,9 +40142,8 @@ impl Rf {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rf::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40345,9 +40183,8 @@ impl Reset {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Reset::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40411,9 +40248,8 @@ impl Rc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40533,9 +40369,8 @@ impl Rbi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rbi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40569,9 +40404,8 @@ impl Pto {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Pto::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40733,9 +40567,8 @@ impl Oww {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Oww::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40843,9 +40676,8 @@ impl Ohecs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ohecs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -40955,9 +40787,8 @@ impl Ohcss {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ohcss::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41075,9 +40906,8 @@ impl Oel {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Oel::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41167,9 +40997,8 @@ impl Mvs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Mvs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41245,9 +41074,8 @@ impl Ml {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ml::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41357,9 +41185,8 @@ impl Mci {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Mci::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41419,9 +41246,8 @@ impl Mbt3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Mbt3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41467,9 +41293,8 @@ impl Mbt2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Mbt2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41521,9 +41346,8 @@ impl Mbt1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Mbt1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41575,9 +41399,8 @@ impl Lvdd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lvdd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41655,9 +41478,8 @@ impl Lvd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lvd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41713,9 +41535,8 @@ impl Ltp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ltp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41781,9 +41602,8 @@ impl Ltfi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ltfi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41847,9 +41667,8 @@ impl Lsp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lsp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -41889,9 +41708,8 @@ impl Loi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Loi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42033,9 +41851,8 @@ impl Lmp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lmp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42069,9 +41886,8 @@ impl Lfi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lfi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42111,9 +41927,8 @@ impl Lfe {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lfe::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42171,9 +41986,8 @@ impl Lfc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Lfc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42213,9 +42027,8 @@ impl Fwd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fwd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42255,9 +42068,8 @@ impl Fms {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fms::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42313,9 +42125,8 @@ impl Fli2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fli2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42377,9 +42188,8 @@ impl Fli1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fli1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42431,9 +42241,8 @@ impl Fl {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fl::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42481,9 +42290,8 @@ impl Fd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42533,9 +42341,8 @@ impl Eth {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eth::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42685,9 +42492,8 @@ impl Etc8 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc8::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42721,9 +42527,8 @@ impl Etc7 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc7::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42865,9 +42670,8 @@ impl Etc6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42919,9 +42723,8 @@ impl Etc5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -42999,9 +42802,8 @@ impl Etc4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43041,9 +42843,8 @@ impl Etc3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43251,9 +43052,8 @@ impl Etc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43311,9 +43111,8 @@ impl Etc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Etc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43417,9 +43216,8 @@ impl Et3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Et3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43471,9 +43269,8 @@ impl Et2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Et2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43525,9 +43322,8 @@ impl Et1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Et1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43591,9 +43387,8 @@ impl Et {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Et::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43633,9 +43428,8 @@ impl Esc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Esc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43727,9 +43521,8 @@ impl Erc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Erc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43767,9 +43560,8 @@ impl Erc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Erc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43879,9 +43671,8 @@ impl Ept5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ept5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43933,9 +43724,8 @@ impl Ept4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ept4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -43987,9 +43777,8 @@ impl Ept3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ept3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44041,9 +43830,8 @@ impl Ept2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ept2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44095,9 +43883,8 @@ impl Ept1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ept1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44149,9 +43936,8 @@ impl Epd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Epd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44185,9 +43971,8 @@ impl Ep {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ep::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44227,9 +44012,8 @@ impl Eoac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eoac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44263,9 +44047,8 @@ impl Eo1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eo1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44331,9 +44114,8 @@ impl Ejm3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ejm3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44547,9 +44329,8 @@ impl Ejm2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ejm2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44763,9 +44544,8 @@ impl Ejm1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ejm1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -44979,9 +44759,8 @@ impl Ei {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ei::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45039,9 +44818,8 @@ impl Eh {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eh::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45081,9 +44859,8 @@ impl Egf1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Egf1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45123,9 +44900,8 @@ impl Efs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Efs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45237,9 +45013,8 @@ impl EflP3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45279,9 +45054,8 @@ impl EflP2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45333,9 +45107,8 @@ impl EflP1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| EflP1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45405,9 +45178,8 @@ impl Ees {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ees::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45461,9 +45233,8 @@ impl Eec5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45529,9 +45300,8 @@ impl Eec4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45587,9 +45357,8 @@ impl Eec3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45659,9 +45428,8 @@ impl Eec2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45771,9 +45539,8 @@ impl Eec1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eec1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45851,9 +45618,8 @@ impl Ecuid {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ecuid::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45881,9 +45647,8 @@ impl Ect1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ect1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -45959,9 +45724,8 @@ impl Ec1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ec1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46189,9 +45953,8 @@ impl Ebc5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebc5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46285,9 +46048,8 @@ impl Ebc4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebc4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46363,9 +46125,8 @@ impl Ebc3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebc3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46441,9 +46202,8 @@ impl Ebc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46513,9 +46273,8 @@ impl Ebc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ebc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46755,9 +46514,8 @@ impl Eac1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eac1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46885,9 +46643,8 @@ impl Eac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Eac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46933,9 +46690,8 @@ impl Di {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Di::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -46963,9 +46719,8 @@ impl Dd {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dd::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47023,9 +46778,8 @@ impl Csa {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Csa::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47097,9 +46851,8 @@ impl Cvw {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cvw::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47139,9 +46892,8 @@ impl Ctl {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ctl::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47217,9 +46969,8 @@ impl Ct6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ct6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47259,9 +47010,8 @@ impl Ct5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ct5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47313,9 +47063,8 @@ impl Ct4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ct4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47367,9 +47116,8 @@ impl Ct3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ct3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47421,9 +47169,8 @@ impl Ct2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ct2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47475,9 +47222,8 @@ impl Ct1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ct1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47529,9 +47275,8 @@ impl Cmi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cmi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47565,9 +47310,8 @@ impl Cm3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cm3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47639,9 +47383,8 @@ impl Cm1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cm1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47787,9 +47530,8 @@ impl Cl {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cl::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47823,9 +47565,8 @@ impl Ci {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ci::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -47853,9 +47594,8 @@ impl Ccvs {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ccvs::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48067,9 +47807,8 @@ impl Ccss {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ccss::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48115,9 +47854,8 @@ impl Ccc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ccc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48151,9 +47889,8 @@ impl Cbi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Cbi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48205,9 +47942,8 @@ impl Caci {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Caci::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48241,9 +47977,8 @@ impl Bt1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bt1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48283,9 +48018,8 @@ impl Bm {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bm::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48323,9 +48057,8 @@ impl Bjm3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bjm3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48613,9 +48346,8 @@ impl Bjm2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bjm2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -48903,9 +48635,8 @@ impl Bjm1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bjm1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49193,9 +48924,8 @@ impl B {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| B::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49275,9 +49005,8 @@ impl Awpp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Awpp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49311,9 +49040,8 @@ impl Ats {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ats::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49391,9 +49119,8 @@ impl Atr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Atr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49461,9 +49188,8 @@ impl At {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49521,9 +49247,8 @@ impl Asc6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Asc6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49575,9 +49300,8 @@ impl Asc5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Asc5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49665,9 +49389,8 @@ impl Asc4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Asc4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49719,9 +49442,8 @@ impl Asc3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Asc3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49773,9 +49495,8 @@ impl Asc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Asc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -49941,9 +49662,8 @@ impl Asc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Asc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50193,9 +49913,8 @@ impl As {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| As::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50269,9 +49988,8 @@ impl Ap {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ap::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50317,9 +50035,8 @@ impl Amb2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Amb2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50359,9 +50076,8 @@ impl Wsmem {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Wsmem::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50447,9 +50163,8 @@ impl Dm8 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm8::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50507,9 +50222,8 @@ impl Dm7 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm7::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50543,9 +50257,8 @@ impl Dm6 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm6::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -50825,9 +50538,8 @@ impl Dm5 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm5::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51125,9 +50837,8 @@ impl Dm4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51235,9 +50946,8 @@ impl Dm3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51265,9 +50975,8 @@ impl Dm25 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm25::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51335,9 +51044,8 @@ impl Dm24 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm24::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51509,9 +51217,8 @@ impl Dm23 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm23::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51791,9 +51498,8 @@ impl Dm22 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm22::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51855,9 +51561,8 @@ impl Dm21 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm21::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51909,9 +51614,8 @@ impl Dm20 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm20::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -51969,9 +51673,8 @@ impl Dm2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52251,9 +51954,8 @@ impl Dm19 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm19::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52311,9 +52013,8 @@ impl Dm17 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm17::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52341,9 +52042,8 @@ impl Dm16 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm16::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52377,9 +52077,8 @@ impl Dm15 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm15::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52459,9 +52158,8 @@ impl Dm14 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm14::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52547,9 +52245,8 @@ impl Dm13 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm13::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52693,9 +52390,8 @@ impl Dm12 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm12::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -52975,9 +52671,8 @@ impl Dm11 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm11::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53005,9 +52700,8 @@ impl Dm10 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm10::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53041,9 +52735,8 @@ impl Dm1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53323,9 +53016,8 @@ impl Utacr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Utacr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53371,9 +53063,8 @@ impl Utacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Utacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53413,9 +53104,8 @@ impl Utace {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Utace::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53455,9 +53145,8 @@ impl Upcacr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upcacr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53503,9 +53192,8 @@ impl Upcacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upcacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53545,9 +53233,8 @@ impl Upcac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upcac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53599,9 +53286,8 @@ impl Upbacr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upbacr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53647,9 +53333,8 @@ impl Upbacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upbacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53689,9 +53374,8 @@ impl Upbac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upbac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53743,9 +53427,8 @@ impl Upaccr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upaccr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53791,9 +53474,8 @@ impl Upaacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upaacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53833,9 +53515,8 @@ impl Upaac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Upaac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53887,9 +53568,8 @@ impl Uaac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Uaac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53941,9 +53621,8 @@ impl Gtacr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gtacr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -53989,9 +53668,8 @@ impl Gtacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gtacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54031,9 +53709,8 @@ impl Gtace {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gtace::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54073,9 +53750,8 @@ impl Gpcacr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpcacr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54121,9 +53797,8 @@ impl Gpcacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpcacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54163,9 +53838,8 @@ impl Gpcac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpcac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54217,9 +53891,8 @@ impl Gpbacrp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpbacrp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54265,9 +53938,8 @@ impl Gpbacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpbacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54307,9 +53979,8 @@ impl Gpbac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpbac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54361,9 +54032,8 @@ impl Gpaacr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpaacr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54409,9 +54079,8 @@ impl Gpaacp {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpaacp::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54451,9 +54120,8 @@ impl Gpaac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gpaac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54505,9 +54173,8 @@ impl Gaac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Gaac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54559,9 +54226,8 @@ impl Busc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Busc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54625,9 +54291,8 @@ impl Bpcac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bpcac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54673,9 +54338,8 @@ impl Bpbac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bpbac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54721,9 +54385,8 @@ impl Bpaac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bpaac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54769,9 +54432,8 @@ impl Bgsc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bgsc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54835,9 +54497,8 @@ impl Baac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Baac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54883,9 +54544,8 @@ impl Wsmstr {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Wsmstr::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -54919,9 +54579,8 @@ impl Ca {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ca::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55013,9 +54672,8 @@ impl Acl {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Acl::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55101,9 +54759,8 @@ impl Xfer {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Xfer::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55149,9 +54806,8 @@ impl Tpdt {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tpdt::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55185,9 +54841,8 @@ impl Tpcm {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Tpcm::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55325,9 +54980,8 @@ impl Rqst2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rqst2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55371,9 +55025,8 @@ impl Rqst {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Rqst::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55407,9 +55060,8 @@ impl Dm29 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm29::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55467,9 +55119,8 @@ impl Dm28 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm28::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -55749,9 +55400,8 @@ impl Dm27 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dm27::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56031,9 +55681,8 @@ impl Ati2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ati2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56109,9 +55758,8 @@ impl Ati1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ati1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56187,9 +55835,8 @@ impl Aac3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Aac3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56241,9 +55888,8 @@ impl Aac4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Aac4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56295,9 +55941,8 @@ impl Aetc {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Aetc::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56341,9 +55986,8 @@ impl Afss {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Afss::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56419,9 +56063,8 @@ impl At1i1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At1i1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56541,9 +56184,8 @@ impl At1i2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At1i2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56595,9 +56237,8 @@ impl At1o1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At1o1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56725,9 +56366,8 @@ impl At1o2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At1o2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56779,9 +56419,8 @@ impl At2i1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At2i1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56909,9 +56548,8 @@ impl At2i2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At2i2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -56963,9 +56601,8 @@ impl At2o1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At2o1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57093,9 +56730,8 @@ impl At2o2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| At2o2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57147,9 +56783,8 @@ impl Atgp1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Atgp1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57189,9 +56824,8 @@ impl Atgp2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Atgp2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57231,9 +56865,8 @@ impl Atm2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Atm2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57291,9 +56924,8 @@ impl Ats1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ats1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57351,9 +56983,8 @@ impl Ats2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ats2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57411,9 +57042,8 @@ impl Auxio1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Auxio1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57453,9 +57083,8 @@ impl Auxio2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Auxio2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -57803,9 +57432,8 @@ impl Auxio3 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Auxio3::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -58153,9 +57781,8 @@ impl Auxio4 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Auxio4::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -58503,9 +58130,8 @@ impl Bsa {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Bsa::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -58773,9 +58399,8 @@ impl Amb {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Amb::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -58833,9 +58458,8 @@ impl Air2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Air2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -58869,9 +58493,8 @@ impl Air1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Air1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -58945,9 +58568,8 @@ impl Ai {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ai::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59011,9 +58633,8 @@ impl Af2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Af2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59065,9 +58686,8 @@ impl Acc2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Acc2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59105,9 +58725,8 @@ impl Acc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Acc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59213,9 +58832,8 @@ impl Ac {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ac::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59249,9 +58867,8 @@ impl Aai {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Aai::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59309,9 +58926,8 @@ impl A1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| A1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59351,9 +58967,8 @@ impl Ackm {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ackm::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59439,9 +59054,8 @@ impl Atm1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Atm1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59505,9 +59119,8 @@ impl Dc1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Dc1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59565,9 +59178,8 @@ impl Fwss1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fwss1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59625,9 +59237,8 @@ impl Fwss2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Fwss2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59711,9 +59322,8 @@ impl Ssi {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Ssi::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59805,9 +59415,8 @@ impl Trf1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Trf1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59895,9 +59504,8 @@ impl Vep1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vep1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -59955,9 +59563,8 @@ impl Wcm2 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Wcm2::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -60033,9 +59640,8 @@ impl Wcm1 {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Wcm1::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -60111,9 +59717,8 @@ impl Vrom {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vrom::new(frame.data().to_vec())));
         Ok(f)
     }
@@ -60201,9 +59806,8 @@ impl Vrep {
     ) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
         let socket = BCMSocket::open_nb(&can_interface)?;
         let message_id = CANMessageId::EFF(Self::ID);
-        let frame_stream = socket
-            .filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?
-            .compat();
+        let frame_stream =
+            socket.filter_id_incoming_frames(message_id, ival1.clone(), ival2.clone())?;
         let f = frame_stream.map(|frame| frame.map(|frame| Vrep::new(frame.data().to_vec())));
         Ok(f)
     }
