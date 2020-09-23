@@ -1,4 +1,7 @@
 # Change Log
+## [2.1.1](https://github.com/marcelbuesing/can-dbc/tree/2.1.1) (2020-09-23)
+- Update tokio-socketcan-bcm to v1.0.0, this removes the need for futures compat.
+
 ## [2.1.0](https://github.com/marcelbuesing/can-dbc/tree/2.1.0) (2020-07-22)
 - Internally migrate from `codegen`-crate to `quote`- and `proc-macro2`-crate.
 - Add `ID` associated const to message struct implementation.
