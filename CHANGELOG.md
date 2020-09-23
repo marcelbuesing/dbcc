@@ -1,4 +1,7 @@
 # Change Log
+## [2.1.2](https://github.com/marcelbuesing/can-dbc/tree/2.1.1) (2020-09-23)
+- Fix missing cast to u16 in SFF identifiers.
+
 ## [2.1.1](https://github.com/marcelbuesing/can-dbc/tree/2.1.1) (2020-09-23)
 - Update tokio-socketcan-bcm to v1.0.0, this removes the need for futures compat.
 
