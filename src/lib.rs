@@ -438,7 +438,7 @@ fn message_impl(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStre
 
     let message_id = match message.message_id().0 & EFF_MASK {
         0..=SFF_MASK => {
-            let sff_id = message.message_id().0 & SFF_MASK;
+            let sff_id = (message.message_id().0 & SFF_MASK) as u16;
             quote! {
                 /// CAN Frame Identifier
                 #[allow(dead_code)]
