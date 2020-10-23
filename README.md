@@ -21,13 +21,13 @@ cargo install dbcc
 
 Generate code using the CLI.
 ```
-dbcc --input dbcc j1939.dbc > j1939.rs
+dbcc --input dbcc --with-tokio -i examples/j1939.dbc > examples/gen/j1939.rs
 ```
 
 For warnings during the generation run with:
 
 ```
-RUST_LOG=info dbcc j1939.dbc > j1939.rs
+RUST_LOG=info dbcc --with-tokio -i examples/j1939.dbc > examples/gen/j1939.rs
 ```
 
 ## Option 2 - build.rs

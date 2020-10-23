@@ -87,8 +87,7 @@ pub fn signal_enum(dbc: &DBC, val_desc: &ValueDescription) -> TokenStream {
             signal_enum_impl_from(&dbc, val_desc).unwrap_or_else(|| quote!());
 
         let xvalue = if let Some(signal) = dbc.signal_by_name(*message_id, signal_name) {
-            let decoded_type =
-                signal_decoded_type(dbc, *message_id, signal);
+            let decoded_type = signal_decoded_type(dbc, *message_id, signal);
             quote! { XValue(#decoded_type) }
         } else {
             quote! { XValue(u64) }
@@ -464,7 +463,14 @@ fn message_impl(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStre
             #[allow(dead_code)]
             pub fn new(mut frame_payload: Vec<u8>) -> #struct_name {
                 frame_payload.resize(8, 0);
-                #struct_name { frame_payload }
+                #struct_name {
+                    frame_payload
+                }
+            }
+
+            #[doc = "Raw frame body data"]
+            pub fn data(&self) -> &[u8] {
+                &self.frame_payload
             }
 
             #message_stream

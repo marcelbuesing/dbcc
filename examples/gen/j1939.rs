@@ -27720,6 +27720,10 @@ impl Disp1 {
         frame_payload.resize(8, 0);
         Disp1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -27764,6 +27768,10 @@ impl Drc {
     pub fn new(mut frame_payload: Vec<u8>) -> Drc {
         frame_payload.resize(8, 0);
         Drc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -27884,6 +27892,10 @@ impl Ec2 {
         frame_payload.resize(8, 0);
         Ec2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -27918,6 +27930,10 @@ impl Eec7 {
     pub fn new(mut frame_payload: Vec<u8>) -> Eec7 {
         frame_payload.resize(8, 0);
         Eec7 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -27960,6 +27976,10 @@ impl Eec8 {
         frame_payload.resize(8, 0);
         Eec8 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -27994,6 +28014,10 @@ impl EflP5 {
     pub fn new(mut frame_payload: Vec<u8>) -> EflP5 {
         frame_payload.resize(8, 0);
         EflP5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28048,6 +28072,10 @@ impl EflP6 {
         frame_payload.resize(8, 0);
         EflP6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28100,6 +28128,10 @@ impl EflP7 {
     pub fn new(mut frame_payload: Vec<u8>) -> EflP7 {
         frame_payload.resize(8, 0);
         EflP7 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28154,6 +28186,10 @@ impl EflP8 {
         frame_payload.resize(8, 0);
         EflP8 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28206,6 +28242,10 @@ impl EflP9 {
     pub fn new(mut frame_payload: Vec<u8>) -> EflP9 {
         frame_payload.resize(8, 0);
         EflP9 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28260,6 +28300,10 @@ impl Egrbv {
         frame_payload.resize(8, 0);
         Egrbv { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28294,6 +28338,10 @@ impl Esv1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Esv1 {
         frame_payload.resize(8, 0);
         Esv1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28348,6 +28396,10 @@ impl Esv2 {
         frame_payload.resize(8, 0);
         Esv2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28400,6 +28452,10 @@ impl Esv3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Esv3 {
         frame_payload.resize(8, 0);
         Esv3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28454,6 +28510,10 @@ impl Esv4 {
         frame_payload.resize(8, 0);
         Esv4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28506,6 +28566,10 @@ impl Esv5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Esv5 {
         frame_payload.resize(8, 0);
         Esv5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28560,6 +28624,10 @@ impl Esv6 {
         frame_payload.resize(8, 0);
         Esv6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28613,6 +28681,10 @@ impl Flic {
         frame_payload.resize(8, 0);
         Flic { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28653,6 +28725,10 @@ impl J2012 {
     pub fn new(mut frame_payload: Vec<u8>) -> J2012 {
         frame_payload.resize(8, 0);
         J2012 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28704,6 +28780,10 @@ impl Ptc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ptc1 {
         frame_payload.resize(8, 0);
         Ptc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -28890,6 +28970,10 @@ impl Sas {
         frame_payload.resize(8, 0);
         Sas { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -28983,6 +29067,10 @@ impl Scr1 {
         frame_payload.resize(8, 0);
         Scr1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -29024,6 +29112,10 @@ impl Tci {
         frame_payload.resize(8, 0);
         Tci { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -29062,6 +29154,10 @@ impl Trf2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Trf2 {
         frame_payload.resize(8, 0);
         Trf2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -29114,6 +29210,10 @@ impl Vds2 {
         frame_payload.resize(8, 0);
         Vds2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -29148,6 +29248,10 @@ impl Lf {
     pub fn new(mut frame_payload: Vec<u8>) -> Lf {
         frame_payload.resize(8, 0);
         Lf { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -29207,6 +29311,10 @@ impl Ld {
     pub fn new(mut frame_payload: Vec<u8>) -> Ld {
         frame_payload.resize(8, 0);
         Ld { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -29580,6 +29688,10 @@ impl Lc {
     pub fn new(mut frame_payload: Vec<u8>) -> Lc {
         frame_payload.resize(8, 0);
         Lc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -29980,6 +30092,10 @@ impl Lbc {
         frame_payload.resize(8, 0);
         Lbc { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30024,6 +30140,10 @@ impl It6 {
     pub fn new(mut frame_payload: Vec<u8>) -> It6 {
         frame_payload.resize(8, 0);
         It6 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30078,6 +30198,10 @@ impl It5 {
         frame_payload.resize(8, 0);
         It5 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30130,6 +30254,10 @@ impl It4 {
     pub fn new(mut frame_payload: Vec<u8>) -> It4 {
         frame_payload.resize(8, 0);
         It4 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30184,6 +30312,10 @@ impl It3 {
         frame_payload.resize(8, 0);
         It3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30236,6 +30368,10 @@ impl It2 {
     pub fn new(mut frame_payload: Vec<u8>) -> It2 {
         frame_payload.resize(8, 0);
         It2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30290,6 +30426,10 @@ impl It1 {
         frame_payload.resize(8, 0);
         It1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30343,6 +30483,10 @@ impl Iso3 {
         frame_payload.resize(8, 0);
         Iso3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30395,6 +30539,10 @@ impl Iso2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Iso2 {
         frame_payload.resize(8, 0);
         Iso2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30473,6 +30621,10 @@ impl Iso1 {
         frame_payload.resize(8, 0);
         Iso1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30550,6 +30702,10 @@ impl Iscs {
         frame_payload.resize(8, 0);
         Iscs { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30592,6 +30748,10 @@ impl Isc {
     pub fn new(mut frame_payload: Vec<u8>) -> Isc {
         frame_payload.resize(8, 0);
         Isc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30636,6 +30796,10 @@ impl Io {
         frame_payload.resize(8, 0);
         Io { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30676,6 +30840,10 @@ impl Imt2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Imt2 {
         frame_payload.resize(8, 0);
         Imt2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30736,6 +30904,10 @@ impl Imt1 {
         frame_payload.resize(8, 0);
         Imt1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -30788,6 +30960,10 @@ impl Ic2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ic2 {
         frame_payload.resize(8, 0);
         Ic2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30847,6 +31023,10 @@ impl Ic1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ic1 {
         frame_payload.resize(8, 0);
         Ic1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -30918,6 +31098,10 @@ impl Htr {
     pub fn new(mut frame_payload: Vec<u8>) -> Htr {
         frame_payload.resize(8, 0);
         Htr { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31018,6 +31202,10 @@ impl Hrw {
         frame_payload.resize(8, 0);
         Hrw { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31070,6 +31258,10 @@ impl Hpg {
     pub fn new(mut frame_payload: Vec<u8>) -> Hpg {
         frame_payload.resize(8, 0);
         Hpg { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31140,6 +31332,10 @@ impl Hours {
         frame_payload.resize(8, 0);
         Hours { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31180,6 +31376,10 @@ impl Hbs {
     pub fn new(mut frame_payload: Vec<u8>) -> Hbs {
         frame_payload.resize(8, 0);
         Hbs { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31302,6 +31502,10 @@ impl Gtfi {
         frame_payload.resize(8, 0);
         Gtfi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31367,6 +31571,10 @@ impl Gfp {
         frame_payload.resize(8, 0);
         Gfp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31419,6 +31627,10 @@ impl Gfi2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gfi2 {
         frame_payload.resize(8, 0);
         Gfi2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31485,6 +31697,10 @@ impl Gfi1 {
         frame_payload.resize(8, 0);
         Gfi1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31532,6 +31748,10 @@ impl Gfd {
         frame_payload.resize(8, 0);
         Gfd { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31566,6 +31786,10 @@ impl Gfc {
     pub fn new(mut frame_payload: Vec<u8>) -> Gfc {
         frame_payload.resize(8, 0);
         Gfc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31608,6 +31832,10 @@ impl Sep2 {
         frame_payload.resize(8, 0);
         Sep2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31648,6 +31876,10 @@ impl Sep1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Sep1 {
         frame_payload.resize(8, 0);
         Sep1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31701,6 +31933,10 @@ impl Ptode {
     pub fn new(mut frame_payload: Vec<u8>) -> Ptode {
         frame_payload.resize(8, 0);
         Ptode { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -31899,6 +32135,10 @@ impl Gfi3 {
         frame_payload.resize(8, 0);
         Gfi3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -31951,6 +32191,10 @@ impl EflP4 {
     pub fn new(mut frame_payload: Vec<u8>) -> EflP4 {
         frame_payload.resize(8, 0);
         EflP4 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -32023,6 +32267,10 @@ impl Eec6 {
         frame_payload.resize(8, 0);
         Eec6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -32073,6 +32321,10 @@ impl Dc2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dc2 {
         frame_payload.resize(8, 0);
         Dc2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -32403,6 +32655,10 @@ impl Cri1 {
         frame_payload.resize(8, 0);
         Cri1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -32471,6 +32727,10 @@ impl Ahi2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ahi2 {
         frame_payload.resize(8, 0);
         Ahi2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -32548,6 +32808,10 @@ impl Afc2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Afc2 {
         frame_payload.resize(8, 0);
         Afc2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -32630,6 +32894,10 @@ impl Afc1 {
         frame_payload.resize(8, 0);
         Afc1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -32710,6 +32978,10 @@ impl Aac2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Aac2 {
         frame_payload.resize(8, 0);
         Aac2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -32812,6 +33084,10 @@ impl Aac1 {
         frame_payload.resize(8, 0);
         Aac1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -32913,6 +33189,10 @@ impl Ahi1 {
         frame_payload.resize(8, 0);
         Ahi1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -32966,6 +33246,10 @@ impl Rgaaq {
         frame_payload.resize(8, 0);
         Rgaaq { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -33000,6 +33284,10 @@ impl Tfac {
     pub fn new(mut frame_payload: Vec<u8>) -> Tfac {
         frame_payload.resize(8, 0);
         Tfac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -33053,6 +33341,10 @@ impl Kl3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Kl3 {
         frame_payload.resize(8, 0);
         Kl3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -33131,6 +33423,10 @@ impl Kl2 {
         frame_payload.resize(8, 0);
         Kl2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -33208,6 +33504,10 @@ impl Kl1 {
         frame_payload.resize(8, 0);
         Kl1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -33284,6 +33584,10 @@ impl Ccs {
     pub fn new(mut frame_payload: Vec<u8>) -> Ccs {
         frame_payload.resize(8, 0);
         Ccs { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -33554,6 +33858,10 @@ impl Rgtarp {
         frame_payload.resize(8, 0);
         Rgtarp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -33606,6 +33914,10 @@ impl Bi {
     pub fn new(mut frame_payload: Vec<u8>) -> Bi {
         frame_payload.resize(8, 0);
         Bi { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -33679,6 +33991,10 @@ impl Ebs11 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ebs11 {
         frame_payload.resize(8, 0);
         Ebs11 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -33787,6 +34103,10 @@ impl Ebs12 {
         frame_payload.resize(8, 0);
         Ebs12 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -33861,6 +34181,10 @@ impl Ebs21 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ebs21 {
         frame_payload.resize(8, 0);
         Ebs21 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -33968,6 +34292,10 @@ impl Ebs22 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ebs22 {
         frame_payload.resize(8, 0);
         Ebs22 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -34150,6 +34478,10 @@ impl Ebs23 {
         frame_payload.resize(8, 0);
         Ebs23 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -34303,6 +34635,10 @@ impl Gpm11 {
         frame_payload.resize(8, 0);
         Gpm11 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -34362,6 +34698,10 @@ impl Gpm12 {
         frame_payload.resize(8, 0);
         Gpm12 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -34408,6 +34748,10 @@ impl Gpm13 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpm13 {
         frame_payload.resize(8, 0);
         Gpm13 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -34497,6 +34841,10 @@ impl Gpm14 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpm14 {
         frame_payload.resize(8, 0);
         Gpm14 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -34641,6 +34989,10 @@ impl Gpm15 {
         frame_payload.resize(8, 0);
         Gpm15 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -34724,6 +35076,10 @@ impl Gpm16 {
         frame_payload.resize(8, 0);
         Gpm16 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -34758,6 +35114,10 @@ impl Gpm21 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpm21 {
         frame_payload.resize(8, 0);
         Gpm21 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -34797,6 +35157,10 @@ impl Gpm22 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpm22 {
         frame_payload.resize(8, 0);
         Gpm22 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -34871,6 +35235,10 @@ impl Gpm23 {
         frame_payload.resize(8, 0);
         Gpm23 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -34929,6 +35297,10 @@ impl Gpm24 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpm24 {
         frame_payload.resize(8, 0);
         Gpm24 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -35064,6 +35436,10 @@ impl Gpm25 {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpm25 {
         frame_payload.resize(8, 0);
         Gpm25 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -35316,6 +35692,10 @@ impl Iso15765Funct {
         frame_payload.resize(8, 0);
         Iso15765Funct { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -35413,6 +35793,10 @@ impl Iso15765Phys {
     pub fn new(mut frame_payload: Vec<u8>) -> Iso15765Phys {
         frame_payload.resize(8, 0);
         Iso15765Phys { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -35512,6 +35896,10 @@ impl Network {
         frame_payload.resize(8, 0);
         Network { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -35572,6 +35960,10 @@ impl Rge11 {
     pub fn new(mut frame_payload: Vec<u8>) -> Rge11 {
         frame_payload.resize(8, 0);
         Rge11 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -35729,6 +36121,10 @@ impl Rge21 {
     pub fn new(mut frame_payload: Vec<u8>) -> Rge21 {
         frame_payload.resize(8, 0);
         Rge21 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -35903,6 +36299,10 @@ impl Rge22 {
         frame_payload.resize(8, 0);
         Rge22 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -35943,6 +36343,10 @@ impl Rge23 {
     pub fn new(mut frame_payload: Vec<u8>) -> Rge23 {
         frame_payload.resize(8, 0);
         Rge23 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36024,6 +36428,10 @@ impl Dm26 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm26 {
         frame_payload.resize(8, 0);
         Dm26 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36324,6 +36732,10 @@ impl Dm18 {
         frame_payload.resize(8, 0);
         Dm18 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36374,6 +36786,10 @@ impl Xbr {
     pub fn new(mut frame_payload: Vec<u8>) -> Xbr {
         frame_payload.resize(8, 0);
         Xbr { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36452,6 +36868,10 @@ impl Wfi {
         frame_payload.resize(8, 0);
         Wfi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36490,6 +36910,10 @@ impl Vw {
     pub fn new(mut frame_payload: Vec<u8>) -> Vw {
         frame_payload.resize(8, 0);
         Vw { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36544,6 +36968,10 @@ impl Vep3 {
         frame_payload.resize(8, 0);
         Vep3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36584,6 +37012,10 @@ impl Vep2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Vep2 {
         frame_payload.resize(8, 0);
         Vep2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36644,6 +37076,10 @@ impl Vp {
         frame_payload.resize(8, 0);
         Vp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36685,6 +37121,10 @@ impl Vi {
         frame_payload.resize(8, 0);
         Vi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36713,6 +37153,10 @@ impl Vh {
     pub fn new(mut frame_payload: Vec<u8>) -> Vh {
         frame_payload.resize(8, 0);
         Vh { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36754,6 +37198,10 @@ impl Vf {
     pub fn new(mut frame_payload: Vec<u8>) -> Vf {
         frame_payload.resize(8, 0);
         Vf { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36818,6 +37266,10 @@ impl Vds {
         frame_payload.resize(8, 0);
         Vds { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36871,6 +37323,10 @@ impl Vdhr {
         frame_payload.resize(8, 0);
         Vdhr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -36911,6 +37367,10 @@ impl Vdc2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Vdc2 {
         frame_payload.resize(8, 0);
         Vdc2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -36980,6 +37440,10 @@ impl Vdc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Vdc1 {
         frame_payload.resize(8, 0);
         Vdc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -37080,6 +37544,10 @@ impl Vd {
         frame_payload.resize(8, 0);
         Vd { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37121,6 +37589,10 @@ impl Tvi {
         frame_payload.resize(8, 0);
         Tvi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37161,6 +37633,10 @@ impl Tti2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tti2 {
         frame_payload.resize(8, 0);
         Tti2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -37221,6 +37697,10 @@ impl Tti1 {
         frame_payload.resize(8, 0);
         Tti1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37274,6 +37754,10 @@ impl Tsi {
         frame_payload.resize(8, 0);
         Tsi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37326,6 +37810,10 @@ impl Tsc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tsc1 {
         frame_payload.resize(8, 0);
         Tsc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -37418,6 +37906,10 @@ impl Tr7 {
         frame_payload.resize(8, 0);
         Tr7 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37493,6 +37985,10 @@ impl Tr6 {
         frame_payload.resize(8, 0);
         Tr6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37541,6 +38037,10 @@ impl Tr5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tr5 {
         frame_payload.resize(8, 0);
         Tr5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -37657,6 +38157,10 @@ impl Tr4 {
         frame_payload.resize(8, 0);
         Tr4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37762,6 +38266,10 @@ impl Tr3 {
         frame_payload.resize(8, 0);
         Tr3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37861,6 +38369,10 @@ impl Tr2 {
         frame_payload.resize(8, 0);
         Tr2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37895,6 +38407,10 @@ impl Tr1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tr1 {
         frame_payload.resize(8, 0);
         Tr1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -37949,6 +38465,10 @@ impl Tprs {
         frame_payload.resize(8, 0);
         Tprs { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -37990,6 +38510,10 @@ impl Tpri {
         frame_payload.resize(8, 0);
         Tpri { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38030,6 +38554,10 @@ impl Tp3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tp3 {
         frame_payload.resize(8, 0);
         Tp3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -38078,6 +38606,10 @@ impl Tp2 {
         frame_payload.resize(8, 0);
         Tp2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38124,6 +38656,10 @@ impl Tp1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tp1 {
         frame_payload.resize(8, 0);
         Tp1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -38266,6 +38802,10 @@ impl Tire {
         frame_payload.resize(8, 0);
         Tire { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38359,6 +38899,10 @@ impl Ti1 {
         frame_payload.resize(8, 0);
         Ti1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38411,6 +38955,10 @@ impl Tfi {
     pub fn new(mut frame_payload: Vec<u8>) -> Tfi {
         frame_payload.resize(8, 0);
         Tfi { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -38465,6 +39013,10 @@ impl Tdi {
         frame_payload.resize(8, 0);
         Tdi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38511,6 +39063,10 @@ impl Tda {
     pub fn new(mut frame_payload: Vec<u8>) -> Tda {
         frame_payload.resize(8, 0);
         Tda { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -38589,6 +39145,10 @@ impl Td {
         frame_payload.resize(8, 0);
         Td { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38666,6 +39226,10 @@ impl Tcw {
         frame_payload.resize(8, 0);
         Tcw { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38724,6 +39288,10 @@ impl Tco1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tco1 {
         frame_payload.resize(8, 0);
         Tco1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -38886,6 +39454,10 @@ impl Tci6 {
         frame_payload.resize(8, 0);
         Tci6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -38938,6 +39510,10 @@ impl Tci5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tci5 {
         frame_payload.resize(8, 0);
         Tci5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -38992,6 +39568,10 @@ impl Tci4 {
         frame_payload.resize(8, 0);
         Tci4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39044,6 +39624,10 @@ impl Tci3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tci3 {
         frame_payload.resize(8, 0);
         Tci3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -39098,6 +39682,10 @@ impl Tci2 {
         frame_payload.resize(8, 0);
         Tci2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39150,6 +39738,10 @@ impl Tci1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tci1 {
         frame_payload.resize(8, 0);
         Tci1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -39204,6 +39796,10 @@ impl Tcfg2 {
         frame_payload.resize(8, 0);
         Tcfg2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39238,6 +39834,10 @@ impl Tcfg {
     pub fn new(mut frame_payload: Vec<u8>) -> Tcfg {
         frame_payload.resize(8, 0);
         Tcfg { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -39285,6 +39885,10 @@ impl Tc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Tc1 {
         frame_payload.resize(8, 0);
         Tc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -39501,6 +40105,10 @@ impl Tc {
         frame_payload.resize(8, 0);
         Tc { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39548,6 +40156,10 @@ impl Tavg {
         frame_payload.resize(8, 0);
         Tavg { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39588,6 +40200,10 @@ impl Spr {
     pub fn new(mut frame_payload: Vec<u8>) -> Spr {
         frame_payload.resize(8, 0);
         Spr { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -39654,6 +40270,10 @@ impl Sp2 {
         frame_payload.resize(8, 0);
         Sp2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39689,6 +40309,10 @@ impl Soft {
         frame_payload.resize(8, 0);
         Soft { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -39723,6 +40347,10 @@ impl Shutdow {
     pub fn new(mut frame_payload: Vec<u8>) -> Shutdow {
         frame_payload.resize(8, 0);
         Shutdow { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -39951,6 +40579,10 @@ impl Serv {
         frame_payload.resize(8, 0);
         Serv { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -40016,6 +40648,10 @@ impl S2 {
         frame_payload.resize(8, 0);
         S2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -40056,6 +40692,10 @@ impl Rtc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Rtc1 {
         frame_payload.resize(8, 0);
         Rtc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -40134,6 +40774,10 @@ impl Rf {
         frame_payload.resize(8, 0);
         Rf { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -40174,6 +40818,10 @@ impl Reset {
     pub fn new(mut frame_payload: Vec<u8>) -> Reset {
         frame_payload.resize(8, 0);
         Reset { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -40239,6 +40887,10 @@ impl Rc {
     pub fn new(mut frame_payload: Vec<u8>) -> Rc {
         frame_payload.resize(8, 0);
         Rc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -40361,6 +41013,10 @@ impl Rbi {
         frame_payload.resize(8, 0);
         Rbi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -40395,6 +41051,10 @@ impl Pto {
     pub fn new(mut frame_payload: Vec<u8>) -> Pto {
         frame_payload.resize(8, 0);
         Pto { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -40559,6 +41219,10 @@ impl Oww {
         frame_payload.resize(8, 0);
         Oww { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -40667,6 +41331,10 @@ impl Ohecs {
     pub fn new(mut frame_payload: Vec<u8>) -> Ohecs {
         frame_payload.resize(8, 0);
         Ohecs { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -40778,6 +41446,10 @@ impl Ohcss {
     pub fn new(mut frame_payload: Vec<u8>) -> Ohcss {
         frame_payload.resize(8, 0);
         Ohcss { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -40898,6 +41570,10 @@ impl Oel {
         frame_payload.resize(8, 0);
         Oel { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -40989,6 +41665,10 @@ impl Mvs {
         frame_payload.resize(8, 0);
         Mvs { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41065,6 +41745,10 @@ impl Ml {
     pub fn new(mut frame_payload: Vec<u8>) -> Ml {
         frame_payload.resize(8, 0);
         Ml { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41177,6 +41861,10 @@ impl Mci {
         frame_payload.resize(8, 0);
         Mci { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41238,6 +41926,10 @@ impl Mbt3 {
         frame_payload.resize(8, 0);
         Mbt3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41284,6 +41976,10 @@ impl Mbt2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Mbt2 {
         frame_payload.resize(8, 0);
         Mbt2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41338,6 +42034,10 @@ impl Mbt1 {
         frame_payload.resize(8, 0);
         Mbt1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41390,6 +42090,10 @@ impl Lvdd {
     pub fn new(mut frame_payload: Vec<u8>) -> Lvdd {
         frame_payload.resize(8, 0);
         Lvdd { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41470,6 +42174,10 @@ impl Lvd {
         frame_payload.resize(8, 0);
         Lvd { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41526,6 +42234,10 @@ impl Ltp {
     pub fn new(mut frame_payload: Vec<u8>) -> Ltp {
         frame_payload.resize(8, 0);
         Ltp { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41594,6 +42306,10 @@ impl Ltfi {
         frame_payload.resize(8, 0);
         Ltfi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41659,6 +42375,10 @@ impl Lsp {
         frame_payload.resize(8, 0);
         Lsp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41699,6 +42419,10 @@ impl Loi {
     pub fn new(mut frame_payload: Vec<u8>) -> Loi {
         frame_payload.resize(8, 0);
         Loi { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41843,6 +42567,10 @@ impl Lmp {
         frame_payload.resize(8, 0);
         Lmp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -41877,6 +42605,10 @@ impl Lfi {
     pub fn new(mut frame_payload: Vec<u8>) -> Lfi {
         frame_payload.resize(8, 0);
         Lfi { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41918,6 +42650,10 @@ impl Lfe {
     pub fn new(mut frame_payload: Vec<u8>) -> Lfe {
         frame_payload.resize(8, 0);
         Lfe { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -41978,6 +42714,10 @@ impl Lfc {
         frame_payload.resize(8, 0);
         Lfc { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42019,6 +42759,10 @@ impl Fwd {
         frame_payload.resize(8, 0);
         Fwd { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42059,6 +42803,10 @@ impl Fms {
     pub fn new(mut frame_payload: Vec<u8>) -> Fms {
         frame_payload.resize(8, 0);
         Fms { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -42116,6 +42864,10 @@ impl Fli2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Fli2 {
         frame_payload.resize(8, 0);
         Fli2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -42180,6 +42932,10 @@ impl Fli1 {
         frame_payload.resize(8, 0);
         Fli1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42233,6 +42989,10 @@ impl Fl {
         frame_payload.resize(8, 0);
         Fl { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42281,6 +43041,10 @@ impl Fd {
     pub fn new(mut frame_payload: Vec<u8>) -> Fd {
         frame_payload.resize(8, 0);
         Fd { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -42332,6 +43096,10 @@ impl Eth {
     pub fn new(mut frame_payload: Vec<u8>) -> Eth {
         frame_payload.resize(8, 0);
         Eth { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -42484,6 +43252,10 @@ impl Etc8 {
         frame_payload.resize(8, 0);
         Etc8 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42518,6 +43290,10 @@ impl Etc7 {
     pub fn new(mut frame_payload: Vec<u8>) -> Etc7 {
         frame_payload.resize(8, 0);
         Etc7 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -42662,6 +43438,10 @@ impl Etc6 {
         frame_payload.resize(8, 0);
         Etc6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42714,6 +43494,10 @@ impl Etc5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Etc5 {
         frame_payload.resize(8, 0);
         Etc5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -42794,6 +43578,10 @@ impl Etc4 {
         frame_payload.resize(8, 0);
         Etc4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -42834,6 +43622,10 @@ impl Etc3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Etc3 {
         frame_payload.resize(8, 0);
         Etc3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43044,6 +43836,10 @@ impl Etc2 {
         frame_payload.resize(8, 0);
         Etc2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43102,6 +43898,10 @@ impl Etc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Etc1 {
         frame_payload.resize(8, 0);
         Etc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43208,6 +44008,10 @@ impl Et3 {
         frame_payload.resize(8, 0);
         Et3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43261,6 +44065,10 @@ impl Et2 {
         frame_payload.resize(8, 0);
         Et2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43313,6 +44121,10 @@ impl Et1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Et1 {
         frame_payload.resize(8, 0);
         Et1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43379,6 +44191,10 @@ impl Et {
         frame_payload.resize(8, 0);
         Et { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43419,6 +44235,10 @@ impl Esc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Esc1 {
         frame_payload.resize(8, 0);
         Esc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43513,6 +44333,10 @@ impl Erc2 {
         frame_payload.resize(8, 0);
         Erc2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43551,6 +44375,10 @@ impl Erc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Erc1 {
         frame_payload.resize(8, 0);
         Erc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43663,6 +44491,10 @@ impl Ept5 {
         frame_payload.resize(8, 0);
         Ept5 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43715,6 +44547,10 @@ impl Ept4 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ept4 {
         frame_payload.resize(8, 0);
         Ept4 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43769,6 +44605,10 @@ impl Ept3 {
         frame_payload.resize(8, 0);
         Ept3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43821,6 +44661,10 @@ impl Ept2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ept2 {
         frame_payload.resize(8, 0);
         Ept2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -43875,6 +44719,10 @@ impl Ept1 {
         frame_payload.resize(8, 0);
         Ept1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43928,6 +44776,10 @@ impl Epd {
         frame_payload.resize(8, 0);
         Epd { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -43962,6 +44814,10 @@ impl Ep {
     pub fn new(mut frame_payload: Vec<u8>) -> Ep {
         frame_payload.resize(8, 0);
         Ep { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -44004,6 +44860,10 @@ impl Eoac {
         frame_payload.resize(8, 0);
         Eoac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -44038,6 +44898,10 @@ impl Eo1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Eo1 {
         frame_payload.resize(8, 0);
         Eo1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -44105,6 +44969,10 @@ impl Ejm3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ejm3 {
         frame_payload.resize(8, 0);
         Ejm3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -44321,6 +45189,10 @@ impl Ejm2 {
         frame_payload.resize(8, 0);
         Ejm2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -44535,6 +45407,10 @@ impl Ejm1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ejm1 {
         frame_payload.resize(8, 0);
         Ejm1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -44751,6 +45627,10 @@ impl Ei {
         frame_payload.resize(8, 0);
         Ei { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -44810,6 +45690,10 @@ impl Eh {
         frame_payload.resize(8, 0);
         Eh { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -44851,6 +45735,10 @@ impl Egf1 {
         frame_payload.resize(8, 0);
         Egf1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -44891,6 +45779,10 @@ impl Efs {
     pub fn new(mut frame_payload: Vec<u8>) -> Efs {
         frame_payload.resize(8, 0);
         Efs { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45005,6 +45897,10 @@ impl EflP3 {
         frame_payload.resize(8, 0);
         EflP3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -45045,6 +45941,10 @@ impl EflP2 {
     pub fn new(mut frame_payload: Vec<u8>) -> EflP2 {
         frame_payload.resize(8, 0);
         EflP2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45098,6 +45998,10 @@ impl EflP1 {
     pub fn new(mut frame_payload: Vec<u8>) -> EflP1 {
         frame_payload.resize(8, 0);
         EflP1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45170,6 +46074,10 @@ impl Ees {
         frame_payload.resize(8, 0);
         Ees { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -45224,6 +46132,10 @@ impl Eec5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Eec5 {
         frame_payload.resize(8, 0);
         Eec5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45292,6 +46204,10 @@ impl Eec4 {
         frame_payload.resize(8, 0);
         Eec4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -45348,6 +46264,10 @@ impl Eec3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Eec3 {
         frame_payload.resize(8, 0);
         Eec3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45419,6 +46339,10 @@ impl Eec2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Eec2 {
         frame_payload.resize(8, 0);
         Eec2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45531,6 +46455,10 @@ impl Eec1 {
         frame_payload.resize(8, 0);
         Eec1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -45610,6 +46538,10 @@ impl Ecuid {
         frame_payload.resize(8, 0);
         Ecuid { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -45638,6 +46570,10 @@ impl Ect1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ect1 {
         frame_payload.resize(8, 0);
         Ect1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45715,6 +46651,10 @@ impl Ec1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ec1 {
         frame_payload.resize(8, 0);
         Ec1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -45945,6 +46885,10 @@ impl Ebc5 {
         frame_payload.resize(8, 0);
         Ebc5 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46040,6 +46984,10 @@ impl Ebc4 {
         frame_payload.resize(8, 0);
         Ebc4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46116,6 +47064,10 @@ impl Ebc3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ebc3 {
         frame_payload.resize(8, 0);
         Ebc3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -46194,6 +47146,10 @@ impl Ebc2 {
         frame_payload.resize(8, 0);
         Ebc2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46264,6 +47220,10 @@ impl Ebc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ebc1 {
         frame_payload.resize(8, 0);
         Ebc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -46506,6 +47466,10 @@ impl Eac1 {
         frame_payload.resize(8, 0);
         Eac1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46635,6 +47599,10 @@ impl Eac {
         frame_payload.resize(8, 0);
         Eac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46682,6 +47650,10 @@ impl Di {
         frame_payload.resize(8, 0);
         Di { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46710,6 +47682,10 @@ impl Dd {
     pub fn new(mut frame_payload: Vec<u8>) -> Dd {
         frame_payload.resize(8, 0);
         Dd { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -46769,6 +47745,10 @@ impl Csa {
     pub fn new(mut frame_payload: Vec<u8>) -> Csa {
         frame_payload.resize(8, 0);
         Csa { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -46843,6 +47823,10 @@ impl Cvw {
         frame_payload.resize(8, 0);
         Cvw { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -46883,6 +47867,10 @@ impl Ctl {
     pub fn new(mut frame_payload: Vec<u8>) -> Ctl {
         frame_payload.resize(8, 0);
         Ctl { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -46961,6 +47949,10 @@ impl Ct6 {
         frame_payload.resize(8, 0);
         Ct6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47001,6 +47993,10 @@ impl Ct5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ct5 {
         frame_payload.resize(8, 0);
         Ct5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47055,6 +48051,10 @@ impl Ct4 {
         frame_payload.resize(8, 0);
         Ct4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47107,6 +48107,10 @@ impl Ct3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ct3 {
         frame_payload.resize(8, 0);
         Ct3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47161,6 +48165,10 @@ impl Ct2 {
         frame_payload.resize(8, 0);
         Ct2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47213,6 +48221,10 @@ impl Ct1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ct1 {
         frame_payload.resize(8, 0);
         Ct1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47267,6 +48279,10 @@ impl Cmi {
         frame_payload.resize(8, 0);
         Cmi { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47301,6 +48317,10 @@ impl Cm3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Cm3 {
         frame_payload.resize(8, 0);
         Cm3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47374,6 +48394,10 @@ impl Cm1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Cm1 {
         frame_payload.resize(8, 0);
         Cm1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47522,6 +48546,10 @@ impl Cl {
         frame_payload.resize(8, 0);
         Cl { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47557,6 +48585,10 @@ impl Ci {
         frame_payload.resize(8, 0);
         Ci { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47585,6 +48617,10 @@ impl Ccvs {
     pub fn new(mut frame_payload: Vec<u8>) -> Ccvs {
         frame_payload.resize(8, 0);
         Ccvs { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47799,6 +48835,10 @@ impl Ccss {
         frame_payload.resize(8, 0);
         Ccss { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47846,6 +48886,10 @@ impl Ccc {
         frame_payload.resize(8, 0);
         Ccc { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47880,6 +48924,10 @@ impl Cbi {
     pub fn new(mut frame_payload: Vec<u8>) -> Cbi {
         frame_payload.resize(8, 0);
         Cbi { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -47934,6 +48982,10 @@ impl Caci {
         frame_payload.resize(8, 0);
         Caci { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -47968,6 +49020,10 @@ impl Bt1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Bt1 {
         frame_payload.resize(8, 0);
         Bt1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -48010,6 +49066,10 @@ impl Bm {
         frame_payload.resize(8, 0);
         Bm { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -48048,6 +49108,10 @@ impl Bjm3 {
     pub fn new(mut frame_payload: Vec<u8>) -> Bjm3 {
         frame_payload.resize(8, 0);
         Bjm3 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -48338,6 +49402,10 @@ impl Bjm2 {
         frame_payload.resize(8, 0);
         Bjm2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -48626,6 +49694,10 @@ impl Bjm1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Bjm1 {
         frame_payload.resize(8, 0);
         Bjm1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -48916,6 +49988,10 @@ impl B {
         frame_payload.resize(8, 0);
         B { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -48997,6 +50073,10 @@ impl Awpp {
         frame_payload.resize(8, 0);
         Awpp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49031,6 +50111,10 @@ impl Ats {
     pub fn new(mut frame_payload: Vec<u8>) -> Ats {
         frame_payload.resize(8, 0);
         Ats { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -49111,6 +50195,10 @@ impl Atr {
         frame_payload.resize(8, 0);
         Atr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49180,6 +50268,10 @@ impl At {
         frame_payload.resize(8, 0);
         At { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49239,6 +50331,10 @@ impl Asc6 {
         frame_payload.resize(8, 0);
         Asc6 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49291,6 +50387,10 @@ impl Asc5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Asc5 {
         frame_payload.resize(8, 0);
         Asc5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -49381,6 +50481,10 @@ impl Asc4 {
         frame_payload.resize(8, 0);
         Asc4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49434,6 +50538,10 @@ impl Asc3 {
         frame_payload.resize(8, 0);
         Asc3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49486,6 +50594,10 @@ impl Asc2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Asc2 {
         frame_payload.resize(8, 0);
         Asc2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -49653,6 +50765,10 @@ impl Asc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Asc1 {
         frame_payload.resize(8, 0);
         Asc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -49905,6 +51021,10 @@ impl As {
         frame_payload.resize(8, 0);
         As { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -49980,6 +51100,10 @@ impl Ap {
         frame_payload.resize(8, 0);
         Ap { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -50027,6 +51151,10 @@ impl Amb2 {
         frame_payload.resize(8, 0);
         Amb2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -50067,6 +51195,10 @@ impl Wsmem {
     pub fn new(mut frame_payload: Vec<u8>) -> Wsmem {
         frame_payload.resize(8, 0);
         Wsmem { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -50155,6 +51287,10 @@ impl Dm8 {
         frame_payload.resize(8, 0);
         Dm8 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -50214,6 +51350,10 @@ impl Dm7 {
         frame_payload.resize(8, 0);
         Dm7 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -50248,6 +51388,10 @@ impl Dm6 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm6 {
         frame_payload.resize(8, 0);
         Dm6 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -50529,6 +51673,10 @@ impl Dm5 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm5 {
         frame_payload.resize(8, 0);
         Dm5 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -50829,6 +51977,10 @@ impl Dm4 {
         frame_payload.resize(8, 0);
         Dm4 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -50938,6 +52090,10 @@ impl Dm3 {
         frame_payload.resize(8, 0);
         Dm3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -50966,6 +52122,10 @@ impl Dm25 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm25 {
         frame_payload.resize(8, 0);
         Dm25 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -51035,6 +52195,10 @@ impl Dm24 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm24 {
         frame_payload.resize(8, 0);
         Dm24 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -51208,6 +52372,10 @@ impl Dm23 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm23 {
         frame_payload.resize(8, 0);
         Dm23 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -51490,6 +52658,10 @@ impl Dm22 {
         frame_payload.resize(8, 0);
         Dm22 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -51553,6 +52725,10 @@ impl Dm21 {
         frame_payload.resize(8, 0);
         Dm21 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -51605,6 +52781,10 @@ impl Dm20 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm20 {
         frame_payload.resize(8, 0);
         Dm20 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -51664,6 +52844,10 @@ impl Dm2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm2 {
         frame_payload.resize(8, 0);
         Dm2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -51946,6 +53130,10 @@ impl Dm19 {
         frame_payload.resize(8, 0);
         Dm19 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -52005,6 +53193,10 @@ impl Dm17 {
         frame_payload.resize(8, 0);
         Dm17 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -52033,6 +53225,10 @@ impl Dm16 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm16 {
         frame_payload.resize(8, 0);
         Dm16 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -52068,6 +53264,10 @@ impl Dm15 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm15 {
         frame_payload.resize(8, 0);
         Dm15 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -52149,6 +53349,10 @@ impl Dm14 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm14 {
         frame_payload.resize(8, 0);
         Dm14 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -52236,6 +53440,10 @@ impl Dm13 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm13 {
         frame_payload.resize(8, 0);
         Dm13 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -52381,6 +53589,10 @@ impl Dm12 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm12 {
         frame_payload.resize(8, 0);
         Dm12 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -52663,6 +53875,10 @@ impl Dm11 {
         frame_payload.resize(8, 0);
         Dm11 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -52691,6 +53907,10 @@ impl Dm10 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm10 {
         frame_payload.resize(8, 0);
         Dm10 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -52726,6 +53946,10 @@ impl Dm1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm1 {
         frame_payload.resize(8, 0);
         Dm1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53008,6 +54232,10 @@ impl Utacr {
         frame_payload.resize(8, 0);
         Utacr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53055,6 +54283,10 @@ impl Utacp {
         frame_payload.resize(8, 0);
         Utacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53096,6 +54328,10 @@ impl Utace {
         frame_payload.resize(8, 0);
         Utace { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53136,6 +54372,10 @@ impl Upcacr {
     pub fn new(mut frame_payload: Vec<u8>) -> Upcacr {
         frame_payload.resize(8, 0);
         Upcacr { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53184,6 +54424,10 @@ impl Upcacp {
         frame_payload.resize(8, 0);
         Upcacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53224,6 +54468,10 @@ impl Upcac {
     pub fn new(mut frame_payload: Vec<u8>) -> Upcac {
         frame_payload.resize(8, 0);
         Upcac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53278,6 +54526,10 @@ impl Upbacr {
         frame_payload.resize(8, 0);
         Upbacr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53325,6 +54577,10 @@ impl Upbacp {
         frame_payload.resize(8, 0);
         Upbacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53365,6 +54621,10 @@ impl Upbac {
     pub fn new(mut frame_payload: Vec<u8>) -> Upbac {
         frame_payload.resize(8, 0);
         Upbac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53419,6 +54679,10 @@ impl Upaccr {
         frame_payload.resize(8, 0);
         Upaccr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53466,6 +54730,10 @@ impl Upaacp {
         frame_payload.resize(8, 0);
         Upaacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53506,6 +54774,10 @@ impl Upaac {
     pub fn new(mut frame_payload: Vec<u8>) -> Upaac {
         frame_payload.resize(8, 0);
         Upaac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53560,6 +54832,10 @@ impl Uaac {
         frame_payload.resize(8, 0);
         Uaac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53613,6 +54889,10 @@ impl Gtacr {
         frame_payload.resize(8, 0);
         Gtacr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53660,6 +54940,10 @@ impl Gtacp {
         frame_payload.resize(8, 0);
         Gtacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53701,6 +54985,10 @@ impl Gtace {
         frame_payload.resize(8, 0);
         Gtace { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53741,6 +55029,10 @@ impl Gpcacr {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpcacr {
         frame_payload.resize(8, 0);
         Gpcacr { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53789,6 +55081,10 @@ impl Gpcacp {
         frame_payload.resize(8, 0);
         Gpcacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53829,6 +55125,10 @@ impl Gpcac {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpcac {
         frame_payload.resize(8, 0);
         Gpcac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -53883,6 +55183,10 @@ impl Gpbacrp {
         frame_payload.resize(8, 0);
         Gpbacrp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53930,6 +55234,10 @@ impl Gpbacp {
         frame_payload.resize(8, 0);
         Gpbacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -53970,6 +55278,10 @@ impl Gpbac {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpbac {
         frame_payload.resize(8, 0);
         Gpbac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54024,6 +55336,10 @@ impl Gpaacr {
         frame_payload.resize(8, 0);
         Gpaacr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54071,6 +55387,10 @@ impl Gpaacp {
         frame_payload.resize(8, 0);
         Gpaacp { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54111,6 +55431,10 @@ impl Gpaac {
     pub fn new(mut frame_payload: Vec<u8>) -> Gpaac {
         frame_payload.resize(8, 0);
         Gpaac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54165,6 +55489,10 @@ impl Gaac {
         frame_payload.resize(8, 0);
         Gaac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54217,6 +55545,10 @@ impl Busc {
     pub fn new(mut frame_payload: Vec<u8>) -> Busc {
         frame_payload.resize(8, 0);
         Busc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54283,6 +55615,10 @@ impl Bpcac {
         frame_payload.resize(8, 0);
         Bpcac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54329,6 +55665,10 @@ impl Bpbac {
     pub fn new(mut frame_payload: Vec<u8>) -> Bpbac {
         frame_payload.resize(8, 0);
         Bpbac { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54377,6 +55717,10 @@ impl Bpaac {
         frame_payload.resize(8, 0);
         Bpaac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54423,6 +55767,10 @@ impl Bgsc {
     pub fn new(mut frame_payload: Vec<u8>) -> Bgsc {
         frame_payload.resize(8, 0);
         Bgsc { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54489,6 +55837,10 @@ impl Baac {
         frame_payload.resize(8, 0);
         Baac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54536,6 +55888,10 @@ impl Wsmstr {
         frame_payload.resize(8, 0);
         Wsmstr { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54570,6 +55926,10 @@ impl Ca {
     pub fn new(mut frame_payload: Vec<u8>) -> Ca {
         frame_payload.resize(8, 0);
         Ca { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54664,6 +56024,10 @@ impl Acl {
         frame_payload.resize(8, 0);
         Acl { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54751,6 +56115,10 @@ impl Xfer {
         frame_payload.resize(8, 0);
         Xfer { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54798,6 +56166,10 @@ impl Tpdt {
         frame_payload.resize(8, 0);
         Tpdt { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -54832,6 +56204,10 @@ impl Tpcm {
     pub fn new(mut frame_payload: Vec<u8>) -> Tpcm {
         frame_payload.resize(8, 0);
         Tpcm { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -54972,6 +56348,10 @@ impl Rqst2 {
         frame_payload.resize(8, 0);
         Rqst2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -55017,6 +56397,10 @@ impl Rqst {
         frame_payload.resize(8, 0);
         Rqst { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -55051,6 +56435,10 @@ impl Dm29 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm29 {
         frame_payload.resize(8, 0);
         Dm29 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -55110,6 +56498,10 @@ impl Dm28 {
     pub fn new(mut frame_payload: Vec<u8>) -> Dm28 {
         frame_payload.resize(8, 0);
         Dm28 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -55392,6 +56784,10 @@ impl Dm27 {
         frame_payload.resize(8, 0);
         Dm27 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -55673,6 +57069,10 @@ impl Ati2 {
         frame_payload.resize(8, 0);
         Ati2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -55749,6 +57149,10 @@ impl Ati1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ati1 {
         frame_payload.resize(8, 0);
         Ati1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -55827,6 +57231,10 @@ impl Aac3 {
         frame_payload.resize(8, 0);
         Aac3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -55879,6 +57287,10 @@ impl Aac4 {
     pub fn new(mut frame_payload: Vec<u8>) -> Aac4 {
         frame_payload.resize(8, 0);
         Aac4 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -55933,6 +57345,10 @@ impl Aetc {
         frame_payload.resize(8, 0);
         Aetc { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -55977,6 +57393,10 @@ impl Afss {
     pub fn new(mut frame_payload: Vec<u8>) -> Afss {
         frame_payload.resize(8, 0);
         Afss { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -56054,6 +57474,10 @@ impl At1i1 {
     pub fn new(mut frame_payload: Vec<u8>) -> At1i1 {
         frame_payload.resize(8, 0);
         At1i1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -56176,6 +57600,10 @@ impl At1i2 {
         frame_payload.resize(8, 0);
         At1i2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56228,6 +57656,10 @@ impl At1o1 {
     pub fn new(mut frame_payload: Vec<u8>) -> At1o1 {
         frame_payload.resize(8, 0);
         At1o1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -56358,6 +57790,10 @@ impl At1o2 {
         frame_payload.resize(8, 0);
         At1o2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56410,6 +57846,10 @@ impl At2i1 {
     pub fn new(mut frame_payload: Vec<u8>) -> At2i1 {
         frame_payload.resize(8, 0);
         At2i1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -56540,6 +57980,10 @@ impl At2i2 {
         frame_payload.resize(8, 0);
         At2i2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56592,6 +58036,10 @@ impl At2o1 {
     pub fn new(mut frame_payload: Vec<u8>) -> At2o1 {
         frame_payload.resize(8, 0);
         At2o1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -56722,6 +58170,10 @@ impl At2o2 {
         frame_payload.resize(8, 0);
         At2o2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56775,6 +58227,10 @@ impl Atgp1 {
         frame_payload.resize(8, 0);
         Atgp1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56816,6 +58272,10 @@ impl Atgp2 {
         frame_payload.resize(8, 0);
         Atgp2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56856,6 +58316,10 @@ impl Atm2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Atm2 {
         frame_payload.resize(8, 0);
         Atm2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -56916,6 +58380,10 @@ impl Ats1 {
         frame_payload.resize(8, 0);
         Ats1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -56974,6 +58442,10 @@ impl Ats2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Ats2 {
         frame_payload.resize(8, 0);
         Ats2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -57034,6 +58506,10 @@ impl Auxio1 {
         frame_payload.resize(8, 0);
         Auxio1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -57074,6 +58550,10 @@ impl Auxio2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Auxio2 {
         frame_payload.resize(8, 0);
         Auxio2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -57424,6 +58904,10 @@ impl Auxio3 {
         frame_payload.resize(8, 0);
         Auxio3 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -57772,6 +59256,10 @@ impl Auxio4 {
     pub fn new(mut frame_payload: Vec<u8>) -> Auxio4 {
         frame_payload.resize(8, 0);
         Auxio4 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -58122,6 +59610,10 @@ impl Bsa {
         frame_payload.resize(8, 0);
         Bsa { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58391,6 +59883,10 @@ impl Amb {
         frame_payload.resize(8, 0);
         Amb { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58450,6 +59946,10 @@ impl Air2 {
         frame_payload.resize(8, 0);
         Air2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58484,6 +59984,10 @@ impl Air1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Air1 {
         frame_payload.resize(8, 0);
         Air1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -58560,6 +60064,10 @@ impl Ai {
         frame_payload.resize(8, 0);
         Ai { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58625,6 +60133,10 @@ impl Af2 {
         frame_payload.resize(8, 0);
         Af2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58678,6 +60190,10 @@ impl Acc2 {
         frame_payload.resize(8, 0);
         Acc2 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58716,6 +60232,10 @@ impl Acc1 {
     pub fn new(mut frame_payload: Vec<u8>) -> Acc1 {
         frame_payload.resize(8, 0);
         Acc1 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -58824,6 +60344,10 @@ impl Ac {
         frame_payload.resize(8, 0);
         Ac { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58858,6 +60382,10 @@ impl Aai {
     pub fn new(mut frame_payload: Vec<u8>) -> Aai {
         frame_payload.resize(8, 0);
         Aai { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -58918,6 +60446,10 @@ impl A1 {
         frame_payload.resize(8, 0);
         A1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -58958,6 +60490,10 @@ impl Ackm {
     pub fn new(mut frame_payload: Vec<u8>) -> Ackm {
         frame_payload.resize(8, 0);
         Ackm { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -59046,6 +60582,10 @@ impl Atm1 {
         frame_payload.resize(8, 0);
         Atm1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -59111,6 +60651,10 @@ impl Dc1 {
         frame_payload.resize(8, 0);
         Dc1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -59170,6 +60714,10 @@ impl Fwss1 {
         frame_payload.resize(8, 0);
         Fwss1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -59228,6 +60776,10 @@ impl Fwss2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Fwss2 {
         frame_payload.resize(8, 0);
         Fwss2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -59313,6 +60865,10 @@ impl Ssi {
     pub fn new(mut frame_payload: Vec<u8>) -> Ssi {
         frame_payload.resize(8, 0);
         Ssi { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -59407,6 +60963,10 @@ impl Trf1 {
         frame_payload.resize(8, 0);
         Trf1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -59496,6 +61056,10 @@ impl Vep1 {
         frame_payload.resize(8, 0);
         Vep1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -59554,6 +61118,10 @@ impl Wcm2 {
     pub fn new(mut frame_payload: Vec<u8>) -> Wcm2 {
         frame_payload.resize(8, 0);
         Wcm2 { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -59632,6 +61200,10 @@ impl Wcm1 {
         frame_payload.resize(8, 0);
         Wcm1 { frame_payload }
     }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
+    }
     #[allow(dead_code)]
     pub fn stream(
         can_interface: &str,
@@ -59708,6 +61280,10 @@ impl Vrom {
     pub fn new(mut frame_payload: Vec<u8>) -> Vrom {
         frame_payload.resize(8, 0);
         Vrom { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
@@ -59797,6 +61373,10 @@ impl Vrep {
     pub fn new(mut frame_payload: Vec<u8>) -> Vrep {
         frame_payload.resize(8, 0);
         Vrep { frame_payload }
+    }
+    #[doc = "Raw frame body data"]
+    pub fn data(&self) -> &[u8] {
+        &self.frame_payload
     }
     #[allow(dead_code)]
     pub fn stream(
