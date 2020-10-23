@@ -1,7 +1,7 @@
 [package]
 name = "dbcc"
 description = "Compiles `data base CAN` (dbc) files into Rust code."
-version = "2.1.2"
+version = "2.2.0"
 license = "MIT"
 homepage = "https://github.com/marcelbuesing/dbcc"
 repository = "https://github.com/marcelbuesing/dbcc.git"
