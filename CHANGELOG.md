@@ -1,4 +1,7 @@
 # Change Log
+## [2.2.1](https://github.com/marcelbuesing/can-dbc/tree/2.2.1) (2020-11-05)
+- Bump can-dbc dependency to 3.0.2, containing whitespace fix.
+
 ## [2.2.0](https://github.com/marcelbuesing/can-dbc/tree/2.2.0) (2020-10-23)
 - Add fn `data` to access the raw frame body.
 
