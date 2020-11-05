@@ -21,7 +21,7 @@ travis-ci = { repository = "marcelbuesing/dbcc", branch = "dev" }
 
 [dependencies]
 blake2 = "0.8"
-can-dbc = "3.0.1"
+can-dbc = "3.0.2"
 generic-array = "0.12"
 heck = "0.3"
 log = "0.4"

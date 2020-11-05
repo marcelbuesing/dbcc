@@ -79,9 +79,9 @@ checksum = "0e4cec68f03f32e44924783795810fa50a7035d8c8ebe78580ad7e6c703fba38"
 
 [[package]]
 name = "can-dbc"
-version = "3.0.1"
+version = "3.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67fecefda1ad8b7fc57c64e6ca9373ac242844352f232f104fddf18686ae4137"
+checksum = "5bc2e1f9f6f7fe6f3dbcfc44036eb07596ef1d37517ce822111f0c3d6eeed82a"
 dependencies = [
  "derive-getters",
  "nom",
