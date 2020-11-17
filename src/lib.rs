@@ -153,8 +153,21 @@ pub fn signal_field(dbc: &DBC, signal: &Signal, message_id: MessageId) -> Result
     let signal_decoded_type = signal_decoded_type(dbc, message_id, signal);
 
     let ret_type = wrap_multiplex_indicator_type(signal, signal_decoded_type);
+    let default_signal_comment = format!("Read {} signal from can frame", signal.name());
+    let signal_comment = dbc
+        .signal_comment(message_id, signal.name())
+        .unwrap_or(&default_signal_comment);
+
+    let signal_unit = if !signal.unit().is_empty() {
+        format!("\nUnit: {}", signal.unit())
+    } else {
+        String::default()
+    };
+
+    let doc_msg = format!("{}{}", signal_comment, signal_unit);
 
     Ok(quote! {
+        #[doc = #doc_msg]
         #signal_name_raw: #ret_type,
     })
 }
@@ -213,8 +226,6 @@ pub fn message_decoder(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<To
         }
     });
 
-    // let fields = signal_fields.concat(signal_enum_fields);
-
     let signal_enum_fields = message.signals().iter().filter_map(|signal| {
         let signal_shift = shift_amount(
             *signal.byte_order(),
@@ -241,7 +252,18 @@ pub fn message_decoder(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<To
         }
     });
     let struct_name = format_ident!("{}", &message.message_name().to_camel_case());
-    let frame_id = message.message_id().0;
+    let frame_id = match message.message_id().0 & EFF_MASK {
+        0..=SFF_MASK => {
+            let sff_id = (message.message_id().0 & SFF_MASK) as u32;
+            quote! {#sff_id}
+        }
+        SFF_MASK..=EFF_MASK => {
+            let eff_id = message.message_id().0 & EFF_MASK as u32;
+            quote! { #eff_id }
+        }
+        _ => unreachable!(),
+    };
+
     Ok(quote! {
         #frame_id => {
             #(#raw_signal_decoder)*
@@ -331,14 +353,9 @@ pub fn decode_signal_raw(dbc: &DBC, signal: &Signal, message_id: MessageId) -> R
     let ret_type = wrap_multiplex_indicator_type(signal, signal_decoded_type);
 
     Ok(quote! {
-        // #[doc = #doc_msg]
-        // #[allow(dead_code)]
-        // pub fn #fn_name_raw(&self) -> #ret_type {
-            #multiplexor_switch_fn
-            #read_byte_order
-            let #signal_name_raw: #ret_type = #wrapped_calc;
-        // }
-
+        #multiplexor_switch_fn
+        #read_byte_order
+        let #signal_name_raw: #ret_type = #wrapped_calc;
     })
 }
 
@@ -507,28 +524,6 @@ fn message_struct(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenSt
         ""
     };
 
-    // let message_impl = message_impl(opt, dbc, message)?;
-
-    // let signals = message.signals().iter().map(|signal| {
-    //     let signal_fn_raw = signal_raw(dbc, signal, *message.message_id()).unwrap();
-
-    //     // Check if this signal can be turned into an enum
-    //     let enum_type = dbc
-    //         .value_descriptions_for_signal(*message.message_id(), signal.name())
-    //         .map(|_| to_enum_name(message.message_id(), signal.name()));
-    //     let signal_fn_enum = if let Some(enum_type) = enum_type {
-    //         signal_fn_enum(signal, enum_type).unwrap()
-    //     } else {
-    //         quote!()
-    //     };
-
-    //     quote! {
-    //         #signal_fn_raw
-
-    //         #signal_fn_enum
-    //     }
-    // });
-
     let signal_fields = message.signals().iter().filter_map(|signal| {
         let signal_shift = shift_amount(
             *signal.byte_order(),
@@ -568,7 +563,23 @@ fn message_struct(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenSt
                 .map(|_| to_enum_name(message.message_id(), signal.name()));
             if let Some(enum_type) = enum_type {
                 let field_name = format_ident!("{}", &signal.name().to_snake_case());
+
+                let default_signal_comment =
+                    format!("Read {} signal from can frame", signal.name());
+                let signal_comment = dbc
+                    .signal_comment(*message.message_id(), signal.name())
+                    .unwrap_or(&default_signal_comment);
+
+                let signal_unit = if !signal.unit().is_empty() {
+                    format!("\nUnit: {}", signal.unit())
+                } else {
+                    String::default()
+                };
+
+                let doc_msg = format!("{}{}", signal_comment, signal_unit);
+
                 Some(quote! {
+                    #[doc = #doc_msg]
                     #field_name: #enum_type,
                 })
             } else {
@@ -578,69 +589,13 @@ fn message_struct(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenSt
     });
 
     Ok(quote! {
-    //   #[doc = #doc_msg]
+      #[doc = #doc_msg]
       #struct_name {
         #(#signal_fields)*
         #(#signal_enum_fields)*
       }
-
-    //   #message_impl
     })
 }
-
-// fn message_impl(opt: &DbccOpt, dbc: &DBC, message: &Message) -> Result<TokenStream> {
-//     let struct_name = format_ident!("{}", &message.message_name().to_camel_case());
-
-//     let message_stream = if opt.with_tokio {
-//         message_stream(message)
-//     } else {
-//         quote!()
-//     };
-
-//     let message_id = match message.message_id().0 & EFF_MASK {
-//         0..=SFF_MASK => {
-//             let sff_id = (message.message_id().0 & SFF_MASK) as u16;
-//             quote! {
-//                 /// CAN Frame Identifier
-//                 #[allow(dead_code)]
-//                 pub const ID: u16 = #sff_id;
-//             }
-//         }
-//         SFF_MASK..=EFF_MASK => {
-//             let eff_id = message.message_id().0 & EFF_MASK;
-//             quote! {
-//                 /// CAN Frame Identifier
-//                 #[allow(dead_code)]
-//                 pub const ID: u32 = #eff_id;
-//             }
-//         }
-//         _ => unreachable!(),
-//     };
-
-//     Ok(quote! {
-//         impl #struct_name {
-
-//             #message_id
-
-//             #[allow(dead_code)]
-//             pub fn new(mut frame_payload: Vec<u8>) -> #struct_name {
-//                 frame_payload.resize(8, 0);
-//                 #struct_name {
-//                     frame_payload
-//                 }
-//             }
-
-//             #[doc = "Raw frame body data"]
-//             pub fn data(&self) -> &[u8] {
-//                 &self.frame_payload
-//             }
-
-//             #message_stream
-
-//             #(#signal_fns)*
-//         }
-//     })
-// }
 
 /// Generate message stream using socketcan's Broadcast Manager filters via socketcan-tokio.
 fn message_stream(message: &Message) -> TokenStream {
@@ -675,19 +630,6 @@ fn message_stream(message: &Message) -> TokenStream {
             let f = socket.map(|frame| frame.map(|frame| #message_name::new(frame.data().to_vec())));
             Ok(f)
         }
-        // #[allow(dead_code)]
-        // pub fn stream(can_interface: &str, _ival1: &std::time::Duration, _ival2: &std::time::Duration) -> std::io::Result<impl Stream<Item = Result<Self, std::io::Error>>> {
-        //     let socket = tokio_socketcan::CANSocket::open(&can_interface).unwrap();
-        //     #message_id
-        //     // Classic Filter
-        //     // 0x2000_0000 == INV_FILTER
-        //     let message_id  = message_id as u32 | 0x2000_0000;
-        //     let mask = message_id as u32 | EFF_FLAG;
-        //     let can_filter = dbg!(CANFilter::new(message_id.into(), mask).unwrap());
-        //     socket.set_filter(&[can_filter]).unwrap();
-        //     let f = socket.map(|frame| frame.map(|frame| #message_name::new(frame.data().to_vec())));
-        //     Ok(f)
-        // }
     }
 }
 

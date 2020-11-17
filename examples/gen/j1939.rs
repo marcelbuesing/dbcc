@@ -27709,4168 +27709,7944 @@ impl From<u8> for VltgRglatorLoadCompensationMode2633869310 {
 pub enum DecodedFrame {
     #[doc = r" Frame that is not listed in dbc"]
     UnknownFrame(tokio_socketcan::CANFrame),
+    #[doc = "Text Display"]
     Disp1 {
+        #[doc = "Read TextDisplayIndex signal from can frame"]
         text_display_index_raw_value: u8,
+        #[doc = "This parameter describes the status for the display how to show the information."]
         text_display_instructions_raw_value: u8,
+        #[doc = "This parameter describes the status for the display how to show the information."]
         text_display_instructions: TextDisplayInstructions2561212158,
     },
+    #[doc = "Door ramp control"]
     Drc {
+        #[doc = "Read MovementStatusOfRamp3 signal from can frame"]
         movement_status_of_ramp3_raw_value: u8,
+        #[doc = "Read EnableStatusOfRamp3 signal from can frame"]
         enable_status_of_ramp3_raw_value: u8,
+        #[doc = "Read RetractStatusOfRamp3 signal from can frame"]
         retract_status_of_ramp3_raw_value: u8,
+        #[doc = "Read MovementStatusOfRamp2 signal from can frame"]
         movement_status_of_ramp2_raw_value: u8,
+        #[doc = "Read EnableStatusOfRamp2 signal from can frame"]
         enable_status_of_ramp2_raw_value: u8,
+        #[doc = "Read RetractStatusOfRamp2 signal from can frame"]
         retract_status_of_ramp2_raw_value: u8,
+        #[doc = "Read MovementStatusOfRamp1 signal from can frame"]
         movement_status_of_ramp1_raw_value: u8,
+        #[doc = "Read EnableStatusOfRamp1 signal from can frame"]
         enable_status_of_ramp1_raw_value: u8,
+        #[doc = "Read RetractStatusOfRamp1 signal from can frame"]
         retract_status_of_ramp1_raw_value: u8,
+        #[doc = "Read MovementStatusOfRamp3 signal from can frame"]
         movement_status_of_ramp3: MovementStatusOfRamp32566746366,
+        #[doc = "Read EnableStatusOfRamp3 signal from can frame"]
         enable_status_of_ramp3: EnableStatusOfRamp32566746366,
+        #[doc = "Read RetractStatusOfRamp3 signal from can frame"]
         retract_status_of_ramp3: RetractStatusOfRamp32566746366,
+        #[doc = "Read MovementStatusOfRamp2 signal from can frame"]
         movement_status_of_ramp2: MovementStatusOfRamp22566746366,
+        #[doc = "Read EnableStatusOfRamp2 signal from can frame"]
         enable_status_of_ramp2: EnableStatusOfRamp22566746366,
+        #[doc = "Read RetractStatusOfRamp2 signal from can frame"]
         retract_status_of_ramp2: RetractStatusOfRamp22566746366,
+        #[doc = "Read MovementStatusOfRamp1 signal from can frame"]
         movement_status_of_ramp1: MovementStatusOfRamp12566746366,
+        #[doc = "Read EnableStatusOfRamp1 signal from can frame"]
         enable_status_of_ramp1: EnableStatusOfRamp12566746366,
+        #[doc = "Read RetractStatusOfRamp1 signal from can frame"]
         retract_status_of_ramp1: RetractStatusOfRamp12566746366,
     },
+    #[doc = "Engine Configuration 2"]
     Ec2 {
+        #[doc = "The number of cranking cycles that will be performed before ending the start attempt."]
         max_crank_attempts_per_start_attempt_raw_value: u8,
     },
+    #[doc = "Electronic Engine Controller 7"]
     Eec7 {
+        #[doc = "The position of the second exhaust gas recirculation valve expressed as a percentage of full travel.\nUnit: %"]
         eng_exhst_gs_rcirculation_valve2_pos_raw_value: f64,
+        #[doc = "The position of the exhaust gas recirculation valve expressed as a percentage of full travel.\nUnit: %"]
         eng_exhst_gs_recirculation_valve_pos_raw_value: f64,
     },
+    #[doc = "Electronic Engine Controller 8"]
     Eec8 {
+        #[doc = "Desired percentage of maximum Exhaust Gas Recirculation (EGR) valve opening for valve 2.\nUnit: %"]
         eng_exhst_gs_rcrculation_valve2_ctrl_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 5"]
     EflP5 {
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #4.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl4_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #3.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl3_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #2.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl2_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #1.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl1_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 6"]
     EflP6 {
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #8.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl8_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #7.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl7_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #6.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl6_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #5.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl5_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 7"]
     EflP7 {
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #12.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl12_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #11.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl11_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #10.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl10_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #9.\nUnit: kPa"]
         eng_intk_vlv_actton_oil_press_for_cyl9_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 8"]
     EflP8 {
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #16.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl16_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #15.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl15_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #14.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl14_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #13.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl13_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 9"]
     EflP9 {
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #20.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl20_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #19.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl19_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #18.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl18_raw_value: f64,
+        #[doc = "The gage pressure of the oil in the hydraulic accumulator that powers the engine intake valve for cylinder #17.\nUnit: kPa"]
         eng_intk_vlv_acttn_oil_press_for_cyl17_raw_value: f64,
     },
+    #[doc = "EGR Cooler Bypass"]
     Egrbv {
+        #[doc = "Read EGRCoolerBypassActuatorPostion signal from can frame\nUnit: %"]
         egr_cooler_bypass_actuator_postion_raw_value: f64,
     },
+    #[doc = "Engine Spark Voltage 1"]
     Esv1 {
+        #[doc = "Read EngSparkPlug4 signal from can frame\nUnit: Volts"]
         eng_spark_plug4_raw_value: u16,
+        #[doc = "Read EngSparkPlug3 signal from can frame\nUnit: Volts"]
         eng_spark_plug3_raw_value: u16,
+        #[doc = "Read EngSparkPlug2 signal from can frame\nUnit: Volts"]
         eng_spark_plug2_raw_value: u16,
+        #[doc = "Read EngSparkPlug1 signal from can frame\nUnit: Volts"]
         eng_spark_plug1_raw_value: u16,
     },
+    #[doc = "Engine Spark Voltage 2"]
     Esv2 {
+        #[doc = "Read EngSparkPlug8 signal from can frame\nUnit: Volts"]
         eng_spark_plug8_raw_value: u16,
+        #[doc = "Read EngSparkPlug7 signal from can frame\nUnit: Volts"]
         eng_spark_plug7_raw_value: u16,
+        #[doc = "Read EngSparkPlug6 signal from can frame\nUnit: Volts"]
         eng_spark_plug6_raw_value: u16,
+        #[doc = "Read EngSparkPlug5 signal from can frame\nUnit: Volts"]
         eng_spark_plug5_raw_value: u16,
     },
+    #[doc = "Engine Spark Voltage 3"]
     Esv3 {
+        #[doc = "Read EngSparkPlug12 signal from can frame\nUnit: Volts"]
         eng_spark_plug12_raw_value: u16,
+        #[doc = "Read EngSparkPlug11 signal from can frame\nUnit: Volts"]
         eng_spark_plug11_raw_value: u16,
+        #[doc = "Read EngSparkPlug10 signal from can frame\nUnit: Volts"]
         eng_spark_plug10_raw_value: u16,
+        #[doc = "Read EngSparkPlug9 signal from can frame\nUnit: Volts"]
         eng_spark_plug9_raw_value: u16,
     },
+    #[doc = "Engine Spark Voltage 4"]
     Esv4 {
+        #[doc = "Read EngSparkPlug16 signal from can frame\nUnit: Volts"]
         eng_spark_plug16_raw_value: u16,
+        #[doc = "Read EngSparkPlug15 signal from can frame\nUnit: Volts"]
         eng_spark_plug15_raw_value: u16,
+        #[doc = "Read EngSparkPlug14 signal from can frame\nUnit: Volts"]
         eng_spark_plug14_raw_value: u16,
+        #[doc = "Read EngSparkPlug13 signal from can frame\nUnit: Volts"]
         eng_spark_plug13_raw_value: u16,
     },
+    #[doc = "Engine Spark Voltage 5"]
     Esv5 {
+        #[doc = "Read EngSparkPlug20 signal from can frame\nUnit: Volts"]
         eng_spark_plug20_raw_value: u16,
+        #[doc = "Read EngSparkPlug19 signal from can frame\nUnit: Volts"]
         eng_spark_plug19_raw_value: u16,
+        #[doc = "Read EngSparkPlug18 signal from can frame\nUnit: Volts"]
         eng_spark_plug18_raw_value: u16,
+        #[doc = "Read EngSparkPlug17 signal from can frame\nUnit: Volts"]
         eng_spark_plug17_raw_value: u16,
     },
+    #[doc = "Engine Spark Voltage 6"]
     Esv6 {
+        #[doc = "Read EngSparkPlug24 signal from can frame\nUnit: Volts"]
         eng_spark_plug24_raw_value: u16,
+        #[doc = "Read EngSparkPlug23 signal from can frame\nUnit: Volts"]
         eng_spark_plug23_raw_value: u16,
+        #[doc = "Read EngSparkPlug22 signal from can frame\nUnit: Volts"]
         eng_spark_plug22_raw_value: u16,
+        #[doc = "Read EngSparkPlug21 signal from can frame\nUnit: Volts"]
         eng_spark_plug21_raw_value: u16,
     },
+    #[doc = "Forward Lane Image Command"]
     Flic {
+        #[doc = "Read LaneDepartureWarningEnableCmd signal from can frame"]
         lane_departure_warning_enable_cmd_raw_value: u8,
+        #[doc = "Read LaneDepartureWarningEnableCmd signal from can frame"]
         lane_departure_warning_enable_cmd: LaneDepartureWarningEnableCmd2561277694,
     },
+    #[doc = "SAE J2012 DTC Display"]
     J2012 {
+        #[doc = "Number of occurrences of the respective SAE J2012 DTC being conveyed."]
         j2012dtc_occurrence_count_raw_value: u8,
+        #[doc = "Indicates if the respective SAE J2012 DTC is active or previously active."]
         j2012dtc_status_raw_value: bool,
+        #[doc = "The number J2012 DTCs being conveyed in PGN 64906."]
         number_of_j2012dt_cs_raw_value: u8,
+        #[doc = "Indicates if the respective SAE J2012 DTC is active or previously active."]
         j2012dtc_status: J2012dtcStatus2633861886,
     },
+    #[doc = "Particulate Trap Control 1"]
     Ptc1 {
+        #[doc = "Read PrtcltTrpActvRgnrtnInhbtdDTVhclS signal from can frame"]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_vhcl_s_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the transmission being out of neutral."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_ot_of_n_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the accelerator pedal being off idle."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_accl_p_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the PTO being active."]
         prtclt_trp_actv_rgnrtn_inhbtd_dtpto_ac_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the service brake being active."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_srvc_b_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the clutch being disengaged."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_cltch_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the Particulate Trap Regeneration Inhibit Switch."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_inhbt_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition."]
         prtclt_trp_actv_rgnrtn_inhbtd_status_raw_value: u8,
+        #[doc = "Indicates the state of the particulate trap regeneration need and urgency."]
         particulate_trap_status_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap active regeneration."]
         prtclt_trp_actv_regeneration_status_raw_value: u8,
+        #[doc = "Indicates the state of particulate trap passive regeneration."]
         prtclt_trp_pssv_regeneration_status_raw_value: u8,
+        #[doc = "Command to control the particulate trap lamp."]
         particulate_trap_lamp_cmd_raw_value: u8,
+        #[doc = "Read PrtcltTrpActvRgnrtnInhbtdDTVhclS signal from can frame"]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_vhcl_s: PrtcltTrpActvRgnrtnInhbtdDtVhclS2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the transmission being out of neutral."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_ot_of_n: PrtcltTrpActvRgnrtnInhbtdDtOtOfN2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the accelerator pedal being off idle."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_accl_p: PrtcltTrpActvRgnrtnInhbtdDtAcclP2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the PTO being active."]
         prtclt_trp_actv_rgnrtn_inhbtd_dtpto_ac: PrtcltTrpActvRgnrtnInhbtdDtptoAc2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the service brake being active."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_srvc_b: PrtcltTrpActvRgnrtnInhbtdDtSrvcB2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the clutch being disengaged."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_cltch: PrtcltTrpActvRgnrtnInhbtdDtCltch2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition due to the Particulate Trap Regeneration Inhibit Switch."]
         prtclt_trp_actv_rgnrtn_inhbtd_dt_inhbt: PrtcltTrpActvRgnrtnInhbtdDtInhbt2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration inhibition."]
         prtclt_trp_actv_rgnrtn_inhbtd_status: PrtcltTrpActvRgnrtnInhbtdStatus2566749438,
+        #[doc = "Indicates the state of the particulate trap regeneration need and urgency."]
         particulate_trap_status: ParticulateTrapStatus2566749438,
+        #[doc = "Indicates the state of particulate trap active regeneration."]
         prtclt_trp_actv_regeneration_status: PrtcltTrpActvRegenerationStatus2566749438,
+        #[doc = "Indicates the state of particulate trap passive regeneration."]
         prtclt_trp_pssv_regeneration_status: PrtcltTrpPssvRegenerationStatus2566749438,
+        #[doc = "Command to control the particulate trap lamp."]
         particulate_trap_lamp_cmd: ParticulateTrapLampCmd2566749438,
     },
+    #[doc = "Steering Angle Sensor Information"]
     Sas {
+        #[doc = "The message checksum is used to verify the signal path from the demanding device to the steering controller ."]
         message_checksum_raw_value: u8,
+        #[doc = "The message counter is to verify the signal path from the demanding device to the steering controller."]
         message_counter_raw_value: u8,
+        #[doc = "This signal indicates the calibration status of the steering angle sensor."]
         steer_angle_sensor_calibrated_raw_value: u8,
+        #[doc = "This signal indicates the operational mode of the steering angle sensor."]
         steer_angle_sensor_active_mode_raw_value: u8,
+        #[doc = "The signal indicates the range of the steering wheel angle the sensor element is capable to measure.\nUnit: rad"]
         steer_wheel_angle_range_raw_value: f64,
+        #[doc = "Read SteerWheelAngleRangeCounterType signal from can frame"]
         steer_wheel_angle_range_counter_type_raw_value: u8,
+        #[doc = "Read SteerWheelAngleRangeCounter signal from can frame\nUnit: ranges"]
         steer_wheel_angle_range_counter_raw_value: f64,
+        #[doc = "The main operator`s steering wheel angle (on the steering column, not the actual wheel angle).\nUnit: rad"]
         steer_wheel_angle_raw_value: f64,
+        #[doc = "This signal indicates the calibration status of the steering angle sensor."]
         steer_angle_sensor_calibrated: SteerAngleSensorCalibrated2565873150,
+        #[doc = "This signal indicates the operational mode of the steering angle sensor."]
         steer_angle_sensor_active_mode: SteerAngleSensorActiveMode2565873150,
+        #[doc = "Read SteerWheelAngleRangeCounterType signal from can frame"]
         steer_wheel_angle_range_counter_type: SteerWheelAngleRangeCounterType2565873150,
     },
+    #[doc = "Catalyst Use Information"]
     Scr1 {
+        #[doc = "Read CmdedCatalystReagentConsumption signal from can frame\nUnit: L/h"]
         cmded_catalyst_reagent_consumption_raw_value: f64,
+        #[doc = "Read AvrgeCatalystReagentConsumption signal from can frame\nUnit: L/h"]
         avrge_catalyst_reagent_consumption_raw_value: f64,
     },
+    #[doc = "Transfer Case Information"]
     Tci {
+        #[doc = "This parameter describes the feedback from the transfer case controller ."]
         transfer_case_status_raw_value: u8,
+        #[doc = "This parameter describes the feedback from the transfer case controller ."]
         transfer_case_status: TransferCaseStatus2566751230,
     },
+    #[doc = "Transmission Fluids 2"]
     Trf2 {
+        #[doc = "This switch indicates whether transmission oil level is full or empty."]
         trans_oil_level_switch_raw_value: u8,
+        #[doc = "This switch indicates whether the transmission oil filter is clogged."]
         trans_oil_filter_restriction_switch_raw_value: u8,
+        #[doc = "This switch indicates whether transmission oil level is full or empty."]
         trans_oil_level_switch: TransOilLevelSwitch2566755838,
+        #[doc = "This switch indicates whether the transmission oil filter is clogged."]
         trans_oil_filter_restriction_switch: TransOilFilterRestrictionSwitch2566755838,
     },
+    #[doc = "Vehicle Direction/Speed 2"]
     Vds2 {
+        #[doc = "This parameter indicates the roll in degrees from level.\nUnit: deg"]
         vehicle_roll_raw_value: f64,
     },
+    #[doc = "Engine Speed/Load Factor Information"]
     Lf {
+        #[doc = "Total time that the engine has operated in the cruise hold state, excluding time in accelerator override, over the life of the engine.\nUnit: hr"]
         total_eng_cruise_time_raw_value: f64,
+        #[doc = "Read TotalDriveAverageLoadFactor signal from can frame\nUnit: %"]
         total_drive_average_load_factor_raw_value: f64,
+        #[doc = "Read TripDriveAverageLoadFactor signal from can frame\nUnit: %"]
         trip_drive_average_load_factor_raw_value: f64,
+        #[doc = "Average speed of the engine since the last trip reset.\nUnit: rpm"]
         trip_average_eng_speed_raw_value: f64,
+        #[doc = "Maximum engine speed achieved since the last trip reset.\nUnit: rpm"]
         trip_max_eng_speed_raw_value: f64,
     },
+    #[doc = "Lighting Data"]
     Ld {
+        #[doc = "This parameter provides measured data from the implement rear work lamps."]
         implement_rear_work_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the forward facing work lights toward the left end of the implement."]
         implement_left_forward_work_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the forward facing work lights toward the right end of the implement."]
         implement_right_forward_work_light_raw_value: u8,
+        #[doc = "Read ImplementLeftFacingWorkLight signal from can frame"]
         implement_left_facing_work_light_raw_value: u8,
+        #[doc = "Read ImplementRightFacingWorkLight signal from can frame"]
         implement_right_facing_work_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the implement OEM option 1 light."]
         implement_oem_option1_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the implement OEM option 2 light."]
         implement_oem_option2_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor front high mounted work lights."]
         trctr_front_high_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor front low mounted work lights."]
         trctor_front_low_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor side high mounted work lights."]
         trctor_side_high_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor side low mounted work lights."]
         tractor_side_low_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor rear high mounted work lights."]
         trctor_rear_high_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor rear low mounted work lights."]
         tractor_rear_low_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor underside mounted work lights."]
         trctr_underside_mounted_work_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor and/or implement rear fog lights."]
         rear_fog_lights_raw_value: u8,
+        #[doc = "Read TractorMarkerLight signal from can frame"]
         tractor_marker_light_raw_value: u8,
+        #[doc = "Read ImplementMarkerLight signal from can frame"]
         implement_marker_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor high mounted clearance and center ID lights."]
         tractor_clearance_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from an attached implement high mounted clearance lights."]
         implement_clearance_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor and attached implement left stop lights."]
         left_stop_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor and attached implement right stop lights."]
         right_stop_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor and attached implement center stop lights."]
         center_stop_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the back up lights and/ or associated alarm."]
         back_up_light_and_alarm_horn_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor and attached implement left turn signal lights."]
         left_turn_signal_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor and attached implement right turn signal lights."]
         right_turn_signal_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the beacon light on tractor or attached implements."]
         rotating_beacon_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor front fog lights."]
         tractor_front_fog_lights_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor high beam head light lamps."]
         high_beam_head_light_data_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor low beam head light lamps."]
         low_beam_head_light_data_raw_value: u8,
+        #[doc = "This parameter provides measured data from the tractor alternate beam head light lamps."]
         alt_beam_head_light_data_raw_value: u8,
+        #[doc = "This parameter provides measured data from the vehicle�s running lights."]
         running_light_raw_value: u8,
+        #[doc = "This parameter provides measured data from the implement rear work lamps."]
         implement_rear_work_light: ImplementRearWorkLight2566799614,
+        #[doc = "This parameter provides measured data from the forward facing work lights toward the left end of the implement."]
         implement_left_forward_work_light: ImplementLeftForwardWorkLight2566799614,
+        #[doc = "This parameter provides measured data from the forward facing work lights toward the right end of the implement."]
         implement_right_forward_work_light: ImplementRightForwardWorkLight2566799614,
+        #[doc = "Read ImplementLeftFacingWorkLight signal from can frame"]
         implement_left_facing_work_light: ImplementLeftFacingWorkLight2566799614,
+        #[doc = "Read ImplementRightFacingWorkLight signal from can frame"]
         implement_right_facing_work_light: ImplementRightFacingWorkLight2566799614,
+        #[doc = "This parameter provides measured data from the implement OEM option 1 light."]
         implement_oem_option1_light: ImplementOemOption1Light2566799614,
+        #[doc = "This parameter provides measured data from the implement OEM option 2 light."]
         implement_oem_option2_light: ImplementOemOption2Light2566799614,
+        #[doc = "This parameter provides measured data from the tractor front high mounted work lights."]
         trctr_front_high_mounted_work_lights: TrctrFrontHighMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor front low mounted work lights."]
         trctor_front_low_mounted_work_lights: TrctorFrontLowMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor side high mounted work lights."]
         trctor_side_high_mounted_work_lights: TrctorSideHighMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor side low mounted work lights."]
         tractor_side_low_mounted_work_lights: TractorSideLowMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor rear high mounted work lights."]
         trctor_rear_high_mounted_work_lights: TrctorRearHighMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor rear low mounted work lights."]
         tractor_rear_low_mounted_work_lights: TractorRearLowMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor underside mounted work lights."]
         trctr_underside_mounted_work_lights: TrctrUndersideMountedWorkLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor and/or implement rear fog lights."]
         rear_fog_lights: RearFogLights2566799614,
+        #[doc = "Read TractorMarkerLight signal from can frame"]
         tractor_marker_light: TractorMarkerLight2566799614,
+        #[doc = "Read ImplementMarkerLight signal from can frame"]
         implement_marker_light: ImplementMarkerLight2566799614,
+        #[doc = "This parameter provides measured data from the tractor high mounted clearance and center ID lights."]
         tractor_clearance_light: TractorClearanceLight2566799614,
+        #[doc = "This parameter provides measured data from an attached implement high mounted clearance lights."]
         implement_clearance_light: ImplementClearanceLight2566799614,
+        #[doc = "This parameter provides measured data from the tractor and attached implement left stop lights."]
         left_stop_light: LeftStopLight2566799614,
+        #[doc = "This parameter provides measured data from the tractor and attached implement right stop lights."]
         right_stop_light: RightStopLight2566799614,
+        #[doc = "This parameter provides measured data from the tractor and attached implement center stop lights."]
         center_stop_light: CenterStopLight2566799614,
+        #[doc = "This parameter provides measured data from the back up lights and/ or associated alarm."]
         back_up_light_and_alarm_horn: BackUpLightAndAlarmHorn2566799614,
+        #[doc = "This parameter provides measured data from the tractor and attached implement left turn signal lights."]
         left_turn_signal_lights: LeftTurnSignalLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor and attached implement right turn signal lights."]
         right_turn_signal_lights: RightTurnSignalLights2566799614,
+        #[doc = "This parameter provides measured data from the beacon light on tractor or attached implements."]
         rotating_beacon_light: RotatingBeaconLight2566799614,
+        #[doc = "This parameter provides measured data from the tractor front fog lights."]
         tractor_front_fog_lights: TractorFrontFogLights2566799614,
+        #[doc = "This parameter provides measured data from the tractor high beam head light lamps."]
         high_beam_head_light_data: HighBeamHeadLightData2566799614,
+        #[doc = "This parameter provides measured data from the tractor low beam head light lamps."]
         low_beam_head_light_data: LowBeamHeadLightData2566799614,
+        #[doc = "This parameter provides measured data from the tractor alternate beam head light lamps."]
         alt_beam_head_light_data: AltBeamHeadLightData2566799614,
+        #[doc = "This parameter provides measured data from the vehicle�s running lights."]
         running_light: RunningLight2566799614,
     },
+    #[doc = "Lighting Command"]
     Lc {
+        #[doc = "Command to activate or de-activate implement rear work lights."]
         implement_rear_work_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the forward facing work lights toward the left end of the implement."]
         implment_left_forward_work_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the forward facing work lights toward the right end of the implement."]
         implmnt_right_forward_work_light_cmd_raw_value: u8,
+        #[doc = "Read LightingDataRqCmd signal from can frame"]
         lighting_data_rq_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate work lights mounted on an implement to illuminate beyond left end of the implement."]
         implement_left_facing_work_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate work lights mounted on an implement to illuminate beyond right end of the implement."]
         implment_right_facing_work_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate an implement OEM option 1 light."]
         implement_oem_option1_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate an implement OEM option 2 light."]
         implement_oem_option2_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor front high mounted work lights."]
         trctr_frnt_hgh_munted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor front low mounted work lights."]
         trctr_frnt_lw_mounted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor side high mounted work lights."]
         trctr_sd_high_mounted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor side low mounted work lights."]
         trctr_sde_low_mounted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor rear high mounted work lights."]
         trctr_rr_high_mounted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor rear low mounted work lights."]
         trctr_rar_low_mounted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor underside mounted work lights."]
         trctr_undrsd_mounted_work_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate tractor or implement rear fog lights."]
         rear_fog_light_cmd_raw_value: u8,
+        #[doc = "Read TractorMarkerLightCmd signal from can frame"]
         tractor_marker_light_cmd_raw_value: u8,
+        #[doc = "Read ImplementMarkerLightCmd signal from can frame"]
         implement_marker_light_cmd_raw_value: u8,
+        #[doc = "Read TractorClearanceLightCmd signal from can frame"]
         tractor_clearance_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the implement high mounted clearance and lights."]
         implement_clearance_light_cmd_raw_value: u8,
+        #[doc = "Read LeftStopLightCmd signal from can frame"]
         left_stop_light_cmd_raw_value: u8,
+        #[doc = "Read RightStopLightCmd signal from can frame"]
         right_stop_light_cmd_raw_value: u8,
+        #[doc = "Read CenterStopLightCmd signal from can frame"]
         center_stop_light_cmd_raw_value: u8,
+        #[doc = "Read BackUpLightAndAlarmHornCmd signal from can frame"]
         back_up_light_and_alarm_horn_cmd_raw_value: u8,
+        #[doc = "Read LeftTurnSignalLightsCmd signal from can frame"]
         left_turn_signal_lights_cmd_raw_value: u8,
+        #[doc = "Read RightTurnSignalLightsCmd signal from can frame"]
         right_turn_signal_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate slow moving vehicle indicator lights on tractor and/or implements."]
         rotating_beacon_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate tractor front fog lights."]
         tractor_front_fog_lights_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor high beam head light lamps."]
         high_beam_head_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor low beam head light lamps."]
         low_beam_head_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor alternate head lights (only low beam is available on alternate head lights)."]
         alt_beam_head_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate the tractor or powered vehicle running lights."]
         running_light_cmd_raw_value: u8,
+        #[doc = "Command to activate or de-activate implement rear work lights."]
         implement_rear_work_light_cmd: ImplementRearWorkLightCmd2365473278,
+        #[doc = "Command to activate or de-activate the forward facing work lights toward the left end of the implement."]
         implment_left_forward_work_light_cmd: ImplmentLeftForwardWorkLightCmd2365473278,
+        #[doc = "Command to activate or de-activate the forward facing work lights toward the right end of the implement."]
         implmnt_right_forward_work_light_cmd: ImplmntRightForwardWorkLightCmd2365473278,
+        #[doc = "Read LightingDataRqCmd signal from can frame"]
         lighting_data_rq_cmd: LightingDataRqCmd2365473278,
+        #[doc = "Command to activate or de-activate work lights mounted on an implement to illuminate beyond left end of the implement."]
         implement_left_facing_work_light_cmd: ImplementLeftFacingWorkLightCmd2365473278,
+        #[doc = "Command to activate or de-activate work lights mounted on an implement to illuminate beyond right end of the implement."]
         implment_right_facing_work_light_cmd: ImplmentRightFacingWorkLightCmd2365473278,
+        #[doc = "Command to activate or de-activate an implement OEM option 1 light."]
         implement_oem_option1_light_cmd: ImplementOemOption1LightCmd2365473278,
+        #[doc = "Command to activate or de-activate an implement OEM option 2 light."]
         implement_oem_option2_light_cmd: ImplementOemOption2LightCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor front high mounted work lights."]
         trctr_frnt_hgh_munted_work_lights_cmd: TrctrFrntHghMuntedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor front low mounted work lights."]
         trctr_frnt_lw_mounted_work_lights_cmd: TrctrFrntLwMountedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor side high mounted work lights."]
         trctr_sd_high_mounted_work_lights_cmd: TrctrSdHighMountedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor side low mounted work lights."]
         trctr_sde_low_mounted_work_lights_cmd: TrctrSdeLowMountedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor rear high mounted work lights."]
         trctr_rr_high_mounted_work_lights_cmd: TrctrRrHighMountedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor rear low mounted work lights."]
         trctr_rar_low_mounted_work_lights_cmd: TrctrRarLowMountedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor underside mounted work lights."]
         trctr_undrsd_mounted_work_lights_cmd: TrctrUndrsdMountedWorkLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate tractor or implement rear fog lights."]
         rear_fog_light_cmd: RearFogLightCmd2365473278,
+        #[doc = "Read TractorMarkerLightCmd signal from can frame"]
         tractor_marker_light_cmd: TractorMarkerLightCmd2365473278,
+        #[doc = "Read ImplementMarkerLightCmd signal from can frame"]
         implement_marker_light_cmd: ImplementMarkerLightCmd2365473278,
+        #[doc = "Read TractorClearanceLightCmd signal from can frame"]
         tractor_clearance_light_cmd: TractorClearanceLightCmd2365473278,
+        #[doc = "Command to activate or de-activate the implement high mounted clearance and lights."]
         implement_clearance_light_cmd: ImplementClearanceLightCmd2365473278,
+        #[doc = "Read LeftStopLightCmd signal from can frame"]
         left_stop_light_cmd: LeftStopLightCmd2365473278,
+        #[doc = "Read RightStopLightCmd signal from can frame"]
         right_stop_light_cmd: RightStopLightCmd2365473278,
+        #[doc = "Read CenterStopLightCmd signal from can frame"]
         center_stop_light_cmd: CenterStopLightCmd2365473278,
+        #[doc = "Read BackUpLightAndAlarmHornCmd signal from can frame"]
         back_up_light_and_alarm_horn_cmd: BackUpLightAndAlarmHornCmd2365473278,
+        #[doc = "Read LeftTurnSignalLightsCmd signal from can frame"]
         left_turn_signal_lights_cmd: LeftTurnSignalLightsCmd2365473278,
+        #[doc = "Read RightTurnSignalLightsCmd signal from can frame"]
         right_turn_signal_lights_cmd: RightTurnSignalLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate slow moving vehicle indicator lights on tractor and/or implements."]
         rotating_beacon_light_cmd: RotatingBeaconLightCmd2365473278,
+        #[doc = "Command to activate or de-activate tractor front fog lights."]
         tractor_front_fog_lights_cmd: TractorFrontFogLightsCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor high beam head light lamps."]
         high_beam_head_light_cmd: HighBeamHeadLightCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor low beam head light lamps."]
         low_beam_head_light_cmd: LowBeamHeadLightCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor alternate head lights (only low beam is available on alternate head lights)."]
         alt_beam_head_light_cmd: AltBeamHeadLightCmd2365473278,
+        #[doc = "Command to activate or de-activate the tractor or powered vehicle running lights."]
         running_light_cmd: RunningLightCmd2365473278,
     },
+    #[doc = "Laser Leveling System Blade Control"]
     Lbc {
+        #[doc = "Allows the user to select the type of blade control for the land leveling system."]
         blade_ctrl_mode_raw_value: u8,
+        #[doc = "Used to indicate the duration and direction that the land leveling system blade moves.\nUnit: sec"]
         blade_duration_and_direction_raw_value: f64,
+        #[doc = "Allows the user to select the type of blade control for the land leveling system."]
         blade_ctrl_mode: BladeCtrlMode2365485822,
     },
+    #[doc = "Ignition Timing 6"]
     It6 {
+        #[doc = "The actual ignition timing at the current engine conditions.\nUnit: deg"]
         eng_actual_ignt_timing_raw_value: f64,
+        #[doc = "A programmable timing value specific to the engine�s application.\nUnit: deg"]
         eng_desired_ignt_timing3_raw_value: f64,
+        #[doc = "A programmable timing value specific to the engine�s application.\nUnit: deg"]
         eng_desired_ignt_timing2_raw_value: f64,
+        #[doc = "A programmable timing value specific to the engine�s application.\nUnit: deg"]
         eng_desired_ignt_timing1_raw_value: f64,
     },
+    #[doc = "Ignition Timing 5"]
     It5 {
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl20_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl19_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl18_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl17_ignt_timing_raw_value: f64,
     },
+    #[doc = "Ignition Timing 4"]
     It4 {
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl16_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl15_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl14_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl13_ignt_timing_raw_value: f64,
     },
+    #[doc = "Ignition Timing 3"]
     It3 {
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl12_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl11_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl10_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl9_ignt_timing_raw_value: f64,
     },
+    #[doc = "Ignition Timing 2"]
     It2 {
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl8_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl7_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl6_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl5_ignt_timing_raw_value: f64,
     },
+    #[doc = "Ignition Timing 1"]
     It1 {
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl4_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl3_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl2_ignt_timing_raw_value: f64,
+        #[doc = "The ignition timing of the cylinder.\nUnit: deg"]
         eng_cyl1_ignt_timing_raw_value: f64,
     },
+    #[doc = "Ignition Transformer Secondary Output 3"]
     Iso3 {
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl20_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl19_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl18_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl17_ignt_trans_second_output_raw_value: f64,
     },
+    #[doc = "Ignition Transformer Secondary Output 2"]
     Iso2 {
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl16_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl15_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl14_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl13_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl12_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl11_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl10_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl9_ignt_trans_second_output_raw_value: f64,
     },
+    #[doc = "Ignition Transformer Secondary Output 1"]
     Iso1 {
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl8_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl7_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl6_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl5_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl4_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl3_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl2_ignt_trans_second_output_raw_value: f64,
+        #[doc = "This parameter indicates the relative intensity of the secondary output voltage of the ignition transformer.\nUnit: %"]
         eng_cyl1_ignt_trans_second_output_raw_value: f64,
     },
+    #[doc = "Operator Primary Intermediate Speed Control state"]
     Iscs {
+        #[doc = "13 preprogrammed intermediate speed control settings are availible for the contolling ECM to select."]
         eng_oprtr_prmry_intrmdt_spd_slct_stte_raw_value: u8,
+        #[doc = "13 preprogrammed intermediate speed control settings are availible for the contolling ECM to select."]
         eng_oprtr_prmry_intrmdt_spd_slct_stte: EngOprtrPrmryIntrmdtSpdSlctStte2566768894,
     },
+    #[doc = "Intermediate Speed Control"]
     Isc {
+        #[doc = "Allows the operator to select one of 13 preprogrammed Intermediate Speed Control settings."]
         eng_oprtr_prmry_intrmdt_speed_select_raw_value: u8,
+        #[doc = "Allows the operator to select one of 13 preprogrammed Intermediate Speed Control settings."]
         eng_oprtr_prmry_intrmdt_speed_select: EngOprtrPrmryIntrmdtSpeedSelect2566769406,
     },
+    #[doc = "Idle Operation"]
     Io {
+        #[doc = "Accumulated time of operation of the engine while under idle conditions.\nUnit: hr"]
         eng_total_idle_hours_raw_value: f64,
+        #[doc = "Accumulated amount of fuel used during vehicle operation while under idle conditions.\nUnit: L"]
         eng_total_idle_fuel_used_raw_value: f64,
     },
+    #[doc = "Intake Manifold Information 2"]
     Imt2 {
+        #[doc = "Temperature of pre-combustion air found in intake manifold number 6 of engine air supply system.\nUnit: deg"]
         eng_intake_manifold6_temp_raw_value: f64,
+        #[doc = "Temperature of pre-combustion air found in intake manifold number 5 of engine air supply system.\nUnit: deg"]
         eng_intake_manifold5_temp_raw_value: f64,
+        #[doc = "Temperature of pre-combustion air found in intake manifold of engine air supply system.\nUnit: deg"]
         eng_intake_manifold4_temp_raw_value: f64,
+        #[doc = "Temperature of pre-combustion air found in intake manifold of engine air supply system.\nUnit: deg"]
         eng_intake_manifold3_temp_raw_value: f64,
+        #[doc = "Temperature of pre-combustion air found in intake manifold of engine air supply system.\nUnit: deg"]
         eng_intake_manifold2_temp_raw_value: f64,
     },
+    #[doc = "Intake Manifold Information 1"]
     Imt1 {
+        #[doc = "Gage pressure of air measured downstream of the compressor discharge side of the turbocharger.\nUnit: kPa"]
         eng_turbo4_boost_press_raw_value: f64,
+        #[doc = "Gage pressure of air measured downstream of the compressor discharge side of the turbocharger.\nUnit: kPa"]
         eng_turbo3_boost_press_raw_value: f64,
+        #[doc = "Gage pressure of air measured downstream of the compressor discharge side of the turbocharger.\nUnit: kPa"]
         eng_turbo2_boost_press_raw_value: f64,
+        #[doc = "Gage pressure of air measured downstream of the compressor discharge side of the turbocharger.\nUnit: kPa"]
         eng_turbo1_boost_press_raw_value: f64,
     },
+    #[doc = "Inlet/Exhaust Conditions 2"]
     Ic2 {
+        #[doc = "Read EngAirFilter4DiffPress signal from can frame\nUnit: kPa"]
         eng_air_filter4_diff_press_raw_value: f64,
+        #[doc = "Read EngAirFilter3DiffPress signal from can frame\nUnit: kPa"]
         eng_air_filter3_diff_press_raw_value: f64,
+        #[doc = "Read EngAirFilter2DiffPress signal from can frame\nUnit: kPa"]
         eng_air_filter2_diff_press_raw_value: f64,
+        #[doc = "The gage pressure measurement of the air intake manifold for bank #2 or the second air intake manifold.\nUnit: kPa"]
         eng_intake_manifold2_press_raw_value: f64,
+        #[doc = "The absolute pressure measurement of the air intake manifold.\nUnit: kPa"]
         eng_intake_manifold1_abs_press_raw_value: f64,
     },
+    #[doc = "Inlet/Exhaust Conditions 1"]
     Ic1 {
+        #[doc = "Read EngCoolantFilterDiffPress signal from can frame\nUnit: kPa"]
         eng_coolant_filter_diff_press_raw_value: f64,
+        #[doc = "Temperature of combustion byproducts leaving the engine.\nUnit: deg"]
         eng_exhaust_gas_temp_raw_value: f64,
+        #[doc = "Read EngAirFilter1DiffPress signal from can frame\nUnit: kPa"]
         eng_air_filter1_diff_press_raw_value: f64,
+        #[doc = "Absolute air pressure at inlet to intake manifold or air box.\nUnit: kPa"]
         eng_air_inlet_press_raw_value: f64,
+        #[doc = "Temperature of pre-combustion air found in intake manifold of engine air supply system.\nUnit: deg"]
         eng_intake_manifold1_temp_raw_value: f64,
+        #[doc = "Gage pressure of air measured downstream on the compressor discharge side of the turbocharger.\nUnit: kPa"]
         eng_turbo_boost_press_raw_value: f64,
+        #[doc = "Exhaust back pressure as a result of particle accumulation on filter media placed in the exhaust stream.\nUnit: kPa"]
         eng_particulate_trap_inlet_press_raw_value: f64,
     },
+    #[doc = "Heater Information"]
     Htr {
+        #[doc = "Parameter indicating whether the cab zone is being heated."]
         cab_heating_zone_raw_value: u8,
+        #[doc = "Parameter indicating whether the engine zone is being heated."]
         eng_heating_zone_raw_value: u8,
+        #[doc = "Indicates whether the cab is being ventilated or not."]
         cab_ventilation_raw_value: u8,
+        #[doc = "Read AuxilaryHeaterWaterPumpStatus signal from can frame"]
         auxilary_heater_water_pump_status_raw_value: u8,
+        #[doc = "Read AuxHeaterMode signal from can frame"]
         aux_heater_mode_raw_value: u8,
+        #[doc = "Current auxiliary heater output power, relative to the auxiliary heater maximum output power.\nUnit: %"]
         aux_heater_output_power_percent_raw_value: f64,
+        #[doc = "Temperature of the input air in an auxiliary heater system.\nUnit: deg"]
         aux_heater_input_air_temp_raw_value: f64,
+        #[doc = "Temperature of the auxiliary heater output coolant (I.\nUnit: deg"]
         aux_heater_output_coolant_temp_raw_value: f64,
+        #[doc = "Parameter indicating whether the cab zone is being heated."]
         cab_heating_zone: CabHeatingZone2566811134,
+        #[doc = "Parameter indicating whether the engine zone is being heated."]
         eng_heating_zone: EngHeatingZone2566811134,
+        #[doc = "Indicates whether the cab is being ventilated or not."]
         cab_ventilation: CabVentilation2566811134,
+        #[doc = "Read AuxilaryHeaterWaterPumpStatus signal from can frame"]
         auxilary_heater_water_pump_status: AuxilaryHeaterWaterPumpStatus2566811134,
+        #[doc = "Read AuxHeaterMode signal from can frame"]
         aux_heater_mode: AuxHeaterMode2566811134,
     },
+    #[doc = "High Resolution Wheel Speed"]
     Hrw {
+        #[doc = "High resolution measurement of the speed of the right wheel on the rear axle.\nUnit: km/h"]
         rear_axle_right_wheel_speed_raw_value: f64,
+        #[doc = "High resolution measurement of the speed of the left wheel on the rear axle.\nUnit: km/h"]
         rear_axle_left_wheel_speed_raw_value: f64,
+        #[doc = "High resolution measurement of the speed of the right wheel on the front axle.\nUnit: km/h"]
         front_axle_right_wheel_speed_raw_value: f64,
+        #[doc = "High resolution measurement of the speed of the left wheel on the front axle.\nUnit: km/h"]
         front_axle_left_wheel_speed_raw_value: f64,
     },
+    #[doc = "Hydraulic Pressure Governor Info"]
     Hpg {
+        #[doc = "Read FireApparatusPumpEngagement signal from can frame"]
         fire_apparatus_pump_engagement_raw_value: u8,
+        #[doc = "Read EngHydPressGovernorSwitch signal from can frame"]
         eng_hyd_press_governor_switch_raw_value: u8,
+        #[doc = "Mode for governor operation is hydraulic pressure control."]
         eng_hyd_prss_governor_mode_indicator_raw_value: u8,
+        #[doc = "Hydraulic pressure measured at the output of the hydraulic pump.\nUnit: kPa"]
         hyd_press_raw_value: f64,
+        #[doc = "Read FireApparatusPumpEngagement signal from can frame"]
         fire_apparatus_pump_engagement: FireApparatusPumpEngagement2565867774,
+        #[doc = "Read EngHydPressGovernorSwitch signal from can frame"]
         eng_hyd_press_governor_switch: EngHydPressGovernorSwitch2565867774,
+        #[doc = "Mode for governor operation is hydraulic pressure control."]
         eng_hyd_prss_governor_mode_indicator: EngHydPrssGovernorModeIndicator2565867774,
     },
+    #[doc = "Engine Hours, Revolutions"]
     Hours {
+        #[doc = "Accumulated number of revolutions of engine crankshaft during its operation.\nUnit: r"]
         eng_total_revolutions_raw_value: f64,
+        #[doc = "Accumulated time of operation of engine.\nUnit: hr"]
         eng_total_hours_of_operation_raw_value: f64,
     },
+    #[doc = "Hydraulic Braking System"]
     Hbs {
+        #[doc = "Signal which indicates whether the hydraulic fluid level in the reservoir(s) is sufficient."]
         hyd_brake_fluid_level_switch_raw_value: u8,
+        #[doc = "Signal which commands an audible warning by the hydraulic braking system."]
         hyd_brake_system_audible_warning_cmd_raw_value: u8,
+        #[doc = "Read HydBrkePressSupplyStateCircuit2 signal from can frame"]
         hyd_brke_press_supply_state_circuit2_raw_value: u8,
+        #[doc = "Read HydBrkePressSupplyStateCircuit1 signal from can frame"]
         hyd_brke_press_supply_state_circuit1_raw_value: u8,
+        #[doc = "Read HydBrkPressWarningStateCircuit2 signal from can frame"]
         hyd_brk_press_warning_state_circuit2_raw_value: u8,
+        #[doc = "Read HydBrkPressWarningStateCircuit1 signal from can frame"]
         hyd_brk_press_warning_state_circuit1_raw_value: u8,
+        #[doc = "Read HydBrakePressCircuit2 signal from can frame\nUnit: MPa"]
         hyd_brake_press_circuit2_raw_value: f64,
+        #[doc = "Read HydBrakePressCircuit1 signal from can frame\nUnit: MPa"]
         hyd_brake_press_circuit1_raw_value: f64,
+        #[doc = "Signal which indicates whether the hydraulic fluid level in the reservoir(s) is sufficient."]
         hyd_brake_fluid_level_switch: HydBrakeFluidLevelSwitch2365449982,
+        #[doc = "Signal which commands an audible warning by the hydraulic braking system."]
         hyd_brake_system_audible_warning_cmd: HydBrakeSystemAudibleWarningCmd2365449982,
+        #[doc = "Read HydBrkePressSupplyStateCircuit2 signal from can frame"]
         hyd_brke_press_supply_state_circuit2: HydBrkePressSupplyStateCircuit22365449982,
+        #[doc = "Read HydBrkePressSupplyStateCircuit1 signal from can frame"]
         hyd_brke_press_supply_state_circuit1: HydBrkePressSupplyStateCircuit12365449982,
+        #[doc = "Read HydBrkPressWarningStateCircuit2 signal from can frame"]
         hyd_brk_press_warning_state_circuit2: HydBrkPressWarningStateCircuit22365449982,
+        #[doc = "Read HydBrkPressWarningStateCircuit1 signal from can frame"]
         hyd_brk_press_warning_state_circuit1: HydBrkPressWarningStateCircuit12365449982,
     },
+    #[doc = "Trip Fuel Information (Gaseous)"]
     Gtfi {
+        #[doc = "Read TripPTOMovingFuelUsed signal from can frame\nUnit: kg"]
         trip_pto_moving_fuel_used_raw_value: f64,
+        #[doc = "Read TripDriveFuelUsed signal from can frame\nUnit: kg"]
         trip_drive_fuel_used_raw_value: f64,
     },
+    #[doc = "Gaseous Fuel Pressure"]
     Gfp {
+        #[doc = "Absolute Pressure of gas on outlet side of the first or only fuel system control valve.\nUnit: kPa"]
         eng_fuel_valve1_outlet_abs_press_raw_value: f64,
+        #[doc = "The differential pressure between the gaseous fuel and the air intake manifold.\nUnit: kPa"]
         eng_air_to_fuel_diff_press_raw_value: f64,
+        #[doc = "The differential pressure between the inlet and the outlet of a gaseous fuel valve.\nUnit: kPa"]
         eng_fuel_valve_diff_press_raw_value: f64,
+        #[doc = "The absolute pressure at the inlet of the gaseous fuel valve.\nUnit: kPa"]
         eng_fuel_valve_inlet_abs_press_raw_value: f64,
     },
+    #[doc = "Fuel Information 2 (Gaseous)"]
     Gfi2 {
+        #[doc = "The rate at which the fuel is flowing through a fuel valve.\nUnit: m�/h"]
         eng_fuel_flow_rate2_raw_value: f64,
+        #[doc = "The rate at which the fuel is flowing through a fuel valve.\nUnit: m�/h"]
         eng_fuel_flow_rate1_raw_value: f64,
+        #[doc = "Read EngRqedFuelValve2Pos signal from can frame\nUnit: %"]
         eng_rqed_fuel_valve2_pos_raw_value: f64,
+        #[doc = "The requested position of a gaseous fuel valve 1 that is metering the fuel flow to the engine.\nUnit: %"]
         eng_rqed_fuel_valve1_pos_raw_value: f64,
+        #[doc = "The position of a gaseous fuel valve that is metering the fuel flow to the engine.\nUnit: %"]
         eng_fuel_valve2_pos_raw_value: f64,
+        #[doc = "The position of a gaseous fuel valve that is metering the fuel flow to the engine.\nUnit: %"]
         eng_fuel_valve1_pos_raw_value: f64,
     },
+    #[doc = "Fuel Information 1 (Gaseous)"]
     Gfi1 {
+        #[doc = "This parameter conveys the specific gravity of the gaseous fuel being used by the engine."]
         eng_fuel_specific_gravity_raw_value: f64,
+        #[doc = "Average fuel rate, equal to trip fuel divided by trip time while the engine speed is above zero, since the last trip reset.\nUnit: kg/h"]
         trip_average_fuel_rate_raw_value: f64,
+        #[doc = "Total fuel used while the PTO or remote PTO is in the hold state and engine speed is above zero, over the life of the engine.\nUnit: kg"]
         total_eng_pto_fuel_used_raw_value: f64,
     },
+    #[doc = "Gaseous Fuel Properties"]
     Gfd {
+        #[doc = "The specific heat ratio of the fuel."]
         specific_heat_ratio_raw_value: f64,
     },
+    #[doc = "Fuel Consumption (Gaseous)"]
     Gfc {
+        #[doc = "Total fuel consumed (trip drive fuel + trip PTO moving fuel + trip PTO non-moving fuel + trip idle fuel) over the life of the engine.\nUnit: kg"]
         total_fuel_used_raw_value: f64,
+        #[doc = "Total fuel consumed (trip drive fuel + trip PTO moving fuel + trip PTO non-moving fuel + trip idle fuel) since the last trip reset.\nUnit: kg"]
         trip_fuel_raw_value: f64,
     },
+    #[doc = "Sensor Electrical Power #2"]
     Sep2 {
+        #[doc = "Read SensorSupplyVoltage6 signal from can frame\nUnit: V"]
         sensor_supply_voltage6_raw_value: f64,
+        #[doc = "Read SensorSupplyVoltage5 signal from can frame\nUnit: V"]
         sensor_supply_voltage5_raw_value: f64,
     },
+    #[doc = "Sensor Electrical Power #1"]
     Sep1 {
+        #[doc = "Read SensorSupplyVoltage4 signal from can frame\nUnit: V"]
         sensor_supply_voltage4_raw_value: f64,
+        #[doc = "Read SensorSupplyVoltage3 signal from can frame\nUnit: V"]
         sensor_supply_voltage3_raw_value: f64,
+        #[doc = "Read SensorSupplyVoltage2 signal from can frame\nUnit: V"]
         sensor_supply_voltage2_raw_value: f64,
+        #[doc = "Read SensorSupplyVoltage1 signal from can frame\nUnit: V"]
         sensor_supply_voltage1_raw_value: f64,
     },
+    #[doc = "PTO Drive Engagement"]
     Ptode {
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_sttus_trans_input_shaft_pto1_raw_value: u8,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_sttus_trans_input_shaft_pto2_raw_value: u8,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_sttus_trans_output_shaft_pto_raw_value: u8,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_stts_trnsfr_cs_otpt_shaft_pto_raw_value: u8,
+        #[doc = "Status of the transmission controller�s consent to engage the first or sole PTO drive mounted on the transmission case."]
         enggmnt_cnsnt_trans_input_shaft_pto1_raw_value: u8,
+        #[doc = "Status of the transmission controller�s consent to engage the second PTO drive mounted on the transmission case."]
         enggmnt_cnsnt_trans_input_shaft_pto2_raw_value: u8,
+        #[doc = "Status of the transmission controller�s consent to engage the PTO drive connected to the transmission output shaft."]
         enggmnt_cnsnt_trans_output_shaft_pto_raw_value: u8,
+        #[doc = "Status of the transmission controller�s consent to engage the PTO drive connected to the transfer case output shaft."]
         enggmnt_cnsnt_trnsfr_cs_otpt_shft_pto_raw_value: u8,
+        #[doc = "Read EnableSwitchTransInputShaftPTO1 signal from can frame"]
         enable_switch_trans_input_shaft_pto1_raw_value: u8,
+        #[doc = "Read EnableSwitchTransInputShaftPTO2 signal from can frame"]
         enable_switch_trans_input_shaft_pto2_raw_value: u8,
+        #[doc = "Read EnableSwitchTransOutputShaftPTO signal from can frame"]
         enable_switch_trans_output_shaft_pto_raw_value: u8,
+        #[doc = "Read EnblSwtchTrnsfrCsOutputShaftPTO signal from can frame"]
         enbl_swtch_trnsfr_cs_output_shaft_pto_raw_value: u8,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_sttus_trans_input_shaft_pto1: EnggmntSttusTransInputShaftPto12566759678,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_sttus_trans_input_shaft_pto2: EnggmntSttusTransInputShaftPto22566759678,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_sttus_trans_output_shaft_pto: EnggmntSttusTransOutputShaftPto2566759678,
+        #[doc = "Reports if this specific PTO drive is engaged."]
         enggmnt_stts_trnsfr_cs_otpt_shaft_pto: EnggmntSttsTrnsfrCsOtptShaftPto2566759678,
+        #[doc = "Status of the transmission controller�s consent to engage the first or sole PTO drive mounted on the transmission case."]
         enggmnt_cnsnt_trans_input_shaft_pto1: EnggmntCnsntTransInputShaftPto12566759678,
+        #[doc = "Status of the transmission controller�s consent to engage the second PTO drive mounted on the transmission case."]
         enggmnt_cnsnt_trans_input_shaft_pto2: EnggmntCnsntTransInputShaftPto22566759678,
+        #[doc = "Status of the transmission controller�s consent to engage the PTO drive connected to the transmission output shaft."]
         enggmnt_cnsnt_trans_output_shaft_pto: EnggmntCnsntTransOutputShaftPto2566759678,
+        #[doc = "Status of the transmission controller�s consent to engage the PTO drive connected to the transfer case output shaft."]
         enggmnt_cnsnt_trnsfr_cs_otpt_shft_pto: EnggmntCnsntTrnsfrCsOtptShftPto2566759678,
+        #[doc = "Read EnableSwitchTransInputShaftPTO1 signal from can frame"]
         enable_switch_trans_input_shaft_pto1: EnableSwitchTransInputShaftPto12566759678,
+        #[doc = "Read EnableSwitchTransInputShaftPTO2 signal from can frame"]
         enable_switch_trans_input_shaft_pto2: EnableSwitchTransInputShaftPto22566759678,
+        #[doc = "Read EnableSwitchTransOutputShaftPTO signal from can frame"]
         enable_switch_trans_output_shaft_pto: EnableSwitchTransOutputShaftPto2566759678,
+        #[doc = "Read EnblSwtchTrnsfrCsOutputShaftPTO signal from can frame"]
         enbl_swtch_trnsfr_cs_output_shaft_pto: EnblSwtchTrnsfrCsOutputShaftPto2566759678,
     },
+    #[doc = "Fuel Information 3 (Gaseous)"]
     Gfi3 {
+        #[doc = "Absolute pressure of gas on outlet side of the second fuel system control valve.\nUnit: kPa"]
         eng_fuel_valve2_outlet_abs_press_raw_value: f64,
+        #[doc = "Temperature 2 of fuel (or gas).\nUnit: deg"]
         eng_fuel_temp2_raw_value: f64,
+        #[doc = "Read EngGasMassFlowRate2 signal from can frame\nUnit: kg/h"]
         eng_gas_mass_flow_rate2_raw_value: f64,
+        #[doc = "Read EngFuelValve2InletAbsPress signal from can frame\nUnit: kPa"]
         eng_fuel_valve2_inlet_abs_press_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 4"]
     EflP4 {
+        #[doc = "The speed of a rotating (centrifugal) engine oil filter.\nUnit: rpm"]
         eng_centrifugal_oil_filter_speed_raw_value: f64,
+        #[doc = "The differential pressure measured across the input and output of the engine coolant pump.\nUnit: kPa"]
         eng_coolant_pump_diff_press_raw_value: f64,
+        #[doc = "Read EngChargeAirCooler2InletPress signal from can frame\nUnit: kPa"]
         eng_charge_air_cooler2_inlet_press_raw_value: f64,
+        #[doc = "Read EngChargeAirCooler1InletPress signal from can frame\nUnit: kPa"]
         eng_charge_air_cooler1_inlet_press_raw_value: f64,
+        #[doc = "Ratio of volume of liquid found in an engine intercooler cooling system to total engine intercooler cooling system volume.\nUnit: %"]
         eng_intercooler_coolant_level_raw_value: f64,
+        #[doc = "Read EngChargeAirCoolerOutletPress signal from can frame\nUnit: kPa"]
         eng_charge_air_cooler_outlet_press_raw_value: f64,
+        #[doc = "Ratio of aftercooler coolant system volume of liquid to total cooling system volume.\nUnit: %"]
         eng_aftercooler_coolant_level_raw_value: f64,
     },
+    #[doc = "Electronic Engine Controller 6"]
     Eec6 {
+        #[doc = "Actuator that controls the variable geometry turbocharger geometry.\nUnit: %"]
         eng_vrable_geometry_turbo_actuator1_raw_value: f64,
+        #[doc = "Read EngTrbCmprssorBypassActuatorPos signal from can frame\nUnit: %"]
         eng_trb_cmprssor_bypass_actuator_pos_raw_value: f64,
+        #[doc = "Read EngTurboCompressorCtrl signal from can frame\nUnit: %"]
         eng_turbo_compressor_ctrl_raw_value: f64,
+        #[doc = "Read EngTurboCompressorCtrl signal from can frame\nUnit: %"]
         eng_turbo_compressor_ctrl: EngTurboCompressorCtrl2432541694,
     },
+    #[doc = "Door Control 2"]
     Dc2 {
+        #[doc = "Enable status of bus door 10."]
         enable_status_of_door10_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor10 signal from can frame"]
         open_status_of_door10_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor10 signal from can frame"]
         lock_status_of_door10_raw_value: u8,
+        #[doc = "Enable status of bus door 9."]
         enable_status_of_door9_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor9 signal from can frame"]
         open_status_of_door9_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor9 signal from can frame"]
         lock_status_of_door9_raw_value: u8,
+        #[doc = "Enable status of bus door 8."]
         enable_status_of_door8_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor8 signal from can frame"]
         open_status_of_door8_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor8 signal from can frame"]
         lock_status_of_door8_raw_value: u8,
+        #[doc = "Enable status of bus door 7."]
         enable_status_of_door7_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor7 signal from can frame"]
         open_status_of_door7_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor7 signal from can frame"]
         lock_status_of_door7_raw_value: u8,
+        #[doc = "Enable status of bus door 6."]
         enable_status_of_door6_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor6 signal from can frame"]
         open_status_of_door6_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor6 signal from can frame"]
         lock_status_of_door6_raw_value: u8,
+        #[doc = "Enable status of bus door 5."]
         enable_status_of_door5_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor5 signal from can frame"]
         open_status_of_door5_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor5 signal from can frame"]
         lock_status_of_door5_raw_value: u8,
+        #[doc = "Enable status of bus door 4."]
         enable_status_of_door4_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor4 signal from can frame"]
         open_status_of_door4_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor4 signal from can frame"]
         lock_status_of_door4_raw_value: u8,
+        #[doc = "Enable status of bus door 3."]
         enable_status_of_door3_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor3 signal from can frame"]
         open_status_of_door3_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor3 signal from can frame"]
         lock_status_of_door3_raw_value: u8,
+        #[doc = "Enable status of bus door 2."]
         enable_status_of_door2_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor2 signal from can frame"]
         open_status_of_door2_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor2 signal from can frame"]
         lock_status_of_door2_raw_value: u8,
+        #[doc = "Enable status of bus door 1."]
         enable_status_of_door1_raw_value: u8,
+        #[doc = "Read OpenStatusOfDoor1 signal from can frame"]
         open_status_of_door1_raw_value: u8,
+        #[doc = "Read LockStatusOfDoor1 signal from can frame"]
         lock_status_of_door1_raw_value: u8,
+        #[doc = "Enable status of bus door 10."]
         enable_status_of_door10: EnableStatusOfDoor102566759934,
+        #[doc = "Read OpenStatusOfDoor10 signal from can frame"]
         open_status_of_door10: OpenStatusOfDoor102566759934,
+        #[doc = "Read LockStatusOfDoor10 signal from can frame"]
         lock_status_of_door10: LockStatusOfDoor102566759934,
+        #[doc = "Enable status of bus door 9."]
         enable_status_of_door9: EnableStatusOfDoor92566759934,
+        #[doc = "Read OpenStatusOfDoor9 signal from can frame"]
         open_status_of_door9: OpenStatusOfDoor92566759934,
+        #[doc = "Read LockStatusOfDoor9 signal from can frame"]
         lock_status_of_door9: LockStatusOfDoor92566759934,
+        #[doc = "Enable status of bus door 8."]
         enable_status_of_door8: EnableStatusOfDoor82566759934,
+        #[doc = "Read OpenStatusOfDoor8 signal from can frame"]
         open_status_of_door8: OpenStatusOfDoor82566759934,
+        #[doc = "Read LockStatusOfDoor8 signal from can frame"]
         lock_status_of_door8: LockStatusOfDoor82566759934,
+        #[doc = "Enable status of bus door 7."]
         enable_status_of_door7: EnableStatusOfDoor72566759934,
+        #[doc = "Read OpenStatusOfDoor7 signal from can frame"]
         open_status_of_door7: OpenStatusOfDoor72566759934,
+        #[doc = "Read LockStatusOfDoor7 signal from can frame"]
         lock_status_of_door7: LockStatusOfDoor72566759934,
+        #[doc = "Enable status of bus door 6."]
         enable_status_of_door6: EnableStatusOfDoor62566759934,
+        #[doc = "Read OpenStatusOfDoor6 signal from can frame"]
         open_status_of_door6: OpenStatusOfDoor62566759934,
+        #[doc = "Read LockStatusOfDoor6 signal from can frame"]
         lock_status_of_door6: LockStatusOfDoor62566759934,
+        #[doc = "Enable status of bus door 5."]
         enable_status_of_door5: EnableStatusOfDoor52566759934,
+        #[doc = "Read OpenStatusOfDoor5 signal from can frame"]
         open_status_of_door5: OpenStatusOfDoor52566759934,
+        #[doc = "Read LockStatusOfDoor5 signal from can frame"]
         lock_status_of_door5: LockStatusOfDoor52566759934,
+        #[doc = "Enable status of bus door 4."]
         enable_status_of_door4: EnableStatusOfDoor42566759934,
+        #[doc = "Read OpenStatusOfDoor4 signal from can frame"]
         open_status_of_door4: OpenStatusOfDoor42566759934,
+        #[doc = "Read LockStatusOfDoor4 signal from can frame"]
         lock_status_of_door4: LockStatusOfDoor42566759934,
+        #[doc = "Enable status of bus door 3."]
         enable_status_of_door3: EnableStatusOfDoor32566759934,
+        #[doc = "Read OpenStatusOfDoor3 signal from can frame"]
         open_status_of_door3: OpenStatusOfDoor32566759934,
+        #[doc = "Read LockStatusOfDoor3 signal from can frame"]
         lock_status_of_door3: LockStatusOfDoor32566759934,
+        #[doc = "Enable status of bus door 2."]
         enable_status_of_door2: EnableStatusOfDoor22566759934,
+        #[doc = "Read OpenStatusOfDoor2 signal from can frame"]
         open_status_of_door2: OpenStatusOfDoor22566759934,
+        #[doc = "Read LockStatusOfDoor2 signal from can frame"]
         lock_status_of_door2: LockStatusOfDoor22566759934,
+        #[doc = "Enable status of bus door 1."]
         enable_status_of_door1: EnableStatusOfDoor12566759934,
+        #[doc = "Read OpenStatusOfDoor1 signal from can frame"]
         open_status_of_door1: OpenStatusOfDoor12566759934,
+        #[doc = "Read LockStatusOfDoor1 signal from can frame"]
         lock_status_of_door1: LockStatusOfDoor12566759934,
     },
+    #[doc = "Catalyst Reagent Information"]
     Cri1 {
+        #[doc = "This parameter indicates what reagent is in the tank."]
         catalyst_reagent_type_raw_value: u8,
+        #[doc = "Used to identify the applicable J1939-73 FMI that applies to the most significant failure of the catalyst reagent properties sensor."]
         ctlyst_rgnt_prprtes_preliminary_fmi_raw_value: u8,
+        #[doc = "Used to identify the applicable J1939-73 FMI that applies to the most significant failure of the catalyst temperature sensor."]
         ctlyst_ragent_temp2_preliminary_fmi_raw_value: u8,
+        #[doc = "A measure of the conductivity of the reagent or fluid at the sensor.\nUnit: microSiemens/mm"]
         catalyst_reagent_conductivity_raw_value: f64,
+        #[doc = "A measure of the concentration of urea in water.\nUnit: %"]
         catalyst_reagent_concentration_raw_value: f64,
+        #[doc = "Read CatalystReagentTemp2 signal from can frame\nUnit: deg"]
         catalyst_reagent_temp2_raw_value: f64,
+        #[doc = "This parameter indicates what reagent is in the tank."]
         catalyst_reagent_type: CatalystReagentType2566757374,
     },
+    #[doc = "After Treatment Historical Information #2"]
     Ahi2 {
+        #[doc = "Total amount of time that after treatment device 2 has been regenerating over the lifetime of the device.\nUnit: s"]
         aftr_trtmnt2_ttal_regeneration_time_raw_value: u32,
+        #[doc = "Total amount of fuel used by after treatment device 2 over the lifetime of the device.\nUnit: L"]
         after_treatment2_total_fuel_used_raw_value: f64,
     },
+    #[doc = "After Treatment Fuel Control #2"]
     Afc2 {
+        #[doc = "Read Aftrtratment2FuelEnableActuator signal from can frame"]
         aftrtratment2_fuel_enable_actuator_raw_value: u8,
+        #[doc = "Read Aftrtratment2RegenerationStatus signal from can frame"]
         aftrtratment2_regeneration_status_raw_value: u8,
+        #[doc = "Indicates whether aftertreatment #2 ignition circuit is energized by the ECM."]
         aftertreatment2_ignt_raw_value: u8,
+        #[doc = "Position that the controller is commanding the aftertreatment #2 fuel pressure control to maintain.\nUnit: %"]
         aftertreatment2_fuel_press_ctrl_raw_value: f64,
+        #[doc = "Read Aftertreatment2FuelRate signal from can frame\nUnit: L/h"]
         aftertreatment2_fuel_rate_raw_value: f64,
+        #[doc = "Pressure of the fuel for Aftertreatment #2.\nUnit: kPa"]
         aftertreatment2_fuel_press_raw_value: f64,
+        #[doc = "Read Aftrtratment2FuelEnableActuator signal from can frame"]
         aftrtratment2_fuel_enable_actuator: Aftrtratment2FuelEnableActuator2566758654,
+        #[doc = "Read Aftrtratment2RegenerationStatus signal from can frame"]
         aftrtratment2_regeneration_status: Aftrtratment2RegenerationStatus2566758654,
+        #[doc = "Indicates whether aftertreatment #2 ignition circuit is energized by the ECM."]
         aftertreatment2_ignt: Aftertreatment2Ignt2566758654,
     },
+    #[doc = "After Treatment Fuel Control #1"]
     Afc1 {
+        #[doc = "Read Aftrtratment1FuelEnableActuator signal from can frame"]
         aftrtratment1_fuel_enable_actuator_raw_value: u8,
+        #[doc = "Read Aftrtratment1RegenerationStatus signal from can frame"]
         aftrtratment1_regeneration_status_raw_value: u8,
+        #[doc = "Indicates whether aftertreatment #1 ignition circuit is energized by the ECM."]
         aftertreatment1_ignt_raw_value: u8,
+        #[doc = "Position that the controller is commanding the aftertreatment #1 fuel pressure control to maintain.\nUnit: %"]
         aftertreatment1_fuel_press_ctrl_raw_value: f64,
+        #[doc = "Read Aftertreatment1FuelRate signal from can frame\nUnit: L/h"]
         aftertreatment1_fuel_rate_raw_value: f64,
+        #[doc = "Pressure of the fuel for Aftertreatment #1.\nUnit: kPa"]
         aftertreatment1_fuel_press_raw_value: f64,
+        #[doc = "Read Aftrtratment1FuelEnableActuator signal from can frame"]
         aftrtratment1_fuel_enable_actuator: Aftrtratment1FuelEnableActuator2566758910,
+        #[doc = "Read Aftrtratment1RegenerationStatus signal from can frame"]
         aftrtratment1_regeneration_status: Aftrtratment1RegenerationStatus2566758910,
+        #[doc = "Indicates whether aftertreatment #1 ignition circuit is energized by the ECM."]
         aftertreatment1_ignt: Aftertreatment1Ignt2566758910,
     },
+    #[doc = "After Treatment Air Control #2"]
     Aac2 {
+        #[doc = "Read Aftrtreatment2AirEnableActuator signal from can frame"]
         aftrtreatment2_air_enable_actuator_raw_value: u8,
+        #[doc = "Read Aftertreatment2PurgeAirActuator signal from can frame"]
         aftertreatment2_purge_air_actuator_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2AtmzationAirActuator signal from can frame"]
         aftrtrtmnt2_atmzation_air_actuator_raw_value: u8,
+        #[doc = "Read Aftertreatment2AirSystemRelay signal from can frame"]
         aftertreatment2_air_system_relay_raw_value: u8,
+        #[doc = "Position of the #2 aftertreatment air pressure actuator as measured by a position feedback sensor.\nUnit: %"]
         aftrtrtment2_air_press_actuator_pos_raw_value: f64,
+        #[doc = "Position that the controller is commanding the aftertreatment #2 air pressure control to maintain.\nUnit: %"]
         aftertreatment2_air_press_ctrl_raw_value: f64,
+        #[doc = "Read Aftertreatment2PurgeAirPress signal from can frame\nUnit: kPa"]
         aftertreatment2_purge_air_press_raw_value: f64,
+        #[doc = "Read Aftertreatment2SupplyAirPress signal from can frame\nUnit: kPa"]
         aftertreatment2_supply_air_press_raw_value: f64,
+        #[doc = "Read Aftrtreatment2AirEnableActuator signal from can frame"]
         aftrtreatment2_air_enable_actuator: Aftrtreatment2AirEnableActuator2566758142,
+        #[doc = "Read Aftertreatment2PurgeAirActuator signal from can frame"]
         aftertreatment2_purge_air_actuator: Aftertreatment2PurgeAirActuator2566758142,
+        #[doc = "Read Aftrtrtmnt2AtmzationAirActuator signal from can frame"]
         aftrtrtmnt2_atmzation_air_actuator: Aftrtrtmnt2AtmzationAirActuator2566758142,
+        #[doc = "Read Aftertreatment2AirSystemRelay signal from can frame"]
         aftertreatment2_air_system_relay: Aftertreatment2AirSystemRelay2566758142,
     },
+    #[doc = "After Treatment Air Control #1"]
     Aac1 {
+        #[doc = "Read Aftrtreatment1AirEnableActuator signal from can frame"]
         aftrtreatment1_air_enable_actuator_raw_value: u8,
+        #[doc = "Read Aftertreatment1PurgeAirActuator signal from can frame"]
         aftertreatment1_purge_air_actuator_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1AtmzationAirActuator signal from can frame"]
         aftrtrtmnt1_atmzation_air_actuator_raw_value: u8,
+        #[doc = "Read Aftertreatment1AirSystemRelay signal from can frame"]
         aftertreatment1_air_system_relay_raw_value: u8,
+        #[doc = "Position of the #1 aftertreatment air pressure actuator as measured by a position feedback sensor.\nUnit: %"]
         aftrtrtment1_air_press_actuator_pos_raw_value: f64,
+        #[doc = "Position that the controller is commanding the aftertreatment #1 air pressure control to maintain.\nUnit: %"]
         aftertreatment1_air_press_ctrl_raw_value: f64,
+        #[doc = "Read Aftertreatment1PurgeAirPress signal from can frame\nUnit: kPa"]
         aftertreatment1_purge_air_press_raw_value: f64,
+        #[doc = "Read Aftertreatment1SupplyAirPress signal from can frame\nUnit: kPa"]
         aftertreatment1_supply_air_press_raw_value: f64,
+        #[doc = "Read Aftrtreatment1AirEnableActuator signal from can frame"]
         aftrtreatment1_air_enable_actuator: Aftrtreatment1AirEnableActuator2566758398,
+        #[doc = "Read Aftertreatment1PurgeAirActuator signal from can frame"]
         aftertreatment1_purge_air_actuator: Aftertreatment1PurgeAirActuator2566758398,
+        #[doc = "Read Aftrtrtmnt1AtmzationAirActuator signal from can frame"]
         aftrtrtmnt1_atmzation_air_actuator: Aftrtrtmnt1AtmzationAirActuator2566758398,
+        #[doc = "Read Aftertreatment1AirSystemRelay signal from can frame"]
         aftertreatment1_air_system_relay: Aftertreatment1AirSystemRelay2566758398,
     },
+    #[doc = "After Treatment Historical Information #1"]
     Ahi1 {
+        #[doc = "Total amount of time that after treatment device 1 has been regenerating over the lifetime of the device.\nUnit: s"]
         aftr_trtmnt1_ttal_regeneration_time_raw_value: u32,
+        #[doc = "Total amount of fuel used by after treatment device 1 over the lifetime of the device.\nUnit: L"]
         after_treatment1_total_fuel_used_raw_value: f64,
     },
+    #[doc = "Requested Generator Average Basic AC Quantities"]
     Rgaaq {
+        #[doc = "The requested average AC RMS voltage to be delivered by the generator.\nUnit: V"]
         rqd_gnrtr_avrg_lne_line_acrms_voltage_raw_value: f64,
     },
+    #[doc = "Engine Throttle / Fuel Actuator Control Command"]
     Tfac {
+        #[doc = "Read EngThrottleActuator2CtrlCmd signal from can frame\nUnit: %"]
         eng_throttle_actuator2_ctrl_cmd_raw_value: f64,
+        #[doc = "Read EngThrottleActuator1CtrlCmd signal from can frame\nUnit: %"]
         eng_throttle_actuator1_ctrl_cmd_raw_value: f64,
+        #[doc = "Read EngFuelActuator2CtrlCmd signal from can frame\nUnit: %"]
         eng_fuel_actuator2_ctrl_cmd_raw_value: f64,
+        #[doc = "Read EngFuelActuator1CtrlCmd signal from can frame\nUnit: %"]
         eng_fuel_actuator1_ctrl_cmd_raw_value: f64,
     },
+    #[doc = "Engine Knock Level #3"]
     Kl3 {
+        #[doc = "Used to indicate the level of knock for engine cylinder 24.\nUnit: %"]
         eng_cyl24_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 23.\nUnit: %"]
         eng_cyl23_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 22.\nUnit: %"]
         eng_cyl22_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 21.\nUnit: %"]
         eng_cyl21_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 20.\nUnit: %"]
         eng_cyl20_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 19.\nUnit: %"]
         eng_cyl19_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 18.\nUnit: %"]
         eng_cyl18_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 17.\nUnit: %"]
         eng_cyl17_knock_level_raw_value: u8,
     },
+    #[doc = "Engine Knock Level #2"]
     Kl2 {
+        #[doc = "Used to indicate the level of knock for engine cylinder 15.\nUnit: %"]
         eng_cyl15_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 14.\nUnit: %"]
         eng_cyl14_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 13.\nUnit: %"]
         eng_cyl13_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 12.\nUnit: %"]
         eng_cyl12_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 11.\nUnit: %"]
         eng_cyl11_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 10.\nUnit: %"]
         eng_cyl10_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 9.\nUnit: %"]
         eng_cyl9_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 16.\nUnit: %"]
         eng_cyl16_knock_level_raw_value: u8,
     },
+    #[doc = "Engine Knock Level #1"]
     Kl1 {
+        #[doc = "Used to indicate the level of knock for engine cylinder 8.\nUnit: %"]
         eng_cyl8_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 7.\nUnit: %"]
         eng_cyl7_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 6.\nUnit: %"]
         eng_cyl6_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 5.\nUnit: %"]
         eng_cyl5_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 4.\nUnit: %"]
         eng_cyl4_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 3.\nUnit: %"]
         eng_cyl3_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 2.\nUnit: %"]
         eng_cyl2_knock_level_raw_value: u8,
+        #[doc = "Used to indicate the level of knock for engine cylinder 1.\nUnit: %"]
         eng_cyl1_knock_level_raw_value: u8,
     },
+    #[doc = "Cylinder Combustion Status"]
     Ccs {
+        #[doc = "Read EngCyl9CombustionStatus signal from can frame"]
         eng_cyl9_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl8CombustionStatus signal from can frame"]
         eng_cyl8_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl7CombustionStatus signal from can frame"]
         eng_cyl7_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl6CombustionStatus signal from can frame"]
         eng_cyl6_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl5CombustionStatus signal from can frame"]
         eng_cyl5_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl4CombustionStatus signal from can frame"]
         eng_cyl4_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl3CombustionStatus signal from can frame"]
         eng_cyl3_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl2CombustionStatus signal from can frame"]
         eng_cyl2_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl24CombustionStatus signal from can frame"]
         eng_cyl24_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl23CombustionStatus signal from can frame"]
         eng_cyl23_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl22CombustionStatus signal from can frame"]
         eng_cyl22_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl21CombustionStatus signal from can frame"]
         eng_cyl21_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl20CombustionStatus signal from can frame"]
         eng_cyl20_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl1CombustionStatus signal from can frame"]
         eng_cyl1_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl19CombustionStatus signal from can frame"]
         eng_cyl19_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl18CombustionStatus signal from can frame"]
         eng_cyl18_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl17CombustionStatus signal from can frame"]
         eng_cyl17_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl16CombustionStatus signal from can frame"]
         eng_cyl16_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl15CombustionStatus signal from can frame"]
         eng_cyl15_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl14CombustionStatus signal from can frame"]
         eng_cyl14_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl13CombustionStatus signal from can frame"]
         eng_cyl13_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl12CombustionStatus signal from can frame"]
         eng_cyl12_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl11CombustionStatus signal from can frame"]
         eng_cyl11_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl10CombustionStatus signal from can frame"]
         eng_cyl10_combustion_status_raw_value: u8,
+        #[doc = "Read EngCyl9CombustionStatus signal from can frame"]
         eng_cyl9_combustion_status: EngCyl9CombustionStatus2364544766,
+        #[doc = "Read EngCyl8CombustionStatus signal from can frame"]
         eng_cyl8_combustion_status: EngCyl8CombustionStatus2364544766,
+        #[doc = "Read EngCyl7CombustionStatus signal from can frame"]
         eng_cyl7_combustion_status: EngCyl7CombustionStatus2364544766,
+        #[doc = "Read EngCyl6CombustionStatus signal from can frame"]
         eng_cyl6_combustion_status: EngCyl6CombustionStatus2364544766,
+        #[doc = "Read EngCyl5CombustionStatus signal from can frame"]
         eng_cyl5_combustion_status: EngCyl5CombustionStatus2364544766,
+        #[doc = "Read EngCyl4CombustionStatus signal from can frame"]
         eng_cyl4_combustion_status: EngCyl4CombustionStatus2364544766,
+        #[doc = "Read EngCyl3CombustionStatus signal from can frame"]
         eng_cyl3_combustion_status: EngCyl3CombustionStatus2364544766,
+        #[doc = "Read EngCyl2CombustionStatus signal from can frame"]
         eng_cyl2_combustion_status: EngCyl2CombustionStatus2364544766,
+        #[doc = "Read EngCyl24CombustionStatus signal from can frame"]
         eng_cyl24_combustion_status: EngCyl24CombustionStatus2364544766,
+        #[doc = "Read EngCyl23CombustionStatus signal from can frame"]
         eng_cyl23_combustion_status: EngCyl23CombustionStatus2364544766,
+        #[doc = "Read EngCyl22CombustionStatus signal from can frame"]
         eng_cyl22_combustion_status: EngCyl22CombustionStatus2364544766,
+        #[doc = "Read EngCyl21CombustionStatus signal from can frame"]
         eng_cyl21_combustion_status: EngCyl21CombustionStatus2364544766,
+        #[doc = "Read EngCyl20CombustionStatus signal from can frame"]
         eng_cyl20_combustion_status: EngCyl20CombustionStatus2364544766,
+        #[doc = "Read EngCyl1CombustionStatus signal from can frame"]
         eng_cyl1_combustion_status: EngCyl1CombustionStatus2364544766,
+        #[doc = "Read EngCyl19CombustionStatus signal from can frame"]
         eng_cyl19_combustion_status: EngCyl19CombustionStatus2364544766,
+        #[doc = "Read EngCyl18CombustionStatus signal from can frame"]
         eng_cyl18_combustion_status: EngCyl18CombustionStatus2364544766,
+        #[doc = "Read EngCyl17CombustionStatus signal from can frame"]
         eng_cyl17_combustion_status: EngCyl17CombustionStatus2364544766,
+        #[doc = "Read EngCyl16CombustionStatus signal from can frame"]
         eng_cyl16_combustion_status: EngCyl16CombustionStatus2364544766,
+        #[doc = "Read EngCyl15CombustionStatus signal from can frame"]
         eng_cyl15_combustion_status: EngCyl15CombustionStatus2364544766,
+        #[doc = "Read EngCyl14CombustionStatus signal from can frame"]
         eng_cyl14_combustion_status: EngCyl14CombustionStatus2364544766,
+        #[doc = "Read EngCyl13CombustionStatus signal from can frame"]
         eng_cyl13_combustion_status: EngCyl13CombustionStatus2364544766,
+        #[doc = "Read EngCyl12CombustionStatus signal from can frame"]
         eng_cyl12_combustion_status: EngCyl12CombustionStatus2364544766,
+        #[doc = "Read EngCyl11CombustionStatus signal from can frame"]
         eng_cyl11_combustion_status: EngCyl11CombustionStatus2364544766,
+        #[doc = "Read EngCyl10CombustionStatus signal from can frame"]
         eng_cyl10_combustion_status: EngCyl10CombustionStatus2364544766,
     },
+    #[doc = "Requested Generator Total AC Reactive Power"]
     Rgtarp {
+        #[doc = "The requested lead/lag status for the generator average AC power factor"]
         rq_gen_overall_power_factor_lagging_raw_value: u8,
+        #[doc = "The requested average power factor of the generator."]
         rq_generator_overall_power_factor_raw_value: f64,
+        #[doc = "The total reactive power requested to be delivered by the generator\nUnit: VA"]
         rq_generator_total_ac_reactive_power_raw_value: f64,
+        #[doc = "The requested lead/lag status for the generator average AC power factor"]
         rq_gen_overall_power_factor_lagging: RqGenOverallPowerFactorLagging2364544510,
     },
+    #[doc = "Blade Information"]
     Bi {
+        #[doc = "Figure of merit for blade rotation measurement."]
         blade_rotation_angle_figure_of_merit_raw_value: u8,
+        #[doc = "Figure of merit for blade height measurement."]
         rel_blade_height_figure_of_merit_raw_value: u8,
+        #[doc = "The estimated measurement latency of the measurement.\nUnit: ms"]
         rel_blade_measurement_latency_raw_value: f64,
+        #[doc = "The blade rotation angle measurement around the yaw (z-axis).\nUnit: deg"]
         blade_rotation_angle_raw_value: f64,
+        #[doc = "The measured vertical distance from a fixed location on the machine blade to a ground-based reference.\nUnit: mm"]
         relative_blade_height_raw_value: f64,
+        #[doc = "Figure of merit for blade rotation measurement."]
         blade_rotation_angle_figure_of_merit: BladeRotationAngleFigureOfMerit2364544254,
+        #[doc = "Figure of merit for blade height measurement."]
         rel_blade_height_figure_of_merit: RelBladeHeightFigureOfMerit2364544254,
     },
+    #[doc = "ISO 11992: Towing vehicle message, electronic brake system #1/1"]
     Ebs11 {
+        #[doc = "The demanded value of the retarder on the towed vehicle(s) as a percentage of the absolute peak torque of retarder.\nUnit: %"]
         retarder_demand_value_raw_value: f64,
+        #[doc = "The requested brake pressure value of the parking brake as a percentage of maximum.\nUnit: %"]
         park_brake_demand_value_raw_value: f64,
+        #[doc = "The requested brake pressure value of the service brake demanded by the driver.\nUnit: kPa"]
         service_brake_demand_value_raw_value: f64,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type_raw_value: u8,
+        #[doc = "Signal which indicates that the brake pedal is being pressed."]
         brake_light_switch_raw_value: u8,
+        #[doc = "Signal which indicates that ASR engine control is active/passive."]
         asr_engine_control_active_raw_value: u8,
+        #[doc = "Signal which indicates that ASR brake control is active/passive."]
         asr_break_control_active_raw_value: u8,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active_raw_value: u8,
+        #[doc = "Signal indicating the ABS is active/passive."]
         vehicle_abs_active_raw_value: u8,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type: VehicleType2349006590,
+        #[doc = "Signal which indicates that the brake pedal is being pressed."]
         brake_light_switch: BrakeLightSwitch2349006590,
+        #[doc = "Signal which indicates that ASR engine control is active/passive."]
         asr_engine_control_active: AsrEngineControlActive2349006590,
+        #[doc = "Signal which indicates that ASR brake control is active/passive."]
         asr_break_control_active: AsrBreakControlActive2349006590,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active: VehicleRetarderCtrlActive2349006590,
+        #[doc = "Signal indicating the ABS is active/passive."]
         vehicle_abs_active: VehicleAbsActive2349006590,
     },
+    #[doc = "ISO 11992: Towing vehicle message, electronic brake system #1/2"]
     Ebs12 {
+        #[doc = "Estimated value of the current road curvature for use by the adaptive cruise control system.\nUnit: 1/km"]
         road_curvature_raw_value: f64,
+        #[doc = "Signal which indicates that the towing vehicle has a pneumatic control line for the towed vehicle service braking system"]
         pneumatic_control_line_raw_value: u8,
+        #[doc = "Request to activate the ABS off-road function. The switch signal is independent of an actual ABS control situation."]
         abs_offroad_request_raw_value: u8,
+        #[doc = "Signal which indicates that the service brake demand value sent by the towing vehicle can be generated by one or two independent electrical braking circuit(s)."]
         two_el_circuits_brake_demand_raw_value: u8,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active_raw_value: u8,
+        #[doc = "Signal which indicates that the towing vehicle has a pneumatic control line for the towed vehicle service braking system"]
         pneumatic_control_line: PneumaticControlLine2566834686,
+        #[doc = "Request to activate the ABS off-road function. The switch signal is independent of an actual ABS control situation."]
         abs_offroad_request: AbsOffroadRequest2566834686,
+        #[doc = "Signal which indicates that the service brake demand value sent by the towing vehicle can be generated by one or two independent electrical braking circuit(s)."]
         two_el_circuits_brake_demand: TwoElCircuitsBrakeDemand2566834686,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active: VehicleRetarderCtrlActive2566834686,
     },
+    #[doc = "ISO 11992: Towed vehicle message, electronic brake system #2/1"]
     Ebs21 {
+        #[doc = "Difference between the wheel speed at the right side and and the left side of the main axle.\nUnit: km/h"]
         wheel_speed_diff_main_axle_raw_value: f64,
+        #[doc = "Actual torque of the retarder as negative percentage of maximum.\nUnit: %"]
         actual_retarder_perc_torque_raw_value: f64,
+        #[doc = "Actual speed of the vehicle (positive value for forward and backward speed) calculated as the average of the wheel speeds of one axle influenced by slip and filtered by a frequency range of 5 Hz to 20 Hz.\nUnit: km/"]
         wheel_based_vehicle_speed_raw_value: f64,
+        #[doc = "Signal indicating the trailer is requesting to be braked by the commercial vehicle by means of bleeding the pneumatic supply line."]
         supply_line_braking_request_raw_value: u8,
+        #[doc = "Signal which indicates that Vehicle Dynamic Control (VDC) is active/passive."]
         vdc_active_raw_value: u8,
+        #[doc = "Signal indicating the automatic towed vehicle braking is active/passive."]
         autom_towed_veh_break_active_raw_value: u8,
+        #[doc = "Signal indicating the service brake of the towed vehicle is active/passive, by observing the brake pressure."]
         vehicle_service_brake_active_raw_value: u8,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active_raw_value: u8,
+        #[doc = "Signal indicating the ABS is active/passive."]
         vehicle_abs_active_raw_value: u8,
+        #[doc = "Signal indicating the trailer is requesting to be braked by the commercial vehicle by means of bleeding the pneumatic supply line."]
         supply_line_braking_request: SupplyLineBrakingRequest2550398718,
+        #[doc = "Signal which indicates that Vehicle Dynamic Control (VDC) is active/passive."]
         vdc_active: VdcActive2550398718,
+        #[doc = "Signal indicating the automatic towed vehicle braking is active/passive."]
         autom_towed_veh_break_active: AutomTowedVehBreakActive2550398718,
+        #[doc = "Signal indicating the service brake of the towed vehicle is active/passive, by observing the brake pressure."]
         vehicle_service_brake_active: VehicleServiceBrakeActive2550398718,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active: VehicleRetarderCtrlActive2550398718,
+        #[doc = "Signal indicating the ABS is active/passive."]
         vehicle_abs_active: VehicleAbsActive2550398718,
     },
+    #[doc = "ISO 11992: Towed vehicle message, electronic brake system #2/2"]
     Ebs22 {
+        #[doc = "This parameter is the 100% reference value for all defined indicated retarder torque parameters.\nUnit: Nm"]
         reference_retarder_torque_raw_value: u16,
+        #[doc = "Sum of the static vertical loads of the vehicle axles.\nUnit: kg"]
         axle_load_sum_raw_value: f64,
+        #[doc = "Signal indicating the trailer is requesting to be braked by the commercial vehicle by means of bleeding the pneumatic supply line."]
         supply_line_braking_request_raw_value: u8,
+        #[doc = "The parameter indicates whether the loading ramp approach assistance is activated."]
         loading_ramp_approach_assist_raw_value: u8,
+        #[doc = "Signal indicating the vehicle spring brake is engaged."]
         spring_brake_engaged_raw_value: u8,
+        #[doc = "Signal indicating the vehicle is equipped with an electrical load proportional function."]
         electr_load_prop_func_raw_value: u8,
+        #[doc = "Signal indicating the vehicle has one or more axle(s) fitted with spring brakes."]
         spring_brake_installed_raw_value: u8,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type_raw_value: u8,
+        #[doc = "Signal which indicates the status of the supply of non-braking systems."]
         elec_supply_of_non_braking_sys_raw_value: u8,
+        #[doc = "Request from the towed vehicle to the commercial vehicle to activate the amber warning signal on the commercial vehicle."]
         amber_warning_signal_req_raw_value: u8,
+        #[doc = "Request from the towed vehicle to the commercial vehicle to activate the red warning signal on the commercial vehicle, which indicates certain specified failures within the braking equipment of the towed vehicles."]
         red_warning_signal_request_raw_value: u8,
+        #[doc = "Signal indicating the actual supply voltage is sufficient/insufficient for proper brake function (including over voltage)."]
         vehicle_electr_supply_suff_raw_value: u8,
+        #[doc = "Signal indicating the automatic towed vehicle braking is active/passive."]
         autom_towed_veh_break_active_raw_value: u8,
+        #[doc = "Signal indicating the service brake of the towed vehicle is active/passive, by observing the brake pressure."]
         vehicle_service_brake_active_raw_value: u8,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active_raw_value: u8,
+        #[doc = "Signal indicating the ABS is active/passive."]
         vehicle_abs_active_raw_value: u8,
+        #[doc = "Signal indicating the trailer is requesting to be braked by the commercial vehicle by means of bleeding the pneumatic supply line."]
         supply_line_braking_request: SupplyLineBrakingRequest2566833406,
+        #[doc = "The parameter indicates whether the loading ramp approach assistance is activated."]
         loading_ramp_approach_assist: LoadingRampApproachAssist2566833406,
+        #[doc = "Signal indicating the vehicle spring brake is engaged."]
         spring_brake_engaged: SpringBrakeEngaged2566833406,
+        #[doc = "Signal indicating the vehicle is equipped with an electrical load proportional function."]
         electr_load_prop_func: ElectrLoadPropFunc2566833406,
+        #[doc = "Signal indicating the vehicle has one or more axle(s) fitted with spring brakes."]
         spring_brake_installed: SpringBrakeInstalled2566833406,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type: VehicleType2566833406,
+        #[doc = "Signal which indicates the status of the supply of non-braking systems."]
         elec_supply_of_non_braking_sys: ElecSupplyOfNonBrakingSys2566833406,
+        #[doc = "Request from the towed vehicle to the commercial vehicle to activate the amber warning signal on the commercial vehicle."]
         amber_warning_signal_req: AmberWarningSignalReq2566833406,
+        #[doc = "Request from the towed vehicle to the commercial vehicle to activate the red warning signal on the commercial vehicle, which indicates certain specified failures within the braking equipment of the towed vehicles."]
         red_warning_signal_request: RedWarningSignalRequest2566833406,
+        #[doc = "Signal indicating the actual supply voltage is sufficient/insufficient for proper brake function (including over voltage)."]
         vehicle_electr_supply_suff: VehicleElectrSupplySuff2566833406,
+        #[doc = "Signal indicating the automatic towed vehicle braking is active/passive."]
         autom_towed_veh_break_active: AutomTowedVehBreakActive2566833406,
+        #[doc = "Signal indicating the service brake of the towed vehicle is active/passive, by observing the brake pressure."]
         vehicle_service_brake_active: VehicleServiceBrakeActive2566833406,
+        #[doc = "This signal indicates the active/passive state in all cases when the installed retarder is applied by the driver�s demand or by other systems (brakes)."]
         vehicle_retarder_ctrl_active: VehicleRetarderCtrlActive2566833406,
+        #[doc = "Signal indicating the ABS is active/passive."]
         vehicle_abs_active: VehicleAbsActive2566833406,
     },
+    #[doc = "ISO 11992: Towed vehicle message, electronic brake system #2/3"]
     Ebs23 {
+        #[doc = "Actual supply pressure of the reservoir of the braking system.\nUnit: kPa"]
         pneumatic_supply_pressure_raw_value: f64,
+        #[doc = "Actual brake temperature.\nUnit: �C"]
         brake_temperature_raw_value: f64,
+        #[doc = "Actual relative value of brake lining of a specific brake.\nUnit: %"]
         brake_lining_raw_value: f64,
+        #[doc = "Actual tyre pressure without corrections.\nUnit: kPa"]
         tyre_pressure_raw_value: f64,
+        #[doc = "Second part of identification number of the tyre or wheel (the number of axles)."]
         tyre_wheel_ident_temp2_raw_value: u8,
+        #[doc = "First part of identification number of the tyre or wheel (position on each axle)."]
         tyre_wheel_ident_temp1_raw_value: u8,
+        #[doc = "Second part of identification number of the tyre or wheel (the number of axles)."]
         tyre_wheel_ident_pressure2_raw_value: u8,
+        #[doc = "First part of identification number of the tyre or wheel (position on each axle)."]
         tyre_wheel_ident_pressure1_raw_value: u8,
+        #[doc = "Second part of identification number of the tyre or wheel (the number of axles)."]
         tyre_wheel_ident_lining2_raw_value: u8,
+        #[doc = "First part of identification number of the tyre or wheel (position on each axle)."]
         tyre_wheel_ident_lining1_raw_value: u8,
+        #[doc = "Signal indicating the actual supply pressure of the reservoir of the braking system is insufficient or sufficient."]
         vehicle_pneum_supply_suff_raw_value: u8,
+        #[doc = "Signal which indicates that the brake temperature is higher than a specific level."]
         brake_temperature_status_raw_value: u8,
+        #[doc = "Signal which indicates that the brake lining is sufficient/insufficient."]
         brake_lining_sufficient_raw_value: u8,
+        #[doc = "Signal which indicates that the tyre pressure is insufficient"]
         tyre_pressure_sufficient_raw_value: u8,
+        #[doc = "Second part of identification number of the tyre or wheel (the number of axles)."]
         tyre_wheel_ident_temp2: TyreWheelIdentTemp22365507326,
+        #[doc = "First part of identification number of the tyre or wheel (position on each axle)."]
         tyre_wheel_ident_temp1: TyreWheelIdentTemp12365507326,
+        #[doc = "Second part of identification number of the tyre or wheel (the number of axles)."]
         tyre_wheel_ident_pressure2: TyreWheelIdentPressure22365507326,
+        #[doc = "First part of identification number of the tyre or wheel (position on each axle)."]
         tyre_wheel_ident_pressure1: TyreWheelIdentPressure12365507326,
+        #[doc = "Second part of identification number of the tyre or wheel (the number of axles)."]
         tyre_wheel_ident_lining2: TyreWheelIdentLining22365507326,
+        #[doc = "First part of identification number of the tyre or wheel (position on each axle)."]
         tyre_wheel_ident_lining1: TyreWheelIdentLining12365507326,
+        #[doc = "Signal indicating the actual supply pressure of the reservoir of the braking system is insufficient or sufficient."]
         vehicle_pneum_supply_suff: VehiclePneumSupplySuff2365507326,
+        #[doc = "Signal which indicates that the brake temperature is higher than a specific level."]
         brake_temperature_status: BrakeTemperatureStatus2365507326,
+        #[doc = "Signal which indicates that the brake lining is sufficient/insufficient."]
         brake_lining_sufficient: BrakeLiningSufficient2365507326,
+        #[doc = "Signal which indicates that the tyre pressure is insufficient"]
         tyre_pressure_sufficient: TyrePressureSufficient2365507326,
     },
+    #[doc = "ISO 11992: Towing vehicle message, general purpose message #1/1\n\nGPM 11 replaces GFM 11 in ISO 11992:1998 part 3"]
     Gpm11 {
+        #[doc = "Command signal to switch on or off the obstacle detection device (ODD)."]
         odd_request_raw_value: u8,
+        #[doc = "Command signal to activate the anti-theft device."]
         anti_theft_device_req_raw_value: u8,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type_raw_value: u8,
+        #[doc = "Command signal to switch on or off the obstacle detection device (ODD)."]
         odd_request: OddRequest2565013246,
+        #[doc = "Command signal to activate the anti-theft device."]
         anti_theft_device_req: AntiTheftDeviceReq2565013246,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type: VehicleType2565013246,
     },
+    #[doc = "ISO 11992: Towing vehicle message, general purpose message #1/2"]
     Gpm12 {
+        #[doc = "Maximum vehicle velocity allowed.\nUnit: km/h"]
         max_vehicle_speed_limit_raw_value: u8,
+        #[doc = "The engine speed which cannot be exceeded.\nUnit: rpm"]
         engine_speed_upper_limit_raw_value: f64,
+        #[doc = "The minimum engine speed which the engine is allowed to reach.\nUnit: rpm"]
         engine_speed_lower_limit_raw_value: f64,
     },
+    #[doc = "ISO 11992: Towing vehicle message, general purpose message #1/3"]
     Gpm13 {
+        #[doc = "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque"]
         engine_torque_mode_raw_value: u8,
+        #[doc = "Read VehicleSpeed signal from can frame\nUnit: km/h"]
         vehicle_speed_raw_value: f64,
+        #[doc = "The ratio of actual engine percent torque to maximum indicated torque available at the current engine speed, clipped to zero torque during engine braking.\nUnit: %"]
         percent_load_at_current_speed_raw_value: u8,
+        #[doc = "Actual engine speed which is calculated over a minimum crankshaft angle of 720 degrees divided by\nthe number of cylinders.\nUnit: rpm"]
         engine_speed_raw_value: f64,
+        #[doc = "The calculated output torque of the engine.\nUnit: %"]
         actual_engine_perc_torque_raw_value: f64,
+        #[doc = "The torque output of the engine requested by the driver.\nUnit: %"]
         drivers_demand_engine_perc_torque_raw_value: f64,
+        #[doc = "Signal which indicates whether the engine is running."]
         engine_running_raw_value: u8,
+        #[doc = "Switch signal which indicates that engine control is allowed."]
         engine_control_allowed_raw_value: u8,
+        #[doc = "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque"]
         engine_torque_mode: EngineTorqueMode2365480958,
+        #[doc = "Signal which indicates whether the engine is running."]
         engine_running: EngineRunning2365480958,
+        #[doc = "Switch signal which indicates that engine control is allowed."]
         engine_control_allowed: EngineControlAllowed2365480958,
     },
+    #[doc = "ISO 11992: Towing vehicle message, general purpose message #1/4"]
     Gpm14 {
+        #[doc = "Signal which indicates the current state of the clutch independent power take off."]
         clutch_indptd_pto_feedback_raw_value: u8,
+        #[doc = "The ratio of actual accelerator pedal position to maximum pedal position.\nUnit: %"]
         accel_pedal_position_raw_value: f64,
+        #[doc = "Switch signal which indicates whether the accelerator pedal low idle switch is opened or closed."]
         accel_pedal_low_idle_switch_raw_value: u8,
+        #[doc = "Signal which indicates whether the starter is in use."]
         starter_active_raw_value: u8,
+        #[doc = "Temperature of the torque converter lubricant.\nUnit: �C"]
         torque_conv_oil_temp_raw_value: f64,
+        #[doc = "Signal which indicates that the torque converter oil temperature has reached its warning level."]
         torque_convt_oil_temp_warning_raw_value: u8,
+        #[doc = "Switch signal which indicates that PTO control is allowed."]
         pto_control_allowed_raw_value: u8,
+        #[doc = "Signal which indicates the current state of the second engine mounted power take off."]
         sec_engine_mtd_pto_feedback_raw_value: u8,
+        #[doc = "Signal which indicates the current state of the first engine mounted power take off."]
         first_engine_mtd_pto_feedback_raw_value: u8,
+        #[doc = "Signal which indicates the current state of the second clutch dependent power take off."]
         sec_clutch_dptd_pto_feedback_raw_value: u8,
+        #[doc = "Signal which indicates the current state of the first clutch dependent power take off."]
         first_clutch_dpdt_pto_feedback_raw_value: u8,
+        #[doc = "The gear currently engaged in the transmission or the last gear engaged while the transmission is in process of shifting to the new or selected gear."]
         current_gear_raw_value: f64,
+        #[doc = "Parameter which represents the ratio of input shaft speed to current engine speed (in percent).\nUnit: %"]
         percent_clutch_slip_raw_value: f64,
+        #[doc = "Signal which indicates the current state of the clutch independent power take off."]
         clutch_indptd_pto_feedback: ClutchIndptdPtoFeedback2566808062,
+        #[doc = "Switch signal which indicates whether the accelerator pedal low idle switch is opened or closed."]
         accel_pedal_low_idle_switch: AccelPedalLowIdleSwitch2566808062,
+        #[doc = "Signal which indicates whether the starter is in use."]
         starter_active: StarterActive2566808062,
+        #[doc = "Signal which indicates that the torque converter oil temperature has reached its warning level."]
         torque_convt_oil_temp_warning: TorqueConvtOilTempWarning2566808062,
+        #[doc = "Switch signal which indicates that PTO control is allowed."]
         pto_control_allowed: PtoControlAllowed2566808062,
+        #[doc = "Signal which indicates the current state of the second engine mounted power take off."]
         sec_engine_mtd_pto_feedback: SecEngineMtdPtoFeedback2566808062,
+        #[doc = "Signal which indicates the current state of the first engine mounted power take off."]
         first_engine_mtd_pto_feedback: FirstEngineMtdPtoFeedback2566808062,
+        #[doc = "Signal which indicates the current state of the second clutch dependent power take off."]
         sec_clutch_dptd_pto_feedback: SecClutchDptdPtoFeedback2566808062,
+        #[doc = "Signal which indicates the current state of the first clutch dependent power take off."]
         first_clutch_dpdt_pto_feedback: FirstClutchDpdtPtoFeedback2566808062,
     },
+    #[doc = "ISO 11992: Towing vehicle message, general purpose message #1/5"]
     Gpm15 {
+        #[doc = "The 100 % reference value for all defined indicated engine torque parameters.\nUnit: Nm"]
         reference_engine_torque_raw_value: u16,
+        #[doc = "This signal indicates the decrease of the fuel level to a certain minimum."]
         fuel_level_warning_raw_value: u8,
+        #[doc = "Signal which indicates that the engine oil pressure has reached its warning level."]
         engine_oil_pressure_warning_raw_value: u8,
+        #[doc = "Signal which indicates that the engine coolant temperature has reached its warning level."]
         engine_coolant_temp_warning_raw_value: u8,
+        #[doc = "Gauge pressure of the oil in the engine lubrication system as provided by the oil pump.\nUnit: kPa"]
         engine_oil_pressure_raw_value: f64,
+        #[doc = "Read EngineCoolantTemperature signal from can frame\nUnit: �C"]
         engine_coolant_temperature_raw_value: f64,
+        #[doc = "Temperature of the engine lubricant.\nUnit: �C"]
         engine_oil_temperature_raw_value: f64,
+        #[doc = "This signal indicates the decrease of the fuel level to a certain minimum."]
         fuel_level_warning: FuelLevelWarning2566808574,
+        #[doc = "Signal which indicates that the engine oil pressure has reached its warning level."]
         engine_oil_pressure_warning: EngineOilPressureWarning2566808574,
+        #[doc = "Signal which indicates that the engine coolant temperature has reached its warning level."]
         engine_coolant_temp_warning: EngineCoolantTempWarning2566808574,
     },
+    #[doc = "ISO 11992: Towing vehicle message, general purpose message #1/6"]
     Gpm16 {
+        #[doc = "Temperature of air surrounding vehicle.\nUnit: �C"]
         ambient_air_temperature_raw_value: f64,
     },
+    #[doc = "ISO 11992: Towed vehicle message, general purpose message #2/1\n\nGPM 21 replaces GFM 21 in ISO 11992:1998 part 3"]
     Gpm21 {
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type_raw_value: u8,
+        #[doc = "Information to identify a dolly axle within the road train."]
         vehicle_type: VehicleType2564947710,
     },
+    #[doc = "ISO 11992: Towed vehicle message, general purpose message #2/2\n\nGPM22 replaces GFM 24 in ISO 11992:1998 part 3"]
     Gpm22 {
+        #[doc = "The actual pressure in a body on the towed vehicle.\nUnit: bar"]
         body_pressure_raw_value: f64,
+        #[doc = "The actual fluid level in a body on the towed vehicle.\nUnit: l"]
         body_fluid_level_raw_value: f64,
+        #[doc = "The actual temperature in a thermal body on the towed vehicle.\nUnit: �C"]
         thermal_body_temperature_raw_value: f64,
+        #[doc = "The actual distance between the back of the towed vehicle and any obstacle.\nUnit: cm"]
         rear_obstacle_distance_raw_value: f64,
+        #[doc = "Signal which indicates that the anti-theft device is switched on or off."]
         anti_theft_device_status_raw_value: u8,
+        #[doc = "Signal which indicates that an obstacle detection device (ODD) is active/inactive."]
         odd_status_raw_value: u8,
+        #[doc = "Signal which indicates that the anti-theft device is switched on or off."]
         anti_theft_device_status: AntiTheftDeviceStatus2566834430,
+        #[doc = "Signal which indicates that an obstacle detection device (ODD) is active/inactive."]
         odd_status: OddStatus2566834430,
     },
+    #[doc = "ISO 11992: Towed vehicle message, general purpose message #2/3"]
     Gpm23 {
+        #[doc = "The requested engine speed which is not to be exceeded.\nUnit: rpm"]
         req_engine_speed_upper_lim_raw_value: f64,
+        #[doc = "The requested minimum engine speed which the engine is to allow.\nUnit: rpm"]
         req_engine_speed_lower_lim_raw_value: f64,
+        #[doc = "The requested engine torque that the engine is not allowed to exceed, indicated as a ratio of the reference engine torque.\nUnit: %"]
         req_engine_torque_limit_raw_value: f64,
+        #[doc = "The requested vehicle speed which the vehicle is not allowed to exceed.\nUnit: km/h"]
         req_engine_speed_limit_raw_value: u8,
+        #[doc = "This is the engine speed which the engine is expected to operate at.\nUnit: rpm"]
         req_engine_speed_raw_value: f64,
     },
+    #[doc = "ISO 11992: Towed vehicle message, general purpose message #2/4"]
     Gpm24 {
+        #[doc = "Signal which indicates the state of the second engine mounted power take off switch."]
         sec_engine_mtd_pto_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the second clutch dependent power take off switch."]
         sec_clutch_dpdt_pto_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the first clutch dependent power take off switch."]
         first_clutch_dpdt_pto_switch_raw_value: u8,
+        #[doc = "Signal which indicates that the operating panel is active."]
         operating_panel_active_raw_value: u8,
+        #[doc = "Signal which indicates the state of the refuse packer step switch."]
         refuse_packer_step_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the engine stop switch."]
         engine_stop_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the engine start switch."]
         engine_start_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the starter lockout switch."]
         starter_lockout_switch_raw_value: u8,
+        #[doc = "Command signal to influence the clutch.\nUnit: %"]
         rqsted_percent_clutch_slip_raw_value: f64,
+        #[doc = "Signal which indicates the state of the first engine mounted power take off switch."]
         first_engine_mtd_pto_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the clutch independent power take off switch."]
         clutch_indpdt_pto_switch_raw_value: u8,
+        #[doc = "Signal which indicates the state of the second engine mounted power take off switch."]
         sec_engine_mtd_pto_switch: SecEngineMtdPtoSwitch2566808318,
+        #[doc = "Signal which indicates the state of the second clutch dependent power take off switch."]
         sec_clutch_dpdt_pto_switch: SecClutchDpdtPtoSwitch2566808318,
+        #[doc = "Signal which indicates the state of the first clutch dependent power take off switch."]
         first_clutch_dpdt_pto_switch: FirstClutchDpdtPtoSwitch2566808318,
+        #[doc = "Signal which indicates that the operating panel is active."]
         operating_panel_active: OperatingPanelActive2566808318,
+        #[doc = "Signal which indicates the state of the refuse packer step switch."]
         refuse_packer_step_switch: RefusePackerStepSwitch2566808318,
+        #[doc = "Signal which indicates the state of the engine stop switch."]
         engine_stop_switch: EngineStopSwitch2566808318,
+        #[doc = "Signal which indicates the state of the engine start switch."]
         engine_start_switch: EngineStartSwitch2566808318,
+        #[doc = "Signal which indicates the state of the starter lockout switch."]
         starter_lockout_switch: StarterLockoutSwitch2566808318,
+        #[doc = "Signal which indicates the state of the first engine mounted power take off switch."]
         first_engine_mtd_pto_switch: FirstEngineMtdPtoSwitch2566808318,
+        #[doc = "Signal which indicates the state of the clutch independent power take off switch."]
         clutch_indpdt_pto_switch: ClutchIndpdtPtoSwitch2566808318,
     },
+    #[doc = "ISO 11992: Towed vehicle message, general purpose message #2/5"]
     Gpm25 {
+        #[doc = "This signal indicates the state of the trailer left-hand side marker light(s)."]
         trailer_left_side_marker_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand reversing light(s)."]
         trailer_left_reversing_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand rear width indicator light(s)."]
         trailer_left_rear_wid_ind_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand rear registration-plate light(s)."]
         trailer_left_rear_reg_plt_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand rear light(s)."]
         trailer_left_rear_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand rear fog light(s)."]
         trailer_left_rear_fog_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand direction indicator light(s)."]
         trailer_left_dir_ind_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand corner marker light(s)."]
         trailer_left_crn_marker_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer interior light(s)."]
         trailer_interior_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer work lamp(s)."]
         trailer_work_lamp_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer rotating identification light(s)."]
         trailer_rotating_ident_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand stop light(s)."]
         trailer_right_stop_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand side marker light(s)."]
         trailer_right_side_mrk_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand reversing light(s)."]
         trailer_right_reversing_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand rear width indicator light(s)."]
         trail_right_rear_wid_ind_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand rear registration-plate light(s)."]
         trailer_right_rear_reg_plt_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand rear light(s)."]
         trailer_right_rear_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand rear fog light(s)."]
         trailer_right_rear_fog_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand direction indicator light(s)."]
         trailer_right_dir_ind_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer right-hand corner marker light(s)."]
         trailer_right_crn_marker_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer rear warning light(s)."]
         trailer_rear_warning_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand stop light(s)."]
         trailer_left_stop_light_raw_value: u8,
+        #[doc = "This signal indicates the state of the trailer left-hand side marker light(s)."]
         trailer_left_side_marker_light: TrailerLeftSideMarkerLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand reversing light(s)."]
         trailer_left_reversing_light: TrailerLeftReversingLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand rear width indicator light(s)."]
         trailer_left_rear_wid_ind_light: TrailerLeftRearWidIndLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand rear registration-plate light(s)."]
         trailer_left_rear_reg_plt_light: TrailerLeftRearRegPltLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand rear light(s)."]
         trailer_left_rear_light: TrailerLeftRearLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand rear fog light(s)."]
         trailer_left_rear_fog_light: TrailerLeftRearFogLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand direction indicator light(s)."]
         trailer_left_dir_ind_light: TrailerLeftDirIndLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand corner marker light(s)."]
         trailer_left_crn_marker_light: TrailerLeftCrnMarkerLight2566808830,
+        #[doc = "This signal indicates the state of the trailer interior light(s)."]
         trailer_interior_light: TrailerInteriorLight2566808830,
+        #[doc = "This signal indicates the state of the trailer work lamp(s)."]
         trailer_work_lamp: TrailerWorkLamp2566808830,
+        #[doc = "This signal indicates the state of the trailer rotating identification light(s)."]
         trailer_rotating_ident_light: TrailerRotatingIdentLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand stop light(s)."]
         trailer_right_stop_light: TrailerRightStopLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand side marker light(s)."]
         trailer_right_side_mrk_light: TrailerRightSideMrkLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand reversing light(s)."]
         trailer_right_reversing_light: TrailerRightReversingLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand rear width indicator light(s)."]
         trail_right_rear_wid_ind_light: TrailRightRearWidIndLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand rear registration-plate light(s)."]
         trailer_right_rear_reg_plt_light: TrailerRightRearRegPltLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand rear light(s)."]
         trailer_right_rear_light: TrailerRightRearLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand rear fog light(s)."]
         trailer_right_rear_fog_light: TrailerRightRearFogLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand direction indicator light(s)."]
         trailer_right_dir_ind_light: TrailerRightDirIndLight2566808830,
+        #[doc = "This signal indicates the state of the trailer right-hand corner marker light(s)."]
         trailer_right_crn_marker_light: TrailerRightCrnMarkerLight2566808830,
+        #[doc = "This signal indicates the state of the trailer rear warning light(s)."]
         trailer_rear_warning_light: TrailerRearWarningLight2566808830,
+        #[doc = "This signal indicates the state of the trailer left-hand stop light(s)."]
         trailer_left_stop_light: TrailerLeftStopLight2566808830,
     },
+    #[doc = "Reserved for ISO 15765"]
     Iso15765Funct {
+        #[doc = "Read SN signal from can frame"]
         sn_raw_value: Option<u8>,
+        #[doc = "Read SeparationTime signal from can frame\nUnit: ms"]
         separation_time_raw_value: Option<u8>,
+        #[doc = "Read BlockSize signal from can frame"]
         block_size_raw_value: Option<u8>,
+        #[doc = "Read FlowStatus signal from can frame"]
         flow_status_raw_value: Option<u8>,
+        #[doc = "Read FirstFrameDataLength signal from can frame\nUnit: Byte"]
         first_frame_data_length_raw_value: Option<u16>,
+        #[doc = "Read SingleFrameDataLength signal from can frame\nUnit: Byte"]
         single_frame_data_length_raw_value: Option<u8>,
+        #[doc = "Part of Network Protocol Control Information (N_PCI) of a ISO 15765 message."]
         protocol_ctrl_information_raw_value: u8,
+        #[doc = "Read FlowStatus signal from can frame"]
         flow_status: FlowStatus2564554494,
+        #[doc = "Part of Network Protocol Control Information (N_PCI) of a ISO 15765 message."]
         protocol_ctrl_information: ProtocolCtrlInformation2564554494,
     },
+    #[doc = "Reserved for ISO 15765"]
     Iso15765Phys {
+        #[doc = "Read SN signal from can frame"]
         sn_raw_value: Option<u8>,
+        #[doc = "Read SeparationTime signal from can frame\nUnit: ms"]
         separation_time_raw_value: Option<u8>,
+        #[doc = "Read BlockSize signal from can frame"]
         block_size_raw_value: Option<u8>,
+        #[doc = "Read FlowStatus signal from can frame"]
         flow_status_raw_value: Option<u8>,
+        #[doc = "Read FirstFrameDataLength signal from can frame\nUnit: Byte"]
         first_frame_data_length_raw_value: Option<u16>,
+        #[doc = "Read SingleFrameDataLength signal from can frame\nUnit: Byte"]
         single_frame_data_length_raw_value: Option<u8>,
+        #[doc = "Part of Network Protocol Control Information (N_PCI) of a ISO 15765 message."]
         protocol_ctrl_information_raw_value: u8,
+        #[doc = "Read FlowStatus signal from can frame"]
         flow_status: FlowStatus2564488958,
+        #[doc = "Part of Network Protocol Control Information (N_PCI) of a ISO 15765 message."]
         protocol_ctrl_information: ProtocolCtrlInformation2564488958,
     },
+    #[doc = "Used to access network interconnection ECU parametrics and database"]
     Network {
+        #[doc = "Read ControlByte signal from can frame"]
         control_byte_raw_value: u8,
+        #[doc = "Filter mode for Network PG"]
         filter_mode_raw_value: u8,
+        #[doc = "Destination port for network PG"]
         to_port_raw_value: u8,
+        #[doc = "Source port for Network PG"]
         from_port_raw_value: u8,
+        #[doc = "Read ControlByte signal from can frame"]
         control_byte: ControlByte2565734142,
+        #[doc = "Filter mode for Network PG"]
         filter_mode: FilterMode2565734142,
     },
+    #[doc = "ISO 11992: Towing vehicle message, running gear equipment #1/1\n\nRGE11 replaces GFM 12 in ISO 11992:1998 part 3"]
     Rge11 {
+        #[doc = "The pneumatic pressure in the circuit or reservoir for the parking brake and the trailer supply.\nUnit: kPa"]
         parking_and_trailer_air_press_raw_value: f64,
+        #[doc = "Actual static vertical load on driven axle of the commercial vehicle. In case of more than one driven axle the value of the axle with the highest vertical load is transmitted.\nUnit: kg"]
         driven_axle_load_raw_value: f64,
+        #[doc = "The pneumatic pressure in the auxiliary circuit.\nUnit: kPa"]
         aux_equip_supply_pressure_raw_value: f64,
+        #[doc = "Command signal to stop immediately any change of the actual body height level."]
         stop_level_change_req_raw_value: u8,
+        #[doc = "Command signal to store the actual body height level as new programmed and memorised ramp levels 1 or 2 in the ECU"]
         ramp_level_storage_req_raw_value: u8,
+        #[doc = "Command signal to enable or disable the automatic level control."]
         level_control_req_raw_value: u8,
+        #[doc = "Command signal to control the body height to a level programmed and memorised in the ECU."]
         ramp_level_req_raw_value: u8,
+        #[doc = "Command signal to lock the steering axle."]
         steering_axle_locking_req_raw_value: u8,
+        #[doc = "Command signal to control the lift axle position / tag axle load condition."]
         lift_axle2_position_req_raw_value: u8,
+        #[doc = "Command signal to control the lift axle position / tag axle load condition."]
         lift_axle1_position_req_raw_value: u8,
+        #[doc = "Command signal to control the lift axle position / tag axle load condition to transfer more load on the driven axle of the commercial vehicle."]
         traction_help_req_raw_value: u8,
+        #[doc = "Command signal to control the body height [up (lifting)/down (lowering)] for the rear axle."]
         level_change_req_rear_axle_raw_value: u8,
+        #[doc = "Command signal to control the body height [up (lifting)/down (lowering)] for the front axle."]
         level_change_req_front_axle_raw_value: u8,
+        #[doc = "Command signal to activate a normal ride body height. The normal levels 1 and 2 are trailer specific body heights."]
         ride_height_request_raw_value: u8,
+        #[doc = "Command signal to stop immediately any change of the actual body height level."]
         stop_level_change_req: StopLevelChangeReq2565144318,
+        #[doc = "Command signal to store the actual body height level as new programmed and memorised ramp levels 1 or 2 in the ECU"]
         ramp_level_storage_req: RampLevelStorageReq2565144318,
+        #[doc = "Command signal to enable or disable the automatic level control."]
         level_control_req: LevelControlReq2565144318,
+        #[doc = "Command signal to control the body height to a level programmed and memorised in the ECU."]
         ramp_level_req: RampLevelReq2565144318,
+        #[doc = "Command signal to lock the steering axle."]
         steering_axle_locking_req: SteeringAxleLockingReq2565144318,
+        #[doc = "Command signal to control the lift axle position / tag axle load condition."]
         lift_axle2_position_req: LiftAxle2PositionReq2565144318,
+        #[doc = "Command signal to control the lift axle position / tag axle load condition."]
         lift_axle1_position_req: LiftAxle1PositionReq2565144318,
+        #[doc = "Command signal to control the lift axle position / tag axle load condition to transfer more load on the driven axle of the commercial vehicle."]
         traction_help_req: TractionHelpReq2565144318,
+        #[doc = "Command signal to control the body height [up (lifting)/down (lowering)] for the rear axle."]
         level_change_req_rear_axle: LevelChangeReqRearAxle2565144318,
+        #[doc = "Command signal to control the body height [up (lifting)/down (lowering)] for the front axle."]
         level_change_req_front_axle: LevelChangeReqFrontAxle2565144318,
+        #[doc = "Command signal to activate a normal ride body height. The normal levels 1 and 2 are trailer specific body heights."]
         ride_height_request: RideHeightRequest2565144318,
     },
+    #[doc = "ISO 11992: Towed vehicle message, running gear equipment #2/1\n\nRGE21 replaces GFM 22 in ISO 11992:1998 part 3"]
     Rge21 {
+        #[doc = "Signal which indicates that the automatic level control is enabled or disabled."]
         level_control_raw_value: u8,
+        #[doc = "Actual nominal vehicle body height.\nUnit: mm"]
         nominal_veh_body_level_rear_axle_raw_value: u16,
+        #[doc = "Actual nominal vehicle body height.\nUnit: mm"]
         nominal_veh_body_level_front_axle_raw_value: u16,
+        #[doc = "Signal which indicates the level of the body height as an anser to 'ramp level request'."]
         ramp_level_raw_value: u8,
+        #[doc = "Signal which indicates the normal levels of the vehicle independently of a specific request."]
         normal_level_raw_value: u8,
+        #[doc = "Signal which indicates the stop of any level change due to a 'stop request'."]
         stop_level_change_acknowledge_raw_value: u8,
+        #[doc = "Signal which indicates the level change of the body height at the rear axle due to any external requests."]
         level_change_rear_axle_raw_value: u8,
+        #[doc = "Signal which indicates the level change of the body height at the front axle due to any external requests."]
         level_change_front_axle_raw_value: u8,
+        #[doc = "Signal which indicates the storage of a new ramp level in the ECU."]
         ramp_level_storage_raw_value: u8,
+        #[doc = "Signal which indicates the actual steering axle locking status."]
         steering_axle_locking_raw_value: u8,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #2."]
         lift_axle2_pos_raw_value: u8,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #1."]
         lift_axle1_pos_raw_value: u8,
+        #[doc = "Signal which indicates the ramp level positions of the vehicle independently of a specific request."]
         ramp_level_position_raw_value: u8,
+        #[doc = "Signal which indicates that a load transfer is active."]
         traction_help_raw_value: u8,
+        #[doc = "Signal which indicates the body height position of the vehicle as an answer to 'ride height request'."]
         level_ctrl_sys_ride_height_level_raw_value: u8,
+        #[doc = "Signal which indicates that the automatic level control is enabled or disabled."]
         level_control: LevelControl2565209854,
+        #[doc = "Signal which indicates the level of the body height as an anser to 'ramp level request'."]
         ramp_level: RampLevel2565209854,
+        #[doc = "Signal which indicates the normal levels of the vehicle independently of a specific request."]
         normal_level: NormalLevel2565209854,
+        #[doc = "Signal which indicates the stop of any level change due to a 'stop request'."]
         stop_level_change_acknowledge: StopLevelChangeAcknowledge2565209854,
+        #[doc = "Signal which indicates the level change of the body height at the rear axle due to any external requests."]
         level_change_rear_axle: LevelChangeRearAxle2565209854,
+        #[doc = "Signal which indicates the level change of the body height at the front axle due to any external requests."]
         level_change_front_axle: LevelChangeFrontAxle2565209854,
+        #[doc = "Signal which indicates the storage of a new ramp level in the ECU."]
         ramp_level_storage: RampLevelStorage2565209854,
+        #[doc = "Signal which indicates the actual steering axle locking status."]
         steering_axle_locking: SteeringAxleLocking2565209854,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #2."]
         lift_axle2_pos: LiftAxle2Pos2565209854,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #1."]
         lift_axle1_pos: LiftAxle1Pos2565209854,
+        #[doc = "Signal which indicates the ramp level positions of the vehicle independently of a specific request."]
         ramp_level_position: RampLevelPosition2565209854,
+        #[doc = "Signal which indicates that a load transfer is active."]
         traction_help: TractionHelp2565209854,
+        #[doc = "Signal which indicates the body height position of the vehicle as an answer to 'ride height request'."]
         level_ctrl_sys_ride_height_level: LevelCtrlSysRideHeightLevel2565209854,
     },
+    #[doc = "ISO 11992: Towed vehicle message, running gear equipment #2/2"]
     Rge22 {
+        #[doc = "Actual relative vehicle body height.\nUnit: mm"]
         rel_veh_body_level_rear_axle_raw_value: u16,
+        #[doc = "Actual relative vehicle body height.\nUnit: mm"]
         rel_veh_body_level_front_axle_raw_value: f64,
     },
+    #[doc = "ISO 11992: Towed vehicle message, running gear equipment #2/3"]
     Rge23 {
+        #[doc = "Signal indicating the pressure level of the tyre."]
         tyre_press_threshold_detect_raw_value: u8,
+        #[doc = "Signal indicating the power supply of the tyre module is sufficient to achieve the specified performance of the module."]
         tyre_module_power_supply_raw_value: u8,
+        #[doc = "The temperature measured by the tyre module.\nUnit: �C"]
         tyre_temperature_raw_value: f64,
+        #[doc = "The pressure loss of a tyre.\nUnit: Pa/s"]
         air_leakage_detection_raw_value: f64,
+        #[doc = "First part of the identification number of the tyre or whee (number of axles)."]
         tyre_wheel_identification2_raw_value: u8,
+        #[doc = "First part of the identification number of the tyre or whee (position on each axle)."]
         tyre_wheel_identification1_raw_value: u8,
+        #[doc = "Signal indicating the pressure level of the tyre."]
         tyre_press_threshold_detect: TyrePressThresholdDetect2566807294,
+        #[doc = "Signal indicating the power supply of the tyre module is sufficient to achieve the specified performance of the module."]
         tyre_module_power_supply: TyreModulePowerSupply2566807294,
+        #[doc = "First part of the identification number of the tyre or whee (number of axles)."]
         tyre_wheel_identification2: TyreWheelIdentification22566807294,
+        #[doc = "First part of the identification number of the tyre or whee (position on each axle)."]
         tyre_wheel_identification1: TyreWheelIdentification12566807294,
     },
+    #[doc = "Diagnostic readiness 3"]
     Dm26 {
+        #[doc = "Read MisfireMonitoringComplete signal from can frame"]
         misfire_monitoring_complete_raw_value: bool,
+        #[doc = "Read MisfireMonitoringEnabled signal from can frame"]
         misfire_monitoring_enabled_raw_value: bool,
+        #[doc = "Read FuelSystemMonitoringEnabled signal from can frame"]
         fuel_system_monitoring_enabled_raw_value: bool,
+        #[doc = "Read ComprehensiveComptMonComplete signal from can frame"]
         comprehensive_compt_mon_complete_raw_value: bool,
+        #[doc = "Read ComprehensiveCompMonEnabled signal from can frame"]
         comprehensive_comp_mon_enabled_raw_value: bool,
+        #[doc = "Read SecondAirSystemMonComplete signal from can frame"]
         second_air_system_mon_complete_raw_value: bool,
+        #[doc = "Read SecondAirSystemMonEnabled signal from can frame"]
         second_air_system_mon_enabled_raw_value: bool,
+        #[doc = "Read OxygenSensorMonComplete signal from can frame"]
         oxygen_sensor_mon_complete_raw_value: bool,
+        #[doc = "Read OxygenSensorMonEnabled signal from can frame"]
         oxygen_sensor_mon_enabled_raw_value: bool,
+        #[doc = "Read OxygenSensorHeaterMonComplete signal from can frame"]
         oxygen_sensor_heater_mon_complete_raw_value: bool,
+        #[doc = "Read OxygenSensorHeaterMonEnabled signal from can frame"]
         oxygen_sensor_heater_mon_enabled_raw_value: bool,
+        #[doc = "Read HeatedCatalystMonComplete signal from can frame"]
         heated_catalyst_mon_complete_raw_value: bool,
+        #[doc = "Read HeatedCatalystMonEnabled signal from can frame"]
         heated_catalyst_mon_enabled_raw_value: bool,
+        #[doc = "Read EvaporativeSystemMonComplete signal from can frame"]
         evaporative_system_mon_complete_raw_value: bool,
+        #[doc = "Read EvaporativeSystemMonEnabled signal from can frame"]
         evaporative_system_mon_enabled_raw_value: bool,
+        #[doc = "Read EGRSystemMonitoringComplete signal from can frame"]
         egr_system_monitoring_complete_raw_value: bool,
+        #[doc = "Read EGRSystemMonitoringEnabled signal from can frame"]
         egr_system_monitoring_enabled_raw_value: bool,
+        #[doc = "Read ColdStartAidSystemMonComplete signal from can frame"]
         cold_start_aid_system_mon_complete_raw_value: bool,
+        #[doc = "Read ColdStartAidSystemMonEnabled signal from can frame"]
         cold_start_aid_system_mon_enabled_raw_value: bool,
+        #[doc = "Read CatalystMonComplete signal from can frame"]
         catalyst_mon_complete_raw_value: bool,
+        #[doc = "Read CatalystMonEnabled signal from can frame"]
         catalyst_mon_enabled_raw_value: bool,
+        #[doc = "Read ACSystemRefrigerantMonComplete signal from can frame"]
         ac_system_refrigerant_mon_complete_raw_value: bool,
+        #[doc = "Read ACSystemRefrigerantMonEnabled signal from can frame"]
         ac_system_refrigerant_mon_enabled_raw_value: bool,
+        #[doc = "Read FuelSystemMonitoringComplete signal from can frame"]
         fuel_system_monitoring_complete_raw_value: bool,
+        #[doc = "Read NumOfWarmUpsSinceDTCsCleared signal from can frame"]
         num_of_warm_ups_since_dt_cs_cleared_raw_value: u8,
+        #[doc = "Read TimeSinceEngineStart signal from can frame\nUnit: seconds"]
         time_since_engine_start_raw_value: u16,
+        #[doc = "Read MisfireMonitoringComplete signal from can frame"]
         misfire_monitoring_complete: MisfireMonitoringComplete2566764798,
+        #[doc = "Read MisfireMonitoringEnabled signal from can frame"]
         misfire_monitoring_enabled: MisfireMonitoringEnabled2566764798,
+        #[doc = "Read FuelSystemMonitoringEnabled signal from can frame"]
         fuel_system_monitoring_enabled: FuelSystemMonitoringEnabled2566764798,
+        #[doc = "Read ComprehensiveComptMonComplete signal from can frame"]
         comprehensive_compt_mon_complete: ComprehensiveComptMonComplete2566764798,
+        #[doc = "Read ComprehensiveCompMonEnabled signal from can frame"]
         comprehensive_comp_mon_enabled: ComprehensiveCompMonEnabled2566764798,
+        #[doc = "Read SecondAirSystemMonComplete signal from can frame"]
         second_air_system_mon_complete: SecondAirSystemMonComplete2566764798,
+        #[doc = "Read SecondAirSystemMonEnabled signal from can frame"]
         second_air_system_mon_enabled: SecondAirSystemMonEnabled2566764798,
+        #[doc = "Read OxygenSensorMonComplete signal from can frame"]
         oxygen_sensor_mon_complete: OxygenSensorMonComplete2566764798,
+        #[doc = "Read OxygenSensorMonEnabled signal from can frame"]
         oxygen_sensor_mon_enabled: OxygenSensorMonEnabled2566764798,
+        #[doc = "Read OxygenSensorHeaterMonComplete signal from can frame"]
         oxygen_sensor_heater_mon_complete: OxygenSensorHeaterMonComplete2566764798,
+        #[doc = "Read OxygenSensorHeaterMonEnabled signal from can frame"]
         oxygen_sensor_heater_mon_enabled: OxygenSensorHeaterMonEnabled2566764798,
+        #[doc = "Read HeatedCatalystMonComplete signal from can frame"]
         heated_catalyst_mon_complete: HeatedCatalystMonComplete2566764798,
+        #[doc = "Read HeatedCatalystMonEnabled signal from can frame"]
         heated_catalyst_mon_enabled: HeatedCatalystMonEnabled2566764798,
+        #[doc = "Read EvaporativeSystemMonComplete signal from can frame"]
         evaporative_system_mon_complete: EvaporativeSystemMonComplete2566764798,
+        #[doc = "Read EvaporativeSystemMonEnabled signal from can frame"]
         evaporative_system_mon_enabled: EvaporativeSystemMonEnabled2566764798,
+        #[doc = "Read EGRSystemMonitoringComplete signal from can frame"]
         egr_system_monitoring_complete: EgrSystemMonitoringComplete2566764798,
+        #[doc = "Read EGRSystemMonitoringEnabled signal from can frame"]
         egr_system_monitoring_enabled: EgrSystemMonitoringEnabled2566764798,
+        #[doc = "Read ColdStartAidSystemMonComplete signal from can frame"]
         cold_start_aid_system_mon_complete: ColdStartAidSystemMonComplete2566764798,
+        #[doc = "Read ColdStartAidSystemMonEnabled signal from can frame"]
         cold_start_aid_system_mon_enabled: ColdStartAidSystemMonEnabled2566764798,
+        #[doc = "Read CatalystMonComplete signal from can frame"]
         catalyst_mon_complete: CatalystMonComplete2566764798,
+        #[doc = "Read CatalystMonEnabled signal from can frame"]
         catalyst_mon_enabled: CatalystMonEnabled2566764798,
+        #[doc = "Read ACSystemRefrigerantMonComplete signal from can frame"]
         ac_system_refrigerant_mon_complete: AcSystemRefrigerantMonComplete2566764798,
+        #[doc = "Read ACSystemRefrigerantMonEnabled signal from can frame"]
         ac_system_refrigerant_mon_enabled: AcSystemRefrigerantMonEnabled2566764798,
+        #[doc = "Read FuelSystemMonitoringComplete signal from can frame"]
         fuel_system_monitoring_complete: FuelSystemMonitoringComplete2566764798,
     },
+    #[doc = "Data security"]
     Dm18 {
+        #[doc = "Read SecurityEntityLengthHigh signal from can frame\nUnit: Byte"]
         security_entity_length_high_raw_value: u8,
+        #[doc = "Read SecurityEntityType signal from can frame"]
         security_entity_type_raw_value: u8,
+        #[doc = "Read SecurityEntityLength signal from can frame\nUnit: Byte"]
         security_entity_length_raw_value: u8,
+        #[doc = "Read SecurityEntityType signal from can frame"]
         security_entity_type: SecurityEntityType2564095742,
     },
+    #[doc = "External Brake Request"]
     Xbr {
+        #[doc = "Read XBRMessageChecksum signal from can frame"]
         xbr_message_checksum_raw_value: u8,
+        #[doc = "Read XBRMessageCounter signal from can frame"]
         xbr_message_counter_raw_value: u8,
+        #[doc = "Read XBRCtrlMode signal from can frame"]
         xbr_ctrl_mode_raw_value: u8,
+        #[doc = "The XBR Priority is used as an input to the brake system to manage the priority of overlapping external and internal requests."]
         xbr_priority_raw_value: u8,
+        #[doc = "Read XBREBIMode signal from can frame"]
         xbrebi_mode_raw_value: u8,
+        #[doc = "Parameter provided to the brake system from external sources.\nUnit: m/s�"]
         extl_acceleration_demand_raw_value: f64,
+        #[doc = "Read XBRCtrlMode signal from can frame"]
         xbr_ctrl_mode: XbrCtrlMode2349137662,
+        #[doc = "The XBR Priority is used as an input to the brake system to manage the priority of overlapping external and internal requests."]
         xbr_priority: XbrPriority2349137662,
+        #[doc = "Read XBREBIMode signal from can frame"]
         xbrebi_mode: XbrebiMode2349137662,
     },
+    #[doc = "Water in Fuel Indicator"]
     Wfi {
+        #[doc = "Signal which indicates the presence of water in the fuel."]
         water_in_fuel_indicator_raw_value: u8,
+        #[doc = "Signal which indicates the presence of water in the fuel."]
         water_in_fuel_indicator: WaterInFuelIndicator2566848510,
     },
+    #[doc = "Vehicle Weight"]
     Vw {
+        #[doc = "The mass of freight carried.\nUnit: kg"]
         cargo_weight_raw_value: f64,
+        #[doc = "Total mass of freight-carrying vehicle designed to be pulled by truck, including the weight of the contents.\nUnit: kg"]
         trailer_weight_raw_value: f64,
+        #[doc = "Total mass imposed by the tires on the road surface at the specified axle.\nUnit: kg"]
         axle_weight_raw_value: f64,
+        #[doc = "To identify to which of several similar devices (such as tires or fuel tanks) the information applies."]
         axle_location_raw_value: u8,
     },
+    #[doc = "Vehicle Electrical Power 3"]
     Vep3 {
+        #[doc = "Net flow of electrical current into/out-of the battery or batteries.\nUnit: A"]
         net_battery_current_hi_res_raw_value: f64,
+        #[doc = "This parameter indicates the amount of electrical current output from the alternator of the main vehicle.\nUnit: A"]
         alt_current_hi_res_raw_value: f64,
     },
+    #[doc = "Vehicle Electrical Power 2"]
     Vep2 {
+        #[doc = "The voltage for isolated battery #2.\nUnit: V"]
         battery2_potential_raw_value: f64,
+        #[doc = "The third power output from an ECM.\nUnit: V"]
         ecu_power_output_supply_voltage3_raw_value: f64,
+        #[doc = "The second power output from an ECM.\nUnit: V"]
         ecu_power_output_supply_voltage2_raw_value: f64,
+        #[doc = "Read ECUPowerOutputSupplyVoltage1 signal from can frame\nUnit: V"]
         ecu_power_output_supply_voltage1_raw_value: f64,
+        #[doc = "This parameter measures the second source of battery potential as measured at the input of the ECM/actuator etc.\nUnit: V"]
         battery_potential_power_input2_raw_value: f64,
     },
+    #[doc = "Vehicle Position"]
     Vp {
+        #[doc = "Longitude position of the vehicle.\nUnit: deg"]
         longitude_raw_value: f64,
+        #[doc = "Latitude position of the vehicle.\nUnit: deg"]
         latitude_raw_value: f64,
     },
+    #[doc = "Vehicle Identification"]
     Vi {},
+    #[doc = "Vehicle Hours"]
     Vh {
+        #[doc = "Accumulated time of operation of power takeoff device.\nUnit: hr"]
         total_power_takeoff_hours_raw_value: f64,
+        #[doc = "Accumulated time of operation of vehicle.\nUnit: hr"]
         total_vehicle_hours_raw_value: f64,
     },
+    #[doc = "Vehicle Fluids"]
     Vf {
+        #[doc = "Read WinchOilPressSwitch signal from can frame"]
         winch_oil_press_switch_raw_value: u8,
+        #[doc = "This parameter indicates the level of the hydraulic fluid in tank as a ratio of current volume to total tank volume.\nUnit: %"]
         hyd_oil_level_raw_value: f64,
+        #[doc = "This switch indicates whether hydraulic oil filter is clogged."]
         hyd_oil_filter_restriction_switch_raw_value: u8,
+        #[doc = "Temperature of hydraulic fluid.\nUnit: deg"]
         hyd_temp_raw_value: f64,
+        #[doc = "Read WinchOilPressSwitch signal from can frame"]
         winch_oil_press_switch: WinchOilPressSwitch2566809854,
+        #[doc = "This switch indicates whether hydraulic oil filter is clogged."]
         hyd_oil_filter_restriction_switch: HydOilFilterRestrictionSwitch2566809854,
     },
+    #[doc = "Vehicle Direction/Speed"]
     Vds {
+        #[doc = "Altitude of the vehicle referenced to sea level at standard atmospheric pressure and temperature.\nUnit: m"]
         altitude_raw_value: f64,
+        #[doc = "Pitch of the vehicle as calculated by the navigation device(s).\nUnit: deg"]
         pitch_raw_value: f64,
+        #[doc = "Speed of the vehicle as calculated from a device such as a Global Positioning System (GPS).\nUnit: km/h"]
         navigation_based_vehicle_speed_raw_value: f64,
+        #[doc = "Present compass bearing of vehicle.\nUnit: deg"]
         compass_bearing_raw_value: f64,
     },
+    #[doc = "High Resolution Vehicle Distance"]
     Vdhr {
+        #[doc = "Distance traveled during all or part of a journey.\nUnit: km"]
         high_resolution_trip_distance_raw_value: f64,
+        #[doc = "Accumulated distance traveled by the vehicle during its operation.\nUnit: km"]
         hgh_rslution_total_vehicle_distance_raw_value: f64,
     },
+    #[doc = "Vehicle Dynamic Stability Control 2"]
     Vdc2 {
+        #[doc = "Indicates the longitudinal acceleration of the vehicle.\nUnit: m/s�"]
         longitudinal_acceleration_raw_value: f64,
+        #[doc = "Indicates a lateral acceleration of the vehicle.\nUnit: m/s�"]
         lateral_acceleration_raw_value: f64,
+        #[doc = "Indicates the rotation about the vertical axis.\nUnit: rad/s"]
         yaw_rate_raw_value: f64,
+        #[doc = "Read SteerWheelAngleSensorType signal from can frame"]
         steer_wheel_angle_sensor_type_raw_value: u8,
+        #[doc = "Indicates number of steering wheel turns, absolute position or relative position at ignition on.\nUnit: turns"]
         steer_wheel_turn_counter_raw_value: f64,
+        #[doc = "The main operator`s steering wheel angle (on the steering column, not the actual wheel angle).\nUnit: rad"]
         steer_wheel_angle_raw_value: f64,
+        #[doc = "Read SteerWheelAngleSensorType signal from can frame"]
         steer_wheel_angle_sensor_type: SteerWheelAngleSensorType2565868030,
     },
+    #[doc = "Vehicle Dynamic Stability Control 1"]
     Vdc1 {
+        #[doc = "State signal which indicates that Yaw Control (YC) has activated brake control."]
         yc_brake_ctrl_active_raw_value: u8,
+        #[doc = "State Signal which indicates that the Yaw Control (YC) has commanded engine control to be active."]
         yc_eng_ctrl_active_raw_value: u8,
+        #[doc = "State signal which indicates that Roll over Prevention (ROP) has activated brake control."]
         rop_brake_ctrl_active_raw_value: u8,
+        #[doc = "State Signal which indicates that the Roll Over Prevention (ROP) has commanded engine control to be active."]
         rop_eng_ctrl_active_raw_value: u8,
+        #[doc = "Read VDCBrakeLightRq signal from can frame"]
         vdc_brake_light_rq_raw_value: u8,
+        #[doc = "Signal that indicates whether VDC is fully operational or whether its functionality is reduced by a permanent or temporary (e."]
         vdc_fully_operational_raw_value: u8,
+        #[doc = "This parameter commands the VDC information signal, for example a dash lamp."]
         vdc_information_signal_raw_value: u8,
+        #[doc = "State signal which indicates that Yaw Control (YC) has activated brake control."]
         yc_brake_ctrl_active: YcBrakeCtrlActive2566803454,
+        #[doc = "State Signal which indicates that the Yaw Control (YC) has commanded engine control to be active."]
         yc_eng_ctrl_active: YcEngCtrlActive2566803454,
+        #[doc = "State signal which indicates that Roll over Prevention (ROP) has activated brake control."]
         rop_brake_ctrl_active: RopBrakeCtrlActive2566803454,
+        #[doc = "State Signal which indicates that the Roll Over Prevention (ROP) has commanded engine control to be active."]
         rop_eng_ctrl_active: RopEngCtrlActive2566803454,
+        #[doc = "Read VDCBrakeLightRq signal from can frame"]
         vdc_brake_light_rq: VdcBrakeLightRq2566803454,
+        #[doc = "Signal that indicates whether VDC is fully operational or whether its functionality is reduced by a permanent or temporary (e."]
         vdc_fully_operational: VdcFullyOperational2566803454,
+        #[doc = "This parameter commands the VDC information signal, for example a dash lamp."]
         vdc_information_signal: VdcInformationSignal2566803454,
     },
+    #[doc = "Vehicle Distance"]
     Vd {
+        #[doc = "Accumulated distance traveled by vehicle during its operation.\nUnit: km"]
         total_vehicle_distance_raw_value: f64,
+        #[doc = "Distance traveled during all or part of a journey.\nUnit: km"]
         trip_distance_raw_value: f64,
     },
+    #[doc = "Trip Vehicle Speed/Cruise Distance Information"]
     Tvi {
+        #[doc = "Read TripCruiseDistance signal from can frame\nUnit: km"]
         trip_cruise_distance_raw_value: f64,
+        #[doc = "Read TripMaxVehicleSpeed signal from can frame\nUnit: km/h"]
         trip_max_vehicle_speed_raw_value: f64,
     },
+    #[doc = "Trip Time Information 2"]
     Tti2 {
+        #[doc = "Total time accumulated while the engine is in the PTO or remote PTO hold state since the last trip reset.\nUnit: hr"]
         trip_pto_time_raw_value: f64,
+        #[doc = "Total time accumulated while the engine is in the cruise hold state, excluding time in accelerator override, since the last trip reset.\nUnit: hr"]
         trip_cruise_time_raw_value: f64,
     },
+    #[doc = "Trip Time Information 1"]
     Tti1 {
+        #[doc = "Total time accumulated when the vehicle has operated in top gear for a calibrated minimum time, since the last trip reset.\nUnit: hr"]
         trip_time_in_top_gear_raw_value: f64,
+        #[doc = "Read TripTimeInVSL signal from can frame\nUnit: hr"]
         trip_time_in_vsl_raw_value: f64,
     },
+    #[doc = "Trip Shutdown Information"]
     Tsi {
+        #[doc = "Read TripSuddenDecelerations signal from can frame\nUnit: counts"]
         trip_sudden_decelerations_raw_value: u16,
+        #[doc = "Total number of times an operator disables idle shutdown to prevent an engine shutdown, since the last trip reset.\nUnit: counts"]
         trp_nmber_of_idle_shutdown_overrides_raw_value: u16,
+        #[doc = "Total number of times the engine has been shutdown due to idling too long (at normal idle or fast idle) since the last trip reset.\nUnit: counts"]
         trip_number_of_idle_shutdowns_raw_value: u16,
+        #[doc = "Total number of hot shutdowns since the last trip reset.\nUnit: counts"]
         trip_number_of_hot_shutdowns_raw_value: u16,
     },
+    #[doc = "Torque/Speed Control 1"]
     Tsc1 {
+        #[doc = "State signal which indicates which control mode the sending device is using to generate the TSC1 command."]
         control_purpose_raw_value: u8,
+        #[doc = "This parameter indicates the transmission rate at which the sending device will transmit the TSC1 message."]
         transmission_rate_raw_value: u8,
+        #[doc = "Parameter provided to the engine or retarder in the torque/speed control message for controlling or limiting the output torque.\nUnit: %"]
         eng_rqed_torque_torque_limit_raw_value: f64,
+        #[doc = "Parameter provided to the engine from external sources in the torque/speed control message.\nUnit: rpm"]
         eng_rqed_speed_speed_limit_raw_value: f64,
+        #[doc = "Read OverrideCtrlModePriority signal from can frame"]
         override_ctrl_mode_priority_raw_value: u8,
+        #[doc = "This mode tells the engine control system the governor characteristics that are desired during speed control."]
         eng_rqed_speed_ctrl_conditions_raw_value: u8,
+        #[doc = "Read EngOverrideCtrlMode signal from can frame"]
         eng_override_ctrl_mode_raw_value: u8,
+        #[doc = "State signal which indicates which control mode the sending device is using to generate the TSC1 command."]
         control_purpose: ControlPurpose2348875518,
+        #[doc = "This parameter indicates the transmission rate at which the sending device will transmit the TSC1 message."]
         transmission_rate: TransmissionRate2348875518,
+        #[doc = "Read OverrideCtrlModePriority signal from can frame"]
         override_ctrl_mode_priority: OverrideCtrlModePriority2348875518,
+        #[doc = "This mode tells the engine control system the governor characteristics that are desired during speed control."]
         eng_rqed_speed_ctrl_conditions: EngRqedSpeedCtrlConditions2348875518,
+        #[doc = "Read EngOverrideCtrlMode signal from can frame"]
         eng_override_ctrl_mode: EngOverrideCtrlMode2348875518,
     },
+    #[doc = "Passenger Counter"]
     Tr7 {
+        #[doc = "Status of the run switch for the vehicle."]
         transit_run_status_raw_value: u8,
+        #[doc = "Used to indicate the proper or unauthorized use of the vehicle."]
         vehicle_use_status_raw_value: u8,
+        #[doc = "Used to report silent alarm push button status."]
         silent_alarm_status_raw_value: u8,
+        #[doc = "Count of the number of passengers on a transit vehicle."]
         patron_count_raw_value: u8,
+        #[doc = "Used to notify transit link devices of the type of passenger counting system used in the vehicle."]
         type_of_passenger_count_raw_value: u8,
+        #[doc = "Status of the run switch for the vehicle."]
         transit_run_status: TransitRunStatus2566766846,
+        #[doc = "Used to indicate the proper or unauthorized use of the vehicle."]
         vehicle_use_status: VehicleUseStatus2566766846,
+        #[doc = "Used to report silent alarm push button status."]
         silent_alarm_status: SilentAlarmStatus2566766846,
+        #[doc = "Used to notify transit link devices of the type of passenger counting system used in the vehicle."]
         type_of_passenger_count: TypeOfPassengerCount2566766846,
     },
+    #[doc = "Farebox Status"]
     Tr6 {
+        #[doc = "Indicates the nature of the farebox alarm condition."]
         farebox_alarm_identifier_raw_value: u8,
+        #[doc = "Indicates if a farebox emergency condition exists."]
         farebox_emergency_status_raw_value: u8,
+        #[doc = "Indicates the nature of the farebox alarm condition."]
         farebox_alarm_identifier: FareboxAlarmIdentifier2566765310,
+        #[doc = "Indicates if a farebox emergency condition exists."]
         farebox_emergency_status: FareboxEmergencyStatus2566765310,
     },
+    #[doc = "Farebox Point of Sale"]
     Tr5 {
+        #[doc = "Indicates that a transfer was sold or issued on this transaction including its type and/or restrictions."]
         transfer_sold_raw_value: u8,
+        #[doc = "The route number issuing the transfer."]
         route_number_raw_value: u16,
+        #[doc = "Read TransferType signal from can frame"]
         transfer_type_raw_value: u8,
+        #[doc = "Read TypeOfService signal from can frame"]
         type_of_service_raw_value: u8,
+        #[doc = "Read InitialFareAgency signal from can frame"]
         initial_fare_agency_raw_value: u8,
+        #[doc = "Read PassCategory signal from can frame"]
         pass_category_raw_value: u8,
+        #[doc = "Read FareValidity signal from can frame"]
         fare_validity_raw_value: u8,
+        #[doc = "Payment details."]
         payment_details_raw_value: u8,
+        #[doc = "Read TypeOfFare signal from can frame"]
         type_of_fare_raw_value: u8,
+        #[doc = "Enumerated value representing the type/class of passenger, as defined by the agency."]
         passenger_type_raw_value: u8,
+        #[doc = "Read TransactionType signal from can frame"]
         transaction_type_raw_value: u8,
+        #[doc = "Read TransferType signal from can frame"]
         transfer_type: TransferType2566765566,
+        #[doc = "Read TypeOfService signal from can frame"]
         type_of_service: TypeOfService2566765566,
+        #[doc = "Payment details."]
         payment_details: PaymentDetails2566765566,
+        #[doc = "Read TypeOfFare signal from can frame"]
         type_of_fare: TypeOfFare2566765566,
+        #[doc = "Read TransactionType signal from can frame"]
         transaction_type: TransactionType2566765566,
     },
+    #[doc = "Farebox Service Detail"]
     Tr4 {
+        #[doc = "The identity number assigned to this route.\nUnit: counts"]
         assigned_route_raw_value: u16,
+        #[doc = "Read PatternNumber signal from can frame\nUnit: counts"]
         pattern_number_raw_value: u16,
+        #[doc = "The identity number assigned to this trip.\nUnit: counts"]
         trip_number_raw_value: u16,
+        #[doc = "Read FarePresets signal from can frame"]
         fare_presets_raw_value: u8,
+        #[doc = "The general direction of travel for this trip."]
         trip_direction_raw_value: u8,
+        #[doc = "Read TripStatus signal from can frame"]
         trip_status_raw_value: u8,
+        #[doc = "Indicates if the farebox is in or out of service."]
         farebox_service_status_raw_value: u8,
+        #[doc = "The general direction of travel for this trip."]
         trip_direction: TripDirection2566765822,
+        #[doc = "Read TripStatus signal from can frame"]
         trip_status: TripStatus2566765822,
+        #[doc = "Indicates if the farebox is in or out of service."]
         farebox_service_status: FareboxServiceStatus2566765822,
     },
+    #[doc = "Signal Preemption"]
     Tr3 {
+        #[doc = "Numerical designation of the vehicle.\nUnit: counts"]
         vehicle_id_raw_value: u16,
+        #[doc = "Read StrobeActivationCtrlStatus signal from can frame"]
         strobe_activation_ctrl_status_raw_value: u8,
+        #[doc = "Read TransitDoorEnable signal from can frame"]
         transit_door_enable_raw_value: u8,
+        #[doc = "Read PriorityOfRespSentByEmitter signal from can frame"]
         priority_of_resp_sent_by_emitter_raw_value: u8,
+        #[doc = "Read IntersectionPreemptionRq_Resp signal from can frame"]
         intersection_preemption_rq_resp_raw_value: u8,
+        #[doc = "Read TransitRouteIDUsage signal from can frame"]
         transit_route_id_usage_raw_value: u8,
+        #[doc = "Read RangeCodeEnable signal from can frame"]
         range_code_enable_raw_value: u8,
+        #[doc = "Read StrobeActivationCtrlStatus signal from can frame"]
         strobe_activation_ctrl_status: StrobeActivationCtrlStatus2566766078,
+        #[doc = "Read TransitDoorEnable signal from can frame"]
         transit_door_enable: TransitDoorEnable2566766078,
+        #[doc = "Read PriorityOfRespSentByEmitter signal from can frame"]
         priority_of_resp_sent_by_emitter: PriorityOfRespSentByEmitter2566766078,
+        #[doc = "Read IntersectionPreemptionRq_Resp signal from can frame"]
         intersection_preemption_rq_resp: IntersectionPreemptionRqResp2566766078,
+        #[doc = "Read TransitRouteIDUsage signal from can frame"]
         transit_route_id_usage: TransitRouteIdUsage2566766078,
+        #[doc = "Read RangeCodeEnable signal from can frame"]
         range_code_enable: RangeCodeEnable2566766078,
     },
+    #[doc = "Transit Milepost"]
     Tr2 {
+        #[doc = "Read NmbrOfBytsInMlpstIdentification signal from can frame"]
         nmbr_of_byts_in_mlpst_identification_raw_value: u8,
     },
+    #[doc = "Transit Route"]
     Tr1 {
+        #[doc = "Read Agency signal from can frame"]
         agency_raw_value: u8,
+        #[doc = "Read NmbrOfBytsInTrnstAssgndBlckIdntt signal from can frame"]
         nmbr_of_byts_in_trnst_assgnd_blck_idntt_raw_value: u8,
+        #[doc = "Read NmbrOfBytsInTrnstAssgndRnIdntty signal from can frame"]
         nmbr_of_byts_in_trnst_assgnd_rn_idntty_raw_value: u8,
+        #[doc = "Read NmbrOfBytsInTrnstAssgndRtIdntty signal from can frame"]
         nmbr_of_byts_in_trnst_assgnd_rt_idntty_raw_value: u8,
     },
+    #[doc = "Tire Pressure Reference Setting"]
     Tprs {
+        #[doc = "Read ReferenceTirePressSetting signal from can frame\nUnit: kPa"]
         reference_tire_press_setting_raw_value: f64,
+        #[doc = "Identifies which tire is associated with the parametric data in this PGN."]
         tire_location_raw_value: u8,
     },
+    #[doc = "Tire Pressure Reference Information"]
     Tpri {
+        #[doc = "Read ReferenceTirePress signal from can frame\nUnit: kPa"]
         reference_tire_press_raw_value: f64,
+        #[doc = "Identifies which tire is associated with the parametric data in this PGN."]
         tire_location_raw_value: u8,
     },
+    #[doc = "Tire Pressure Control Unit Current Pressures"]
     Tp3 {
+        #[doc = "The latest gage pressure reading of the steer group of tires, as opposed to the pressure in each tire.\nUnit: kPa"]
         steer_channel_tire_press_raw_value: f64,
+        #[doc = "The latest gage pressure reading of the drive group of tires, as opposed to the pressure in each tire.\nUnit: kPa"]
         drive_channel_tire_press_raw_value: f64,
+        #[doc = "The latest gage pressure reading of the trailer, tag, or push group of tires, as opposed to the pressure in each tire.\nUnit: kPa"]
         trailer_tag_push_channel_tire_press_raw_value: f64,
     },
+    #[doc = "Tire Pressure Control Unit Target Pressures"]
     Tp2 {
+        #[doc = "The tire pressure control system�s target gage pressure for the steer group of tires.\nUnit: kPa"]
         steer_channel_tire_press_target_raw_value: f64,
+        #[doc = "The tire pressure control system�s target gage pressure for the drive group of tires.\nUnit: kPa"]
         drive_channel_tire_press_target_raw_value: f64,
+        #[doc = "The tire pressure control system�s target gage pressure for the trailer, tag, or push group of tires.\nUnit: kPa"]
         trlr_tg_psh_channel_tire_press_target_raw_value: f64,
     },
+    #[doc = "Tire Pressure Control Unit Mode and Status"]
     Tp1 {
+        #[doc = "Current state of the supply solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_supply_solenoid_status_raw_value: u8,
+        #[doc = "Current state of the control solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_ctrl_solenoid_status_raw_value: u8,
+        #[doc = "Current state of the deflate solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_deflate_solenoid_status_raw_value: u8,
+        #[doc = "Current state of an open/closed type switch used to determine if adequate pressure exists for system implementation."]
         tire_press_supply_switch_status_raw_value: u8,
+        #[doc = "Current state of the steer solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_steer_solenoid_status_raw_value: u8,
+        #[doc = "Current state of the drive solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_drive_solenoid_status_raw_value: u8,
+        #[doc = "Indicates the functional mode of trailer/tag channel of the tire pressure control system."]
         drive_channel_mode_raw_value: u8,
+        #[doc = "Indicates the functional mode of trailer/tag channel of the tire pressure control system."]
         trailer_tag_channel_mode_raw_value: u8,
+        #[doc = "Indicates the functional mode of steer channel of the tire pressure control system."]
         steer_channel_mode_raw_value: u8,
+        #[doc = "The interval at which the system will check the tire pressures (e.\nUnit: mins"]
         tire_press_check_interval_raw_value: u8,
+        #[doc = "Read PCUTrailerTagPushSolenoidStatus signal from can frame"]
         pcu_trailer_tag_push_solenoid_status_raw_value: u8,
+        #[doc = "Current state of the supply solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_supply_solenoid_status: PcuSupplySolenoidStatus2633922814,
+        #[doc = "Current state of the control solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_ctrl_solenoid_status: PcuCtrlSolenoidStatus2633922814,
+        #[doc = "Current state of the deflate solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_deflate_solenoid_status: PcuDeflateSolenoidStatus2633922814,
+        #[doc = "Current state of an open/closed type switch used to determine if adequate pressure exists for system implementation."]
         tire_press_supply_switch_status: TirePressSupplySwitchStatus2633922814,
+        #[doc = "Current state of the steer solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_steer_solenoid_status: PcuSteerSolenoidStatus2633922814,
+        #[doc = "Current state of the drive solenoid used to implement a tire pressure control system in its pneumatic control unit (PCU)."]
         pcu_drive_solenoid_status: PcuDriveSolenoidStatus2633922814,
+        #[doc = "Indicates the functional mode of trailer/tag channel of the tire pressure control system."]
         drive_channel_mode: DriveChannelMode2633922814,
+        #[doc = "Indicates the functional mode of trailer/tag channel of the tire pressure control system."]
         trailer_tag_channel_mode: TrailerTagChannelMode2633922814,
+        #[doc = "Indicates the functional mode of steer channel of the tire pressure control system."]
         steer_channel_mode: SteerChannelMode2633922814,
+        #[doc = "Read PCUTrailerTagPushSolenoidStatus signal from can frame"]
         pcu_trailer_tag_push_solenoid_status: PcuTrailerTagPushSolenoidStatus2633922814,
     },
+    #[doc = "Tire Condition"]
     Tire {
+        #[doc = "Signal indicating the pressure level of the tire."]
         tire_press_threshold_detection_raw_value: u8,
+        #[doc = "The pressure loss rate of a tire.\nUnit: Pa/s"]
         tire_air_leakage_rate_raw_value: f64,
+        #[doc = "Indicates the status of electrical fault on CTI wheel interface."]
         cti_wheel_end_electrical_fault_raw_value: u8,
+        #[doc = "Indicates the status of the tire."]
         cti_tire_status_raw_value: u8,
+        #[doc = "Indicates whether the wheel is being monitored by the CTI controller."]
         cti_wheel_sensor_status_raw_value: u8,
+        #[doc = "Temperature at the surface of the tire sidewall.\nUnit: deg"]
         tire_temp_raw_value: f64,
+        #[doc = "Pressure at which air is contained in cavity formed by tire and rim.\nUnit: kPa"]
         tire_press_raw_value: f64,
+        #[doc = "Identifies which tire is associated with the parametric data in this PGN."]
         tire_location_raw_value: u8,
+        #[doc = "Signal indicating the pressure level of the tire."]
         tire_press_threshold_detection: TirePressThresholdDetection2566845694,
+        #[doc = "Indicates the status of electrical fault on CTI wheel interface."]
         cti_wheel_end_electrical_fault: CtiWheelEndElectricalFault2566845694,
+        #[doc = "Indicates the status of the tire."]
         cti_tire_status: CtiTireStatus2566845694,
+        #[doc = "Indicates whether the wheel is being monitored by the CTI controller."]
         cti_wheel_sensor_status: CtiWheelSensorStatus2566845694,
     },
+    #[doc = "Tank Information 1"]
     Ti1 {
+        #[doc = "Temperature of the reagent in the storage tank.\nUnit: deg"]
         catalyst_tank_temp_raw_value: f64,
+        #[doc = "A special catalyst uses chemical substance to reach legal requirement for NOX emissions.\nUnit: %"]
         catalyst_tank_level_raw_value: f64,
+        #[doc = "Used to identify the applicable J1939-73 FMI that applies to the most significant failure of the catalyst tank level sensor."]
         catalyst_tank_level_preliminary_fmi_raw_value: u8,
+        #[doc = "The measure of the reagent level in the catalyst tank.\nUnit: mm"]
         catalyst_tank_level2_raw_value: f64,
     },
+    #[doc = "Trip Fan Information"]
     Tfi {
+        #[doc = "Total time the fan has been on (due to an automatic trigger or manual trigger) since the last trip reset.\nUnit: hr"]
         trip_fan_on_time_raw_value: f64,
+        #[doc = "Total time the fan has been on due to engine triggers (i.\nUnit: hr"]
         trip_fan_on_time_due_to_eng_system_raw_value: f64,
     },
+    #[doc = "Trip Distance Information"]
     Tdi {
+        #[doc = "Read TripGearDownDistance signal from can frame\nUnit: km"]
         trip_gear_down_distance_raw_value: f64,
+        #[doc = "Total distance accumulated while the engine torque mode is road speed governing since the last trip reset.\nUnit: km"]
         trip_distance_on_vsl_raw_value: f64,
     },
+    #[doc = "Time/Date Adjust"]
     Tda {
+        #[doc = "Read AdjustLocalHourOffset signal from can frame\nUnit: hr"]
         adjust_local_hour_offset_raw_value: f64,
+        #[doc = "Used to set the local offset in minutes from a reference time.\nUnit: mins"]
         adjust_local_minute_offset_raw_value: f64,
+        #[doc = "Part of a parameter used to set a calendar date.\nUnit: years"]
         adjust_year_raw_value: f64,
+        #[doc = "Part of a parameter used to set a calendar date.\nUnit: days"]
         adjust_day_raw_value: f64,
+        #[doc = "Part of a parameter used to set a calendar date.\nUnit: months"]
         adjust_month_raw_value: u8,
+        #[doc = "Part of the parameter used to set the time.\nUnit: hr"]
         adjust_hours_raw_value: u8,
+        #[doc = "Part of the parameter used to set the time.\nUnit: mins"]
         adjust_minutes_raw_value: u8,
+        #[doc = "Part of the parameter used to set the time.\nUnit: s"]
         adjust_seconds_raw_value: f64,
     },
+    #[doc = "Time/Date"]
     Td {
+        #[doc = "Read LocalHourOffset signal from can frame\nUnit: hr"]
         local_hour_offset_raw_value: f64,
+        #[doc = "Local offset in minutes from a reference time.\nUnit: mins"]
         local_minute_offset_raw_value: f64,
+        #[doc = "Part of a parameter used to represent a calendar date.\nUnit: years"]
         year_raw_value: f64,
+        #[doc = "Part of a parameter used to represent a calendar date.\nUnit: days"]
         day_raw_value: f64,
+        #[doc = "Part of a parameter used to represent a calendar date.\nUnit: months"]
         month_raw_value: u8,
+        #[doc = "Part of a parameter used to represent time.\nUnit: hr"]
         hours_raw_value: u8,
+        #[doc = "Part of a parameter used to represent time.\nUnit: mins"]
         minutes_raw_value: u8,
+        #[doc = "Part of a parameter used to represent time.\nUnit: s"]
         seconds_raw_value: f64,
     },
+    #[doc = "Turbocharger Wastegate"]
     Tcw {
+        #[doc = "Gage pressure of the air used to control the actuator which opens and closes the wastegate valve.\nUnit: kPa"]
         eng_trb_wstgt_actuator_ctrl_air_press_raw_value: f64,
+        #[doc = "Position of the wastegate drive.\nUnit: %"]
         eng_turbo4_wastegate_drive_raw_value: f64,
+        #[doc = "Position of the wastegate drive.\nUnit: %"]
         eng_turbo3_wastegate_drive_raw_value: f64,
+        #[doc = "Position of the wastegate drive.\nUnit: %"]
         eng_turbo2_wastegate_drive_raw_value: f64,
+        #[doc = "Position of the wastegate drive.\nUnit: %"]
         eng_turbo1_wastegate_drive_raw_value: f64,
     },
+    #[doc = "Tachograph"]
     Tco1 {
+        #[doc = "Speed of the vehicle registered by the tachograph.\nUnit: km/h"]
         tachograph_vehicle_speed_raw_value: f64,
+        #[doc = "Calculated speed of the transmission output shaft.\nUnit: rpm"]
         tachograph_output_shaft_speed_raw_value: f64,
+        #[doc = "Indicates the direction of the vehicle."]
         direction_indicator_raw_value: u8,
+        #[doc = "Read TachographPerformance signal from can frame"]
         tachograph_performance_raw_value: u8,
+        #[doc = "Indicates that handling information is present."]
         handling_information_raw_value: u8,
+        #[doc = "Indicates that a tachograph event has occurred."]
         system_event_raw_value: u8,
+        #[doc = "Read DriverCardDriver2 signal from can frame"]
         driver_card_driver2_raw_value: u8,
+        #[doc = "Indicates if the driver approaches or exceeds working time limits (or other limits)."]
         driver2_time_related_states_raw_value: u8,
+        #[doc = "Indicates whether the vehicle is exceeding the legal speed limit set in the tachograph."]
         overspeed_raw_value: u8,
+        #[doc = "Read DriverCardDriver1 signal from can frame"]
         driver_card_driver1_raw_value: u8,
+        #[doc = "Indicates if the driver approaches or exceeds working time limits (or other limits)."]
         driver1_time_related_states_raw_value: u8,
+        #[doc = "Indicates whether motion of the vehicle is detected or not."]
         drive_recognize_raw_value: u8,
+        #[doc = "State of work of the driver."]
         driver2_working_state_raw_value: u8,
+        #[doc = "State of work of the driver."]
         driver1_working_state_raw_value: u8,
+        #[doc = "Indicates the direction of the vehicle."]
         direction_indicator: DirectionIndicator2365484286,
+        #[doc = "Read TachographPerformance signal from can frame"]
         tachograph_performance: TachographPerformance2365484286,
+        #[doc = "Indicates that handling information is present."]
         handling_information: HandlingInformation2365484286,
+        #[doc = "Indicates that a tachograph event has occurred."]
         system_event: SystemEvent2365484286,
+        #[doc = "Read DriverCardDriver2 signal from can frame"]
         driver_card_driver2: DriverCardDriver22365484286,
+        #[doc = "Indicates if the driver approaches or exceeds working time limits (or other limits)."]
         driver2_time_related_states: Driver2TimeRelatedStates2365484286,
+        #[doc = "Indicates whether the vehicle is exceeding the legal speed limit set in the tachograph."]
         overspeed: Overspeed2365484286,
+        #[doc = "Read DriverCardDriver1 signal from can frame"]
         driver_card_driver1: DriverCardDriver12365484286,
+        #[doc = "Indicates if the driver approaches or exceeds working time limits (or other limits)."]
         driver1_time_related_states: Driver1TimeRelatedStates2365484286,
+        #[doc = "Indicates whether motion of the vehicle is detected or not."]
         drive_recognize: DriveRecognize2365484286,
+        #[doc = "State of work of the driver."]
         driver2_working_state: Driver2WorkingState2365484286,
+        #[doc = "State of work of the driver."]
         driver1_working_state: Driver1WorkingState2365484286,
     },
+    #[doc = "Turbocharger Information 6"]
     Tci6 {
+        #[doc = "Read EngTurbo4CompressorOutletTemp signal from can frame\nUnit: deg"]
         eng_turbo4_compressor_outlet_temp_raw_value: f64,
+        #[doc = "Read EngTurbo3CompressorOutletTemp signal from can frame\nUnit: deg"]
         eng_turbo3_compressor_outlet_temp_raw_value: f64,
+        #[doc = "Read EngTurbo2CompressorOutletTemp signal from can frame\nUnit: deg"]
         eng_turbo2_compressor_outlet_temp_raw_value: f64,
+        #[doc = "Read EngTurbo1CompressorOutletTemp signal from can frame\nUnit: deg"]
         eng_turbo1_compressor_outlet_temp_raw_value: f64,
     },
+    #[doc = "Turbocharger Information 5"]
     Tci5 {
+        #[doc = "Temperature of the combustion by-products exiting the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo4_turbine_outlet_temp_raw_value: f64,
+        #[doc = "Temperature of the combustion by-products exiting the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo3_turbine_outlet_temp_raw_value: f64,
+        #[doc = "Temperature of the combustion by-products exiting the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo2_turbine_outlet_temp_raw_value: f64,
+        #[doc = "Temperature of the combustion by-products exiting the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo1_turbine_outlet_temp_raw_value: f64,
     },
+    #[doc = "Turbocharger Information 4"]
     Tci4 {
+        #[doc = "Temperature of the combustion by-products entering the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo4_turbine_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of the combustion by-products entering the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo3_turbine_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of the combustion by-products entering the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo2_turbine_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of the combustion by-products entering the turbine side of the turbocharger.\nUnit: deg"]
         eng_turbo1_turbine_inlet_temp_raw_value: f64,
     },
+    #[doc = "Turbocharger Information 3"]
     Tci3 {
+        #[doc = "Gage pressure of the air entering the compressor side of the turbocharger.\nUnit: kPa"]
         eng_turbo4_compressor_inlet_press_raw_value: f64,
+        #[doc = "Gage pressure of the air entering the compressor side of the turbocharger.\nUnit: kPa"]
         eng_turbo3_compressor_inlet_press_raw_value: f64,
+        #[doc = "Gage pressure of the air entering the compressor side of the turbocharger.\nUnit: kPa"]
         eng_turbo2_compressor_inlet_press_raw_value: f64,
+        #[doc = "Gage pressure of the air entering the compressor side of the turbocharger.\nUnit: kPa"]
         eng_turbo1_compressor_inlet_press_raw_value: f64,
     },
+    #[doc = "Turbocharger Information 2"]
     Tci2 {
+        #[doc = "Temperature of the air entering the compressor side of the turbocharger.\nUnit: deg"]
         eng_turbo4_compressor_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of the air entering the compressor side of the turbocharger.\nUnit: deg"]
         eng_turbo3_compressor_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of the air entering the compressor side of the turbocharger.\nUnit: deg"]
         eng_turbo2_compressor_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of the air entering the compressor side of the turbocharger.\nUnit: deg"]
         eng_turbo1_compressor_inlet_temp_raw_value: f64,
     },
+    #[doc = "Turbocharger Information 1"]
     Tci1 {
+        #[doc = "Rotational velocity of rotor in the turbocharger.\nUnit: rpm"]
         eng_turbo4_speed_raw_value: f64,
+        #[doc = "Rotational velocity of rotor in the turbocharger.\nUnit: rpm"]
         eng_turbo3_speed_raw_value: f64,
+        #[doc = "Rotational velocity of rotor in the turbocharger.\nUnit: rpm"]
         eng_turbo2_speed_raw_value: f64,
+        #[doc = "Gage pressure of oil in turbocharger lubrication system.\nUnit: kPa"]
         eng_turbo_lube_oil_press2_raw_value: f64,
     },
+    #[doc = "Transmission Configuration 2"]
     Tcfg2 {
+        #[doc = "Read TransTorqueLimit signal from can frame\nUnit: Nm"]
         trans_torque_limit_raw_value: u16,
     },
+    #[doc = "Transmission Configuration"]
     Tcfg {
+        #[doc = "Read TransGearRatio signal from can frame"]
         trans_gear_ratio_raw_value: f64,
+        #[doc = "Number of forward gear ratios in the transmission, provided as part of the configuration."]
         number_of_forward_gear_ratios_raw_value: u8,
+        #[doc = "Number of reverse gear ratios in the transmission, provided as part of the transmission configuration."]
         number_of_reverse_gear_ratios_raw_value: u8,
     },
+    #[doc = "Transmission Control 1"]
     Tc1 {
+        #[doc = "Status of the operator�s switch used to �toggle� through multiple display modes of a shift selector display."]
         trns_shft_slctor_display_mode_switch_raw_value: u8,
+        #[doc = "Indicates whether transmission mode 4 is enabled."]
         trans_mode4_raw_value: u8,
+        #[doc = "Indicates whether transmission mode 3 is enabled."]
         trans_mode3_raw_value: u8,
+        #[doc = "Indicates whether transmission mode 2 is enabled."]
         trans_mode2_raw_value: u8,
+        #[doc = "Indicates whether transmission mode 1 is enabled."]
         trans_mode1_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_central_rear_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_central_front_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_central_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_rear_axle2_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_rear_axle1_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_front_axle2_raw_value: u8,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_front_axle1_raw_value: u8,
+        #[doc = "Gear requested by the operator, ABS, or engine."]
         trans_rqed_gear_raw_value: f64,
+        #[doc = "Parameter which represents the percent clutch slip requested by a device.\nUnit: %"]
         rqed_percent_clutch_slip_raw_value: f64,
+        #[doc = "Command signal used to simply disengage the driveline, e."]
         disengage_driveline_rq_raw_value: u8,
+        #[doc = "Command signal to prevent torque converter lockup, which may cause problems in certain circumstances for ASR."]
         torque_converter_lockup_disable_rq_raw_value: u8,
+        #[doc = "Command signal to inhibit gear shifts."]
         trans_gear_shift_inhibit_rq_raw_value: u8,
+        #[doc = "Status of the operator�s switch used to �toggle� through multiple display modes of a shift selector display."]
         trns_shft_slctor_display_mode_switch: TrnsShftSlctorDisplayModeSwitch2348941054,
+        #[doc = "Indicates whether transmission mode 4 is enabled."]
         trans_mode4: TransMode42348941054,
+        #[doc = "Indicates whether transmission mode 3 is enabled."]
         trans_mode3: TransMode32348941054,
+        #[doc = "Indicates whether transmission mode 2 is enabled."]
         trans_mode2: TransMode22348941054,
+        #[doc = "Indicates whether transmission mode 1 is enabled."]
         trans_mode1: TransMode12348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_central_rear: DisengageDiffLockRqCentralRear2348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_central_front: DisengageDiffLockRqCentralFront2348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_central: DisengageDiffLockRqCentral2348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_rear_axle2: DisengageDiffLockRqRearAxle22348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_rear_axle1: DisengageDiffLockRqRearAxle12348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_front_axle2: DisengageDiffLockRqFrontAxle22348941054,
+        #[doc = "Command signal used to disengage the various differential locks, e."]
         disengage_diff_lock_rq_front_axle1: DisengageDiffLockRqFrontAxle12348941054,
+        #[doc = "Gear requested by the operator, ABS, or engine."]
         trans_rqed_gear: TransRqedGear2348941054,
+        #[doc = "Command signal used to simply disengage the driveline, e."]
         disengage_driveline_rq: DisengageDrivelineRq2348941054,
+        #[doc = "Command signal to prevent torque converter lockup, which may cause problems in certain circumstances for ASR."]
         torque_converter_lockup_disable_rq: TorqueConverterLockupDisableRq2348941054,
+        #[doc = "Command signal to inhibit gear shifts."]
         trans_gear_shift_inhibit_rq: TransGearShiftInhibitRq2348941054,
     },
+    #[doc = "Turbocharger"]
     Tc {
+        #[doc = "Read EngTurboOilLevelSwitch signal from can frame"]
         eng_turbo_oil_level_switch_raw_value: u8,
+        #[doc = "Rotational velocity of rotor in the turbocharger.\nUnit: rpm"]
         eng_turbo1_speed_raw_value: f64,
+        #[doc = "Gage pressure of oil in turbocharger lubrication system.\nUnit: kPa"]
         eng_turbo_lube_oil_press1_raw_value: f64,
     },
+    #[doc = "Total Averaged Information"]
     Tavg {
+        #[doc = "Read EngTotalAverageFuelEconomy signal from can frame\nUnit: km/L"]
         eng_total_average_fuel_economy_raw_value: f64,
+        #[doc = "Read EngTotalAverageFuelRate signal from can frame\nUnit: L/h"]
         eng_total_average_fuel_rate_raw_value: f64,
     },
+    #[doc = "Supply Pressure Demand"]
     Spr {
+        #[doc = "Command signal to influence the pneumatic pressure in the circuit for the electronically controlled air suspension system.\nUnit: kPa"]
         air_suspension_supply_press_rq_raw_value: f64,
+        #[doc = "Command signal to influence the pneumatic pressure in the auxiliary circuit.\nUnit: kPa"]
         aux_equipment_supply_press_rq_raw_value: f64,
+        #[doc = "Command signal to influence the pneumatic pressure in the service brake circuit or reservoir #2.\nUnit: kPa"]
         service_brake_air_press_rq_circuit2_raw_value: f64,
+        #[doc = "Command signal to influence the pneumatic pressure in the service brake circuit or reservoir #1.\nUnit: kPa"]
         service_brake_air_press_rq_circuit1_raw_value: f64,
+        #[doc = "Command signal to influence the pneumatic pressure in the circuit or reservoir for the parking brake and/or the trailer supply.\nUnit: kPa"]
         parking_and_or_trailer_air_press_rq_raw_value: f64,
+        #[doc = "Command signal to influence the pneumatic pressure in the main reservoir.\nUnit: kPa"]
         pneumatic_supply_press_rq_raw_value: f64,
     },
+    #[doc = "Supply Pressure 2"]
     Sp2 {
+        #[doc = "Pressure of the air used to shut off the fuel supply to the engine.\nUnit: kPa"]
         eng_extl_shutdown_air_supply_press_raw_value: f64,
     },
+    #[doc = "Software Identification"]
     Soft {
+        #[doc = "Number of software identification designators represented in the software identification parameter group.\nUnit: steps"]
         nmbr_of_sftwr_identification_fields_raw_value: u8,
     },
+    #[doc = "Shutdown"]
     Shutdow {
+        #[doc = "The engine overspeed test signal as measured by the reporting ECM."]
         eng_overspeed_test_raw_value: u8,
+        #[doc = "State signal which indicates when the Air Shutoff driver output is being driven."]
         eng_air_shutoff_cmd_status_raw_value: u8,
+        #[doc = "State signal which indicates when the Alarm driver output is being driven."]
         eng_alarm_output_cmd_status_raw_value: u8,
+        #[doc = "The Engine Alarm Acknowledge Input signal as measured by the reporting ECM."]
         eng_alarm_acknowledge_raw_value: u8,
+        #[doc = "Parameter which indicates the configuration of the engine shutdown system."]
         eng_protection_system_config_raw_value: u8,
+        #[doc = "Status signal which indicates the current mode of the engine protection system timer system."]
         eng_protection_system_timer_state_raw_value: u8,
+        #[doc = "Status signal which indicates the status of the override feature of the engine protection system timer."]
         eng_prtection_system_timer_override_raw_value: u8,
+        #[doc = "Status signal which indicates that engine shutdown is imminent."]
         eng_prtctn_systm_apprching_shutdown_raw_value: u8,
+        #[doc = "Status signal which indicates whether or not the engine protection system has shutdown the engine."]
         eng_prtction_system_has_shutdown_eng_raw_value: u8,
+        #[doc = "Read EngWaitToStartLamp signal from can frame"]
         eng_wait_to_start_lamp_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the high pressure switch in the coolant circuit of an air conditioning system."]
         refrigerant_high_press_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the low pressure switch in the coolant circuit of an air conditioning system."]
         refrigerant_low_press_switch_raw_value: u8,
+        #[doc = "Read A_CHighPressFanSwitch signal from can frame"]
         a_c_high_press_fan_switch_raw_value: u8,
+        #[doc = "Parameter which indicates the configuration of the idle shutdown timer system."]
         eng_idle_shutdown_timer_function_raw_value: u8,
+        #[doc = "Status signal which indicates the current mode of operation of the idle shutdown timer system."]
         eng_idle_shutdown_timer_state_raw_value: u8,
+        #[doc = "Status signal which indicates the status of the override feature of the idle shutdown timer system."]
         eng_idle_shutdown_timer_override_raw_value: u8,
+        #[doc = "Status signal which indicates the status of the driver alert mode of the idle shutdown timer system."]
         eng_idle_shutdown_driver_alert_mode_raw_value: u8,
+        #[doc = "Status signal which identifies whether or not the engine has been shutdown by the idle shutdown timer system."]
         eng_idle_shutdown_has_shutdown_eng_raw_value: u8,
+        #[doc = "The engine overspeed test signal as measured by the reporting ECM."]
         eng_overspeed_test: EngOverspeedTest2566841598,
+        #[doc = "State signal which indicates when the Air Shutoff driver output is being driven."]
         eng_air_shutoff_cmd_status: EngAirShutoffCmdStatus2566841598,
+        #[doc = "State signal which indicates when the Alarm driver output is being driven."]
         eng_alarm_output_cmd_status: EngAlarmOutputCmdStatus2566841598,
+        #[doc = "The Engine Alarm Acknowledge Input signal as measured by the reporting ECM."]
         eng_alarm_acknowledge: EngAlarmAcknowledge2566841598,
+        #[doc = "Parameter which indicates the configuration of the engine shutdown system."]
         eng_protection_system_config: EngProtectionSystemConfig2566841598,
+        #[doc = "Status signal which indicates the current mode of the engine protection system timer system."]
         eng_protection_system_timer_state: EngProtectionSystemTimerState2566841598,
+        #[doc = "Status signal which indicates the status of the override feature of the engine protection system timer."]
         eng_prtection_system_timer_override: EngPrtectionSystemTimerOverride2566841598,
+        #[doc = "Status signal which indicates that engine shutdown is imminent."]
         eng_prtctn_systm_apprching_shutdown: EngPrtctnSystmApprchingShutdown2566841598,
+        #[doc = "Status signal which indicates whether or not the engine protection system has shutdown the engine."]
         eng_prtction_system_has_shutdown_eng: EngPrtctionSystemHasShutdownEng2566841598,
+        #[doc = "Read EngWaitToStartLamp signal from can frame"]
         eng_wait_to_start_lamp: EngWaitToStartLamp2566841598,
+        #[doc = "Switch signal which indicates the position of the high pressure switch in the coolant circuit of an air conditioning system."]
         refrigerant_high_press_switch: RefrigerantHighPressSwitch2566841598,
+        #[doc = "Switch signal which indicates the position of the low pressure switch in the coolant circuit of an air conditioning system."]
         refrigerant_low_press_switch: RefrigerantLowPressSwitch2566841598,
+        #[doc = "Read A_CHighPressFanSwitch signal from can frame"]
         a_c_high_press_fan_switch: ACHighPressFanSwitch2566841598,
+        #[doc = "Parameter which indicates the configuration of the idle shutdown timer system."]
         eng_idle_shutdown_timer_function: EngIdleShutdownTimerFunction2566841598,
+        #[doc = "Status signal which indicates the current mode of operation of the idle shutdown timer system."]
         eng_idle_shutdown_timer_state: EngIdleShutdownTimerState2566841598,
+        #[doc = "Status signal which indicates the status of the override feature of the idle shutdown timer system."]
         eng_idle_shutdown_timer_override: EngIdleShutdownTimerOverride2566841598,
+        #[doc = "Status signal which indicates the status of the driver alert mode of the idle shutdown timer system."]
         eng_idle_shutdown_driver_alert_mode: EngIdleShutdownDriverAlertMode2566841598,
+        #[doc = "Status signal which identifies whether or not the engine has been shutdown by the idle shutdown timer system."]
         eng_idle_shutdown_has_shutdown_eng: EngIdleShutdownHasShutdownEng2566841598,
     },
+    #[doc = "Service Information"]
     Serv {
+        #[doc = "Identification of component needing service.\nUnit: ID"]
         service_component_identification_b_raw_value: u8,
+        #[doc = "Identification of component needing service.\nUnit: ID"]
         service_component_identification_a_raw_value: u8,
+        #[doc = "The time in vehicle operational time until the next vehicle service inspection is required.\nUnit: hr"]
         srvce_delay_operational_time_based_raw_value: f64,
+        #[doc = "The time in weeks until the next vehicle service inspection is required.\nUnit: weeks"]
         service_delay_calendar_time_based_raw_value: f64,
+        #[doc = "The distance which can be traveled by the vehicle before the next service inspection is required.\nUnit: km"]
         service_distance_raw_value: f64,
+        #[doc = "Identification of component needing service.\nUnit: ID"]
         service_component_identification_raw_value: u8,
     },
+    #[doc = "Service 2"]
     S2 {
+        #[doc = "The vehicle operation time since the last service was performed.\nUnit: hr"]
         time_since_last_service_raw_value: f64,
+        #[doc = "Identification of component needing service.\nUnit: ID"]
         service_component_identification_raw_value: u8,
     },
+    #[doc = "Retarder Continuous Torque & Speed Limit"]
     Rtc1 {
+        #[doc = "Applied limit for maximum continuous retarder torque.\nUnit: %"]
         max_continuous_retarder_torque_raw_value: f64,
+        #[doc = "Read MinContinuousRetarderSpeed signal from can frame\nUnit: rpm"]
         min_continuous_retarder_speed_raw_value: f64,
+        #[doc = "Read MaxContinuousRetarderSpeed signal from can frame\nUnit: rpm"]
         max_continuous_retarder_speed_raw_value: f64,
+        #[doc = "Maximum allowable value for minimum continuous retarder torque.\nUnit: %"]
         hgh_lmt_thrshhld_fr_mn_cntns_trq_frm_rtr_raw_value: f64,
+        #[doc = "Minimum allowable value for maximum continuous retarder torque.\nUnit: %"]
         lw_lmt_thrshhld_fr_mx_trq_frm_retarder_raw_value: f64,
+        #[doc = "Read HghLmtThrshhldFrMnCntnsRPMFrmRtr signal from can frame\nUnit: rpm"]
         hgh_lmt_thrshhld_fr_mn_cntns_rpm_frm_rtr_raw_value: f64,
+        #[doc = "Read LwLmtThrshhldFrMxRPMFrmRetarder signal from can frame\nUnit: rpm"]
         lw_lmt_thrshhld_fr_mx_rpm_frm_retarder_raw_value: f64,
+        #[doc = "Read MinContinuousRetarderTorque signal from can frame\nUnit: %"]
         min_continuous_retarder_torque_raw_value: f64,
     },
+    #[doc = "Retarder fluids"]
     Rf {
+        #[doc = "Temperature of oil found in a hydraulic retarder.\nUnit: deg"]
         hyd_retarder_oil_temp_raw_value: f64,
+        #[doc = "Gage pressure of oil in hydraulic retarder system.\nUnit: kPa"]
         hyd_retarder_press_raw_value: f64,
     },
+    #[doc = "Reset"]
     Reset {
+        #[doc = "Command signal used to reset the engine rebuild hours."]
         eng_build_hours_reset_raw_value: u8,
+        #[doc = "Identification of component needing service.\nUnit: ID"]
         service_component_identification_raw_value: u8,
+        #[doc = "Command signal used to reset proprietary parameters associated with a trip but not defined within this document."]
         trip_group2_proprietary_raw_value: u8,
+        #[doc = "Command signal used to reset the PGNs and parameters as defined in Table SPN988_A."]
         trip_group1_raw_value: u8,
+        #[doc = "Command signal used to reset the engine rebuild hours."]
         eng_build_hours_reset: EngBuildHoursReset2631859966,
+        #[doc = "Command signal used to reset proprietary parameters associated with a trip but not defined within this document."]
         trip_group2_proprietary: TripGroup2Proprietary2631859966,
+        #[doc = "Command signal used to reset the PGNs and parameters as defined in Table SPN988_A."]
         trip_group1: TripGroup12631859966,
     },
+    #[doc = "Retarder Configuration"]
     Rc {
+        #[doc = "The torque limit that indicates the available retarder torque which can be provided by the retarder at its maximum speed.\nUnit: %"]
         percent_torque_at_max_speed_point2_raw_value: f64,
+        #[doc = "Maximum speed of retarder (Please reference PGN 65249).\nUnit: rpm"]
         max_retarder_speed_point2_raw_value: f64,
+        #[doc = "The torque limit that indicates the available retarder torque which can be provided by the retarder at idle speed.\nUnit: %"]
         percent_torque_at_idle_point1_raw_value: f64,
+        #[doc = "Read RetarderSpeedAtIdlePoint1 signal from can frame\nUnit: rpm"]
         retarder_speed_at_idle_point1_raw_value: f64,
+        #[doc = "This parameter identifies the number of steps used by the retarder.\nUnit: steps"]
         retarder_ctrl_method_raw_value: u8,
+        #[doc = "Read RetarderLocation signal from can frame"]
         retarder_location_raw_value: u8,
+        #[doc = "A vehicle retarder is a supplementary device to the wheel brakes for the driver to better control the vehicle."]
         retarder_type_raw_value: u8,
+        #[doc = "Read RetarderLocation signal from can frame"]
         retarder_location: RetarderLocation2566840830,
+        #[doc = "A vehicle retarder is a supplementary device to the wheel brakes for the driver to better control the vehicle."]
         retarder_type: RetarderType2566840830,
     },
+    #[doc = "Rebuild Information"]
     Rbi {
+        #[doc = "The time in engine operation since the last engine rebuild.\nUnit: s"]
         eng_operation_time_since_rebuild_raw_value: u32,
     },
+    #[doc = "Power Takeoff Information"]
     Pto {
+        #[doc = "Measured state of the operator PTO memory select switch."]
         operator_pto_memory_select_switch_raw_value: u8,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'accelerate'."]
         eng_pto_accelerate_switch_raw_value: u8,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'resume'."]
         eng_pto_resume_switch_raw_value: u8,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'coast/decelerate'."]
         eng_pto_coast_decelerate_switch_raw_value: u8,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'set'."]
         eng_pto_set_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates that the remote PTO toggle switch is in the enabled (ON) position."]
         eng_rmt_pto_vriable_speed_ctrl_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates that the remote PTO toggle switch is in the enabled (ON) position."]
         eng_rmt_pto_prprgrmmd_spd_ctrl_switch_raw_value: u8,
+        #[doc = "Read EngPTOEnableSwitch signal from can frame"]
         eng_pto_enable_switch_raw_value: u8,
+        #[doc = "Rotational velocity selected by operator for device used to transmit engine power to auxiliary equipment.\nUnit: rpm"]
         power_takeoff_set_speed_raw_value: f64,
+        #[doc = "Rotational velocity of device used to transmit engine power to auxiliary equipment.\nUnit: rpm"]
         power_takeoff_speed_raw_value: f64,
+        #[doc = "Temperature of lubricant in device used to transmit engine power to auxiliary equipment.\nUnit: deg"]
         power_takeoff_oil_temp_raw_value: f64,
+        #[doc = "Switch signal which indicates that the remote PTO toggle switch #2 is in the enabled (ON) position."]
         rmt_pto_prprgrmmd_speed_ctrl_switch2_raw_value: u8,
+        #[doc = "Switch signal which overrides other switch input's ability to kick out of an engine's operating condition."]
         aux_input_ignore_switch_raw_value: u8,
+        #[doc = "Measured state of the operator PTO memory select switch."]
         operator_pto_memory_select_switch: OperatorPtoMemorySelectSwitch2566844670,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'accelerate'."]
         eng_pto_accelerate_switch: EngPtoAccelerateSwitch2566844670,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'resume'."]
         eng_pto_resume_switch: EngPtoResumeSwitch2566844670,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'coast/decelerate'."]
         eng_pto_coast_decelerate_switch: EngPtoCoastDecelerateSwitch2566844670,
+        #[doc = "Switch signal of the PTO control activator which indicates that the activator is in the position 'set'."]
         eng_pto_set_switch: EngPtoSetSwitch2566844670,
+        #[doc = "Switch signal which indicates that the remote PTO toggle switch is in the enabled (ON) position."]
         eng_rmt_pto_vriable_speed_ctrl_switch: EngRmtPtoVriableSpeedCtrlSwitch2566844670,
+        #[doc = "Switch signal which indicates that the remote PTO toggle switch is in the enabled (ON) position."]
         eng_rmt_pto_prprgrmmd_spd_ctrl_switch: EngRmtPtoPrprgrmmdSpdCtrlSwitch2566844670,
+        #[doc = "Read EngPTOEnableSwitch signal from can frame"]
         eng_pto_enable_switch: EngPtoEnableSwitch2566844670,
+        #[doc = "Switch signal which indicates that the remote PTO toggle switch #2 is in the enabled (ON) position."]
         rmt_pto_prprgrmmd_speed_ctrl_switch2: RmtPtoPrprgrmmdSpeedCtrlSwitch22566844670,
+        #[doc = "Switch signal which overrides other switch input's ability to kick out of an engine's operating condition."]
         aux_input_ignore_switch: AuxInputIgnoreSwitch2566844670,
     },
+    #[doc = "Operator Wiper and Washer Controls Message"]
     Oww {
+        #[doc = "State of operation selected by operator switch for the rear washer."]
         rear_washer_function_raw_value: u8,
+        #[doc = "State of operation selected by operator switch for the washer in front of the operator position."]
         front_operator_washer_switch_raw_value: u8,
+        #[doc = "State of operation selected by operator switch for the front washer not in front of the operator position."]
         front_nonoperator_washer_switch_raw_value: u8,
+        #[doc = "Time between cycles of the rear wiper (i.\nUnit: %"]
         rear_wiper_delay_ctrl_raw_value: f64,
+        #[doc = "Time between cycles of the front non-operator side wiper (i.\nUnit: %"]
         front_nonoperator_wiper_delay_ctrl_raw_value: f64,
+        #[doc = "Time between cycles of the front operator side wiper (i.\nUnit: %"]
         front_operator_wiper_delay_ctrl_raw_value: f64,
+        #[doc = "State of operation selected by operator switch for the rear wiper."]
         rear_wiper_switch_raw_value: u8,
+        #[doc = "State of operation selected by operator switch for the Wiper in front of the operator position."]
         front_operator_wiper_switch_raw_value: u8,
+        #[doc = "State of operation selected by operator switch for the front wiper not in front of the operator position."]
         front_nonoperator_wiper_switch_raw_value: u8,
+        #[doc = "State of operation selected by operator switch for the rear washer."]
         rear_washer_function: RearWasherFunction2566770174,
+        #[doc = "State of operation selected by operator switch for the washer in front of the operator position."]
         front_operator_washer_switch: FrontOperatorWasherSwitch2566770174,
+        #[doc = "State of operation selected by operator switch for the front washer not in front of the operator position."]
         front_nonoperator_washer_switch: FrontNonoperatorWasherSwitch2566770174,
+        #[doc = "State of operation selected by operator switch for the rear wiper."]
         rear_wiper_switch: RearWiperSwitch2566770174,
+        #[doc = "State of operation selected by operator switch for the Wiper in front of the operator position."]
         front_operator_wiper_switch: FrontOperatorWiperSwitch2566770174,
+        #[doc = "State of operation selected by operator switch for the front wiper not in front of the operator position."]
         front_nonoperator_wiper_switch: FrontNonoperatorWiperSwitch2566770174,
     },
+    #[doc = "Off-Highway Engine Control Selection"]
     Ohecs {
+        #[doc = "Read EngAltDroopAuxInputSelect signal from can frame"]
         eng_alt_droop_aux_input_select_raw_value: u8,
+        #[doc = "Read EngAltDroopRemoteAccelSelect signal from can frame"]
         eng_alt_droop_remote_accel_select_raw_value: u8,
+        #[doc = "Read EngAltDroopAccel2Select signal from can frame"]
         eng_alt_droop_accel2_select_raw_value: u8,
+        #[doc = "Read EngAltDroopAccel1Select signal from can frame"]
         eng_alt_droop_accel1_select_raw_value: u8,
+        #[doc = "In some off-highway applications it may be desirable to have multiple engine ratings available for selection by the operator."]
         eng_alt_rating_select_raw_value: u8,
+        #[doc = "Operator switch which selects between two low idle speeds, default and alternate."]
         eng_alt_low_idle_switch_raw_value: u8,
+        #[doc = "This is the On/Off operation of the Multiple Unit Synchronization functionality."]
         eng_synchronization_switch_raw_value: u8,
+        #[doc = "This is the On/Off operation of the Auxiliary Governor feature switch."]
         eng_aux_governor_switch_raw_value: u8,
+        #[doc = "Read EngAltDroopAuxInputSelect signal from can frame"]
         eng_alt_droop_aux_input_select: EngAltDroopAuxInputSelect2566769662,
+        #[doc = "Read EngAltDroopRemoteAccelSelect signal from can frame"]
         eng_alt_droop_remote_accel_select: EngAltDroopRemoteAccelSelect2566769662,
+        #[doc = "Read EngAltDroopAccel2Select signal from can frame"]
         eng_alt_droop_accel2_select: EngAltDroopAccel2Select2566769662,
+        #[doc = "Read EngAltDroopAccel1Select signal from can frame"]
         eng_alt_droop_accel1_select: EngAltDroopAccel1Select2566769662,
+        #[doc = "In some off-highway applications it may be desirable to have multiple engine ratings available for selection by the operator."]
         eng_alt_rating_select: EngAltRatingSelect2566769662,
+        #[doc = "Operator switch which selects between two low idle speeds, default and alternate."]
         eng_alt_low_idle_switch: EngAltLowIdleSwitch2566769662,
+        #[doc = "This is the On/Off operation of the Multiple Unit Synchronization functionality."]
         eng_synchronization_switch: EngSynchronizationSwitch2566769662,
+        #[doc = "This is the On/Off operation of the Auxiliary Governor feature switch."]
         eng_aux_governor_switch: EngAuxGovernorSwitch2566769662,
     },
+    #[doc = "Off-Highway Engine Control Selection States"]
     Ohcss {
+        #[doc = "Read EngAltDroopAuxInputSelectState signal from can frame"]
         eng_alt_droop_aux_input_select_state_raw_value: u8,
+        #[doc = "Read EngAltDrpRemoteAccelSelectState signal from can frame"]
         eng_alt_drp_remote_accel_select_state_raw_value: u8,
+        #[doc = "Read EngAltDroopAccel2SelectState signal from can frame"]
         eng_alt_droop_accel2_select_state_raw_value: u8,
+        #[doc = "Read EngAltDroopAccel1SelectState signal from can frame"]
         eng_alt_droop_accel1_select_state_raw_value: u8,
+        #[doc = "In some off-highway applications it may be desirable to have multiple engine ratings available for selection by the operator."]
         eng_alt_rating_select_state_raw_value: u8,
+        #[doc = "In many applications, it is desirable that an alternate low idle speed setting be made available via switch input."]
         eng_alt_low_idle_select_state_raw_value: u8,
+        #[doc = "This feature is widely used in Industry to operate multiple engines from a single command source."]
         eng_multi_unit_sync_state_raw_value: u8,
+        #[doc = "This is the Engine Auxiliary Governor feature."]
         eng_aux_governor_state_raw_value: u8,
+        #[doc = "Read EngAltDroopAuxInputSelectState signal from can frame"]
         eng_alt_droop_aux_input_select_state: EngAltDroopAuxInputSelectState2566768638,
+        #[doc = "Read EngAltDrpRemoteAccelSelectState signal from can frame"]
         eng_alt_drp_remote_accel_select_state: EngAltDrpRemoteAccelSelectState2566768638,
+        #[doc = "Read EngAltDroopAccel2SelectState signal from can frame"]
         eng_alt_droop_accel2_select_state: EngAltDroopAccel2SelectState2566768638,
+        #[doc = "Read EngAltDroopAccel1SelectState signal from can frame"]
         eng_alt_droop_accel1_select_state: EngAltDroopAccel1SelectState2566768638,
+        #[doc = "In some off-highway applications it may be desirable to have multiple engine ratings available for selection by the operator."]
         eng_alt_rating_select_state: EngAltRatingSelectState2566768638,
+        #[doc = "In many applications, it is desirable that an alternate low idle speed setting be made available via switch input."]
         eng_alt_low_idle_select_state: EngAltLowIdleSelectState2566768638,
+        #[doc = "This feature is widely used in Industry to operate multiple engines from a single command source."]
         eng_multi_unit_sync_state: EngMultiUnitSyncState2566768638,
+        #[doc = "This is the Engine Auxiliary Governor feature."]
         eng_aux_governor_state: EngAuxGovernorState2566768638,
     },
+    #[doc = "Operators External Light Controls Message"]
     Oel {
+        #[doc = "A 16 bit parameter to be associated with Delayed Off position (1000 binary) of the Main Light Switch.\nUnit: s"]
         oprtrs_desired_delayed_lamp_off_time_raw_value: u16,
+        #[doc = "A 8 bit parameter to indicate the level of back lighting the operator has selected for displays.\nUnit: %"]
         operators_desired_backlight_raw_value: f64,
+        #[doc = "A 2 bit parameter to indicate the selected position of the operator's high/low beam select switch."]
         high_low_beam_switch_raw_value: u8,
+        #[doc = "A 2 bit parameter to indicate the selected position of the operator's hazard light switch."]
         hazard_light_switch_raw_value: u8,
+        #[doc = "A 4 bit parameter to indicate the selected position of the operator's turn signal switch."]
         turn_signal_switch_raw_value: u8,
+        #[doc = "A 4 bit parameter to indicate the selected position of the operator's main light switch."]
         main_light_switch_raw_value: u8,
+        #[doc = "A 4 bit parameter to indicate the selected position of the operator's work light switch."]
         work_light_switch_raw_value: u8,
+        #[doc = "A 2 bit parameter to indicate the selected position of the operator's high/low beam select switch."]
         high_low_beam_switch: HighLowBeamSwitch2365443326,
+        #[doc = "A 2 bit parameter to indicate the selected position of the operator's hazard light switch."]
         hazard_light_switch: HazardLightSwitch2365443326,
+        #[doc = "A 4 bit parameter to indicate the selected position of the operator's turn signal switch."]
         turn_signal_switch: TurnSignalSwitch2365443326,
+        #[doc = "A 4 bit parameter to indicate the selected position of the operator's main light switch."]
         main_light_switch: MainLightSwitch2365443326,
+        #[doc = "A 4 bit parameter to indicate the selected position of the operator's work light switch."]
         work_light_switch: WorkLightSwitch2365443326,
     },
+    #[doc = "Maximum Vehicle Speed Limit Status"]
     Mvs {
+        #[doc = "The vehicle speed limit in effect.\nUnit: km/h"]
         applied_vehicle_speed_limit_raw_value: u8,
+        #[doc = "Read MaxVehicleSpeedLimit7 signal from can frame\nUnit: km/h"]
         max_vehicle_speed_limit7_raw_value: u8,
+        #[doc = "Read MaxVehicleSpeedLimit6 signal from can frame\nUnit: km/h"]
         max_vehicle_speed_limit6_raw_value: u8,
+        #[doc = "Read MaxVehicleSpeedLimit5 signal from can frame\nUnit: km/h"]
         max_vehicle_speed_limit5_raw_value: u8,
+        #[doc = "Read MaxVehicleSpeedLimit4 signal from can frame\nUnit: km/h"]
         max_vehicle_speed_limit4_raw_value: u8,
+        #[doc = "Read MaxVehicleSpeedLimit3 signal from can frame\nUnit: km/h"]
         max_vehicle_speed_limit3_raw_value: u8,
+        #[doc = "Read MaxVehicleSpeedLimit2 signal from can frame\nUnit: km/h"]
         max_vehicle_speed_limit2_raw_value: u8,
+        #[doc = "The lowest Maximum Vehicle Speed Limit.\nUnit: km/h"]
         max_vehicle_speed_limit1_raw_value: u8,
     },
+    #[doc = "Military Lighting Command"]
     Ml {
+        #[doc = "Operators Selection of lamp intensity in black out mode.\nUnit: %"]
         oprtrs_blck_out_intensity_selection_raw_value: f64,
+        #[doc = "Read BlackOutWorkLampSelect signal from can frame"]
         black_out_work_lamp_select_raw_value: u8,
+        #[doc = "Read NightVisionIlluminatorSelect signal from can frame"]
         night_vision_illuminator_select_raw_value: u8,
+        #[doc = "Read BlackOutBrake_StopLampSelect signal from can frame"]
         black_out_brake_stop_lamp_select_raw_value: u8,
+        #[doc = "Read ConvoyDrivingLampSelect signal from can frame"]
         convoy_driving_lamp_select_raw_value: u8,
+        #[doc = "Read ConvoyLampSelect signal from can frame"]
         convoy_lamp_select_raw_value: u8,
+        #[doc = "Read FrontBlackOutMarkerLampSelect signal from can frame"]
         front_black_out_marker_lamp_select_raw_value: u8,
+        #[doc = "Read RearBlackOutMarkerSelect signal from can frame"]
         rear_black_out_marker_select_raw_value: u8,
+        #[doc = "Read BlackOutWorkLampSelect signal from can frame"]
         black_out_work_lamp_select: BlackOutWorkLampSelect2566802686,
+        #[doc = "Read NightVisionIlluminatorSelect signal from can frame"]
         night_vision_illuminator_select: NightVisionIlluminatorSelect2566802686,
+        #[doc = "Read BlackOutBrake_StopLampSelect signal from can frame"]
         black_out_brake_stop_lamp_select: BlackOutBrakeStopLampSelect2566802686,
+        #[doc = "Read ConvoyDrivingLampSelect signal from can frame"]
         convoy_driving_lamp_select: ConvoyDrivingLampSelect2566802686,
+        #[doc = "Read ConvoyLampSelect signal from can frame"]
         convoy_lamp_select: ConvoyLampSelect2566802686,
+        #[doc = "Read FrontBlackOutMarkerLampSelect signal from can frame"]
         front_black_out_marker_lamp_select: FrontBlackOutMarkerLampSelect2566802686,
+        #[doc = "Read RearBlackOutMarkerSelect signal from can frame"]
         rear_black_out_marker_select: RearBlackOutMarkerSelect2566802686,
     },
+    #[doc = "Marine Control Information"]
     Mci {
+        #[doc = "The status of the Slow Vessel Mode."]
         slow_vessel_mode_status_raw_value: u8,
+        #[doc = "The status of the Trolling Mode."]
         trolling_mode_status_raw_value: u8,
+        #[doc = "The status of the Throttle Synchronization Mode."]
         eng_thrttl_synchrnztion_mode_status_raw_value: u8,
+        #[doc = "The status of the Slow Vessel Mode."]
         slow_vessel_mode_status: SlowVesselModeStatus2566774014,
+        #[doc = "The status of the Trolling Mode."]
         trolling_mode_status: TrollingModeStatus2566774014,
+        #[doc = "The status of the Throttle Synchronization Mode."]
         eng_thrttl_synchrnztion_mode_status: EngThrttlSynchrnztionModeStatus2566774014,
     },
+    #[doc = "Main Bearing Temperature 3"]
     Mbt3 {
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing11_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing10_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing9_temp_raw_value: f64,
     },
+    #[doc = "Main Bearing Temperature 2"]
     Mbt2 {
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing8_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing7_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing6_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing5_temp_raw_value: f64,
     },
+    #[doc = "Main Bearing Temperature 1"]
     Mbt1 {
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing4_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing3_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing2_temp_raw_value: f64,
+        #[doc = "Temperature of the main bearing which supports the crankshaft of the engine.\nUnit: deg"]
         eng_main_bearing1_temp_raw_value: f64,
     },
+    #[doc = "Laser Leveling System Vertical Position Display Data"]
     Lvdd {
+        #[doc = "Sets Display Deadbands mode."]
         display_deadbands_raw_value: u8,
+        #[doc = "Sets LED Pattern control mode on laser leveling systems."]
         led_pattern_ctrl_raw_value: u8,
+        #[doc = "This parameter informs the system what the selected Display deadband will be."]
         led_display_deadband_ctrl_raw_value: u8,
+        #[doc = "This parameter informs the system what the selected Display mode will be."]
         led_display_mode_ctrl_raw_value: u8,
+        #[doc = "Informs display devices how to display the current vertical position."]
         led_display_data1_raw_value: u8,
+        #[doc = "Sets Display Deadbands mode."]
         display_deadbands: DisplayDeadbands2432595710,
+        #[doc = "Sets LED Pattern control mode on laser leveling systems."]
         led_pattern_ctrl: LedPatternCtrl2432595710,
+        #[doc = "This parameter informs the system what the selected Display deadband will be."]
         led_display_deadband_ctrl: LedDisplayDeadbandCtrl2432595710,
+        #[doc = "This parameter informs the system what the selected Display mode will be."]
         led_display_mode_ctrl: LedDisplayModeCtrl2432595710,
+        #[doc = "Informs display devices how to display the current vertical position."]
         led_display_data1: LedDisplayData12432595710,
     },
+    #[doc = "Laser Leveling System Vertical Deviation"]
     Lvd {
+        #[doc = "Laser Strike location on the survey type laser receiver.\nUnit: mm"]
         abs_laser_strike_position_raw_value: f64,
+        #[doc = "Time from laser strike to CAN message transmission.\nUnit: s"]
         laser_strike_data_latency_raw_value: f64,
+        #[doc = "Identifies which type of Laser Receiver transmitted the message."]
         laser_receiver_type_raw_value: u8,
+        #[doc = "The calculated distance from the laser strike position to the current land leveling system reference point.\nUnit: mm"]
         laser_strike_vertical_deviation_raw_value: f64,
+        #[doc = "Identifies which type of Laser Receiver transmitted the message."]
         laser_receiver_type: LaserReceiverType2365486590,
     },
+    #[doc = "Laser Tracer Position"]
     Ltp {
+        #[doc = "Provides the status of the laser tracer to the operator."]
         laser_tracer_information_raw_value: u8,
+        #[doc = "Informs display devices how to display the current position of the laser tracer."]
         led_display_data2_raw_value: u8,
+        #[doc = "The calculated percent deviation between the target distance and the center of the laser tracer.\nUnit: %"]
         laser_tracer_horizontal_deviation_raw_value: u8,
+        #[doc = "The elevation of the laser tracer sensor in a laser leveling system.\nUnit: mm"]
         laser_tracer_vertical_distance_raw_value: f64,
+        #[doc = "The calculated distance for the laser target to the current laser tracer reference point.\nUnit: mm"]
         laser_tracer_target_deviation_raw_value: f64,
+        #[doc = "Provides the status of the laser tracer to the operator."]
         laser_tracer_information: LaserTracerInformation2365485566,
+        #[doc = "Informs display devices how to display the current position of the laser tracer."]
         led_display_data2: LedDisplayData22365485566,
     },
+    #[doc = "Trip Fuel Information (Liquid)"]
     Ltfi {
+        #[doc = "Read TripPTOMovingFuelUsed signal from can frame\nUnit: kg"]
         trip_pto_moving_fuel_used_raw_value: f64,
+        #[doc = "Read TripDriveFuelUsed signal from can frame\nUnit: kg"]
         trip_drive_fuel_used_raw_value: f64,
     },
+    #[doc = "Modify Leveling System Control Set Point"]
     Lsp {
+        #[doc = "High resolution for the laser guided blade set point.\nUnit: m"]
         bld_height_set_point_high_resolution_raw_value: f64,
+        #[doc = "Used to control and coordinate the set point for the leveling system.\nUnit: mm"]
         modify_set_point_raw_value: f64,
     },
+    #[doc = "Land Leveling System Operational Information"]
     Loi {
+        #[doc = "This parameter indicates the side-shift blade control mode operator control state the user has set for the land leveling system."]
         sdshft_dsrd_bld_offset_operator_ctrl_raw_value: u8,
+        #[doc = "This parameter indicates the side-shift blade control mode operator control state the user has set for the land leveling system."]
         sdshft_bld_ctrl_mde_operator_control_raw_value: u8,
+        #[doc = "This parameter indicates the right blade offset operator control state the user has set for the land leveling system."]
         rght_dsrd_blade_offset_operator_ctrl_raw_value: u8,
+        #[doc = "This parameter indicates the right blade control mode operator control state the user has set for the land leveling system."]
         rght_blde_ctrl_mode_operator_control_raw_value: u8,
+        #[doc = "This parameter indicates the left blade offset operator control state the user has set for the land leveling system."]
         lft_dsred_blade_offset_operator_ctrl_raw_value: u8,
+        #[doc = "This parameter indicates the left blade control mode operator control state the user has set for the land leveling system."]
         lft_blade_ctrl_mode_operator_control_raw_value: u8,
+        #[doc = "Read BladeAutoModeCmd signal from can frame"]
         blade_auto_mode_cmd_raw_value: u8,
+        #[doc = "This parameter indicates the grade offset switch state the user has set for the land leveling system."]
         desired_grade_offset_switch_raw_value: u8,
+        #[doc = "This parameter indicates the blade control mode switch state the user has set for the land leveling system."]
         blade_ctrl_mode_switch_raw_value: u8,
+        #[doc = "This parameter indicates the side-shift blade control mode operator control state the user has set for the land leveling system."]
         sdshft_dsrd_bld_offset_operator_ctrl: SdshftDsrdBldOffsetOperatorCtrl2364542462,
+        #[doc = "This parameter indicates the side-shift blade control mode operator control state the user has set for the land leveling system."]
         sdshft_bld_ctrl_mde_operator_control: SdshftBldCtrlMdeOperatorControl2364542462,
+        #[doc = "This parameter indicates the right blade offset operator control state the user has set for the land leveling system."]
         rght_dsrd_blade_offset_operator_ctrl: RghtDsrdBladeOffsetOperatorCtrl2364542462,
+        #[doc = "This parameter indicates the right blade control mode operator control state the user has set for the land leveling system."]
         rght_blde_ctrl_mode_operator_control: RghtBldeCtrlModeOperatorControl2364542462,
+        #[doc = "This parameter indicates the left blade offset operator control state the user has set for the land leveling system."]
         lft_dsred_blade_offset_operator_ctrl: LftDsredBladeOffsetOperatorCtrl2364542462,
+        #[doc = "This parameter indicates the left blade control mode operator control state the user has set for the land leveling system."]
         lft_blade_ctrl_mode_operator_control: LftBladeCtrlModeOperatorControl2364542462,
+        #[doc = "Read BladeAutoModeCmd signal from can frame"]
         blade_auto_mode_cmd: BladeAutoModeCmd2364542462,
+        #[doc = "This parameter indicates the grade offset switch state the user has set for the land leveling system."]
         desired_grade_offset_switch: DesiredGradeOffsetSwitch2364542462,
+        #[doc = "This parameter indicates the blade control mode switch state the user has set for the land leveling system."]
         blade_ctrl_mode_switch: BladeCtrlModeSwitch2364542462,
     },
+    #[doc = "Laser Receiver Mast Position"]
     Lmp {
+        #[doc = "Used to monitor the position of the sensor attached to the land leveling mast.\nUnit: mm"]
         mast_pos_raw_value: f64,
     },
+    #[doc = "Fuel Information (Liquid)"]
     Lfi {
+        #[doc = "Average fuel rate, equal to trip fuel divided by trip time while the engine speed is above zero, since the last trip reset.\nUnit: kg/h"]
         trip_average_fuel_rate_raw_value: f64,
+        #[doc = "Total fuel used while the PTO or remote PTO is in the hold state and engine speed is above zero, over the life of the engine.\nUnit: kg"]
         total_eng_pto_fuel_used_raw_value: f64,
     },
+    #[doc = "Fuel Economy (Liquid)"]
     Lfe {
+        #[doc = "Average of instantaneous fuel economy for that segment of vehicle operation of interest.\nUnit: km/L"]
         eng_average_fuel_economy_raw_value: f64,
+        #[doc = "Current fuel economy at current vehicle velocity.\nUnit: km/L"]
         eng_instantaneous_fuel_economy_raw_value: f64,
+        #[doc = "Amount of fuel consumed by engine per unit of time.\nUnit: L/h"]
         eng_fuel_rate_raw_value: f64,
+        #[doc = "Read EngThrottle2Pos signal from can frame\nUnit: %"]
         eng_throttle2_pos_raw_value: f64,
+        #[doc = "The position of the valve used to regulate the supply of a fluid, usually air or fuel/air mixture, to an engine.\nUnit: %"]
         eng_throttle_pos_raw_value: f64,
     },
+    #[doc = "Fuel Consumption (Liquid)"]
     Lfc {
+        #[doc = "Accumulated amount of fuel used during vehicle operation.\nUnit: L"]
         eng_total_fuel_used_raw_value: f64,
+        #[doc = "Fuel consumed during all or part of a journey.\nUnit: L"]
         eng_trip_fuel_raw_value: f64,
     },
+    #[doc = "Front Wheel Drive Status"]
     Fwd {
+        #[doc = "Feedback on the front wheel drive actuator."]
         front_wheel_drive_actuator_status_raw_value: u8,
+        #[doc = "Feedback on the front wheel drive actuator."]
         front_wheel_drive_actuator_status: FrontWheelDriveActuatorStatus2633883646,
     },
+    #[doc = "FMS-standard Interface Identity/Capabilities"]
     Fms {
+        #[doc = "Information that identifies which issue level of the FMS-standard document the software included in the FMS gateway supports."]
         fm_sstandard_s_wversion_supported_raw_value: u32,
+        #[doc = "Read FMSstandardRqsSupported signal from can frame"]
         fm_sstandard_rqs_supported_raw_value: u8,
+        #[doc = "Read FMSstandardDiagnosticsSupported signal from can frame"]
         fm_sstandard_diagnostics_supported_raw_value: u8,
+        #[doc = "Read FMSstandardRqsSupported signal from can frame"]
         fm_sstandard_rqs_supported: FmSstandardRqsSupported2633880062,
+        #[doc = "Read FMSstandardDiagnosticsSupported signal from can frame"]
         fm_sstandard_diagnostics_supported: FmSstandardDiagnosticsSupported2633880062,
     },
+    #[doc = "Forward Lane Image"]
     Fli2 {
+        #[doc = "Indicates whether lane departure indication is active."]
         ln_dprture_indication_enable_status_raw_value: u8,
+        #[doc = "Indicates whether the left side is tracking lane."]
         lane_tracking_status_left_side_raw_value: u8,
+        #[doc = "Indicates whether right side is tracking lane."]
         lane_tracking_status_right_side_raw_value: u8,
+        #[doc = "Indicates whether lane departure indication is active."]
         ln_dprture_indication_enable_status: LnDprtureIndicationEnableStatus2566806526,
+        #[doc = "Indicates whether the left side is tracking lane."]
         lane_tracking_status_left_side: LaneTrackingStatusLeftSide2566806526,
+        #[doc = "Indicates whether right side is tracking lane."]
         lane_tracking_status_right_side: LaneTrackingStatusRightSide2566806526,
     },
+    #[doc = "Forward Lane Image urgent msg"]
     Fli1 {
+        #[doc = "Indicates departure imminent on left side of lane."]
         lane_departure_imminent_left_side_raw_value: u8,
+        #[doc = "Indicates departure imminent on right side of lane."]
         lane_departure_imminent_right_side_raw_value: u8,
+        #[doc = "Indicates departure imminent on left side of lane."]
         lane_departure_imminent_left_side: LaneDepartureImminentLeftSide2431649790,
+        #[doc = "Indicates departure imminent on right side of lane."]
         lane_departure_imminent_right_side: LaneDepartureImminentRightSide2431649790,
     },
+    #[doc = "Fuel Leakage"]
     Fl {
+        #[doc = "Status signal which indicates fuel leakage in the fuel rail of the engine."]
         eng_fuel_leakage2_raw_value: u8,
+        #[doc = "Status signal which indicates fuel leakage in the fuel rail of the engine."]
         eng_fuel_leakage1_raw_value: u8,
+        #[doc = "Status signal which indicates fuel leakage in the fuel rail of the engine."]
         eng_fuel_leakage2: EngFuelLeakage22633929214,
+        #[doc = "Status signal which indicates fuel leakage in the fuel rail of the engine."]
         eng_fuel_leakage1: EngFuelLeakage12633929214,
     },
+    #[doc = "Fan Drive"]
     Fd {
+        #[doc = "The speed of the fan associated with engine coolant system.\nUnit: rpm"]
         fan_speed_raw_value: f64,
+        #[doc = "This parameter is used to indicate the current state or mode of operation by the fan drive."]
         fan_drive_state_raw_value: u8,
+        #[doc = "Estimated fan speed as a ratio of the fan drive (current speed) to the fully engaged fan drive (maximum fan speed).\nUnit: %"]
         est_percent_fan_speed_raw_value: f64,
+        #[doc = "This parameter is used to indicate the current state or mode of operation by the fan drive."]
         fan_drive_state: FanDriveState2566831614,
     },
+    #[doc = "Engine Torque History"]
     Eth {
+        #[doc = "Calendar month timestamp when an ECU record was established.\nUnit: months"]
         calib_record_start_month_raw_value: u8,
+        #[doc = "Maximum torque output of the current ECU calibration when the engine operates on torque curve 2.\nUnit: Nm"]
         eng_peak_torque2_raw_value: u16,
+        #[doc = "Maximum torque output of the current ECU calibration when the engine operates on torque curve 1.\nUnit: Nm"]
         eng_peak_torque1_raw_value: u16,
+        #[doc = "Advertised engine power capability.\nUnit: kW"]
         eng_power_raw_value: f64,
+        #[doc = "Number of torque history records contained in the engine torque history PGN.\nUnit: records"]
         number_of_eng_torque_history_records_raw_value: u8,
     },
+    #[doc = "Electronic Transmission Controller #8"]
     Etc8 {
+        #[doc = "Ratio of the transmissions torque converter output torque to torque converter input torque at current speed."]
         trans_torque_converter_ratio_raw_value: f64,
     },
+    #[doc = "Electronic Transmission Controller 7"]
     Etc7 {
+        #[doc = "Read TransRqedGearFeedback signal from can frame"]
         trans_rqed_gear_feedback_raw_value: f64,
+        #[doc = "Read TransMode1Indicator signal from can frame"]
         trans_mode1_indicator_raw_value: u8,
+        #[doc = "Read TransMode2Indicator signal from can frame"]
         trans_mode2_indicator_raw_value: u8,
+        #[doc = "Read TransMode3Indicator signal from can frame"]
         trans_mode3_indicator_raw_value: u8,
+        #[doc = "Read TransMode4Indicator signal from can frame"]
         trans_mode4_indicator_raw_value: u8,
+        #[doc = "State signal indicating a transmission request for the Shift Inhibit Indicator to be active or inactive."]
         trans_shift_inhibit_indicator_raw_value: u8,
+        #[doc = "State signal from the transmission indicating if the transmission�s status is such that engine cranking is allowed (i."]
         trans_eng_crank_enable_raw_value: u8,
+        #[doc = "Read ActiveShiftConsoleIndicator signal from can frame"]
         active_shift_console_indicator_raw_value: u8,
+        #[doc = "Read TransReadyForBrakeRelease signal from can frame"]
         trans_ready_for_brake_release_raw_value: u8,
+        #[doc = "Read TransRqedRangeDisplayFlashState signal from can frame"]
         trans_rqed_range_display_flash_state_raw_value: u8,
+        #[doc = "Read TransRqedRangeDisplayBlankState signal from can frame"]
         trans_rqed_range_display_blank_state_raw_value: u8,
+        #[doc = "Read TransMode1Indicator signal from can frame"]
         trans_mode1_indicator: TransMode1Indicator2566802174,
+        #[doc = "Read TransMode2Indicator signal from can frame"]
         trans_mode2_indicator: TransMode2Indicator2566802174,
+        #[doc = "Read TransMode3Indicator signal from can frame"]
         trans_mode3_indicator: TransMode3Indicator2566802174,
+        #[doc = "Read TransMode4Indicator signal from can frame"]
         trans_mode4_indicator: TransMode4Indicator2566802174,
+        #[doc = "State signal indicating a transmission request for the Shift Inhibit Indicator to be active or inactive."]
         trans_shift_inhibit_indicator: TransShiftInhibitIndicator2566802174,
+        #[doc = "State signal from the transmission indicating if the transmission�s status is such that engine cranking is allowed (i."]
         trans_eng_crank_enable: TransEngCrankEnable2566802174,
+        #[doc = "Read ActiveShiftConsoleIndicator signal from can frame"]
         active_shift_console_indicator: ActiveShiftConsoleIndicator2566802174,
+        #[doc = "Read TransReadyForBrakeRelease signal from can frame"]
         trans_ready_for_brake_release: TransReadyForBrakeRelease2566802174,
+        #[doc = "Read TransRqedRangeDisplayFlashState signal from can frame"]
         trans_rqed_range_display_flash_state: TransRqedRangeDisplayFlashState2566802174,
+        #[doc = "Read TransRqedRangeDisplayBlankState signal from can frame"]
         trans_rqed_range_display_blank_state: TransRqedRangeDisplayBlankState2566802174,
     },
+    #[doc = "Electronic Transmission Controller 6"]
     Etc6 {
+        #[doc = "Signal which indicates the actual clutch life remaining in percent.\nUnit: %"]
         clutch_life_remaining_raw_value: f64,
+        #[doc = "The transmission calculates this gear continuously."]
         lowest_possible_gear_raw_value: f64,
+        #[doc = "The transmission calculates this gear continuously."]
         highest_possible_gear_raw_value: f64,
+        #[doc = "The transmission calculates this gear continuously."]
         recommended_gear_raw_value: f64,
     },
+    #[doc = "Electronic Transmission Controller 5"]
     Etc5 {
+        #[doc = "Identifies the status of the switch that indicates forward direction."]
         trans_forward_direction_switch_raw_value: u8,
+        #[doc = "Identifies the status of the switch that indicates neutral."]
         trans_neutral_switch_raw_value: u8,
+        #[doc = "Identifies the status of the switch that indicates reverse direction."]
         trans_reverse_direction_switch_raw_value: u8,
+        #[doc = "Identifies the status of the switch that represents low range."]
         trans_low_range_sense_switch_raw_value: u8,
+        #[doc = "Identifies the status of the switch that represents high range."]
         trans_high_range_sense_switch_raw_value: u8,
+        #[doc = "Identifies the status of the switch that indicates forward direction."]
         trans_forward_direction_switch: TransForwardDirectionSwitch2633942014,
+        #[doc = "Identifies the status of the switch that indicates neutral."]
         trans_neutral_switch: TransNeutralSwitch2633942014,
+        #[doc = "Identifies the status of the switch that indicates reverse direction."]
         trans_reverse_direction_switch: TransReverseDirectionSwitch2633942014,
+        #[doc = "Identifies the status of the switch that represents low range."]
         trans_low_range_sense_switch: TransLowRangeSenseSwitch2633942014,
+        #[doc = "Identifies the status of the switch that represents high range."]
         trans_high_range_sense_switch: TransHighRangeSenseSwitch2633942014,
     },
+    #[doc = "Electronic Transmission Controller 4"]
     Etc4 {
+        #[doc = "The current modulated value for the air supply to the synchronizer brake.\nUnit: %"]
         trans_synchronizer_brake_value_raw_value: f64,
+        #[doc = "The current modulated value for the air supply to the synchronizer clutch.\nUnit: %"]
         trans_synchronizer_clutch_value_raw_value: f64,
     },
+    #[doc = "Electronic Transmission Controller 3"]
     Etc3 {
+        #[doc = "Identifies the status of the actuator that controls the inertia brake."]
         trans_inertia_brake_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that controls the engine defuel mechanism."]
         trans_defuel_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that controls the lockup clutch."]
         trans_lockup_clutch_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that controls the clutch."]
         trans_clutch_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the splitter indirect actuator in the auxiliary unit."]
         trans_splitter_indirect_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the splitter direct actuator in the auxiliary unit."]
         trans_splitter_direct_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the range low actuator in the auxiliary unit."]
         trans_range_low_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the range high actuator in the auxiliary unit."]
         trans_range_high_actuator_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as gear actuator #2."]
         trans_shift_finger_gear_actuator2_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as rail actuator #2."]
         trans_shift_finger_rail_actuator2_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as gear actuator #1."]
         trans_shift_finger_gear_actuator1_raw_value: u8,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as rail actuator #1."]
         trans_shift_finger_rail_actuator1_raw_value: u8,
+        #[doc = "Identifies the status of the shift finger in the center rail position."]
         trns_shft_fngr_center_rail_indicator_raw_value: u8,
+        #[doc = "Identifies the status of the shift finger in the engagement position."]
         trns_shft_fngr_engagement_indicator_raw_value: u8,
+        #[doc = "Indicates the status of the shift finger in the neutral position."]
         trns_shift_finger_neutral_indicator_raw_value: u8,
+        #[doc = "The current position of the shift finger in the rail direction.\nUnit: %"]
         trans_shift_finger_rail_pos_raw_value: f64,
+        #[doc = "The current position of the shift finger in the gear direction.\nUnit: %"]
         trans_shift_finger_gear_pos_raw_value: f64,
+        #[doc = "Identifies the status of the actuator that controls the inertia brake."]
         trans_inertia_brake_actuator: TransInertiaBrakeActuator2633943038,
+        #[doc = "Identifies the status of the actuator that controls the engine defuel mechanism."]
         trans_defuel_actuator: TransDefuelActuator2633943038,
+        #[doc = "Identifies the status of the actuator that controls the lockup clutch."]
         trans_lockup_clutch_actuator: TransLockupClutchActuator2633943038,
+        #[doc = "Identifies the status of the actuator that controls the clutch."]
         trans_clutch_actuator: TransClutchActuator2633943038,
+        #[doc = "Identifies the status of the splitter indirect actuator in the auxiliary unit."]
         trans_splitter_indirect_actuator: TransSplitterIndirectActuator2633943038,
+        #[doc = "Identifies the status of the splitter direct actuator in the auxiliary unit."]
         trans_splitter_direct_actuator: TransSplitterDirectActuator2633943038,
+        #[doc = "Identifies the status of the range low actuator in the auxiliary unit."]
         trans_range_low_actuator: TransRangeLowActuator2633943038,
+        #[doc = "Identifies the status of the range high actuator in the auxiliary unit."]
         trans_range_high_actuator: TransRangeHighActuator2633943038,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as gear actuator #2."]
         trans_shift_finger_gear_actuator2: TransShiftFingerGearActuator22633943038,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as rail actuator #2."]
         trans_shift_finger_rail_actuator2: TransShiftFingerRailActuator22633943038,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as gear actuator #1."]
         trans_shift_finger_gear_actuator1: TransShiftFingerGearActuator12633943038,
+        #[doc = "Identifies the status of the actuator that moves the shift finger identified as rail actuator #1."]
         trans_shift_finger_rail_actuator1: TransShiftFingerRailActuator12633943038,
+        #[doc = "Identifies the status of the shift finger in the center rail position."]
         trns_shft_fngr_center_rail_indicator: TrnsShftFngrCenterRailIndicator2633943038,
+        #[doc = "Identifies the status of the shift finger in the engagement position."]
         trns_shft_fngr_engagement_indicator: TrnsShftFngrEngagementIndicator2633943038,
+        #[doc = "Indicates the status of the shift finger in the neutral position."]
         trns_shift_finger_neutral_indicator: TrnsShiftFingerNeutralIndicator2633943038,
     },
+    #[doc = "Electronic Transmission Controller 2"]
     Etc2 {
+        #[doc = "Range currently being commanded by the transmission control system."]
         trans_current_range_raw_value: u16,
+        #[doc = "Range selected by the operator."]
         trans_rqed_range_raw_value: u16,
+        #[doc = "Read TransCurrentGear signal from can frame"]
         trans_current_gear_raw_value: f64,
+        #[doc = "Actual ratio of input shaft speed to output shaft speed."]
         trans_actual_gear_ratio_raw_value: f64,
+        #[doc = "Read TransSelectedGear signal from can frame"]
         trans_selected_gear_raw_value: f64,
     },
+    #[doc = "Electronic Transmission Controller 1"]
     Etc1 {
+        #[doc = "The source address of the SAE J1939 device currently controlling the transmission."]
         src_addrss_of_ctrllng_dvc_fr_trns_ctrl_raw_value: u8,
+        #[doc = "Rotational velocity of the primary shaft transferring power into the transmission.\nUnit: rpm"]
         trans_input_shaft_speed_raw_value: f64,
+        #[doc = "Command signal used to indicate that progressive shifting by the engine should be disallowed."]
         progressive_shift_disable_raw_value: u8,
+        #[doc = "Read EngMomentaryOverspeedEnable signal from can frame"]
         eng_momentary_overspeed_enable_raw_value: u8,
+        #[doc = "Parameter which represents the ratio of input shaft speed to current engine speed (in percent).\nUnit: %"]
         percent_clutch_slip_raw_value: f64,
+        #[doc = "Calculated speed of the transmission output shaft.\nUnit: rpm"]
         trans_output_shaft_speed_raw_value: f64,
+        #[doc = "Indicates that the transmission is in process of shifting from the current gear to the selected gear."]
         trans_shift_in_process_raw_value: u8,
+        #[doc = "State signal which indicates whether the torque converter lockup is engaged."]
         torque_converter_lockup_engaged_raw_value: u8,
+        #[doc = "Read TransDrivelineEngaged signal from can frame"]
         trans_driveline_engaged_raw_value: u8,
+        #[doc = "Command signal used to indicate that progressive shifting by the engine should be disallowed."]
         progressive_shift_disable: ProgressiveShiftDisable2364539646,
+        #[doc = "Read EngMomentaryOverspeedEnable signal from can frame"]
         eng_momentary_overspeed_enable: EngMomentaryOverspeedEnable2364539646,
+        #[doc = "Indicates that the transmission is in process of shifting from the current gear to the selected gear."]
         trans_shift_in_process: TransShiftInProcess2364539646,
+        #[doc = "State signal which indicates whether the torque converter lockup is engaged."]
         torque_converter_lockup_engaged: TorqueConverterLockupEngaged2364539646,
+        #[doc = "Read TransDrivelineEngaged signal from can frame"]
         trans_driveline_engaged: TransDrivelineEngaged2364539646,
     },
+    #[doc = "Engine Temperature 3"]
     Et3 {
+        #[doc = "Temperature of combustion air after it exits from the Charge Air Cooler but before any mixing of Recirculated Exhaust Gas.\nUnit: deg"]
         eng_charge_air_cooler_outlet_temp_raw_value: f64,
+        #[doc = "Temperature of liquid found in engine cooling system.\nUnit: deg"]
         eng_coolant_temp_hi_res_raw_value: f64,
+        #[doc = "The temperature of the oil in the hydraulic system that powers the intake valve actuation system.\nUnit: deg"]
         eng_intk_vlv_actation_system_oil_temp_raw_value: f64,
+        #[doc = "Temperature of pre-combustion air found in intake manifold of engine air supply system.\nUnit: deg"]
         eng_intake_manifold1_air_temp_raw_value: f64,
     },
+    #[doc = "Engine Temperature 2"]
     Et2 {
+        #[doc = "Read EngExhaustGasRecirculationTemp signal from can frame\nUnit: deg"]
         eng_exhaust_gas_recirculation_temp_raw_value: f64,
+        #[doc = "Read EngExhstGsRcirculationDiffPress signal from can frame\nUnit: kPa"]
         eng_exhst_gs_rcirculation_diff_press_raw_value: f64,
+        #[doc = "Temperature of the engine electronic control unit.\nUnit: deg"]
         eng_ecu_temp_raw_value: f64,
+        #[doc = "Temperature of the engine lubricant.\nUnit: deg"]
         eng_oil_temp2_raw_value: f64,
     },
+    #[doc = "Engine Temperature 1"]
     Et1 {
+        #[doc = "The current position of the thermostat used to regulate the temperature of the engine intercooler.\nUnit: %"]
         eng_intercooler_thermostat_opening_raw_value: f64,
+        #[doc = "Temperature of liquid found in the intercooler located after the turbocharger.\nUnit: deg"]
         eng_intercooler_temp_raw_value: f64,
+        #[doc = "Temperature of the turbocharger lubricant.\nUnit: deg"]
         eng_turbo_oil_temp_raw_value: f64,
+        #[doc = "Temperature of the engine lubricant.\nUnit: deg"]
         eng_oil_temp1_raw_value: f64,
+        #[doc = "Temperature of fuel entering injectors.\nUnit: deg"]
         eng_fuel_temp_raw_value: f64,
+        #[doc = "Temperature of liquid found in engine cooling system.\nUnit: deg"]
         eng_coolant_temp_raw_value: f64,
     },
+    #[doc = "Exhaust Temperature"]
     Et {
+        #[doc = "Temperature of combustion byproducts within the left engine exhaust manifold.\nUnit: deg"]
         eng_exhst_exhst_gs_temp_left_manifold_raw_value: f64,
+        #[doc = "Temperature of combustion byproducts within the right engine exhaust manifold.\nUnit: deg"]
         eng_exhst_exhst_gs_tmp_right_manifold_raw_value: f64,
     },
+    #[doc = "Electronic Steering Control"]
     Esc1 {
+        #[doc = "A signal which indicates if lowering of lifted axle is allowed or inhibited."]
         sterable_lift_axle_lowering_inhibit_raw_value: u8,
+        #[doc = "To identify to which of several similar devices (such as tires or fuel tanks) the information applies."]
         axle_location_raw_value: u8,
+        #[doc = "Type of Steering Transmission (Ref."]
         type_of_steer_trans_raw_value: u8,
+        #[doc = "Type of Steering Forces (Ref."]
         type_of_steer_forces_raw_value: u8,
+        #[doc = "Indicates the different types of steering systems (ref."]
         steer_type_raw_value: u8,
+        #[doc = "Read StatusOfSteerAxle signal from can frame"]
         status_of_steer_axle_raw_value: u8,
+        #[doc = "Signal which indicates the actual inner wheel steering angle.\nUnit: deg"]
         actual_inner_wheel_steer_angle_raw_value: f64,
+        #[doc = "A signal which indicates if lowering of lifted axle is allowed or inhibited."]
         sterable_lift_axle_lowering_inhibit: SterableLiftAxleLoweringInhibit2565868542,
+        #[doc = "Type of Steering Transmission (Ref."]
         type_of_steer_trans: TypeOfSteerTrans2565868542,
+        #[doc = "Type of Steering Forces (Ref."]
         type_of_steer_forces: TypeOfSteerForces2565868542,
+        #[doc = "Indicates the different types of steering systems (ref."]
         steer_type: SteerType2565868542,
+        #[doc = "Read StatusOfSteerAxle signal from can frame"]
         status_of_steer_axle: StatusOfSteerAxle2565868542,
     },
+    #[doc = "Electronic Retarder Controller 2"]
     Erc2 {
+        #[doc = "Identifies the status of the transmission output retarder."]
         trans_output_retarder_raw_value: u8,
+        #[doc = "Identifies the status of the transmission output retarder."]
         trans_output_retarder: TransOutputRetarder2633941758,
     },
+    #[doc = "Electronic Retarder Controller 1"]
     Erc1 {
+        #[doc = "Read RetarderSelectionNonEng signal from can frame\nUnit: %"]
         retarder_selection_non_eng_raw_value: f64,
+        #[doc = "This is the maximum amount of torque that the retarder can immediately deliver.\nUnit: %"]
         actl_mx_avlbl_rtarder_percent_torque_raw_value: f64,
+        #[doc = "Read DrvrsDmandRetarderPercentTorque signal from can frame\nUnit: %"]
         drvrs_dmand_retarder_percent_torque_raw_value: f64,
+        #[doc = "The source address of the SAE J1939 device currently controlling the retarder."]
         src_addrss_of_ctrllng_dvc_fr_rtrdr_ctrl_raw_value: u8,
+        #[doc = "Read RetarderRqingBrakeLight signal from can frame"]
         retarder_rqing_brake_light_raw_value: u8,
+        #[doc = "Status of an event, external to the engine, that may increase the nominal temperature of the engine coolant liquid."]
         eng_coolant_load_increase_raw_value: u8,
+        #[doc = "Braking torque of retarder that the retarder is currently trying to achieve.\nUnit: %"]
         intended_retarder_percent_torque_raw_value: f64,
+        #[doc = "Actual braking torque of the retarder as a percent of retarder configuration reference torque SPN 556.\nUnit: %"]
         actual_retarder_percent_torque_raw_value: f64,
+        #[doc = "Switch signal which indicates whether the operator wishes the retarder to be enabled for transmission shift assist."]
         retarder_enable_shift_assist_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates whether the operator wishes the retarder to be enabled for vehicle braking assist."]
         retarder_enable_brake_assist_switch_raw_value: u8,
+        #[doc = "State signal which indicates which retarder torque mode is currently generating, limiting, or controlling the torque."]
         retarder_torque_mode_raw_value: u8,
+        #[doc = "Status of an event, external to the engine, that may increase the nominal temperature of the engine coolant liquid."]
         eng_coolant_load_increase: EngCoolantLoadIncrease2565865726,
+        #[doc = "Switch signal which indicates whether the operator wishes the retarder to be enabled for transmission shift assist."]
         retarder_enable_shift_assist_switch: RetarderEnableShiftAssistSwitch2565865726,
+        #[doc = "Switch signal which indicates whether the operator wishes the retarder to be enabled for vehicle braking assist."]
         retarder_enable_brake_assist_switch: RetarderEnableBrakeAssistSwitch2565865726,
     },
+    #[doc = "Exhaust Port Temperature 5"]
     Ept5 {
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port20_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port19_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port18_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port17_temp_raw_value: f64,
     },
+    #[doc = "Exhaust Port Temperature 4"]
     Ept4 {
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port16_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port15_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port14_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port13_temp_raw_value: f64,
     },
+    #[doc = "Exhaust Port Temperature 3"]
     Ept3 {
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port12_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port11_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port10_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port9_temp_raw_value: f64,
     },
+    #[doc = "Exhaust Port Temperature 2"]
     Ept2 {
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port8_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port7_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port6_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port5_temp_raw_value: f64,
     },
+    #[doc = "Exhaust Port Temperature 1"]
     Ept1 {
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port4_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port3_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port2_temp_raw_value: f64,
+        #[doc = "Temperature at the cylinder exhaust port of the engine.\nUnit: deg"]
         eng_exhaust_gas_port1_temp_raw_value: f64,
     },
+    #[doc = "Equipment Performance Data"]
     Epd {
+        #[doc = "The current payload of the equipment, reported as a percentage of the equipment's rated payload limit.\nUnit: %"]
         payload_percentage_raw_value: u8,
     },
+    #[doc = "ECU Performance"]
     Ep {
+        #[doc = "The used storage capacity of the data buffer memory internal to an ECU, such as a data logger.\nUnit: %"]
         data_memory_usage_raw_value: f64,
+        #[doc = "The capacity consumed from the direct battery connection since the key was last turned off.\nUnit: mAhr"]
         keep_alive_battery_consumption_raw_value: u16,
     },
+    #[doc = "Equipment Operation and Control"]
     Eoac {
+        #[doc = "Read TravelVelocityCtrlPos signal from can frame\nUnit: %"]
         travel_velocity_ctrl_pos_raw_value: f64,
     },
+    #[doc = "Exhaust Oxygen 1"]
     Eo1 {
+        #[doc = "Indicates whether the engine is using the Exhaust Gas Oxygen sensor to control the air/fuel ratio."]
         eng_exhst_gs_oxygn_snsr_clsd_lp_oprton_raw_value: u8,
+        #[doc = "Read EngExhstGsOxygnSnsrFlngCrrction signal from can frame\nUnit: %"]
         eng_exhst_gs_oxygn_snsr_flng_crrction_raw_value: f64,
+        #[doc = "Read EngActualExhaustOxygen signal from can frame\nUnit: %"]
         eng_actual_exhaust_oxygen_raw_value: f64,
+        #[doc = "Read EngDesiredExhaustOxygen signal from can frame\nUnit: %"]
         eng_desired_exhaust_oxygen_raw_value: f64,
+        #[doc = "Read EngDesiredRatedExhaustOxygen signal from can frame\nUnit: %"]
         eng_desired_rated_exhaust_oxygen_raw_value: f64,
+        #[doc = "Indicates whether the engine is using the Exhaust Gas Oxygen sensor to control the air/fuel ratio."]
         eng_exhst_gs_oxygn_snsr_clsd_lp_oprton: EngExhstGsOxygnSnsrClsdLpOprton2633935358,
     },
+    #[doc = "Extended Joystick Message 3"]
     Ejm3 {
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck3_grip_x_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck3_grip_y_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         jystck3_theta_axis_detent_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick3_theta_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck3ThtAxsClckwsPstvPsStatus signal from can frame"]
         jystck3_tht_axs_clckws_pstv_ps_status_raw_value: u8,
+        #[doc = "Read Jystck3ThtAxsCntrClckwsNgtvPsStt signal from can frame"]
         jystck3_tht_axs_cntr_clckws_ngtv_ps_stt_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         jystck3_thta_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick grip in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick3_grip_y_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck3GrpYAxsLvrFrwrdPstvPsStts signal from can frame"]
         jystck3_grp_y_axs_lvr_frwrd_pstv_ps_stts_raw_value: u8,
+        #[doc = "Read Jystck3GrpYAxsLvrBckNgtvPsSttus signal from can frame"]
         jystck3_grp_y_axs_lvr_bck_ngtv_ps_sttus_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck3_grp_y_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick grip in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick3_grip_x_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck3GrpXAxsLvrRghtPstvPsStts signal from can frame"]
         jystck3_grp_x_axs_lvr_rght_pstv_ps_stts_raw_value: u8,
+        #[doc = "Read Jystck3GrpXAxsLvrLftNgtvPsSttus signal from can frame"]
         jystck3_grp_x_axs_lvr_lft_ngtv_ps_sttus_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck3_grp_x_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck3_grip_x_axis_detent_pos_status: Jystck3GripXAxisDetentPosStatus2365447166,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck3_grip_y_axis_detent_pos_status: Jystck3GripYAxisDetentPosStatus2365447166,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         jystck3_theta_axis_detent_pos_status: Jystck3ThetaAxisDetentPosStatus2365447166,
+        #[doc = "Read Jystck3ThtAxsClckwsPstvPsStatus signal from can frame"]
         jystck3_tht_axs_clckws_pstv_ps_status: Jystck3ThtAxsClckwsPstvPsStatus2365447166,
+        #[doc = "Read Jystck3ThtAxsCntrClckwsNgtvPsStt signal from can frame"]
         jystck3_tht_axs_cntr_clckws_ngtv_ps_stt: Jystck3ThtAxsCntrClckwsNgtvPsStt2365447166,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         jystck3_thta_axis_neutral_pos_status: Jystck3ThtaAxisNeutralPosStatus2365447166,
+        #[doc = "Read Jystck3GrpYAxsLvrFrwrdPstvPsStts signal from can frame"]
         jystck3_grp_y_axs_lvr_frwrd_pstv_ps_stts: Jystck3GrpYAxsLvrFrwrdPstvPsStts2365447166,
+        #[doc = "Read Jystck3GrpYAxsLvrBckNgtvPsSttus signal from can frame"]
         jystck3_grp_y_axs_lvr_bck_ngtv_ps_sttus: Jystck3GrpYAxsLvrBckNgtvPsSttus2365447166,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck3_grp_y_axis_neutral_pos_status: Jystck3GrpYAxisNeutralPosStatus2365447166,
+        #[doc = "Read Jystck3GrpXAxsLvrRghtPstvPsStts signal from can frame"]
         jystck3_grp_x_axs_lvr_rght_pstv_ps_stts: Jystck3GrpXAxsLvrRghtPstvPsStts2365447166,
+        #[doc = "Read Jystck3GrpXAxsLvrLftNgtvPsSttus signal from can frame"]
         jystck3_grp_x_axs_lvr_lft_ngtv_ps_sttus: Jystck3GrpXAxsLvrLftNgtvPsSttus2365447166,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck3_grp_x_axis_neutral_pos_status: Jystck3GrpXAxisNeutralPosStatus2365447166,
     },
+    #[doc = "Extended Joystick Message 2"]
     Ejm2 {
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck2_grip_x_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck2_grip_y_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         jystck2_theta_axis_detent_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick2_theta_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck2ThtAxsClckwsPstvPsStatus signal from can frame"]
         jystck2_tht_axs_clckws_pstv_ps_status_raw_value: u8,
+        #[doc = "Read Jystck2ThtAxsCntrClckwsNgtvPsStt signal from can frame"]
         jystck2_tht_axs_cntr_clckws_ngtv_ps_stt_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         jystck2_thta_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick grip in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick2_grip_y_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck2GrpYAxsLvrFrwrdPstvPsStts signal from can frame"]
         jystck2_grp_y_axs_lvr_frwrd_pstv_ps_stts_raw_value: u8,
+        #[doc = "Read Jystck2GrpYAxsLvrBckNgtvPsSttus signal from can frame"]
         jystck2_grp_y_axs_lvr_bck_ngtv_ps_sttus_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck2_grp_y_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick grip in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick2_grip_x_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck2GrpXAxsLvrRghtPstvPsStts signal from can frame"]
         jystck2_grp_x_axs_lvr_rght_pstv_ps_stts_raw_value: u8,
+        #[doc = "Read Jystck2GrpXAxsLvrLftNgtvPsSttus signal from can frame"]
         jystck2_grp_x_axs_lvr_lft_ngtv_ps_sttus_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck2_grp_x_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck2_grip_x_axis_detent_pos_status: Jystck2GripXAxisDetentPosStatus2365446654,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck2_grip_y_axis_detent_pos_status: Jystck2GripYAxisDetentPosStatus2365446654,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         jystck2_theta_axis_detent_pos_status: Jystck2ThetaAxisDetentPosStatus2365446654,
+        #[doc = "Read Jystck2ThtAxsClckwsPstvPsStatus signal from can frame"]
         jystck2_tht_axs_clckws_pstv_ps_status: Jystck2ThtAxsClckwsPstvPsStatus2365446654,
+        #[doc = "Read Jystck2ThtAxsCntrClckwsNgtvPsStt signal from can frame"]
         jystck2_tht_axs_cntr_clckws_ngtv_ps_stt: Jystck2ThtAxsCntrClckwsNgtvPsStt2365446654,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         jystck2_thta_axis_neutral_pos_status: Jystck2ThtaAxisNeutralPosStatus2365446654,
+        #[doc = "Read Jystck2GrpYAxsLvrFrwrdPstvPsStts signal from can frame"]
         jystck2_grp_y_axs_lvr_frwrd_pstv_ps_stts: Jystck2GrpYAxsLvrFrwrdPstvPsStts2365446654,
+        #[doc = "Read Jystck2GrpYAxsLvrBckNgtvPsSttus signal from can frame"]
         jystck2_grp_y_axs_lvr_bck_ngtv_ps_sttus: Jystck2GrpYAxsLvrBckNgtvPsSttus2365446654,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck2_grp_y_axis_neutral_pos_status: Jystck2GrpYAxisNeutralPosStatus2365446654,
+        #[doc = "Read Jystck2GrpXAxsLvrRghtPstvPsStts signal from can frame"]
         jystck2_grp_x_axs_lvr_rght_pstv_ps_stts: Jystck2GrpXAxsLvrRghtPstvPsStts2365446654,
+        #[doc = "Read Jystck2GrpXAxsLvrLftNgtvPsSttus signal from can frame"]
         jystck2_grp_x_axs_lvr_lft_ngtv_ps_sttus: Jystck2GrpXAxsLvrLftNgtvPsSttus2365446654,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck2_grp_x_axis_neutral_pos_status: Jystck2GrpXAxisNeutralPosStatus2365446654,
     },
+    #[doc = "Extended Joystick Message 1"]
     Ejm1 {
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck1_grip_x_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck1_grip_y_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         jystck1_theta_axis_detent_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick1_theta_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck1ThtAxsClckwsPstvPsStatus signal from can frame"]
         jystck1_tht_axs_clckws_pstv_ps_status_raw_value: u8,
+        #[doc = "Read Jystck1ThtAxsCntrClckwsNgtvPsStt signal from can frame"]
         jystck1_tht_axs_cntr_clckws_ngtv_ps_stt_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         jystck1_thta_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick grip in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick1_grip_y_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck1GrpYAxsLvrFrwrdPstvPsStts signal from can frame"]
         jystck1_grp_y_axs_lvr_frwrd_pstv_ps_stts_raw_value: u8,
+        #[doc = "Read Jystck1GrpYAxsLvrBckNgtvPsSttus signal from can frame"]
         jystck1_grp_y_axs_lvr_bck_ngtv_ps_sttus_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck1_grp_y_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick grip in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick1_grip_x_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck1GrpXAxsLvrRghtPstvPsStts signal from can frame"]
         jystck1_grp_x_axs_lvr_rght_pstv_ps_stts_raw_value: u8,
+        #[doc = "Read Jystck1GrpXAxsLvrLftNgtvPsSttus signal from can frame"]
         jystck1_grp_x_axs_lvr_lft_ngtv_ps_sttus_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck1_grp_x_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck1_grip_x_axis_detent_pos_status: Jystck1GripXAxisDetentPosStatus2365446142,
+        #[doc = "Reports when the current joystick grip position is in the detent position for that axis of travel."]
         jystck1_grip_y_axis_detent_pos_status: Jystck1GripYAxisDetentPosStatus2365446142,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         jystck1_theta_axis_detent_pos_status: Jystck1ThetaAxisDetentPosStatus2365446142,
+        #[doc = "Read Jystck1ThtAxsClckwsPstvPsStatus signal from can frame"]
         jystck1_tht_axs_clckws_pstv_ps_status: Jystck1ThtAxsClckwsPstvPsStatus2365446142,
+        #[doc = "Read Jystck1ThtAxsCntrClckwsNgtvPsStt signal from can frame"]
         jystck1_tht_axs_cntr_clckws_ngtv_ps_stt: Jystck1ThtAxsCntrClckwsNgtvPsStt2365446142,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         jystck1_thta_axis_neutral_pos_status: Jystck1ThtaAxisNeutralPosStatus2365446142,
+        #[doc = "Read Jystck1GrpYAxsLvrFrwrdPstvPsStts signal from can frame"]
         jystck1_grp_y_axs_lvr_frwrd_pstv_ps_stts: Jystck1GrpYAxsLvrFrwrdPstvPsStts2365446142,
+        #[doc = "Read Jystck1GrpYAxsLvrBckNgtvPsSttus signal from can frame"]
         jystck1_grp_y_axs_lvr_bck_ngtv_ps_sttus: Jystck1GrpYAxsLvrBckNgtvPsSttus2365446142,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck1_grp_y_axis_neutral_pos_status: Jystck1GrpYAxisNeutralPosStatus2365446142,
+        #[doc = "Read Jystck1GrpXAxsLvrRghtPstvPsStts signal from can frame"]
         jystck1_grp_x_axs_lvr_rght_pstv_ps_stts: Jystck1GrpXAxsLvrRghtPstvPsStts2365446142,
+        #[doc = "Read Jystck1GrpXAxsLvrLftNgtvPsSttus signal from can frame"]
         jystck1_grp_x_axs_lvr_lft_ngtv_ps_sttus: Jystck1GrpXAxsLvrLftNgtvPsSttus2365446142,
+        #[doc = "Reports when the current joystick grip position is in the neutral position for that axis of travel."]
         jystck1_grp_x_axis_neutral_pos_status: Jystck1GrpXAxisNeutralPosStatus2365446142,
     },
+    #[doc = "Engine Information"]
     Ei {
+        #[doc = "Measured position of the engine fuel rack.\nUnit: %"]
         eng_fuel_rack_pos_raw_value: f64,
+        #[doc = "Estimate of the power developed by the engine.\nUnit: kW"]
         instantaneous_est_brake_power_raw_value: f64,
+        #[doc = "Mass flow of natural gas to the engine.\nUnit: kg/h"]
         eng_mass_flow_raw_value: f64,
+        #[doc = "Gage pressure of the exhaust gasses as measured at the turbine inlet of the turbocharger.\nUnit: kPa"]
         eng_exhaust_gas_press_raw_value: f64,
+        #[doc = "Gage pressure of the engine oil before the oil reaches the oil filter.\nUnit: kPa"]
         eng_prefilter_oil_press_raw_value: f64,
     },
+    #[doc = "ECU History"]
     Eh {
+        #[doc = "Total time accumulated over the life of the ECU, from ignition switch ON to ignition switch OFF.\nUnit: hr"]
         total_ecu_run_time_raw_value: f64,
+        #[doc = "Total distance accumulated over the life of the ECU.\nUnit: km"]
         total_ecu_distance_raw_value: f64,
     },
+    #[doc = "Engine Gas Flow Rate"]
     Egf1 {
+        #[doc = "Mass flow rate of fresh air entering the engine air intake, before any EGR mixer, if used.\nUnit: kg/h"]
         eng_inlet_air_mass_flow_rate_raw_value: f64,
+        #[doc = "Flow rate of gas through the EGR system.\nUnit: kg/h"]
         eng_exhst_gs_rcrcltion_mass_flow_rate_raw_value: f64,
     },
+    #[doc = "Engine Fuel/lube systems"]
     Efs {
+        #[doc = "Differential pressure measured across the fuel filter located between the fuel tank and the supply pump.\nUnit: kPa"]
         eng_fuel_filter_suc_side_diff_press_raw_value: f64,
+        #[doc = "Absolute pressure of fuel at the fuel supply pump inlet.\nUnit: kPa"]
         eng_fuel_supply_pump_inlet_press_raw_value: f64,
+        #[doc = "Ratio of current volume of engine oil in a remote reservoir to the maximum required volume.\nUnit: %"]
         eng_oil_level_remote_reservoir_raw_value: f64,
+        #[doc = "Level of crankcase blowby emulsion collected by a container.\nUnit: %"]
         eng_waste_oil_reservoir_level_raw_value: f64,
+        #[doc = "Engine ventilation control states."]
         eng_ventilation_status_raw_value: u8,
+        #[doc = "Determination of whether or not the engine is (or has recently been) sufficiently lubricated for starting purposes."]
         eng_oil_priming_state_raw_value: u8,
+        #[doc = "Switch input for activating the engine oil priming pump."]
         eng_oil_priming_pump_switch_raw_value: u8,
+        #[doc = "Indicates whether the engine oil pre-heated sufficiently for starting purposes."]
         eng_oil_pre_heated_state_raw_value: u8,
+        #[doc = "Oil pressure (gauge) measured just downstream of oil filter.\nUnit: kPa"]
         eng_oil_filter_outlet_press_raw_value: f64,
+        #[doc = "Indicates whether the engine coolant is pre-heated sufficiently for starting purposes."]
         eng_coolant_preheated_state_raw_value: u8,
+        #[doc = "Level of crankcase blowby emulsion collected by a container.\nUnit: %"]
         eng_waste_oil_reservoir_level: EngWasteOilReservoirLevel2566810366,
+        #[doc = "Engine ventilation control states."]
         eng_ventilation_status: EngVentilationStatus2566810366,
+        #[doc = "Determination of whether or not the engine is (or has recently been) sufficiently lubricated for starting purposes."]
         eng_oil_priming_state: EngOilPrimingState2566810366,
+        #[doc = "Switch input for activating the engine oil priming pump."]
         eng_oil_priming_pump_switch: EngOilPrimingPumpSwitch2566810366,
+        #[doc = "Indicates whether the engine oil pre-heated sufficiently for starting purposes."]
         eng_oil_pre_heated_state: EngOilPreHeatedState2566810366,
+        #[doc = "Indicates whether the engine coolant is pre-heated sufficiently for starting purposes."]
         eng_coolant_preheated_state: EngCoolantPreheatedState2566810366,
     },
+    #[doc = "Engine Fluid Level/Pressure 3"]
     EflP3 {
+        #[doc = "EGR inlet gage pressure is measured after the EGR cooler and before the EGR valve.\nUnit: kPa"]
         eng_exhst_gs_rcrculation_inlet_press_raw_value: f64,
+        #[doc = "Read EngIntkVlvActtionSystemOilPress signal from can frame\nUnit: Mpa"]
         eng_intk_vlv_acttion_system_oil_press_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 2"]
     EflP2 {
+        #[doc = "The gage pressure of fuel in the metering rail #2 as delivered from the supply pump to the injector metering inlet.\nUnit: MPa"]
         eng_injector_metering_rail2_press_raw_value: f64,
+        #[doc = "The gage pressure of fuel in the timing rail delivered from the supply pump to the injector timing inlet.\nUnit: Mpa"]
         eng_injector_timing_rail1_press_raw_value: f64,
+        #[doc = "The gage pressure of fuel in the primary, or first, metering rail as delivered from the supply pump to the injector metering inlet.\nUnit: MPa"]
         eng_injector_metering_rail1_press_raw_value: f64,
+        #[doc = "The gage pressure of the engine oil in the hydraulic accumulator that powers an intensifier used for fuel injection.\nUnit: MPa"]
         eng_injection_ctrl_press_raw_value: f64,
     },
+    #[doc = "Engine Fluid Level/Pressure 1"]
     EflP1 {
+        #[doc = "Ratio of volume of liquid found in engine cooling system to total cooling system volume.\nUnit: %"]
         eng_coolant_level_raw_value: f64,
+        #[doc = "Gage pressure of liquid found in engine cooling system.\nUnit: kPa"]
         eng_coolant_press_raw_value: f64,
+        #[doc = "Gage pressure inside engine crankcase.\nUnit: kPa"]
         eng_crankcase_press_raw_value: f64,
+        #[doc = "Gage pressure of oil in engine lubrication system as provided by oil pump.\nUnit: kPa"]
         eng_oil_press_raw_value: f64,
+        #[doc = "Ratio of current volume of engine sump oil to maximum required volume.\nUnit: %"]
         eng_oil_level_raw_value: f64,
+        #[doc = "Differential crankcase blow-by pressure as measured through a tube with a venturi.\nUnit: kPa"]
         eng_ex_crankcase_blowby_press_raw_value: f64,
+        #[doc = "Gage pressure of fuel in system as delivered from supply pump to the injection pump.\nUnit: kPa"]
         eng_fuel_delivery_press_raw_value: f64,
     },
+    #[doc = "Engine Electrical System/Module Information"]
     Ees {
+        #[doc = "Status signal which indicates that the turning gear is engaged."]
         turning_gear_engaged_raw_value: u8,
+        #[doc = "Status signal which indicates that the safety wire has been activated."]
         safety_wire_status_raw_value: u8,
+        #[doc = "Electrical power delivered by the engine to the electrical system connected to the generator.\nUnit: kW"]
         electrical_load_raw_value: f64,
+        #[doc = "Status signal which indicates that the turning gear is engaged."]
         turning_gear_engaged: TurningGearEngaged2633929726,
+        #[doc = "Status signal which indicates that the safety wire has been activated."]
         safety_wire_status: SafetyWireStatus2633929726,
     },
+    #[doc = "Electronic Engine Controller 5"]
     Eec5 {
+        #[doc = "Sensor that measures the position of the variable geometry turbocharger actuator.\nUnit: %"]
         eng_vrbl_gometry_turbo1_actuator_pos_raw_value: f64,
+        #[doc = "Isolates vehicle brake air from the Variable Geometry Turbocharger (VGT) system when engine is not running."]
         eng_vrbl_gmtry_trb_ar_ctrl_shtff_valve_raw_value: u8,
+        #[doc = "Desired percentage of maximum Exhaust Gas Recirculation (EGR) valve opening.\nUnit: %"]
         eng_exhst_gs_rcirculation_valve_ctrl_raw_value: f64,
+        #[doc = "Calculated value of turbocharger compressor outlet air temperature.\nUnit: deg"]
         eng_trb1_clclted_turbine_outlet_temp_raw_value: f64,
+        #[doc = "Read EngTrb1ClclatedTurbineInletTemp signal from can frame\nUnit: deg"]
         eng_trb1_clclated_turbine_inlet_temp_raw_value: f64,
+        #[doc = "Isolates vehicle brake air from the Variable Geometry Turbocharger (VGT) system when engine is not running."]
         eng_vrbl_gmtry_trb_ar_ctrl_shtff_valve: EngVrblGmtryTrbArCtrlShtffValve2566772222,
     },
+    #[doc = "Electronic Engine Controller 4"]
     Eec4 {
+        #[doc = "Direction of engine rotation, as reported by the engine."]
         eng_rotation_direction_raw_value: u8,
+        #[doc = "Reports the number of cranking cycles undergone during the present start attempt."]
         crnk_attmpt_cnt_on_prsnt_strt_attempt_raw_value: u8,
+        #[doc = "The maximum governed rotational velocity of the engine crankshaft under full load conditions.\nUnit: rpm"]
         eng_rated_speed_raw_value: f64,
+        #[doc = "Net brake power that the engine will deliver continuously, specified for a given application at a rated speed.\nUnit: kW"]
         eng_rated_power_raw_value: f64,
+        #[doc = "Direction of engine rotation, as reported by the engine."]
         eng_rotation_direction: EngRotationDirection2633940734,
     },
+    #[doc = "Electronic Engine Controller 3"]
     Eec3 {
+        #[doc = "Measured/calculated exhaust gas mass upstream of the after-treatment system.\nUnit: kg"]
         exhaust_gas_mass_raw_value: f64,
+        #[doc = "Read AftrTrtmntIntakeDewPointMessage signal from can frame"]
         aftr_trtmnt_intake_dew_point_message_raw_value: u8,
+        #[doc = "Read AftrTrtmntExhustDewPointMessage signal from can frame"]
         aftr_trtmnt_exhust_dew_point_message_raw_value: u8,
+        #[doc = "Read EstEngPrsticLossesPercentTorque signal from can frame\nUnit: %"]
         est_eng_prstic_losses_percent_torque_raw_value: f64,
+        #[doc = "Read EngsDsrdOprtngSpdAsymmtryAdjstmn signal from can frame"]
         engs_dsrd_oprtng_spd_asymmtry_adjstmn_raw_value: u8,
+        #[doc = "An indication by the engine of the optimal operating speed of the engine for the current existing conditions.\nUnit: rpm"]
         engs_desired_operating_speed_raw_value: f64,
+        #[doc = "Read NominalFrictionPercentTorque signal from can frame\nUnit: %"]
         nominal_friction_percent_torque_raw_value: f64,
     },
+    #[doc = "Electronic Engine Controller 2"]
     Eec2 {
+        #[doc = "This is the maximum amount of torque that the engine can immediately deliver as a percentage of the reference engine torque.\nUnit: %"]
         act_max_avail_eng_percent_torque_raw_value: f64,
+        #[doc = "Read AccelPedalPos2 signal from can frame\nUnit: %"]
         accel_pedal_pos2_raw_value: f64,
+        #[doc = "Status (active or not active) of the system used to limit maximum forward vehicle acceleration."]
         vhcl_acceleration_rate_limit_status_raw_value: u8,
+        #[doc = "Read EngPercentLoadAtCurrentSpeed signal from can frame\nUnit: %"]
         eng_percent_load_at_current_speed_raw_value: u8,
+        #[doc = "Switch signal which indicates the state of the accelerator pedal 2 low idle switch."]
         accel_pedal2_low_idle_switch_raw_value: u8,
+        #[doc = "Status (active or not active) of the system used to limit maximum vehicle velocity."]
         road_speed_limit_status_raw_value: u8,
+        #[doc = "Switch signal which indicates whether the accelerator pedal kickdown switch is opened or closed."]
         accel_pedal_kickdown_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the state of the accelerator pedal 1 low idle switch."]
         accel_pedal1_low_idle_switch_raw_value: u8,
+        #[doc = "Read RemoteAccelPedalPos signal from can frame\nUnit: %"]
         remote_accel_pedal_pos_raw_value: f64,
+        #[doc = "Read AccelPedalPos1 signal from can frame\nUnit: %"]
         accel_pedal_pos1_raw_value: f64,
+        #[doc = "Status (active or not active) of the system used to limit maximum forward vehicle acceleration."]
         vhcl_acceleration_rate_limit_status: VhclAccelerationRateLimitStatus2364539902,
+        #[doc = "Switch signal which indicates the state of the accelerator pedal 2 low idle switch."]
         accel_pedal2_low_idle_switch: AccelPedal2LowIdleSwitch2364539902,
+        #[doc = "Status (active or not active) of the system used to limit maximum vehicle velocity."]
         road_speed_limit_status: RoadSpeedLimitStatus2364539902,
+        #[doc = "Switch signal which indicates whether the accelerator pedal kickdown switch is opened or closed."]
         accel_pedal_kickdown_switch: AccelPedalKickdownSwitch2364539902,
+        #[doc = "Switch signal which indicates the state of the accelerator pedal 1 low idle switch."]
         accel_pedal1_low_idle_switch: AccelPedal1LowIdleSwitch2364539902,
     },
+    #[doc = "Electronic Engine Controller 1"]
     Eec1 {
+        #[doc = "Read EngDemandPercentTorque signal from can frame\nUnit: %"]
         eng_demand_percent_torque_raw_value: f64,
+        #[doc = "There are several phases in a starting action and different reasons why a start cannot take place."]
         eng_starter_mode_raw_value: u8,
+        #[doc = "The source address of the SAE J1939 device currently controlling the engine."]
         src_addrss_of_ctrllng_dvc_for_eng_ctrl_raw_value: u8,
+        #[doc = "Actual engine speed which is calculated over a minimum crankshaft angle of 720 degrees divided by the number of cylinders.\nUnit: rpm"]
         eng_speed_raw_value: f64,
+        #[doc = "The calculated output torque of the engine.\nUnit: %"]
         actual_eng_percent_torque_raw_value: f64,
+        #[doc = "The requested torque output of the engine by the driver.\nUnit: %"]
         drivers_demand_eng_percent_torque_raw_value: f64,
+        #[doc = "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque."]
         eng_torque_mode_raw_value: u8,
+        #[doc = "There are several phases in a starting action and different reasons why a start cannot take place."]
         eng_starter_mode: EngStarterMode2364540158,
+        #[doc = "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque."]
         eng_torque_mode: EngTorqueMode2364540158,
     },
+    #[doc = "ECU Identification Information"]
     Ecuid {},
+    #[doc = "Engine Continuous Torque & Speed Limit"]
     Ect1 {
+        #[doc = "Read EngMinContinuousTorque signal from can frame\nUnit: %"]
         eng_min_continuous_torque_raw_value: f64,
+        #[doc = "Applied limit for maximum continuous engine torque.\nUnit: %"]
         eng_max_continuous_torque_raw_value: f64,
+        #[doc = "Read EngMinContinuousRPM signal from can frame\nUnit: rpm"]
         eng_min_continuous_rpm_raw_value: f64,
+        #[doc = "Read EngMaxContinuousRPM signal from can frame\nUnit: rpm"]
         eng_max_continuous_rpm_raw_value: f64,
+        #[doc = "Maximum allowable value for minimum continuous torque.\nUnit: %"]
         eng_hgh_lmt_thrshhld_fr_mn_cntns_trq_frm_raw_value: f64,
+        #[doc = "Minimum allowable value for maximum continuous torque.\nUnit: %"]
         eng_lw_lmt_thrshld_fr_mx_trque_from_eng_raw_value: f64,
+        #[doc = "Read EngHghLmtThrshhldFrMnCntnsEngRPM signal from can frame\nUnit: rpm"]
         eng_hgh_lmt_thrshhld_fr_mn_cntns_eng_rpm_raw_value: f64,
+        #[doc = "Read EngLwLmtThrshhldFrMaxRPMFromEng signal from can frame\nUnit: rpm"]
         eng_lw_lmt_thrshhld_fr_max_rpm_from_eng_raw_value: f64,
     },
+    #[doc = "Engine Configuration"]
     Ec1 {
+        #[doc = "Engine speed of point 3, 4, and 5 of the engine torque map (see PGN 65251 and supporting document).\nUnit: rpm"]
         eng_speed_at_point3_raw_value: f64,
+        #[doc = "Read EngPercentTorqueAtPoint2 signal from can frame\nUnit: %"]
         eng_percent_torque_at_point2_raw_value: f64,
+        #[doc = "Engine speed of point 2 of the engine torque map (see PGN 65251 and supporting document).\nUnit: rpm"]
         eng_speed_at_point2_raw_value: f64,
+        #[doc = "The torque limit that indicates the available engine torque which can be provided by the engine at idle speed.\nUnit: %"]
         eng_percent_torque_at_idle_point1_raw_value: f64,
+        #[doc = "Read EngSpeedAtIdlePoint1 signal from can frame\nUnit: rpm"]
         eng_speed_at_idle_point1_raw_value: f64,
     },
+    #[doc = "Electronic Brake Controller 5"]
     Ebc5 {
+        #[doc = "This parameter indicates if the temperature in the service brakes exceeds a certain value."]
         brake_temp_warning_raw_value: u8,
+        #[doc = "The brake system may temporarily or generally limit the maximum brake performance available for external systems.\nUnit: m/s�"]
         xbr_acceleration_limit_raw_value: f64,
+        #[doc = "This parameter indicates which XBR Control Mode is executed by the brake system."]
         xbr_active_ctrl_mode_raw_value: u8,
+        #[doc = "This parameter indicates which external brake control is allowed."]
         xbr_system_state_raw_value: u8,
+        #[doc = "This parameter indicates if the brake system presently uses the foundation brakes."]
         foundation_brake_use_raw_value: u8,
+        #[doc = "Signal which indicates the current mode of the hill holder function."]
         hill_holder_mode_raw_value: u8,
+        #[doc = "Signal which indicates the current mode of the halt brake function."]
         halt_brake_mode_raw_value: u8,
+        #[doc = "This parameter indicates if the temperature in the service brakes exceeds a certain value."]
         brake_temp_warning: BrakeTempWarning2566767870,
+        #[doc = "This parameter indicates which XBR Control Mode is executed by the brake system."]
         xbr_active_ctrl_mode: XbrActiveCtrlMode2566767870,
+        #[doc = "This parameter indicates which external brake control is allowed."]
         xbr_system_state: XbrSystemState2566767870,
+        #[doc = "This parameter indicates if the brake system presently uses the foundation brakes."]
         foundation_brake_use: FoundationBrakeUse2566767870,
+        #[doc = "Signal which indicates the current mode of the hill holder function."]
         hill_holder_mode: HillHolderMode2566767870,
+        #[doc = "Signal which indicates the current mode of the halt brake function."]
         halt_brake_mode: HaltBrakeMode2566767870,
     },
+    #[doc = "Wheel Brake Lining Remaining Information"]
     Ebc4 {
+        #[doc = "The percentage of brake lining which can still be measured for the right wheel on the rear axle #3.\nUnit: %"]
         brk_lnng_rmnng_rear_axle3_right_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the left wheel on the rear axle #3.\nUnit: %"]
         brk_lnng_rmning_rear_axle3_left_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the right wheel on the rear axle #2.\nUnit: %"]
         brk_lnng_rmnng_rear_axle2_right_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the left wheel on the rear axle #2.\nUnit: %"]
         brk_lnng_rmning_rear_axle2_left_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the right wheel on the rear axle #1.\nUnit: %"]
         brk_lnng_rmnng_rear_axle1_right_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the left wheel on the rear axle #1.\nUnit: %"]
         brk_lnng_rmning_rear_axle1_left_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the right wheel on the front axle.\nUnit: %"]
         brk_lnng_rmnng_front_axle_right_wheel_raw_value: f64,
+        #[doc = "The percentage of brake lining which can still be measured for the left wheel on the front axle.\nUnit: %"]
         brk_lnng_rmning_front_axle_left_wheel_raw_value: f64,
     },
+    #[doc = "Wheel Application Pressure High Range Information"]
     Ebc3 {
+        #[doc = "The brake application pressure for the right wheel on the rear axle #3.\nUnit: kPa"]
         brk_app_prss_hgh_rng_rr_axl3_rght_wheel_raw_value: f64,
+        #[doc = "The brake application pressure for the left wheel on the rear axle #3.\nUnit: kPa"]
         brk_app_prss_hgh_rng_rr_axl3_left_wheel_raw_value: f64,
+        #[doc = "The brake application pressure for the right wheel on the rear axle #2.\nUnit: kPa"]
         brk_app_prss_hgh_rng_rr_axl2_rght_wheel_raw_value: f64,
+        #[doc = "The brake application pressure for the left wheel on the rear axle #2.\nUnit: kPa"]
         brk_app_prss_hgh_rng_rr_axl2_left_wheel_raw_value: f64,
+        #[doc = "The brake application pressure for the right wheel on the rear axle #1.\nUnit: kPa"]
         brk_app_prss_hgh_rng_rr_axl1_rght_wheel_raw_value: f64,
+        #[doc = "The brake application pressure for the left wheel on the rear axle #1.\nUnit: kPa"]
         brk_app_prss_hgh_rng_rr_axl1_left_wheel_raw_value: f64,
+        #[doc = "The brake application pressure for the right wheel on the front axle.\nUnit: kPa"]
         brk_app_prss_hgh_rng_frnt_axl_rght_whel_raw_value: f64,
+        #[doc = "The brake application pressure for the left wheel on the front axle.\nUnit: kPa"]
         brk_app_prss_hgh_rng_frnt_axl_lft_wheel_raw_value: f64,
     },
+    #[doc = "Wheel Speed Information"]
     Ebc2 {
+        #[doc = "The speed of the rear axle #2, right wheel relative to the front axle speed, SPN 904.\nUnit: km/h"]
         rlative_speed_rear_axle2_right_wheel_raw_value: f64,
+        #[doc = "The speed of the rear axle #2, left wheel relative to the front axle speed, SPN 904.\nUnit: km/h"]
         relative_speed_rear_axle2_left_wheel_raw_value: f64,
+        #[doc = "The speed of the rear axle #1, right wheel relative to the front axle speed, SPN 904.\nUnit: km/h"]
         rlative_speed_rear_axle1_right_wheel_raw_value: f64,
+        #[doc = "The speed of the rear axle #1, left wheel relative to the front axle speed, SPN 904.\nUnit: km/h"]
         relative_speed_rear_axle1_left_wheel_raw_value: f64,
+        #[doc = "The speed of the front axle, right wheel relative to the front axle speed, SPN 904.\nUnit: km/h"]
         rlative_speed_front_axle_right_wheel_raw_value: f64,
+        #[doc = "The speed of the front axle, left wheel relative to the front axle speed, SPN 904.\nUnit: km/h"]
         relative_speed_front_axle_left_wheel_raw_value: f64,
+        #[doc = "The average speed of the two front wheels.\nUnit: km/h"]
         front_axle_speed_raw_value: f64,
     },
+    #[doc = "Electronic Brake Controller 1"]
     Ebc1 {
+        #[doc = "The source address of the SAE J1939 device currently controlling the brake system."]
         src_addrss_of_ctrllng_dvc_fr_brk_cntrl_raw_value: u8,
+        #[doc = "Ratio of brake pedal position to maximum pedal position.\nUnit: %"]
         brake_pedal_pos_raw_value: f64,
+        #[doc = "This parameter commands the tractor-mounted trailer ABS optical warning signal."]
         trctr_mntd_triler_abs_warning_signal_raw_value: u8,
+        #[doc = "State signal which indicates that ABS in the trailer is actively controlling the brakes."]
         trailer_abs_status_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the halt brake switch."]
         halt_brake_switch_raw_value: u8,
+        #[doc = "This parameter commands the ATC/ASR driver information signal, for example a dash lamp."]
         atc_asr_information_signal_raw_value: u8,
+        #[doc = "Read ABS_EBSAmberWarningSignal signal from can frame"]
         abs_ebs_amber_warning_signal_raw_value: u8,
+        #[doc = "Read EBSRedWarningSignal signal from can frame"]
         ebs_red_warning_signal_raw_value: u8,
+        #[doc = "Read ABSFullyOperational signal from can frame"]
         abs_fully_operational_raw_value: u8,
+        #[doc = "Read EngRetarderSelection signal from can frame\nUnit: %"]
         eng_retarder_selection_raw_value: f64,
+        #[doc = "Switch signal which indicates that the remote accelerator has been enabled and controls the engine."]
         remote_accel_enable_switch_raw_value: u8,
+        #[doc = "Switch signal which requests that all engine fueling stop."]
         eng_aux_eng_shutdown_switch_raw_value: u8,
+        #[doc = "Switch signal used to activate the torque limiting feature of the engine."]
         eng_derate_switch_raw_value: u8,
+        #[doc = "Switch signal used to disable the accelerator and remote accelerator inputs, causing the engine to return to idle."]
         accel_interlock_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the traction control override switch."]
         traction_ctrl_override_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the ASR �hill holder� switch."]
         asr_hill_holder_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the ASR off-road switch."]
         asr_offroad_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the ABS off-road switch."]
         abs_offroad_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates that the brake pedal is being pressed."]
         ebs_brake_switch_raw_value: u8,
+        #[doc = "State signal which indicates that the ABS is active."]
         anti_lock_braking_active_raw_value: u8,
+        #[doc = "State signal which indicates that ASR brake control is active."]
         asr_brake_ctrl_active_raw_value: u8,
+        #[doc = "State signal which indicates that ASR engine control has been commanded to be active."]
         asr_eng_ctrl_active_raw_value: u8,
+        #[doc = "This parameter commands the tractor-mounted trailer ABS optical warning signal."]
         trctr_mntd_triler_abs_warning_signal: TrctrMntdTrilerAbsWarningSignal2565865982,
+        #[doc = "State signal which indicates that ABS in the trailer is actively controlling the brakes."]
         trailer_abs_status: TrailerAbsStatus2565865982,
+        #[doc = "Switch signal which indicates the position of the halt brake switch."]
         halt_brake_switch: HaltBrakeSwitch2565865982,
+        #[doc = "This parameter commands the ATC/ASR driver information signal, for example a dash lamp."]
         atc_asr_information_signal: AtcAsrInformationSignal2565865982,
+        #[doc = "Read ABS_EBSAmberWarningSignal signal from can frame"]
         abs_ebs_amber_warning_signal: AbsEbsAmberWarningSignal2565865982,
+        #[doc = "Read EBSRedWarningSignal signal from can frame"]
         ebs_red_warning_signal: EbsRedWarningSignal2565865982,
+        #[doc = "Read ABSFullyOperational signal from can frame"]
         abs_fully_operational: AbsFullyOperational2565865982,
+        #[doc = "Switch signal which indicates that the remote accelerator has been enabled and controls the engine."]
         remote_accel_enable_switch: RemoteAccelEnableSwitch2565865982,
+        #[doc = "Switch signal which requests that all engine fueling stop."]
         eng_aux_eng_shutdown_switch: EngAuxEngShutdownSwitch2565865982,
+        #[doc = "Switch signal used to activate the torque limiting feature of the engine."]
         eng_derate_switch: EngDerateSwitch2565865982,
+        #[doc = "Switch signal used to disable the accelerator and remote accelerator inputs, causing the engine to return to idle."]
         accel_interlock_switch: AccelInterlockSwitch2565865982,
+        #[doc = "Switch signal which indicates the position of the traction control override switch."]
         traction_ctrl_override_switch: TractionCtrlOverrideSwitch2565865982,
+        #[doc = "Switch signal which indicates the position of the ASR �hill holder� switch."]
         asr_hill_holder_switch: AsrHillHolderSwitch2565865982,
+        #[doc = "Switch signal which indicates the position of the ASR off-road switch."]
         asr_offroad_switch: AsrOffroadSwitch2565865982,
+        #[doc = "Switch signal which indicates the position of the ABS off-road switch."]
         abs_offroad_switch: AbsOffroadSwitch2565865982,
+        #[doc = "Switch signal which indicates that the brake pedal is being pressed."]
         ebs_brake_switch: EbsBrakeSwitch2565865982,
+        #[doc = "State signal which indicates that the ABS is active."]
         anti_lock_braking_active: AntiLockBrakingActive2565865982,
+        #[doc = "State signal which indicates that ASR brake control is active."]
         asr_brake_ctrl_active: AsrBrakeCtrlActive2565865982,
+        #[doc = "State signal which indicates that ASR engine control has been commanded to be active."]
         asr_eng_ctrl_active: AsrEngCtrlActive2565865982,
     },
+    #[doc = "Electronic Axle Controller 1"]
     Eac1 {
+        #[doc = "Read RearAxleGroupEngagementStatus signal from can frame"]
         rear_axle_group_engagement_status_raw_value: u8,
+        #[doc = "Read FrontAxleGroupEngagementStatus signal from can frame"]
         front_axle_group_engagement_status_raw_value: u8,
+        #[doc = "State used which indicates the condition of the central rear differential lock."]
         diff_lock_state_central_rear_raw_value: u8,
+        #[doc = "State used which indicates the condition of the central front differential lock."]
         diff_lock_state_central_front_raw_value: u8,
+        #[doc = "State used which indicates the condition of the central differential lock."]
         diff_lock_state_central_raw_value: u8,
+        #[doc = "State used which indicates the condition of the rear axle 2 differential lock."]
         diff_lock_state_rear_axle2_raw_value: u8,
+        #[doc = "State used which indicates the condition of the rear axle 1 differential lock."]
         diff_lock_state_rear_axle1_raw_value: u8,
+        #[doc = "State used which indicates the condition of the front axle 2 differential lock."]
         diff_lock_state_front_axle2_raw_value: u8,
+        #[doc = "State used which indicates the condition of the front axle 1 differential lock."]
         diff_lock_state_front_axle1_raw_value: u8,
+        #[doc = "To identify to which of several similar devices (such as tires or fuel tanks) the information applies."]
         location_raw_value: u8,
+        #[doc = "Read RearAxleGroupEngagementStatus signal from can frame"]
         rear_axle_group_engagement_status: RearAxleGroupEngagementStatus2565867262,
+        #[doc = "Read FrontAxleGroupEngagementStatus signal from can frame"]
         front_axle_group_engagement_status: FrontAxleGroupEngagementStatus2565867262,
+        #[doc = "State used which indicates the condition of the central rear differential lock."]
         diff_lock_state_central_rear: DiffLockStateCentralRear2565867262,
+        #[doc = "State used which indicates the condition of the central front differential lock."]
         diff_lock_state_central_front: DiffLockStateCentralFront2565867262,
+        #[doc = "State used which indicates the condition of the central differential lock."]
         diff_lock_state_central: DiffLockStateCentral2565867262,
+        #[doc = "State used which indicates the condition of the rear axle 2 differential lock."]
         diff_lock_state_rear_axle2: DiffLockStateRearAxle22565867262,
+        #[doc = "State used which indicates the condition of the rear axle 1 differential lock."]
         diff_lock_state_rear_axle1: DiffLockStateRearAxle12565867262,
+        #[doc = "State used which indicates the condition of the front axle 2 differential lock."]
         diff_lock_state_front_axle2: DiffLockStateFrontAxle22565867262,
+        #[doc = "State used which indicates the condition of the front axle 1 differential lock."]
         diff_lock_state_front_axle1: DiffLockStateFrontAxle12565867262,
     },
+    #[doc = "Engine Auxiliary Coolant"]
     Eac {
+        #[doc = "Gauge pressure of liquid found at outlet of sea water pump in sea water cooling system.\nUnit: kPa"]
         sea_water_pump_outlet_press_raw_value: f64,
+        #[doc = "Temperature of coolant found in the intercooler which is located after the turbocharger.\nUnit: deg"]
         eng_aux_coolant_temp_raw_value: f64,
+        #[doc = "Gage pressure of coolant found in the intercooler which is located after the turbocharger.\nUnit: kPa"]
         eng_aux_coolant_press_raw_value: f64,
     },
+    #[doc = "Driver's Identification"]
     Di {},
+    #[doc = "Dash Display"]
     Dd {
+        #[doc = "Temperature of air inside vehicle container used to accommodate cargo.\nUnit: deg"]
         cargo_ambient_temp_raw_value: f64,
+        #[doc = "Read EngOilFilterDiffPress signal from can frame\nUnit: kPa"]
         eng_oil_filter_diff_press_raw_value: f64,
+        #[doc = "Differential pressure measured across the fuel filter located between the fuel tank and the supply pump.\nUnit: kPa"]
         eng_fuel_filter_diff_press_raw_value: f64,
+        #[doc = "Ratio of volume of fuel to the total volume of fuel storage container.\nUnit: %"]
         fuel_level_raw_value: f64,
+        #[doc = "Ratio of volume of liquid to total container volume of fluid reservoir in windshield wash system.\nUnit: %"]
         washer_fluid_level_raw_value: f64,
     },
+    #[doc = "Cold Start Aids"]
     Csa {
+        #[doc = "The start enable device installed for start enable device 2."]
         eng_start_enable_device2_config_raw_value: u8,
+        #[doc = "The start enable device installed for start enable device 1."]
         eng_start_enable_device1_config_raw_value: u8,
+        #[doc = "Devices that assist an engine in starting, e."]
         eng_start_enable_device2_raw_value: u8,
+        #[doc = "Devices that assist an Engine in starting, e."]
         eng_start_enable_device1_raw_value: u8,
+        #[doc = "The start enable device installed for start enable device 2."]
         eng_start_enable_device2_config: EngStartEnableDevice2Config2566768382,
+        #[doc = "The start enable device installed for start enable device 1."]
         eng_start_enable_device1_config: EngStartEnableDevice1Config2566768382,
+        #[doc = "Devices that assist an engine in starting, e."]
         eng_start_enable_device2: EngStartEnableDevice22566768382,
+        #[doc = "Devices that assist an Engine in starting, e."]
         eng_start_enable_device1: EngStartEnableDevice12566768382,
     },
+    #[doc = "Combination Vehicle Weight"]
     Cvw {
+        #[doc = "Total mass imposed by the tires of the powered vehicle on the road surface.\nUnit: kg"]
         powered_vehicle_weight_raw_value: f64,
+        #[doc = "The total weight of the truck and all attached trailers.\nUnit: kg"]
         gross_combination_vehicle_weight_raw_value: f64,
     },
+    #[doc = "Continuous Torque & Speed Limit Request"]
     Ctl {
+        #[doc = "Read MxCntnuousRetarderTorqueLimitRq signal from can frame\nUnit: %"]
         mx_cntnuous_retarder_torque_limit_rq_raw_value: f64,
+        #[doc = "Read MnCntnuousRetarderTorqueLimitRq signal from can frame\nUnit: %"]
         mn_cntnuous_retarder_torque_limit_rq_raw_value: f64,
+        #[doc = "Read MxCntinuousRetarderSpeedLimitRq signal from can frame\nUnit: rpm"]
         mx_cntinuous_retarder_speed_limit_rq_raw_value: f64,
+        #[doc = "Read MnCntinuousRetarderSpeedLimitRq signal from can frame\nUnit: rpm"]
         mn_cntinuous_retarder_speed_limit_rq_raw_value: f64,
+        #[doc = "Read EngTorqueLimitRqMaxContinuous signal from can frame\nUnit: %"]
         eng_torque_limit_rq_max_continuous_raw_value: f64,
+        #[doc = "Read EngTorqueLimitRqMinContinuous signal from can frame\nUnit: %"]
         eng_torque_limit_rq_min_continuous_raw_value: f64,
+        #[doc = "Read EngSpeedLimitRqMaxContinuous signal from can frame\nUnit: rpm"]
         eng_speed_limit_rq_max_continuous_raw_value: f64,
+        #[doc = "Read EngSpeedLimitRqMinContinuous signal from can frame\nUnit: rpm"]
         eng_speed_limit_rq_min_continuous_raw_value: f64,
     },
+    #[doc = "Combustion Time 6"]
     Ct6 {
+        #[doc = "The average combustion time of all cylinders of an engine.\nUnit: ms"]
         eng_average_combustion_time_raw_value: f64,
+        #[doc = "The desired combustion time based upon engine load and speed lookup maps.\nUnit: ms"]
         eng_desired_combustion_time_raw_value: f64,
     },
+    #[doc = "Combustion Time 5"]
     Ct5 {
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl20_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl19_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl18_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl17_combustion_time_raw_value: f64,
     },
+    #[doc = "Combustion Time 4"]
     Ct4 {
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl16_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl15_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl14_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl13_combustion_time_raw_value: f64,
     },
+    #[doc = "Combustion Time 3"]
     Ct3 {
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl12_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl11_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl10_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl9_combustion_time_raw_value: f64,
     },
+    #[doc = "Combustion Time 2"]
     Ct2 {
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl8_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl7_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl6_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl5_combustion_time_raw_value: f64,
     },
+    #[doc = "Combustion Time 1"]
     Ct1 {
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl4_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl3_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl2_combustion_time_raw_value: f64,
+        #[doc = "The amount of time from when the ignition of the fuel is initiated to when the fuel is completely ignited (i.\nUnit: ms"]
         eng_cyl1_combustion_time_raw_value: f64,
     },
+    #[doc = "Electronic Control Module Information"]
     Cmi {
+        #[doc = "Total number of times changes have been made to any of the configurable parameters.\nUnit: counts"]
         total_count_of_config_changes_made_raw_value: u16,
     },
+    #[doc = "Cab Message 3"]
     Cm3 {
+        #[doc = "Conveys operator or vehicle system desire for a transmission oil level reading to be taken."]
         trans_oil_level_rq_raw_value: u8,
+        #[doc = "Operator input used to release the fifth wheel."]
         fifth_wheel_release_ctrl_raw_value: u8,
+        #[doc = "Operator's fifth wheel release control interlock."]
         ffth_whl_rlase_ctrl_security_lockout_raw_value: u8,
+        #[doc = "Operator switch to select the condition of the transfer case."]
         transfer_case_selector_switch_raw_value: u8,
+        #[doc = "Conveys operator or vehicle system desire for a transmission oil level reading to be taken."]
         trans_oil_level_rq: TransOilLevelRq2566771966,
+        #[doc = "Operator input used to release the fifth wheel."]
         fifth_wheel_release_ctrl: FifthWheelReleaseCtrl2566771966,
+        #[doc = "Operator's fifth wheel release control interlock."]
         ffth_whl_rlase_ctrl_security_lockout: FfthWhlRlaseCtrlSecurityLockout2566771966,
+        #[doc = "Operator switch to select the condition of the transfer case."]
         transfer_case_selector_switch: TransferCaseSelectorSwitch2566771966,
     },
+    #[doc = "Cab Message 1"]
     Cm1 {
+        #[doc = "Read SelectedMaxVehicleSpeedLimit signal from can frame"]
         selected_max_vehicle_speed_limit_raw_value: u8,
+        #[doc = "Request to activate cab zone heating."]
         rq_cab_zone_heating_raw_value: u8,
+        #[doc = "Request to activate engine zone heating."]
         rq_eng_zone_heating_raw_value: u8,
+        #[doc = "Request to activate the auxiliary heater."]
         aux_heater_mode_rq_raw_value: u8,
+        #[doc = "Switch signal which enables the idle management system to be enabled."]
         eng_automatic_start_enable_switch_raw_value: u8,
+        #[doc = "Read AtmaticGearShiftingEnableSwitch signal from can frame"]
         atmatic_gear_shifting_enable_switch_raw_value: u8,
+        #[doc = "Read VhclLmtngSpdGvernorEnableSwitch signal from can frame"]
         vhcl_lmtng_spd_gvernor_enable_switch_raw_value: u8,
+        #[doc = "Switch signal which increases the Vehicle Limiting Speed Governor (VLSG)."]
         vhcl_lmtng_spd_gvrnr_incrment_switch_raw_value: u8,
+        #[doc = "Switch signal which decreases the Vehicle Limiting Speed Governor (VLSG)."]
         vhcl_lmtng_spd_gvrnr_dcrement_switch_raw_value: u8,
+        #[doc = "Read SeatBeltSwitch signal from can frame"]
         seat_belt_switch_raw_value: u8,
+        #[doc = "Read OperatorSeatDirectionSwitch signal from can frame"]
         operator_seat_direction_switch_raw_value: u8,
+        #[doc = "Request to hold the battery main switch."]
         battery_main_switch_hold_rq_raw_value: u8,
+        #[doc = "Indicates whether to activate the auxiliary heater coolant water pump."]
         aux_heater_coolant_pump_rq_raw_value: u8,
+        #[doc = "Parameter used to command a certain cab interior temperature.\nUnit: deg"]
         cab_interior_temp_cmd_raw_value: f64,
+        #[doc = "Fan speed as a ratio of the actual fan drive (current speed) to the fully engaged fan drive (maximum fan speed).\nUnit: %"]
         rqed_percent_fan_speed_raw_value: f64,
+        #[doc = "Request to activate cab zone heating."]
         rq_cab_zone_heating: RqCabZoneHeating2564882174,
+        #[doc = "Request to activate engine zone heating."]
         rq_eng_zone_heating: RqEngZoneHeating2564882174,
+        #[doc = "Request to activate the auxiliary heater."]
         aux_heater_mode_rq: AuxHeaterModeRq2564882174,
+        #[doc = "Read SeatBeltSwitch signal from can frame"]
         seat_belt_switch: SeatBeltSwitch2564882174,
+        #[doc = "Read OperatorSeatDirectionSwitch signal from can frame"]
         operator_seat_direction_switch: OperatorSeatDirectionSwitch2564882174,
+        #[doc = "Request to hold the battery main switch."]
         battery_main_switch_hold_rq: BatteryMainSwitchHoldRq2564882174,
+        #[doc = "Indicates whether to activate the auxiliary heater coolant water pump."]
         aux_heater_coolant_pump_rq: AuxHeaterCoolantPumpRq2564882174,
     },
+    #[doc = "Cab Illumination Message"]
     Cl {
+        #[doc = "Read IlluminationBrightnessPercent signal from can frame\nUnit: %"]
         illumination_brightness_percent_raw_value: f64,
     },
+    #[doc = "Component Identification"]
     Ci {},
+    #[doc = "Cruise Control/Vehicle Speed"]
     Ccvs {
+        #[doc = "Read ParkBrakeReleaseInhibitRq signal from can frame"]
         park_brake_release_inhibit_rq_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the engine shutdown override switch."]
         eng_shutdown_override_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the engine test mode switch."]
         eng_test_mode_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the idle decrement switch."]
         eng_idle_decrement_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the position of the idle increment switch."]
         eng_idle_increment_switch_raw_value: u8,
+        #[doc = "This parameter is used to indicate the current state, or mode, of operation by the cruise control device."]
         cruise_ctrl_states_raw_value: u8,
+        #[doc = "This parameter is used to indicate the current state or mode of operation by the power takeoff (PTO) device."]
         pto_state_raw_value: u8,
+        #[doc = "Value of set (chosen) velocity of velocity control system.\nUnit: km/h"]
         cruise_ctrl_set_speed_raw_value: u8,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �accelerate."]
         cruise_ctrl_accelerate_switch_raw_value: u8,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �resume."]
         cruise_ctrl_resume_switch_raw_value: u8,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �coast (decelerate)."]
         cruise_ctrl_coast_switch_raw_value: u8,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �set."]
         cruise_ctrl_set_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates that the clutch pedal is being pressed."]
         clutch_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates that the driver operated brake foot pedal is being pressed."]
         brake_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates that it is possible to manage the cruise control function."]
         cruise_ctrl_enable_switch_raw_value: u8,
+        #[doc = "Cruise control is switched on."]
         cruise_ctrl_active_raw_value: u8,
+        #[doc = "Speed of the vehicle as calculated from wheel or tailshaft speed.\nUnit: km/h"]
         wheel_based_vehicle_speed_raw_value: f64,
+        #[doc = "Switch signal which indicates the position of the Cruise Control Pause Switch used on Remote Cruise Control applications."]
         cruise_ctrl_pause_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates when the parking brake is set."]
         parking_brake_switch_raw_value: u8,
+        #[doc = "Switch signal which indicates the current axle range."]
         two_speed_axle_switch_raw_value: u8,
+        #[doc = "Read ParkBrakeReleaseInhibitRq signal from can frame"]
         park_brake_release_inhibit_rq: ParkBrakeReleaseInhibitRq2566844926,
+        #[doc = "Switch signal which indicates the position of the engine shutdown override switch."]
         eng_shutdown_override_switch: EngShutdownOverrideSwitch2566844926,
+        #[doc = "Switch signal which indicates the position of the engine test mode switch."]
         eng_test_mode_switch: EngTestModeSwitch2566844926,
+        #[doc = "Switch signal which indicates the position of the idle decrement switch."]
         eng_idle_decrement_switch: EngIdleDecrementSwitch2566844926,
+        #[doc = "Switch signal which indicates the position of the idle increment switch."]
         eng_idle_increment_switch: EngIdleIncrementSwitch2566844926,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �accelerate."]
         cruise_ctrl_accelerate_switch: CruiseCtrlAccelerateSwitch2566844926,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �resume."]
         cruise_ctrl_resume_switch: CruiseCtrlResumeSwitch2566844926,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �coast (decelerate)."]
         cruise_ctrl_coast_switch: CruiseCtrlCoastSwitch2566844926,
+        #[doc = "Switch signal of the cruise control activator which indicates that the activator is in the position �set."]
         cruise_ctrl_set_switch: CruiseCtrlSetSwitch2566844926,
+        #[doc = "Switch signal which indicates that the clutch pedal is being pressed."]
         clutch_switch: ClutchSwitch2566844926,
+        #[doc = "Switch signal which indicates that the driver operated brake foot pedal is being pressed."]
         brake_switch: BrakeSwitch2566844926,
+        #[doc = "Switch signal which indicates that it is possible to manage the cruise control function."]
         cruise_ctrl_enable_switch: CruiseCtrlEnableSwitch2566844926,
+        #[doc = "Cruise control is switched on."]
         cruise_ctrl_active: CruiseCtrlActive2566844926,
+        #[doc = "Switch signal which indicates the position of the Cruise Control Pause Switch used on Remote Cruise Control applications."]
         cruise_ctrl_pause_switch: CruiseCtrlPauseSwitch2566844926,
+        #[doc = "Switch signal which indicates when the parking brake is set."]
         parking_brake_switch: ParkingBrakeSwitch2566844926,
+        #[doc = "Switch signal which indicates the current axle range."]
         two_speed_axle_switch: TwoSpeedAxleSwitch2566844926,
     },
+    #[doc = "Cruise Control/Vehicle Speed Setup"]
     Ccss {
+        #[doc = "Read CruiseCtrlLowSetLimitSpeed signal from can frame\nUnit: km/h"]
         cruise_ctrl_low_set_limit_speed_raw_value: u8,
+        #[doc = "Maximum vehicle velocity at which cruise can be set.\nUnit: km/h"]
         cruise_ctrl_high_set_limit_speed_raw_value: u8,
+        #[doc = "Maximum vehicle velocity allowed.\nUnit: km/h"]
         max_vehicle_speed_limit_raw_value: u8,
     },
+    #[doc = "Climate Control Configuration"]
     Ccc {
+        #[doc = "The maximum output power of the auxiliary heater.\nUnit: W"]
         aux_heater_max_output_power_raw_value: f64,
     },
+    #[doc = "Compression/Service Brake Information"]
     Cbi {
+        #[doc = "Total distance over which the compression brakes have been active since the last trip reset.\nUnit: km"]
         trip_compression_brake_distance_raw_value: f64,
+        #[doc = "Total distance over which the compression brakes have been active for the life of the engine.\nUnit: km"]
         total_compression_brake_distance_raw_value: f64,
     },
+    #[doc = "Cab A/C Climate System Information"]
     Caci {
+        #[doc = "This is the gage pressure at the compressor outlet in the cab air conditioning system.\nUnit: kPa"]
         cb_a_c_rfrgrnt_cmprssor_outlet_press_raw_value: f64,
     },
+    #[doc = "Battery Temperature"]
     Bt1 {
+        #[doc = "Temperature of the battery 2.\nUnit: deg"]
         battery2_temp_raw_value: f64,
+        #[doc = "Temperature of the battery 1.\nUnit: deg"]
         battery1_temp_raw_value: f64,
     },
+    #[doc = "Battery Main Switch Information"]
     Bm {
+        #[doc = "Parameter indicating whether the battery main switch is held due to an external request or not."]
         battery_main_switch_hold_state_raw_value: u8,
+        #[doc = "Parameter indicating whether the battery main switch is held due to an external request or not."]
         battery_main_switch_hold_state: BatteryMainSwitchHoldState2566809342,
     },
+    #[doc = "Basic Joystick Message 3"]
     Bjm3 {
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick3_x_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button9_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button10_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button11_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button12_pressed_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick3_y_axis_detent_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick3_y_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck3YAxsLvrFrwrdPstvPsStatus signal from can frame"]
         jystck3_y_axs_lvr_frwrd_pstv_ps_status_raw_value: u8,
+        #[doc = "Read Jystck3YAxsLvrBckNgtvePosStatus signal from can frame"]
         jystck3_y_axs_lvr_bck_ngtve_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick3_y_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick3_x_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck3XAxsLvrRghtPstvPosStatus signal from can frame"]
         jystck3_x_axs_lvr_rght_pstv_pos_status_raw_value: u8,
+        #[doc = "Read Jystck3XAxsLvrLftNgtvePosStatus signal from can frame"]
         jystck3_x_axs_lvr_lft_ngtve_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick3_x_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button5_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button6_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button7_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button8_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button1_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button2_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button3_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button4_pressed_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick3_x_axis_detent_pos_status: Joystick3XAxisDetentPosStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button9_pressed_status: Joystick3Button9PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button10_pressed_status: Joystick3Button10PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button11_pressed_status: Joystick3Button11PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button12_pressed_status: Joystick3Button12PressedStatus2365446910,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick3_y_axis_detent_pos_status: Joystick3YAxisDetentPosStatus2365446910,
+        #[doc = "Read Jystck3YAxsLvrFrwrdPstvPsStatus signal from can frame"]
         jystck3_y_axs_lvr_frwrd_pstv_ps_status: Jystck3YAxsLvrFrwrdPstvPsStatus2365446910,
+        #[doc = "Read Jystck3YAxsLvrBckNgtvePosStatus signal from can frame"]
         jystck3_y_axs_lvr_bck_ngtve_pos_status: Jystck3YAxsLvrBckNgtvePosStatus2365446910,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick3_y_axis_neutral_pos_status: Joystick3YAxisNeutralPosStatus2365446910,
+        #[doc = "Read Jystck3XAxsLvrRghtPstvPosStatus signal from can frame"]
         jystck3_x_axs_lvr_rght_pstv_pos_status: Jystck3XAxsLvrRghtPstvPosStatus2365446910,
+        #[doc = "Read Jystck3XAxsLvrLftNgtvePosStatus signal from can frame"]
         jystck3_x_axs_lvr_lft_ngtve_pos_status: Jystck3XAxsLvrLftNgtvePosStatus2365446910,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick3_x_axis_neutral_pos_status: Joystick3XAxisNeutralPosStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button5_pressed_status: Joystick3Button5PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button6_pressed_status: Joystick3Button6PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button7_pressed_status: Joystick3Button7PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button8_pressed_status: Joystick3Button8PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button1_pressed_status: Joystick3Button1PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button2_pressed_status: Joystick3Button2PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button3_pressed_status: Joystick3Button3PressedStatus2365446910,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick3_button4_pressed_status: Joystick3Button4PressedStatus2365446910,
     },
+    #[doc = "Basic Joystick Message 2"]
     Bjm2 {
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick2_x_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick2_y_axis_detent_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick2_y_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck2YAxsLvrFrwrdPstvPsStatus signal from can frame"]
         jystck2_y_axs_lvr_frwrd_pstv_ps_status_raw_value: u8,
+        #[doc = "Read Jystck2YAxsLvrBckNgtvePosStatus signal from can frame"]
         jystck2_y_axs_lvr_bck_ngtve_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick2_y_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick2_x_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck2XAxsLvrRghtPstvPosStatus signal from can frame"]
         jystck2_x_axs_lvr_rght_pstv_pos_status_raw_value: u8,
+        #[doc = "Read Jystck2XAxsLvrLftNgtvePosStatus signal from can frame"]
         jystck2_x_axs_lvr_lft_ngtve_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick2_x_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button9_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button10_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button11_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button12_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button5_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button6_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button7_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button8_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button1_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button2_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button3_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button4_pressed_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick2_x_axis_detent_pos_status: Joystick2XAxisDetentPosStatus2365446398,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick2_y_axis_detent_pos_status: Joystick2YAxisDetentPosStatus2365446398,
+        #[doc = "Read Jystck2YAxsLvrFrwrdPstvPsStatus signal from can frame"]
         jystck2_y_axs_lvr_frwrd_pstv_ps_status: Jystck2YAxsLvrFrwrdPstvPsStatus2365446398,
+        #[doc = "Read Jystck2YAxsLvrBckNgtvePosStatus signal from can frame"]
         jystck2_y_axs_lvr_bck_ngtve_pos_status: Jystck2YAxsLvrBckNgtvePosStatus2365446398,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick2_y_axis_neutral_pos_status: Joystick2YAxisNeutralPosStatus2365446398,
+        #[doc = "Read Jystck2XAxsLvrRghtPstvPosStatus signal from can frame"]
         jystck2_x_axs_lvr_rght_pstv_pos_status: Jystck2XAxsLvrRghtPstvPosStatus2365446398,
+        #[doc = "Read Jystck2XAxsLvrLftNgtvePosStatus signal from can frame"]
         jystck2_x_axs_lvr_lft_ngtve_pos_status: Jystck2XAxsLvrLftNgtvePosStatus2365446398,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick2_x_axis_neutral_pos_status: Joystick2XAxisNeutralPosStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button9_pressed_status: Joystick2Button9PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button10_pressed_status: Joystick2Button10PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button11_pressed_status: Joystick2Button11PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button12_pressed_status: Joystick2Button12PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button5_pressed_status: Joystick2Button5PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button6_pressed_status: Joystick2Button6PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button7_pressed_status: Joystick2Button7PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button8_pressed_status: Joystick2Button8PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button1_pressed_status: Joystick2Button1PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button2_pressed_status: Joystick2Button2PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button3_pressed_status: Joystick2Button3PressedStatus2365446398,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick2_button4_pressed_status: Joystick2Button4PressedStatus2365446398,
     },
+    #[doc = "Basic Joystick Message 1"]
     Bjm1 {
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick1_x_axis_detent_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick1_y_axis_detent_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick1_y_axis_pos_raw_value: f64,
+        #[doc = "Read Jystck1YAxsLvrFrwrdPstvPsStatus signal from can frame"]
         jystck1_y_axs_lvr_frwrd_pstv_ps_status_raw_value: u8,
+        #[doc = "Read Jystck1YAxsLvrBckNgtvePosStatus signal from can frame"]
         jystck1_y_axs_lvr_bck_ngtve_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick1_y_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "The position of the joystick in the relative motion of travel from the neutral position.\nUnit: %"]
         joystick1_x_axis_pos_raw_value: f64,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button9_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button10_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button11_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button12_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button5_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button6_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button7_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button8_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button1_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button2_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button3_pressed_status_raw_value: u8,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button4_pressed_status_raw_value: u8,
+        #[doc = "Read Jystck1XAxsLvrRghtPstvPosStatus signal from can frame"]
         jystck1_x_axs_lvr_rght_pstv_pos_status_raw_value: u8,
+        #[doc = "Read Jystck1XAxsLvrLftNgtvePosStatus signal from can frame"]
         jystck1_x_axs_lvr_lft_ngtve_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick1_x_axis_neutral_pos_status_raw_value: u8,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick1_x_axis_detent_pos_status: Joystick1XAxisDetentPosStatus2365445886,
+        #[doc = "Reports when the current joystick position is in the detent position for that axis of travel."]
         joystick1_y_axis_detent_pos_status: Joystick1YAxisDetentPosStatus2365445886,
+        #[doc = "Read Jystck1YAxsLvrFrwrdPstvPsStatus signal from can frame"]
         jystck1_y_axs_lvr_frwrd_pstv_ps_status: Jystck1YAxsLvrFrwrdPstvPsStatus2365445886,
+        #[doc = "Read Jystck1YAxsLvrBckNgtvePosStatus signal from can frame"]
         jystck1_y_axs_lvr_bck_ngtve_pos_status: Jystck1YAxsLvrBckNgtvePosStatus2365445886,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick1_y_axis_neutral_pos_status: Joystick1YAxisNeutralPosStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button9_pressed_status: Joystick1Button9PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button10_pressed_status: Joystick1Button10PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button11_pressed_status: Joystick1Button11PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button12_pressed_status: Joystick1Button12PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button5_pressed_status: Joystick1Button5PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button6_pressed_status: Joystick1Button6PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button7_pressed_status: Joystick1Button7PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button8_pressed_status: Joystick1Button8PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button1_pressed_status: Joystick1Button1PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button2_pressed_status: Joystick1Button2PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button3_pressed_status: Joystick1Button3PressedStatus2365445886,
+        #[doc = "Reports when the joystick button has been pressed."]
         joystick1_button4_pressed_status: Joystick1Button4PressedStatus2365445886,
+        #[doc = "Read Jystck1XAxsLvrRghtPstvPosStatus signal from can frame"]
         jystck1_x_axs_lvr_rght_pstv_pos_status: Jystck1XAxsLvrRghtPstvPosStatus2365445886,
+        #[doc = "Read Jystck1XAxsLvrLftNgtvePosStatus signal from can frame"]
         jystck1_x_axs_lvr_lft_ngtve_pos_status: Jystck1XAxsLvrLftNgtvePosStatus2365445886,
+        #[doc = "Reports when the current joystick position is in the neutral position for that axis of travel."]
         joystick1_x_axis_neutral_pos_status: Joystick1XAxisNeutralPosStatus2365445886,
     },
+    #[doc = "Brakes"]
     B {
+        #[doc = "This parameter commands the Parking Brake red optical warning signal."]
         parking_brake_red_warning_signal_raw_value: u8,
+        #[doc = "This parameter provides reports on the status of the Park Brake Release Inhibit function."]
         park_brake_release_inhibit_status_raw_value: u8,
+        #[doc = "Signal which indicates the current state of the actuator(s) that control the parking brake (see also SPN 70)."]
         parking_brake_actuator_raw_value: u8,
+        #[doc = "Gage pressure of air in the secondary, or service side, of the air brake system.\nUnit: kPa"]
         brake_second_press_raw_value: f64,
+        #[doc = "Gage pressure of air in the primary, or supply side, of the air brake system.\nUnit: kPa"]
         brake_primary_press_raw_value: f64,
+        #[doc = "Read BrakeAppPress signal from can frame\nUnit: kPa"]
         brake_app_press_raw_value: f64,
+        #[doc = "This parameter commands the Parking Brake red optical warning signal."]
         parking_brake_red_warning_signal: ParkingBrakeRedWarningSignal2566847230,
+        #[doc = "This parameter provides reports on the status of the Park Brake Release Inhibit function."]
         park_brake_release_inhibit_status: ParkBrakeReleaseInhibitStatus2566847230,
+        #[doc = "Signal which indicates the current state of the actuator(s) that control the parking brake (see also SPN 70)."]
         parking_brake_actuator: ParkingBrakeActuator2566847230,
     },
+    #[doc = "Auxiliary Water Pump Pressure"]
     Awpp {
+        #[doc = "Gage pressure of auxiliary water pump driven as a PTO device.\nUnit: kPa"]
         aux_pump_press_raw_value: f64,
     },
+    #[doc = "Anti-theft Status"]
     Ats {
+        #[doc = "A seven byte random numeric code provided by the component in response to an anti-theft request."]
         antitheft_random_number_raw_value: u64,
+        #[doc = "Indicates whether or not the component can be started."]
         antitheft_component_status_states_raw_value: u8,
+        #[doc = "Indicates the presence of the encryption seed random number."]
         antthft_encryptn_sd_prsnt_indicator_raw_value: u8,
+        #[doc = "Read AntitheftModifyPwdStates signal from can frame"]
         antitheft_modify_pwd_states_raw_value: u8,
+        #[doc = "Indicates the presence of a validated password."]
         antitheft_pwd_valid_indicator_raw_value: u8,
+        #[doc = "Indicates whether or not the component can be started."]
         antitheft_component_status_states: AntitheftComponentStatusStates2631728894,
+        #[doc = "Indicates the presence of the encryption seed random number."]
         antthft_encryptn_sd_prsnt_indicator: AntthftEncryptnSdPrsntIndicator2631728894,
+        #[doc = "Read AntitheftModifyPwdStates signal from can frame"]
         antitheft_modify_pwd_states: AntitheftModifyPwdStates2631728894,
+        #[doc = "Indicates the presence of a validated password."]
         antitheft_pwd_valid_indicator: AntitheftPwdValidIndicator2631728894,
     },
+    #[doc = "Anti-theft Request"]
     Atr {
+        #[doc = "This parameter is the seven byte numeric code (i."]
         antitheft_password_representation_raw_value: u64,
+        #[doc = "This parameter is used to identify the specific requests being sent to the component."]
         antitheft_cmd_states_raw_value: u8,
+        #[doc = "Read AntitheftDesiredExitModeStates signal from can frame"]
         antitheft_desired_exit_mode_states_raw_value: u8,
+        #[doc = "Read AntthftEncryptonIndicatorStates signal from can frame"]
         antthft_encrypton_indicator_states_raw_value: u8,
+        #[doc = "This parameter is used to identify the specific requests being sent to the component."]
         antitheft_cmd_states: AntitheftCmdStates2631794430,
+        #[doc = "Read AntitheftDesiredExitModeStates signal from can frame"]
         antitheft_desired_exit_mode_states: AntitheftDesiredExitModeStates2631794430,
+        #[doc = "Read AntthftEncryptonIndicatorStates signal from can frame"]
         antthft_encrypton_indicator_states: AntthftEncryptonIndicatorStates2631794430,
     },
+    #[doc = "Alternator Temperature"]
     At {
+        #[doc = "Temperature of the windings inside the alternator.\nUnit: deg"]
         eng_alt_winding3_temp_raw_value: f64,
+        #[doc = "Temperature of the windings inside the alternator.\nUnit: deg"]
         eng_alt_winding2_temp_raw_value: f64,
+        #[doc = "Temperature of the windings inside the alternator.\nUnit: deg"]
         eng_alt_winding1_temp_raw_value: f64,
+        #[doc = "Temperature of the bearing inside the alternator.\nUnit: deg"]
         eng_alt_bearing2_temp_raw_value: f64,
+        #[doc = "Temperature of the bearing inside the alternator.\nUnit: deg"]
         eng_alt_bearing1_temp_raw_value: f64,
     },
+    #[doc = "Air Suspension Control 6"]
     Asc6 {
+        #[doc = "Set value for nominal level 'preset level' at the right side of the rear axle.\nUnit: mm"]
         level_preset_rear_axle_right_raw_value: f64,
+        #[doc = "Set value for nominal level 'preset level' at the left side of the rear axle.\nUnit: mm"]
         level_preset_rear_axle_left_raw_value: f64,
+        #[doc = "Set value for nominal level 'preset level' at the right side of the front axle.\nUnit: mm"]
         level_preset_front_axle_right_raw_value: f64,
+        #[doc = "Set value for nominal level 'preset level' at the left side of the front axle.\nUnit: mm"]
         level_preset_front_axle_left_raw_value: f64,
     },
+    #[doc = "Air Suspension Control 5"]
     Asc5 {
+        #[doc = "Signal which indicates the current mode of operation of the electronic shock absorber control at the lift/tag axle."]
         elctrnc_shck_absrbr_ctrl_md_lft_tg_axl_raw_value: u8,
+        #[doc = "Signal which indicates the current mode of operation of the electronic shock absorber control at the rear axle."]
         elctrnc_shck_absrbr_ctrl_md_rear_axle_raw_value: u8,
+        #[doc = "Signal which indicates the current mode of operation of the electronic shock absorber control at the front axle."]
         elctrnc_shck_absrbr_ctrl_md_frnt_axle_raw_value: u8,
+        #[doc = "Read DamperStiffnessLift_TagAxle signal from can frame\nUnit: %"]
         damper_stiffness_lift_tag_axle_raw_value: f64,
+        #[doc = "Read DamperStiffnessRearAxle signal from can frame\nUnit: %"]
         damper_stiffness_rear_axle_raw_value: f64,
+        #[doc = "Read DamperStiffnessFrontAxle signal from can frame\nUnit: %"]
         damper_stiffness_front_axle_raw_value: f64,
+        #[doc = "Signal which indicates the current mode of operation of the electronic shock absorber control at the lift/tag axle."]
         elctrnc_shck_absrbr_ctrl_md_lft_tg_axl: ElctrncShckAbsrbrCtrlMdLftTgAxl2365478910,
+        #[doc = "Signal which indicates the current mode of operation of the electronic shock absorber control at the rear axle."]
         elctrnc_shck_absrbr_ctrl_md_rear_axle: ElctrncShckAbsrbrCtrlMdRearAxle2365478910,
+        #[doc = "Signal which indicates the current mode of operation of the electronic shock absorber control at the front axle."]
         elctrnc_shck_absrbr_ctrl_md_frnt_axle: ElctrncShckAbsrbrCtrlMdFrntAxle2365478910,
     },
+    #[doc = "Air Suspension Control 4"]
     Asc4 {
+        #[doc = "Read BellowPressRearAxleRight signal from can frame\nUnit: kPa"]
         bellow_press_rear_axle_right_raw_value: f64,
+        #[doc = "Read BellowPressRearAxleLeft signal from can frame\nUnit: kPa"]
         bellow_press_rear_axle_left_raw_value: f64,
+        #[doc = "Read BellowPressFrontAxleRight signal from can frame\nUnit: kPa"]
         bellow_press_front_axle_right_raw_value: f64,
+        #[doc = "Read BellowPressFrontAxleLeft signal from can frame\nUnit: kPa"]
         bellow_press_front_axle_left_raw_value: f64,
     },
+    #[doc = "Air Suspension Control 3"]
     Asc3 {
+        #[doc = "Information of the height at the left side of the rear axle referred to normal level 1.\nUnit: mm"]
         relative_level_rear_axle_right_raw_value: f64,
+        #[doc = "Information of the height at the left side of the rear axle referred to normal level 1.\nUnit: mm"]
         relative_level_rear_axle_left_raw_value: f64,
+        #[doc = "Information of the height at the right side of the front axle referred to normal level 1.\nUnit: mm"]
         relative_level_front_axle_right_raw_value: f64,
+        #[doc = "Information of the height at the left side of the front axle referred to normal level 1.\nUnit: mm"]
         relative_level_front_axle_left_raw_value: f64,
     },
+    #[doc = "Air Suspension Control 2"]
     Asc2 {
+        #[doc = "This parameter contains an external request to prohibit all air suspension control."]
         prohibit_air_suspension_ctrl_raw_value: u8,
+        #[doc = "Command signal to activate the kneeling functionality at the rear axle of the vehicle."]
         kneeling_cmd_rear_axle_raw_value: u8,
+        #[doc = "Read KneelingCmdFrontAxle signal from can frame"]
         kneeling_cmd_front_axle_raw_value: u8,
+        #[doc = "Read DamperStiffnessRqLift_TagAxle signal from can frame\nUnit: %"]
         damper_stiffness_rq_lift_tag_axle_raw_value: f64,
+        #[doc = "Demand value for the shock absorber control at the rear axle.\nUnit: %"]
         damper_stiffness_rq_rear_axle_raw_value: f64,
+        #[doc = "Demand value for the shock absorber control at the front axle.\nUnit: %"]
         damper_stiffness_rq_front_axle_raw_value: f64,
+        #[doc = "Read LevelCtrlModeRq signal from can frame"]
         level_ctrl_mode_rq_raw_value: u8,
+        #[doc = "Command signal to activate a level of the rear axle programmed and/or memorised in the ECU."]
         nominal_level_rq_rear_axle_raw_value: u8,
+        #[doc = "Read NominalLevelRqFrontAxle signal from can frame"]
         nominal_level_rq_front_axle_raw_value: u8,
+        #[doc = "Read KneelingCtrlModeRq signal from can frame"]
         kneeling_ctrl_mode_rq_raw_value: u8,
+        #[doc = "Read KneelingRqRightSide signal from can frame"]
         kneeling_rq_right_side_raw_value: u8,
+        #[doc = "Read KneelingRqLeftSide signal from can frame"]
         kneeling_rq_left_side_raw_value: u8,
+        #[doc = "Read AutomaticTractionHelp signal from can frame"]
         automatic_traction_help_raw_value: u8,
+        #[doc = "Signal to command the position / load condition of lift / tag axle #2."]
         lift_axle2_pos_cmd_raw_value: u8,
+        #[doc = "Signal to command the position/load condition of lift/tag axle #1."]
         lift_axle1_pos_cmd_raw_value: u8,
+        #[doc = "This parameter contains an external request to prohibit all air suspension control."]
         prohibit_air_suspension_ctrl: ProhibitAirSuspensionCtrl2362638078,
+        #[doc = "Command signal to activate the kneeling functionality at the rear axle of the vehicle."]
         kneeling_cmd_rear_axle: KneelingCmdRearAxle2362638078,
+        #[doc = "Read KneelingCmdFrontAxle signal from can frame"]
         kneeling_cmd_front_axle: KneelingCmdFrontAxle2362638078,
+        #[doc = "Read LevelCtrlModeRq signal from can frame"]
         level_ctrl_mode_rq: LevelCtrlModeRq2362638078,
+        #[doc = "Command signal to activate a level of the rear axle programmed and/or memorised in the ECU."]
         nominal_level_rq_rear_axle: NominalLevelRqRearAxle2362638078,
+        #[doc = "Read NominalLevelRqFrontAxle signal from can frame"]
         nominal_level_rq_front_axle: NominalLevelRqFrontAxle2362638078,
+        #[doc = "Read KneelingCtrlModeRq signal from can frame"]
         kneeling_ctrl_mode_rq: KneelingCtrlModeRq2362638078,
+        #[doc = "Read KneelingRqRightSide signal from can frame"]
         kneeling_rq_right_side: KneelingRqRightSide2362638078,
+        #[doc = "Read KneelingRqLeftSide signal from can frame"]
         kneeling_rq_left_side: KneelingRqLeftSide2362638078,
+        #[doc = "Read AutomaticTractionHelp signal from can frame"]
         automatic_traction_help: AutomaticTractionHelp2362638078,
+        #[doc = "Signal to command the position / load condition of lift / tag axle #2."]
         lift_axle2_pos_cmd: LiftAxle2PosCmd2362638078,
+        #[doc = "Signal to command the position/load condition of lift/tag axle #1."]
         lift_axle1_pos_cmd: LiftAxle1PosCmd2362638078,
     },
+    #[doc = "Air Suspension Control 1"]
     Asc1 {
+        #[doc = "Signal which indicates that the air suspension control cannot perform a request due to the operating conditions."]
         sspension_ctrl_refusal_information_raw_value: u8,
+        #[doc = "Signal which indicates that the suspension system is controlled by remote control #2."]
         suspension_remote_ctrl2_raw_value: u8,
+        #[doc = "Signal which indicates that the suspension system is controlled by remote control #1."]
         suspension_remote_ctrl1_raw_value: u8,
+        #[doc = "Signal which indicates that the vehicle height at the rear axle (SPNs 1723 and 1724) is within the bumper range."]
         rear_axle_in_bumper_range_raw_value: u8,
+        #[doc = "Signal which indicates that the vehicle height at the front axle (SPNs 1721 and 1722) is within the bumper range."]
         front_axle_in_bumper_range_raw_value: u8,
+        #[doc = "Signal which indicates that the doors may be opened."]
         door_release_raw_value: u8,
+        #[doc = "Signal which indicates whether vehicle motion is inhibited."]
         vehicle_motion_inhibit_raw_value: u8,
+        #[doc = "The signal which indicates the status of the security device."]
         security_device_raw_value: u8,
+        #[doc = "Read LevelCtrlMode signal from can frame"]
         level_ctrl_mode_raw_value: u8,
+        #[doc = "Read KneelingInformation signal from can frame"]
         kneeling_information_raw_value: u8,
+        #[doc = "Read LiftingCtrlModeRearAxle signal from can frame"]
         lifting_ctrl_mode_rear_axle_raw_value: u8,
+        #[doc = "Read LiftingCtrlModeFrontAxle signal from can frame"]
         lifting_ctrl_mode_front_axle_raw_value: u8,
+        #[doc = "Read LoweringCtrlModeRearAxle signal from can frame"]
         lowering_ctrl_mode_rear_axle_raw_value: u8,
+        #[doc = "Read LoweringCtrlModeFrontAxle signal from can frame"]
         lowering_ctrl_mode_front_axle_raw_value: u8,
+        #[doc = "Signal which indicates whether the actual height of the rear axle is above the nominal (desired) level of the rear axle."]
         above_nominal_level_rear_axle_raw_value: u8,
+        #[doc = "Signal which indicates whether the actual height of the front axle is above the nominal (desired) level of the front axle."]
         above_nominal_level_front_axle_raw_value: u8,
+        #[doc = "Signal which indicates whether the actual height of the rear axle is below the nominal (desired) level for the rear axle."]
         below_nominal_level_rear_axle_raw_value: u8,
+        #[doc = "Signal which indicates whether the actual height of the front axle is below the nominal (desired) level for the front axle."]
         below_nominal_level_front_axle_raw_value: u8,
+        #[doc = "Signal which indicates the nominal (desired) height of the rear axle to be controlled by the suspension system."]
         nominal_level_rear_axle_raw_value: u8,
+        #[doc = "Signal which indicates the nominal (desired) height of the front axle to be controlled by the suspension system."]
         nominal_level_front_axle_raw_value: u8,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #2."]
         lift_axle2_pos_raw_value: u8,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #1."]
         lift_axle1_pos_raw_value: u8,
+        #[doc = "Signal which indicates that the air suspension control cannot perform a request due to the operating conditions."]
         sspension_ctrl_refusal_information: SspensionCtrlRefusalInformation2365479678,
+        #[doc = "Signal which indicates that the suspension system is controlled by remote control #2."]
         suspension_remote_ctrl2: SuspensionRemoteCtrl22365479678,
+        #[doc = "Signal which indicates that the suspension system is controlled by remote control #1."]
         suspension_remote_ctrl1: SuspensionRemoteCtrl12365479678,
+        #[doc = "Signal which indicates that the vehicle height at the rear axle (SPNs 1723 and 1724) is within the bumper range."]
         rear_axle_in_bumper_range: RearAxleInBumperRange2365479678,
+        #[doc = "Signal which indicates that the vehicle height at the front axle (SPNs 1721 and 1722) is within the bumper range."]
         front_axle_in_bumper_range: FrontAxleInBumperRange2365479678,
+        #[doc = "Signal which indicates that the doors may be opened."]
         door_release: DoorRelease2365479678,
+        #[doc = "Signal which indicates whether vehicle motion is inhibited."]
         vehicle_motion_inhibit: VehicleMotionInhibit2365479678,
+        #[doc = "The signal which indicates the status of the security device."]
         security_device: SecurityDevice2365479678,
+        #[doc = "Read LevelCtrlMode signal from can frame"]
         level_ctrl_mode: LevelCtrlMode2365479678,
+        #[doc = "Read KneelingInformation signal from can frame"]
         kneeling_information: KneelingInformation2365479678,
+        #[doc = "Read LiftingCtrlModeRearAxle signal from can frame"]
         lifting_ctrl_mode_rear_axle: LiftingCtrlModeRearAxle2365479678,
+        #[doc = "Read LiftingCtrlModeFrontAxle signal from can frame"]
         lifting_ctrl_mode_front_axle: LiftingCtrlModeFrontAxle2365479678,
+        #[doc = "Read LoweringCtrlModeRearAxle signal from can frame"]
         lowering_ctrl_mode_rear_axle: LoweringCtrlModeRearAxle2365479678,
+        #[doc = "Read LoweringCtrlModeFrontAxle signal from can frame"]
         lowering_ctrl_mode_front_axle: LoweringCtrlModeFrontAxle2365479678,
+        #[doc = "Signal which indicates whether the actual height of the rear axle is above the nominal (desired) level of the rear axle."]
         above_nominal_level_rear_axle: AboveNominalLevelRearAxle2365479678,
+        #[doc = "Signal which indicates whether the actual height of the front axle is above the nominal (desired) level of the front axle."]
         above_nominal_level_front_axle: AboveNominalLevelFrontAxle2365479678,
+        #[doc = "Signal which indicates whether the actual height of the rear axle is below the nominal (desired) level for the rear axle."]
         below_nominal_level_rear_axle: BelowNominalLevelRearAxle2365479678,
+        #[doc = "Signal which indicates whether the actual height of the front axle is below the nominal (desired) level for the front axle."]
         below_nominal_level_front_axle: BelowNominalLevelFrontAxle2365479678,
+        #[doc = "Signal which indicates the nominal (desired) height of the rear axle to be controlled by the suspension system."]
         nominal_level_rear_axle: NominalLevelRearAxle2365479678,
+        #[doc = "Signal which indicates the nominal (desired) height of the front axle to be controlled by the suspension system."]
         nominal_level_front_axle: NominalLevelFrontAxle2365479678,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #2."]
         lift_axle2_pos: LiftAxle2Pos2365479678,
+        #[doc = "Signal which indicates the position / load condition of lift axle / tag axle #1."]
         lift_axle1_pos: LiftAxle1Pos2365479678,
     },
+    #[doc = "Alternator Information"]
     As {
+        #[doc = "Alternator 4 operating status."]
         alt4_status_raw_value: u8,
+        #[doc = "Alternator 3 operating status."]
         alt3_status_raw_value: u8,
+        #[doc = "Alternator 2 operating status."]
         alt2_status_raw_value: u8,
+        #[doc = "Alternator 1 operating status."]
         alt1_status_raw_value: u8,
+        #[doc = "Actual rotation speed of the alternator.\nUnit: rpm"]
         alt_speed_raw_value: f64,
+        #[doc = "Alternator 4 operating status."]
         alt4_status: Alt4Status2566837758,
+        #[doc = "Alternator 3 operating status."]
         alt3_status: Alt3Status2566837758,
+        #[doc = "Alternator 2 operating status."]
         alt2_status: Alt2Status2566837758,
+        #[doc = "Alternator 1 operating status."]
         alt1_status: Alt1Status2566837758,
     },
+    #[doc = "Auxiliary Pressures"]
     Ap {
+        #[doc = "Identifies the current absolute pressure (relative to 0 pressure) that is configured uniquely per application.\nUnit: kPa"]
         aux_abs_press_reading_raw_value: f64,
+        #[doc = "Identifies the current gage pressure (relative to atmosphere) that is configured uniquely per application.\nUnit: kPa"]
         aux_gage_press_reading1_raw_value: f64,
+        #[doc = "Identifies the current vacuum pressure (relative to atmosphere) that is configured uniquely per application.\nUnit: kPa"]
         aux_vacuum_press_reading_raw_value: f64,
     },
+    #[doc = "Ambient Conditions 2"]
     Amb2 {
+        #[doc = "This is the maximum value which can be reported by the sensor for the solar intensity.\nUnit: mW/cm�"]
         solar_sensor_max_raw_value: f64,
+        #[doc = "This is the solar radiation (power density) falling on the vehicle in percent of the maximum sensor value (SPN 2611).\nUnit: %"]
         solar_intensity_percent_raw_value: f64,
     },
+    #[doc = "Working Set Member"]
     Wsmem {
+        #[doc = "Read ArbitraryAddressCapable signal from can frame"]
         arbitrary_address_capable_raw_value: bool,
+        #[doc = "0 = Global; \n   1  = On-Highway; \n   2  = Agricultural and Forestry; \n   3  = Construction; \n   4  = Marine;\n   5  = Industrial - Process\n          Control - Stationary (Gen-Sets)\n   6  = Reserve for SAE\n   7  = Reserve for SAE"]
         industry_group_raw_value: u8,
+        #[doc = "Read VehicleSystemInstance signal from can frame"]
         vehicle_system_instance_raw_value: u8,
+        #[doc = "Read VehicleSystem signal from can frame"]
         vehicle_system_raw_value: u8,
+        #[doc = "Read Function signal from can frame"]
         function_raw_value: u8,
+        #[doc = "Read FunctionInstance signal from can frame"]
         function_instance_raw_value: u8,
+        #[doc = "Read ECUInstance signal from can frame"]
         ecu_instance_raw_value: u8,
+        #[doc = "Assigned by NMEA 2000 Committee"]
         manufacturer_code_raw_value: u16,
+        #[doc = "Read IdentityNumber signal from can frame"]
         identity_number_raw_value: u32,
+        #[doc = "0 = Global; \n   1  = On-Highway; \n   2  = Agricultural and Forestry; \n   3  = Construction; \n   4  = Marine;\n   5  = Industrial - Process\n          Control - Stationary (Gen-Sets)\n   6  = Reserve for SAE\n   7  = Reserve for SAE"]
         industry_group: IndustryGroup2633895166,
     },
+    #[doc = "Test results for non-continously monitored systems."]
     Dm8 {
+        #[doc = "The threshold which the test value must be above to pass the test."]
         test_limit_minimum_raw_value: u16,
+        #[doc = "The threshold which the test value must be below to pass the test."]
         test_limit_maximum_raw_value: u16,
+        #[doc = "The test value collected during the test."]
         test_value_raw_value: u16,
+        #[doc = "Identifies the non-continously monitored component identifier that was tested."]
         test_type_raw_value: u8,
+        #[doc = "Designates the test to be run."]
         test_identifier_raw_value: u8,
     },
+    #[doc = "Command non-continously monitored test"]
     Dm7 {
+        #[doc = "Designates the test to be run."]
         test_identifier_raw_value: u8,
     },
+    #[doc = "Pending DTCs"]
     Dm6 {
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2566836222,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2566836222,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2566836222,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2566836222,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566836222,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2566836222,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2566836222,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2566836222,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2566836222,
     },
+    #[doc = "Diagnostic readiness 1"]
     Dm5 {
+        #[doc = "Read MisfireMonitoringSupport signal from can frame"]
         misfire_monitoring_support_raw_value: bool,
+        #[doc = "Identifies the OBD compliance capabilityof the responding controller."]
         obd_compliance_raw_value: u8,
+        #[doc = "Identifies the number of previously active trouble codes that are present in a specific controller."]
         previously_active_trouble_codes_raw_value: u8,
+        #[doc = "Identifies the number of active trouble codes that are present in a specific controller."]
         active_trouble_codes_raw_value: u8,
+        #[doc = "Read SecondAirSystemMonStatus signal from can frame"]
         second_air_system_mon_status_raw_value: bool,
+        #[doc = "Read EvaporativeSystemMonStatus signal from can frame"]
         evaporative_system_mon_status_raw_value: bool,
+        #[doc = "Read ACSystemRefrigerantMonStatus signal from can frame"]
         ac_system_refrigerant_mon_status_raw_value: bool,
+        #[doc = "Read OxygenSensorHeaterMonStatus signal from can frame"]
         oxygen_sensor_heater_mon_status_raw_value: bool,
+        #[doc = "Read OxygenSensorMonStatus signal from can frame"]
         oxygen_sensor_mon_status_raw_value: bool,
+        #[doc = "Read EGRSystemMonitoringStatus signal from can frame"]
         egr_system_monitoring_status_raw_value: bool,
+        #[doc = "Read CatalystMonStatus signal from can frame"]
         catalyst_mon_status_raw_value: bool,
+        #[doc = "Read ColdStartAidSystemMonStatus signal from can frame"]
         cold_start_aid_system_mon_status_raw_value: bool,
+        #[doc = "Read HeatedCatalystMonStatus signal from can frame"]
         heated_catalyst_mon_status_raw_value: bool,
+        #[doc = "Read CatalystMonSupp signal from can frame"]
         catalyst_mon_supp_raw_value: bool,
+        #[doc = "Read ColdStartAidSystemMonSupp signal from can frame"]
         cold_start_aid_system_mon_supp_raw_value: bool,
+        #[doc = "Read HeatedCatalystMonSupp signal from can frame"]
         heated_catalyst_mon_supp_raw_value: bool,
+        #[doc = "Read EvaporativeSystemMonSupp signal from can frame"]
         evaporative_system_mon_supp_raw_value: bool,
+        #[doc = "Read SecondAirSystemMonSupp signal from can frame"]
         second_air_system_mon_supp_raw_value: bool,
+        #[doc = "Read ACSystemRefrigerantMonSupp signal from can frame"]
         ac_system_refrigerant_mon_supp_raw_value: bool,
+        #[doc = "Read OxygenSensorMonSupp signal from can frame"]
         oxygen_sensor_mon_supp_raw_value: bool,
+        #[doc = "Read OxygenSensorHeaterMonSupp signal from can frame"]
         oxygen_sensor_heater_mon_supp_raw_value: bool,
+        #[doc = "Read EGRSystemMonitoringSupp signal from can frame"]
         egr_system_monitoring_supp_raw_value: bool,
+        #[doc = "Read MisfireMonitoringStatus signal from can frame"]
         misfire_monitoring_status_raw_value: bool,
+        #[doc = "Read ComprehensiveCompMonStatus signal from can frame"]
         comprehensive_comp_mon_status_raw_value: bool,
+        #[doc = "Read FuelSystemMonitoringStatus signal from can frame"]
         fuel_system_monitoring_status_raw_value: bool,
+        #[doc = "Read ComprehensiveComponentMonSupp signal from can frame"]
         comprehensive_component_mon_supp_raw_value: bool,
+        #[doc = "Read FuelSystemMonitoringSupport signal from can frame"]
         fuel_system_monitoring_support_raw_value: bool,
+        #[doc = "Read MisfireMonitoringSupport signal from can frame"]
         misfire_monitoring_support: MisfireMonitoringSupport2566835966,
+        #[doc = "Identifies the OBD compliance capabilityof the responding controller."]
         obd_compliance: ObdCompliance2566835966,
+        #[doc = "Read SecondAirSystemMonStatus signal from can frame"]
         second_air_system_mon_status: SecondAirSystemMonStatus2566835966,
+        #[doc = "Read EvaporativeSystemMonStatus signal from can frame"]
         evaporative_system_mon_status: EvaporativeSystemMonStatus2566835966,
+        #[doc = "Read ACSystemRefrigerantMonStatus signal from can frame"]
         ac_system_refrigerant_mon_status: AcSystemRefrigerantMonStatus2566835966,
+        #[doc = "Read OxygenSensorHeaterMonStatus signal from can frame"]
         oxygen_sensor_heater_mon_status: OxygenSensorHeaterMonStatus2566835966,
+        #[doc = "Read OxygenSensorMonStatus signal from can frame"]
         oxygen_sensor_mon_status: OxygenSensorMonStatus2566835966,
+        #[doc = "Read EGRSystemMonitoringStatus signal from can frame"]
         egr_system_monitoring_status: EgrSystemMonitoringStatus2566835966,
+        #[doc = "Read CatalystMonStatus signal from can frame"]
         catalyst_mon_status: CatalystMonStatus2566835966,
+        #[doc = "Read ColdStartAidSystemMonStatus signal from can frame"]
         cold_start_aid_system_mon_status: ColdStartAidSystemMonStatus2566835966,
+        #[doc = "Read HeatedCatalystMonStatus signal from can frame"]
         heated_catalyst_mon_status: HeatedCatalystMonStatus2566835966,
+        #[doc = "Read CatalystMonSupp signal from can frame"]
         catalyst_mon_supp: CatalystMonSupp2566835966,
+        #[doc = "Read ColdStartAidSystemMonSupp signal from can frame"]
         cold_start_aid_system_mon_supp: ColdStartAidSystemMonSupp2566835966,
+        #[doc = "Read HeatedCatalystMonSupp signal from can frame"]
         heated_catalyst_mon_supp: HeatedCatalystMonSupp2566835966,
+        #[doc = "Read EvaporativeSystemMonSupp signal from can frame"]
         evaporative_system_mon_supp: EvaporativeSystemMonSupp2566835966,
+        #[doc = "Read SecondAirSystemMonSupp signal from can frame"]
         second_air_system_mon_supp: SecondAirSystemMonSupp2566835966,
+        #[doc = "Read ACSystemRefrigerantMonSupp signal from can frame"]
         ac_system_refrigerant_mon_supp: AcSystemRefrigerantMonSupp2566835966,
+        #[doc = "Read OxygenSensorMonSupp signal from can frame"]
         oxygen_sensor_mon_supp: OxygenSensorMonSupp2566835966,
+        #[doc = "Read OxygenSensorHeaterMonSupp signal from can frame"]
         oxygen_sensor_heater_mon_supp: OxygenSensorHeaterMonSupp2566835966,
+        #[doc = "Read EGRSystemMonitoringSupp signal from can frame"]
         egr_system_monitoring_supp: EgrSystemMonitoringSupp2566835966,
+        #[doc = "Read MisfireMonitoringStatus signal from can frame"]
         misfire_monitoring_status: MisfireMonitoringStatus2566835966,
+        #[doc = "Read ComprehensiveCompMonStatus signal from can frame"]
         comprehensive_comp_mon_status: ComprehensiveCompMonStatus2566835966,
+        #[doc = "Read FuelSystemMonitoringStatus signal from can frame"]
         fuel_system_monitoring_status: FuelSystemMonitoringStatus2566835966,
+        #[doc = "Read ComprehensiveComponentMonSupp signal from can frame"]
         comprehensive_component_mon_supp: ComprehensiveComponentMonSupp2566835966,
+        #[doc = "Read FuelSystemMonitoringSupport signal from can frame"]
         fuel_system_monitoring_support: FuelSystemMonitoringSupport2566835966,
     },
+    #[doc = "Freeze frame parameters"]
     Dm4 {
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "The freeze frame length shall be equal to the number of bytes in the required parameters plus the number of bytes in the\nmanufacturer specific parameters.\nUnit: byte"]
         freeze_frame_length_raw_value: u8,
+        #[doc = "Actual engine speed which is calculated over a minimum crankshaft angle of 720 degrees divided by the number of cylinders.\nUnit: rpm"]
         eng_speed_raw_value: f64,
+        #[doc = "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque."]
         eng_torque_mode_raw_value: u8,
+        #[doc = "Gage pressure of air measured downstream on the compressor discharge side of the turbocharger.\nUnit: kPa"]
         eng_turbo_boost_press_raw_value: f64,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566835710,
+        #[doc = "State signal which indicates which engine torque mode is currently generating, limiting, or controlling the torque."]
         eng_torque_mode: EngTorqueMode2566835710,
     },
+    #[doc = "Diagnostic data clear/reset of previously active DTCs."]
     Dm3 {},
+    #[doc = "Expanded freeze frame."]
     Dm25 {
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "The freeze frame length shall be equal to the number of bytes in the required parameters plus the number of bytes in the\nmanufacturer specific parameters.\nUnit: byte"]
         expanded_freeze_frame_length_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566764542,
     },
+    #[doc = "SPN Support. This message is used to identify those SPNs supported by the product for freeze frames and data stream messages."]
     Dm24 {
+        #[doc = "This parameter defines the SPN(s) that is/are supported for the freeze frame and/or data stream information."]
         spn_supported1_high_raw_value: u8,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_eff2_raw_value: bool,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_ds3_raw_value: bool,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_ds2_raw_value: bool,
+        #[doc = "This parameter defines the SPN(s) that is/are supported for the freeze frame and/or data stream information."]
         spn_supported2_high_raw_value: u8,
+        #[doc = "This parameter defines the SPN(s) that is/are supported for the freeze frame and/or data stream information."]
         spn_supported2_raw_value: u16,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_str1_raw_value: bool,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_ds1_raw_value: bool,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_eff1_raw_value: bool,
+        #[doc = "The number of data bytes associated with the SPN in the Freeze Frame."]
         spn_data_length2_raw_value: u8,
+        #[doc = "The number of data bytes associated with the SPN in the Freeze Frame."]
         spn_data_length1_raw_value: u8,
+        #[doc = "This parameter defines the SPN(s) that is/are supported for the freeze frame and/or data stream information."]
         spn_supported1_raw_value: u16,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_eff2: SpnSupportTypeEff22566764286,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_ds3: SpnSupportTypeDs32566764286,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_ds2: SpnSupportTypeDs22566764286,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_str1: SpnSupportTypeStr12566764286,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_ds1: SpnSupportTypeDs12566764286,
+        #[doc = "This parameter defines whether the applicable parameter (that is the SPN) is supported in the freeze frame, the data stream or both the freeze frame and data stream."]
         spn_support_type_eff1: SpnSupportTypeEff12566764286,
     },
+    #[doc = "Previously active emission related faults."]
     Dm23 {
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2555576062,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2555576062,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2555576062,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2555576062,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12555576062,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2555576062,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2555576062,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2555576062,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2555576062,
     },
+    #[doc = "Individual Clear/Reset of active and previously active DTC."]
     Dm22 {
+        #[doc = "Read IndividualDTCClearControlByte signal from can frame"]
         individual_dtc_clear_control_byte_raw_value: u8,
+        #[doc = "Read CtrlByteIndicIndividualDTCClear signal from can frame"]
         ctrl_byte_indic_individual_dtc_clear_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12562981630,
     },
+    #[doc = "Diagnostic readiness 2"]
     Dm21 {
+        #[doc = "Time accumulated since DTCs were cleared (via an external test equipment or possibly, a battery disconnect) (SPN=?).\nUnit: min"]
         time_since_dt_cs_cleared_raw_value: u16,
+        #[doc = "Accumulated count (in minutes) while the MIL is activated (on) (SPN=?).\nUnit: min"]
         minutes_run_by_engine_mil_activated_raw_value: u16,
+        #[doc = "Distance accumulated since DTCs were cleared (SPN=?).\nUnit: km"]
         distance_since_dt_cs_cleared_raw_value: u16,
+        #[doc = "The kilometers accumulated while the MIL is activated (SPN 3060).\nUnit: km"]
         distance_while_mi_lis_activated_raw_value: u16,
     },
+    #[doc = "Monitor Performance Ratio"]
     Dm20 {
+        #[doc = "The number of times a vehicle has been operated such that all conditions necessary for the Applicable System Monitor to detect a malfunction have been encountered (SPN 3067)."]
         appl_sys_monitor_numerator_raw_value: u16,
+        #[doc = "Contain the SPN of the system monitor for which Monitor ratio is being reported (SPN 3066)."]
         sp_nof_appl_sys_monitor_raw_value: u32,
+        #[doc = "Displays the number of times that the vehicle has been operated in the specified OBD monitoring conditions (SPN 3049)."]
         obd_monitoring_cond_encountered_raw_value: u16,
+        #[doc = "A single counter that defines the number of ignition cycles (SPN 3048)."]
         ignition_cycle_counter_raw_value: u16,
     },
+    #[doc = "Previously active diagnostic trouble codes"]
     Dm2 {
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566835198,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2566835198,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2566835198,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2566835198,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2566835198,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2566835198,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2566835198,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2566835198,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2566835198,
     },
+    #[doc = "Calibration Information"]
     Dm19 {
+        #[doc = "Read CalibrationID1 signal from can frame"]
         calibration_id1_raw_value: u32,
+        #[doc = "Read CalibrationVerificationNumber signal from can frame"]
         calibration_verification_number_raw_value: u32,
     },
+    #[doc = "Boot Load Data"]
     Dm17 {},
+    #[doc = "Binary Data Transfer"]
     Dm16 {
+        #[doc = "Number of occurance of raw binary data"]
         number_of_occurance_raw_value: u8,
     },
+    #[doc = "Memory Access Response"]
     Dm15 {
+        #[doc = "Read NumberAllowed signal from can frame"]
         number_allowed_raw_value: u8,
+        #[doc = "Read Seed signal from can frame"]
         seed_raw_value: u16,
+        #[doc = "Read EDCP_Extension signal from can frame"]
         edcp_extension_raw_value: u8,
+        #[doc = "Error Indicator/EDC Parameter"]
         error_indicator_raw_value: u32,
+        #[doc = "Read Status signal from can frame"]
         status_raw_value: u8,
+        #[doc = "Read NumberAllowedHigh signal from can frame"]
         number_allowed_high_raw_value: u8,
+        #[doc = "Read Seed signal from can frame"]
         seed: Seed2564357886,
+        #[doc = "Read EDCP_Extension signal from can frame"]
         edcp_extension: EdcpExtension2564357886,
+        #[doc = "Error Indicator/EDC Parameter"]
         error_indicator: ErrorIndicator2564357886,
+        #[doc = "Read Status signal from can frame"]
         status: Status2564357886,
     },
+    #[doc = "Memory Access Request"]
     Dm14 {
+        #[doc = "Key/User Level"]
         key_or_user_level_raw_value: u16,
+        #[doc = "Read PointerExtension signal from can frame"]
         pointer_extension_raw_value: u8,
+        #[doc = "Read Pointer signal from can frame"]
         pointer_raw_value: u32,
+        #[doc = "Read Command signal from can frame"]
         command_raw_value: u8,
+        #[doc = "Read PointerType signal from can frame"]
         pointer_type_raw_value: bool,
+        #[doc = "Length/Number Requested"]
         number_requested_raw_value: u8,
+        #[doc = "Length/Number Requested"]
         number_requested_high_raw_value: u8,
+        #[doc = "Key/User Level"]
         key_or_user_level: KeyOrUserLevel2564423422,
+        #[doc = "Read PointerExtension signal from can frame"]
         pointer_extension: PointerExtension2564423422,
+        #[doc = "Read Command signal from can frame"]
         command: Command2564423422,
+        #[doc = "Read PointerType signal from can frame"]
         pointer_type: PointerType2564423422,
     },
+    #[doc = "Stop start broadcast"]
     Dm13 {
+        #[doc = "Indicator to all nodes that the communication ports that have been acted upon by the 'Stop start broadcast'\nPGN are remaining in the modified state."]
         hold_signal_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the SAE J1939 Network #3."]
         j1939_network3_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the SAE J1939 Network #2."]
         j1939_network2_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the ISO9141 communications port."]
         iso9141_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the SAE J1850 communications port."]
         sae_j1850_raw_value: u8,
+        #[doc = "Identifies the action to be performed on 'Other, manufacturer specific port' communications port."]
         manufacturer_specific_port_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the communications port that this parameter was received."]
         current_data_link_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the SAE J1587 communications port."]
         sae_j1587_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the SAE J1922 communications port."]
         sae_j1922_raw_value: u8,
+        #[doc = "Identifies the action to be performed on the SAE J1939 Network #1, Primary vehicle communications port."]
         j1939_network1_raw_value: u8,
+        #[doc = "Read SuspendSignal signal from can frame"]
         suspend_signal_raw_value: u8,
+        #[doc = "Read SuspendDuration signal from can frame\nUnit: seconds"]
         suspend_duration_raw_value: u16,
+        #[doc = "Indicator to all nodes that the communication ports that have been acted upon by the 'Stop start broadcast'\nPGN are remaining in the modified state."]
         hold_signal: HoldSignal2564816638,
+        #[doc = "Identifies the action to be performed on the SAE J1939 Network #3."]
         j1939_network3: J1939Network32564816638,
+        #[doc = "Identifies the action to be performed on the SAE J1939 Network #2."]
         j1939_network2: J1939Network22564816638,
+        #[doc = "Identifies the action to be performed on the ISO9141 communications port."]
         iso9141: Iso91412564816638,
+        #[doc = "Identifies the action to be performed on the SAE J1850 communications port."]
         sae_j1850: SaeJ18502564816638,
+        #[doc = "Identifies the action to be performed on 'Other, manufacturer specific port' communications port."]
         manufacturer_specific_port: ManufacturerSpecificPort2564816638,
+        #[doc = "Identifies the action to be performed on the communications port that this parameter was received."]
         current_data_link: CurrentDataLink2564816638,
+        #[doc = "Identifies the action to be performed on the SAE J1587 communications port."]
         sae_j1587: SaeJ15872564816638,
+        #[doc = "Identifies the action to be performed on the SAE J1922 communications port."]
         sae_j1922: SaeJ19222564816638,
+        #[doc = "Identifies the action to be performed on the SAE J1939 Network #1, Primary vehicle communications port."]
         j1939_network1: J1939Network12564816638,
+        #[doc = "Read SuspendSignal signal from can frame"]
         suspend_signal: SuspendSignal2564816638,
     },
+    #[doc = "Emissions-related active diagnostic trouble codes."]
     Dm12 {
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2566837502,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2566837502,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566837502,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2566837502,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2566837502,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2566837502,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2566837502,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2566837502,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2566837502,
     },
+    #[doc = "Diagnostic data clear/Reset for active DTCs"]
     Dm11 {},
+    #[doc = "Non-continously monitored systems test identifiers support"]
     Dm10 {
+        #[doc = "Indicates the test identifiers that the controller supports."]
         test_identifier_supported_raw_value: u64,
     },
+    #[doc = "Active diagnostic trouble codes"]
     Dm1 {
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2566834942,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2566834942,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2566834942,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2566834942,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2566834942,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2566834942,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566834942,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2566834942,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2566834942,
     },
+    #[doc = "Utility Total AC Reactive Power"]
     Utacr {
+        #[doc = "Lead/lag status for utility incomer average power factor."]
         utlity_overall_power_factor_lagging_raw_value: u8,
+        #[doc = "The average power factor of the utility incomer."]
         utility_overall_power_factor_raw_value: f64,
+        #[doc = "The total reactive power delivered by the utility incomer\nUnit: VA"]
         utility_total_reactive_power_raw_value: f64,
     },
+    #[doc = "Utility Total AC Power"]
     Utacp {
+        #[doc = "The total apparent power delivered by the utility incomer.\nUnit: VA"]
         utility_total_apparent_power_raw_value: f64,
+        #[doc = "Total real power delivered by the utility incomer.\nUnit: VA"]
         utility_total_real_power_raw_value: f64,
     },
+    #[doc = "Utility Total AC Energy"]
     Utace {
+        #[doc = "The total kilowatt-hours that have been imported by the utility incomer.\nUnit: kWh"]
         utility_total_kw_hours_import_raw_value: u32,
+        #[doc = "The total kilowatt-hours that have been exported by the utility incomer.\nUnit: kWh"]
         utility_total_kw_hours_export_raw_value: u32,
     },
+    #[doc = "Utility Phase C AC Reactive Power"]
     Upcacr {
+        #[doc = "Lead/lag status for utility incomer phase C power factor."]
         utility_phase_c_power_factor_lagging_raw_value: u8,
+        #[doc = "The power factor of phases C of the utility incomer."]
         utility_phase_c_power_factor_raw_value: f64,
+        #[doc = "The reactive power delivered by phase C of the utility incomer\nUnit: VA"]
         utility_phase_c_reactive_power_raw_value: f64,
     },
+    #[doc = "Utility Phase C AC Power"]
     Upcacp {
+        #[doc = "The apparent power delivered by phase C of the utility incomer.\nUnit: VA"]
         utility_phase_c_apparent_power_raw_value: f64,
+        #[doc = "The real power delivered by phase C of the utility incomer.\nUnit: VA"]
         utility_phase_c_real_power_raw_value: f64,
     },
+    #[doc = "Utility Phase C AC Basic Quantities"]
     Upcac {
+        #[doc = "RMS current measured at the utility incomer phase C.\nUnit: A"]
         utility_phase_cacrms_current_raw_value: u16,
+        #[doc = "AC frequency measured at the utility incomer phase C.\nUnit: Hz"]
         utility_phase_cac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at the utility incomer phase C.\nUnit: V"]
         utlty_phs_c_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at the utility incomer phase CA.\nUnit: V"]
         utlty_phse_ca_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Utility Phase B AC Reactive Power"]
     Upbacr {
+        #[doc = "Lead/lag status for utility incomer phase B power factor."]
         utility_phase_b_power_factor_lagging_raw_value: u8,
+        #[doc = "The power factor of phases B of the utility incomer."]
         utility_phase_b_power_factor_raw_value: f64,
+        #[doc = "The reactive power delivered by phase B of the utility incomer\nUnit: VA"]
         utility_phase_b_reactive_power_raw_value: f64,
     },
+    #[doc = "Utility Phase B AC Power"]
     Upbacp {
+        #[doc = "The apparent power delivered by phase B of the utility incomer.\nUnit: VA"]
         utility_phase_b_apparent_power_raw_value: f64,
+        #[doc = "The real power delivered by phase B of the utility incomer.\nUnit: VA"]
         utility_phase_b_real_power_raw_value: f64,
     },
+    #[doc = "Utility Phase B AC Basic Quantities"]
     Upbac {
+        #[doc = "RMS current measured at the utility incomer phase B.\nUnit: A"]
         utility_phase_bacrms_current_raw_value: u16,
+        #[doc = "AC frequency measured at the utility incomer phase B.\nUnit: Hz"]
         utility_phase_bac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at the utility incomer phase B.\nUnit: V"]
         utlty_phs_b_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at the utility incomer phase BC.\nUnit: V"]
         utlty_phse_bc_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Utility Phase A  AC Reactive Power"]
     Upaccr {
+        #[doc = "Lead/lag status for utility incomer phase A power factor."]
         utility_phase_a_power_factor_lagging_raw_value: u8,
+        #[doc = "The power factor of phase A of the utility incomer."]
         utility_phase_a_power_factor_raw_value: f64,
+        #[doc = "The reactive power delivered by phase A of the utility incomer\nUnit: VA"]
         utility_phase_a_reactive_power_raw_value: f64,
     },
+    #[doc = "Utility Phase A  AC Power"]
     Upaacp {
+        #[doc = "The apparent power delivered by phase A of the utility incomer.\nUnit: VA"]
         utility_phase_a_apparent_power_raw_value: f64,
+        #[doc = "The real power delivered by phase A of the utility incomer.\nUnit: VA"]
         utility_phase_a_real_power_raw_value: f64,
     },
+    #[doc = "Utility Phase A Basic AC Quantities"]
     Upaac {
+        #[doc = "RMS current measured at the utility incomer phase A.\nUnit: A"]
         utility_phase_aacrms_current_raw_value: u16,
+        #[doc = "AC frequency measured at the utility incomer phase A.\nUnit: Hz"]
         utility_phase_aac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at the utility incomer phase A.\nUnit: V"]
         utlty_phs_a_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at the utility incomer phase AB.\nUnit: V"]
         utlty_phse_ab_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Utility Average Basic AC Quantities"]
     Uaac {
+        #[doc = "Average RMS current measured at the utility incomer.\nUnit: A"]
         utility_average_acrms_current_raw_value: u16,
+        #[doc = "Average AC frequency measured at the utility incomer.\nUnit: Hz"]
         utility_average_ac_frequency_raw_value: u16,
+        #[doc = "The average Line to Neutral AC RMS voltage measured at the utility incomer .\nUnit: V"]
         utlty_avrg_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Average Line to Line RMS voltage measured at the utility incomer .\nUnit: V"]
         utlty_avrage_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Generator Total AC Reactive Power"]
     Gtacr {
+        #[doc = "Lead/lag status for generator average power factor."]
         gnrtor_overall_power_factor_lagging_raw_value: u8,
+        #[doc = "The average power factor of the generator."]
         generator_overall_power_factor_raw_value: f64,
+        #[doc = "The total reactive power delivered by the generator\nUnit: VA"]
         generator_total_reactive_power_raw_value: f64,
     },
+    #[doc = "Generator Total AC Power"]
     Gtacp {
+        #[doc = "The total apparent power delivered by the generator.\nUnit: VA"]
         generator_total_apparent_power_raw_value: f64,
+        #[doc = "Total real power delivered by the generator.\nUnit: VA"]
         generator_total_real_power_raw_value: f64,
     },
+    #[doc = "Generator Total AC Energy"]
     Gtace {
+        #[doc = "The total kilowatt-hours that have been imported by the generator.\nUnit: kWh"]
         generator_total_kw_hours_import_raw_value: u32,
+        #[doc = "The total kilowatt-hours that have been exported by the generator.\nUnit: kWh"]
         generator_total_kw_hours_export_raw_value: u32,
     },
+    #[doc = "Generator Phase C AC Reactive Power"]
     Gpcacr {
+        #[doc = "Lead/lag status for generator phase C power factor."]
         gnrator_phase_c_power_factor_lagging_raw_value: u8,
+        #[doc = "The power factor of phases C of the generator."]
         generator_phase_c_power_factor_raw_value: f64,
+        #[doc = "The reactive power delivered by phase C of the generator\nUnit: VA"]
         generator_phase_c_reactive_power_raw_value: f64,
     },
+    #[doc = "Generator Phase C AC Power"]
     Gpcacp {
+        #[doc = "The apparent power delivered by phase C of the generator.\nUnit: VA"]
         generator_phase_c_apparent_power_raw_value: f64,
+        #[doc = "The real power delivered by phase C of the generator.\nUnit: VA"]
         generator_phase_c_real_power_raw_value: f64,
     },
+    #[doc = "Generator Phase C Basic AC Quantities"]
     Gpcac {
+        #[doc = "RMS current measured at the generator phase C output.\nUnit: A"]
         generator_phase_cacrms_current_raw_value: u16,
+        #[doc = "AC frequency measured at the generator phase C output.\nUnit: Hz"]
         generator_phase_cac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at the generator phase C output.\nUnit: V"]
         gnrtr_phs_c_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at the generator phase CA output.\nUnit: V"]
         gnrtr_phse_ca_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Generator Phase B AC Reactive Power"]
     Gpbacrp {
+        #[doc = "Lead/lag status for generator phase B power factor."]
         gnrator_phase_b_power_factor_lagging_raw_value: u8,
+        #[doc = "The power factor of phases B of the generator."]
         generator_phase_b_power_factor_raw_value: f64,
+        #[doc = "The reactive power delivered by phase B of the generator\nUnit: VA"]
         generator_phase_b_reactive_power_raw_value: f64,
     },
+    #[doc = "Generator Phase B AC Power"]
     Gpbacp {
+        #[doc = "The apparent power delivered by phase B of the generator.\nUnit: VA"]
         generator_phase_b_apparent_power_raw_value: f64,
+        #[doc = "The real power delivered by phase B of the generator.\nUnit: VA"]
         generator_phase_b_real_power_raw_value: f64,
     },
+    #[doc = "Generator Phase B Basic AC Quantities"]
     Gpbac {
+        #[doc = "RMS current measured at the generator phase B output.\nUnit: A"]
         generator_phase_bacrms_current_raw_value: u16,
+        #[doc = "AC frequency measured at the generator phase B output.\nUnit: Hz"]
         generator_phase_bac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at the generator phase B output.\nUnit: V"]
         gnrtr_phs_b_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at the generator phase BC output.\nUnit: V"]
         gnrtr_phse_bc_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Generator Phase A AC Reactive Power"]
     Gpaacr {
+        #[doc = "Lead/lag status for generator phase A power factor."]
         gnrator_phase_a_power_factor_lagging_raw_value: u8,
+        #[doc = "The power factor of phase A of the generator."]
         generator_phase_a_power_factor_raw_value: f64,
+        #[doc = "The reactive power delivered by phase A of the generator\nUnit: VA"]
         generator_phase_a_reactive_power_raw_value: f64,
     },
+    #[doc = "Generator Phase A AC Power"]
     Gpaacp {
+        #[doc = "The apparent power delivered by phase A of the generator.\nUnit: VA"]
         generator_phase_a_apparent_power_raw_value: f64,
+        #[doc = "The real power delivered by phase A of the generator.\nUnit: VA"]
         generator_phase_a_real_power_raw_value: f64,
     },
+    #[doc = "Generator Phase A Basic AC Quantities"]
     Gpaac {
+        #[doc = "RMS current measured at the generator phase A output.\nUnit: A"]
         generator_phase_aacrms_current_raw_value: u16,
+        #[doc = "AC frequency measured at the generator phase A output.\nUnit: Hz"]
         generator_phase_aac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at the generator phase A output.\nUnit: V"]
         gnrtr_phs_a_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at the generator phase AB output.\nUnit: V"]
         gnrtr_phse_ab_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Generator Average Basic AC Quantities"]
     Gaac {
+        #[doc = "Average RMS current measured at the generator output.\nUnit: A"]
         generator_average_acrms_current_raw_value: u16,
+        #[doc = "Average AC frequency measured at the generator output.\nUnit: Hz"]
         generator_average_ac_frequency_raw_value: u16,
+        #[doc = "The average Line to Neutral AC RMS voltage measured at the Generator output.\nUnit: V"]
         gnrtr_avrg_lne_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Average Line to Line RMS voltage measured at the generator output.\nUnit: V"]
         gnrtr_avrage_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Bus #1/Utility Sync Check Status"]
     Busc {
+        #[doc = "The phase difference between the Bus #1 voltage and Utility voltage.\nUnit: deg"]
         bus1_utility_ac_phase_difference_raw_value: f64,
+        #[doc = "Indicator of whether Bus #1 and Utility are properly synchronized for paralleling. This indicator will be based on parameters such as Voltage Match, Frequency Match, and Phase Match."]
         bus1_utility_in_sync_raw_value: u8,
+        #[doc = "Indicator of whether voltage difference between Bus #1 and Utility is adequate for paralleling. This indicator will be based on the measured AC voltages qualified using parameters such as Voltage Tolerance."]
         bus1_utility_voltage_match_raw_value: u8,
+        #[doc = "Indicator of whether frequency difference between Bus #1 and Utility is adequate for paralleling. This indicator will be based on the measured AC frequencies qualified using parameters such as Frequency Tolerance, Phase Tolerance, and Dwell Time."]
         bus1_utility_frequency_match_raw_value: u8,
+        #[doc = "Indicator of whether phase difference between Bus #1 and Utility is adequate for paralleling. This indicator will be based on the measured AC phase difference qualified using parameters such as Phase Tolerance and Dwell Time."]
         bus1_utility_phase_match_raw_value: u8,
+        #[doc = "Indicator of whether Bus #1 is considered dead for closing to the utility. This indicator will be based on parameters such as Bus #1 Voltage and dead bus threshold values."]
         bus1_utility_dead_bus_raw_value: u8,
     },
+    #[doc = "Bus #1 Phase C  Basic AC Quantities"]
     Bpcac {
+        #[doc = "AC frequency measured at bus #1 phase C.\nUnit: Hz"]
         bus1_phase_cac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at bus #1 phase C.\nUnit: V"]
         bs1_phse_c_line_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at bus #1 phase CA.\nUnit: V"]
         bus1_phase_ca_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Bus #1 Phase B  Basic AC Quantities"]
     Bpbac {
+        #[doc = "AC frequency measured at bus #1 phase B.\nUnit: Hz"]
         bus1_phase_bac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at bus #1 phase B.\nUnit: V"]
         bs1_phse_b_line_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at bus #1 phase BC.\nUnit: V"]
         bus1_phase_bc_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Bus #1 Phase A  Basic AC Quantities"]
     Bpaac {
+        #[doc = "AC frequency measured at bus #1 phase A.\nUnit: Hz"]
         bus1_phase_aac_frequency_raw_value: u16,
+        #[doc = "Line to Neutral RMS voltage measured at bus #1 phase A.\nUnit: V"]
         bs1_phse_a_line_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Line to Line RMS voltage measured at bus #1 phase AB.\nUnit: V"]
         bus1_phase_ab_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Bus #1/Generator Sync Check Status"]
     Bgsc {
+        #[doc = "The phase difference between the Bus #1 voltage and Generator voltage.\nUnit: deg"]
         bus1_generator_ac_phase_difference_raw_value: f64,
+        #[doc = "Indicator of whether Bus #1 and Generator are properly synchronized for paralleling. This indicator will be based on parameters such as Voltage Match, Frequency Match, and Phase Match."]
         bus1_generator_in_sync_raw_value: u8,
+        #[doc = "Indicator of whether voltage difference between Bus #1 and Generator is adequate for paralleling. This indicator will be based on the measured AC voltages qualified using parameters such as Voltage Tolerance."]
         bus1_generator_voltage_match_raw_value: u8,
+        #[doc = "Indicator of whether frequency difference between Bus #1 and Generator is adequate for paralleling. This indicator will be based on the measured AC frequencies qualified using parameters such as Frequency Tolerance, Phase Tolerance, and Dwell Time."]
         bus1_generator_frequency_match_raw_value: u8,
+        #[doc = "Indicator of whether phase difference between Bus #1 and Generator is adequate for paralleling. This indicator will be based on the measured AC phase difference qualified using parameters such as Phase Tolerance and Dwell Time."]
         bus1_generator_phase_match_raw_value: u8,
+        #[doc = "Indicator of whether Bus #1 is considered dead for closing to the generator. This indicator will be based on parameters such as Bus #1 Voltage and dead bus threshold values."]
         bus1_generator_dead_bus_raw_value: u8,
     },
+    #[doc = "Bus #1 Average Basic AC Quantities"]
     Baac {
+        #[doc = "Average AC frequency measured at bus #1.\nUnit: Hz"]
         bus1_average_ac_frequency_raw_value: u16,
+        #[doc = "The average Line to Neutral AC RMS voltage measured at bus #1 .\nUnit: V"]
         bs1_avrge_line_neutral_acrms_voltage_raw_value: u16,
+        #[doc = "Average Line to Line RMS voltage measured at bus #1 .\nUnit: V"]
         bus1_average_line_line_acrms_voltage_raw_value: u16,
     },
+    #[doc = "Working Set Master"]
     Wsmstr {
+        #[doc = "Read NumberOfMembers signal from can frame"]
         number_of_members_raw_value: u8,
     },
+    #[doc = "Commanded Address"]
     Ca {
+        #[doc = "Read ArbitraryAddressCapable signal from can frame"]
         arbitrary_address_capable_raw_value: bool,
+        #[doc = "0 = Global; \n   1  = On-Highway; \n   2  = Agricultural and Forestry; \n   3  = Construction; \n   4  = Marine;\n   5  = Industrial - Process\n          Control - Stationary (Gen-Sets)\n   6  = Reserve for SAE\n   7  = Reserve for SAE"]
         industry_group_raw_value: u8,
+        #[doc = "Read VehicleSystemInstance signal from can frame"]
         vehicle_system_instance_raw_value: u8,
+        #[doc = "Read VehicleSystem signal from can frame"]
         vehicle_system_raw_value: u8,
+        #[doc = "Read Function signal from can frame"]
         function_raw_value: u8,
+        #[doc = "Read FunctionInstance signal from can frame"]
         function_instance_raw_value: u8,
+        #[doc = "Read ECUInstance signal from can frame"]
         ecu_instance_raw_value: u8,
+        #[doc = "Assigned by NMEA 2000 Committee"]
         manufacturer_code_raw_value: u16,
+        #[doc = "Read IdentityNumber signal from can frame"]
         identity_number_raw_value: u32,
+        #[doc = "0 = Global; \n   1  = On-Highway; \n   2  = Agricultural and Forestry; \n   3  = Construction; \n   4  = Marine;\n   5  = Industrial - Process\n          Control - Stationary (Gen-Sets)\n   6  = Reserve for SAE\n   7  = Reserve for SAE"]
         industry_group: IndustryGroup2566838526,
     },
+    #[doc = "Address Claimed"]
     Acl {
+        #[doc = "Read ArbitraryAddressCapable signal from can frame"]
         arbitrary_address_capable_raw_value: bool,
+        #[doc = "0 = Global; \n   1  = On-Highway; \n   2  = Agricultural and Forestry; \n   3  = Construction; \n   4  = Marine;\n   5  = Industrial - Process\n          Control - Stationary (Gen-Sets)\n   6  = Reserve for SAE\n   7  = Reserve for SAE"]
         industry_group_raw_value: u8,
+        #[doc = "Read VehicleSystemInstance signal from can frame"]
         vehicle_system_instance_raw_value: u8,
+        #[doc = "Read VehicleSystem signal from can frame"]
         vehicle_system_raw_value: u8,
+        #[doc = "Read Function signal from can frame"]
         function_raw_value: u8,
+        #[doc = "Read FunctionInstance signal from can frame"]
         function_instance_raw_value: u8,
+        #[doc = "Read ECUInstance signal from can frame"]
         ecu_instance_raw_value: u8,
+        #[doc = "Assigned by NMEA 2000 Committee"]
         manufacturer_code_raw_value: u16,
+        #[doc = "Read IdentityNumber signal from can frame"]
         identity_number_raw_value: u32,
+        #[doc = "0 = Global; \n   1  = On-Highway; \n   2  = Agricultural and Forestry; \n   3  = Construction; \n   4  = Marine;\n   5  = Industrial - Process\n          Control - Stationary (Gen-Sets)\n   6  = Reserve for SAE\n   7  = Reserve for SAE"]
         industry_group: IndustryGroup2565799678,
     },
+    #[doc = "Transfer"]
     Xfer {
+        #[doc = "Short name of reporting device of the requested PGN via the Transfer PGN.\nUnit: (2^32 - 1)"]
         shrt_name_of_actual_reporting_device_raw_value: u32,
+        #[doc = "Length of data reported with the associated PGN via the Transfer PGN."]
         length_of_data_for_the_reported_pgn_raw_value: u8,
+        #[doc = "PGN associated with this transfer message"]
         pg_nof_requsted_information_raw_value: u32,
     },
+    #[doc = "Transport Protocol - Data Transfer"]
     Tpdt {
+        #[doc = "Read SequenceNumber signal from can frame"]
         sequence_number_raw_value: u8,
     },
+    #[doc = "Transport Protocol - Connection Management"]
     Tpcm {
+        #[doc = "Total number of packets for BAM message.Total number of packets received for RTS/CTS message.Total number of packets for RTS/CTS message."]
         total_number_of_packets_eo_ma_raw_value: Option<u8>,
+        #[doc = "Total message size (in bytes) for BAM message.Total message size (in bytes) for RTS/CTS message.Total message size (in bytes) for RTS/CTS message.\nUnit: counts"]
         total_message_size_eo_ma_raw_value: Option<u16>,
+        #[doc = "Total message size (in bytes) for BAM message.Total message size (in bytes) for RTS/CTS message.Total message size (in bytes) for RTS/CTS message.\nUnit: counts"]
         total_message_size_bam_raw_value: Option<u16>,
+        #[doc = "Total number of packets for BAM message.Total number of packets received for RTS/CTS message.Total number of packets for RTS/CTS message."]
         total_number_of_packets_bam_raw_value: Option<u8>,
+        #[doc = "Reason for connection abort message."]
         connection_abort_reason_raw_value: Option<u8>,
+        #[doc = "Next Packet Number to be sent (TP.CM_CTS)"]
         next_packet_number_to_be_sent_raw_value: Option<u8>,
+        #[doc = "Number of Packets that can be sent (TP.CM_CTS)"]
         number_of_packets_that_can_be_sent_raw_value: Option<u8>,
+        #[doc = "Read PGNumber signal from can frame"]
         pg_number_raw_value: u32,
+        #[doc = "Maximum number of packets for RTS/CTS message."]
         maximum_number_of_packets_raw_value: Option<u8>,
+        #[doc = "Total number of packets for BAM message.Total number of packets received for RTS/CTS message.Total number of packets for RTS/CTS message."]
         total_number_of_packets_raw_value: Option<u8>,
+        #[doc = "Total message size (in bytes) for BAM message.Total message size (in bytes) for RTS/CTS message.Total message size (in bytes) for RTS/CTS message.\nUnit: counts"]
         total_message_size_raw_value: Option<u16>,
+        #[doc = "Read ControlByte signal from can frame"]
         control_byte_raw_value: u8,
+        #[doc = "Read PGNumber signal from can frame"]
         pg_number: PgNumber2565668606,
+        #[doc = "Read ControlByte signal from can frame"]
         control_byte: ControlByte2565668606,
     },
+    #[doc = "Request 2"]
     Rqst2 {
+        #[doc = "Requester is to respond via the Transfer PGN"]
         use_transfer_mode_raw_value: u8,
+        #[doc = "PGN which is requested by Request2 message"]
         parameter_group_number_raw_value: u32,
+        #[doc = "Requester is to respond via the Transfer PGN"]
         use_transfer_mode: UseTransferMode2563374846,
     },
+    #[doc = "Request"]
     Rqst {
+        #[doc = "PGN which is requested by Request2 message"]
         parameter_group_number_raw_value: u32,
     },
+    #[doc = "DTC Counts"]
     Dm29 {
+        #[doc = "Identifies the current number of permanent DTCs"]
         permanent_dt_cs_raw_value: u8,
+        #[doc = "Identifies the current number of previously MIL-On DTCs"]
         previously_mil_on_dt_cs_raw_value: u8,
+        #[doc = "Identifies the current number of MIL-On DTCs"]
         mil_on_dt_cs_raw_value: u8,
+        #[doc = "Identifies the current total number of pending DTCs, including emission related"]
         all_pending_dt_cs_raw_value: u8,
+        #[doc = "Identifies the current number of emission related pending DTCs"]
         pending_dt_cs_raw_value: u8,
     },
+    #[doc = "Permanent DTCs"]
     Dm28 {
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2566750462,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2566750462,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2566750462,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2566750462,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2566750462,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2566750462,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566750462,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2566750462,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2566750462,
     },
+    #[doc = "All Pending DTCs"]
     Dm27 {
+        #[doc = "SPN #2 (Conversion Version 4)"]
         spn2_raw_value: u16,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp_raw_value: u8,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status_raw_value: u8,
+        #[doc = "The 7 bit occurence count field contains the number of times a fault has gone from active to previously active."]
         occurence_count1_raw_value: u8,
+        #[doc = "Read SPNConversionMethod1 signal from can frame"]
         spn_conversion_method1_raw_value: bool,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_raw_value: u16,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state_raw_value: u8,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status_raw_value: u8,
+        #[doc = "SPN #1 (Conversion Version 4)"]
         spn1_high_raw_value: u8,
+        #[doc = "This parameter provides the capability to flash the RSL (SPN 3039)."]
         flash_red_stop_lamp: FlashRedStopLamp2566750974,
+        #[doc = "This parameter provides the capability to flash the engine protect lamp (SPN 3041)."]
         flash_protect_lamp: FlashProtectLamp2566750974,
+        #[doc = "This parameter provides the capability to flash the MIL (SPN 3038)."]
         flash_malfunc_indicator_lamp: FlashMalfuncIndicatorLamp2566750974,
+        #[doc = "This parameter provides the capability to flash the AWL (SPN 3040). "]
         flash_amber_warning_lamp: FlashAmberWarningLamp2566750974,
+        #[doc = "A lamp used to relay only emissions-related trouble code information."]
         malfunction_indicator_lamp_status: MalfunctionIndicatorLampStatus2566750974,
+        #[doc = "This lamp is used to relay trouble code information that is reporting a problem with the vehicle system but the vehicle need\nnot be immediately stopped."]
         amber_warning_lamp_status: AmberWarningLampStatus2566750974,
+        #[doc = "The FMI defines the type of failure detected in the subsystem identified by an SPN."]
         failure_mode_identifier1: FailureModeIdentifier12566750974,
+        #[doc = "This lamp is uesed to relay trouble code information that is of a severe enought condition that it warrants stopping the vehicle."]
         red_stop_lamp_state: RedStopLampState2566750974,
+        #[doc = "This lamp is used to relay trouble code informatio that is reporting a problem with a vehicle system that is most\nprobably not electronic subsystem related."]
         protect_lamp_status: ProtectLampStatus2566750974,
     },
+    #[doc = "Aftertreatment 2 Trip Information"]
     Ati2 {
+        #[doc = "Total amount of time that aftertreatment device 2 has been in active regeneration during the current trip period.\nUnit: s"]
         aftrtrtmnt2_trp_actv_rgnration_time_raw_value: u32,
+        #[doc = "Total amount of fuel used by aftertreatment device 2 during the current trip period.\nUnit: L"]
         aftertreatment2_trip_fuel_used_raw_value: f64,
     },
+    #[doc = "Aftertreatment 1 Trip Information"]
     Ati1 {
+        #[doc = "Total amount of time that aftertreatment device 1 has been in active regeneration during the current trip period.\nUnit: s"]
         aftrtrtmnt1_trp_actv_rgnration_time_raw_value: u32,
+        #[doc = "Total amount of fuel used by aftertreatment device 1 during the current trip period.\nUnit: L"]
         aftertreatment1_trip_fuel_used_raw_value: f64,
     },
+    #[doc = "Aftertreatment Air Control 3"]
     Aac3 {
+        #[doc = "Read Aftertreatment1SecondAirPress signal from can frame\nUnit: kPa"]
         aftertreatment1_second_air_press_raw_value: f64,
+        #[doc = "Indicates the secondary air mass flow for aftertreatment 1.\nUnit: kg/h"]
         aftrtreatment1_second_air_mass_flow_raw_value: f64,
+        #[doc = "Indicates the secondary air temperature for aftertreatment 1.\nUnit: deg"]
         aftertreatment1_second_air_temp_raw_value: f64,
+        #[doc = "Indicates the secondary air differential pressure for aftertreatment 1.\nUnit: kPa"]
         aftrtratment1_second_air_diff_press_raw_value: f64,
     },
+    #[doc = "Aftertreatment Air Control 4"]
     Aac4 {
+        #[doc = "Read Aftertreatment2SecondAirPress signal from can frame\nUnit: kPa"]
         aftertreatment2_second_air_press_raw_value: f64,
+        #[doc = "Indicates the secondary air mass flow for aftertreatment 2.\nUnit: kg/h"]
         aftrtreatment2_second_air_mass_flow_raw_value: f64,
+        #[doc = "Indicates the secondary air temperature for aftertreatment 2.\nUnit: deg"]
         aftertreatment2_second_air_temp_raw_value: f64,
+        #[doc = "Indicates the secondary air differential pressure for aftertreatment 2.\nUnit: kPa"]
         aftrtratment2_second_air_diff_press_raw_value: f64,
     },
+    #[doc = "Advertised Engine Torque Curve"]
     Aetc {
+        #[doc = "Indicates the number of speed / torque data points contained in the Advertised Engine Torque Curve broadcast (AETC)."]
         number_of_aetc_data_points_raw_value: u8,
+        #[doc = "Indicates the standardized method by which torque data was obtained for the Advertised Engine Torque Curve (AETC)."]
         aetc_data_collection_standard_raw_value: u8,
+        #[doc = "Indicates the standardized method by which torque data was obtained for the Advertised Engine Torque Curve (AETC)."]
         aetc_data_collection_standard: AetcDataCollectionStandard2566754558,
     },
+    #[doc = "Adaptive Front-Lighting System Status"]
     Afss {
+        #[doc = "This parameter indicates what kind of light distribution is set by the AFS system for the right headlamp."]
         right_headlamp_light_distribution_raw_value: u8,
+        #[doc = "This parameter indicates what kind of light distribution is set by the AFS system for the left headlamp."]
         left_headlamp_light_distribution_raw_value: u8,
+        #[doc = "This parameter indicates whether the dynamic bending light of the left headlamp is working properly."]
         rght_headlamp_dynamic_bending_light_raw_value: u8,
+        #[doc = "This parameter indicates whether the dynamic bending light of the left headlamp is working properly."]
         left_headlamp_dynamic_bending_light_raw_value: u8,
+        #[doc = "This parameter indicates what kind of light distribution is set by the AFS system for the right headlamp."]
         right_headlamp_light_distribution: RightHeadlampLightDistribution2566749950,
+        #[doc = "This parameter indicates what kind of light distribution is set by the AFS system for the left headlamp."]
         left_headlamp_light_distribution: LeftHeadlampLightDistribution2566749950,
+        #[doc = "This parameter indicates whether the dynamic bending light of the left headlamp is working properly."]
         rght_headlamp_dynamic_bending_light: RghtHeadlampDynamicBendingLight2566749950,
+        #[doc = "This parameter indicates whether the dynamic bending light of the left headlamp is working properly."]
         left_headlamp_dynamic_bending_light: LeftHeadlampDynamicBendingLight2566749950,
     },
+    #[doc = "Aftertreatment 1 Intake Gas 1"]
     At1i1 {
+        #[doc = "Read Aftrtrtmnt1IntkOxygnSnsrPrlmnryF signal from can frame"]
         aftrtrtmnt1_intk_oxygn_snsr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1IntkNOxSnsrPrlmnryFMI signal from can frame"]
         aftrtrtmnt1_intk_n_ox_snsr_prlmnry_fmi_raw_value: u8,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt1_intk_gs_snsr_heater_ctrl_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1IntkGsSnsrHtrPrlmnryF signal from can frame"]
         aftrtrtmnt1_intk_gs_snsr_htr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1IntkWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt1_intk_wd_rng_o2_rdng_stble_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1IntkNOxReadingStable signal from can frame"]
         aftrtrtmnt1_intk_n_ox_reading_stable_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1IntkeGasSensorAtTemp signal from can frame"]
         aftrtrtmnt1_intke_gas_sensor_at_temp_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1IntkGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt1_intk_gs_snsr_pwr_in_range_raw_value: u8,
+        #[doc = "The actual oxidation factor (%O2) of the gas within the exhaust stream.\nUnit: %"]
         aftertreatment1_intake_o2_raw_value: f64,
+        #[doc = "Read Aftertreatment1IntakeNOx signal from can frame\nUnit: ppm"]
         aftertreatment1_intake_n_ox_raw_value: f64,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt1_intk_gs_snsr_heater_ctrl: Aftrtrtmnt1IntkGsSnsrHeaterCtrl2565869310,
+        #[doc = "Read Aftrtrtmnt1IntkWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt1_intk_wd_rng_o2_rdng_stble: Aftrtrtmnt1IntkWdRngO2RdngStble2565869310,
+        #[doc = "Read Aftrtrtmnt1IntkNOxReadingStable signal from can frame"]
         aftrtrtmnt1_intk_n_ox_reading_stable: Aftrtrtmnt1IntkNOxReadingStable2565869310,
+        #[doc = "Read Aftrtrtmnt1IntkGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt1_intk_gs_snsr_pwr_in_range: Aftrtrtmnt1IntkGsSnsrPwrInRange2565869310,
     },
+    #[doc = "Aftertreatment 1 Intake Gas 2"]
     At1i2 {
+        #[doc = "Read Aftrtrtmnt1PrtcltTrpIntkGsTmpPrl signal from can frame"]
         aftrtrtmnt1_prtclt_trp_intk_gs_tmp_prl_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1ExhstGsTmp1PrlmnryFMI signal from can frame"]
         aftrtrtmnt1_exhst_gs_tmp1_prlmnry_fmi_raw_value: u8,
+        #[doc = "Temperature of engine combustion byproducts entering the particulate trap in exhaust bank 1.\nUnit: deg"]
         aftrtrtmnt1_prtclt_trp_intk_gas_temp_raw_value: f64,
+        #[doc = "The reading from the exhaust gas temperature sensor located farthest upstream in the aftertreatment system in exhaust bank 1.\nUnit: deg"]
         aftertreatment1_exhaust_gas_temp1_raw_value: f64,
     },
+    #[doc = "Aftertreatment 1 Outlet Gas 1"]
     At1o1 {
+        #[doc = "Read Aftrtrtmnt1OtltOxygnSnsrPrlmnryF signal from can frame"]
         aftrtrtmnt1_otlt_oxygn_snsr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1OtltNOxSnsrPrlmnryFMI signal from can frame"]
         aftrtrtmnt1_otlt_n_ox_snsr_prlmnry_fmi_raw_value: u8,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt1_otlt_gs_snsr_heater_ctrl_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1OtltGsSnsrHtrPrlmnryF signal from can frame"]
         aftrtrtmnt1_otlt_gs_snsr_htr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1OtltWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt1_otlt_wd_rng_o2_rdng_stble_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1OtltNOxReadingStable signal from can frame"]
         aftrtrtmnt1_otlt_n_ox_reading_stable_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1OtletGasSensorAtTemp signal from can frame"]
         aftrtrtmnt1_otlet_gas_sensor_at_temp_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1OtltGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt1_otlt_gs_snsr_pwr_in_range_raw_value: u8,
+        #[doc = "The actual oxidation factor (%O2) of the gas within the exhaust stream.\nUnit: %"]
         aftertreatment1_outlet_o2_raw_value: f64,
+        #[doc = "Read Aftertreatment1OutletNOx signal from can frame\nUnit: ppm"]
         aftertreatment1_outlet_n_ox_raw_value: f64,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt1_otlt_gs_snsr_heater_ctrl: Aftrtrtmnt1OtltGsSnsrHeaterCtrl2565869566,
+        #[doc = "Read Aftrtrtmnt1OtltWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt1_otlt_wd_rng_o2_rdng_stble: Aftrtrtmnt1OtltWdRngO2RdngStble2565869566,
+        #[doc = "Read Aftrtrtmnt1OtltNOxReadingStable signal from can frame"]
         aftrtrtmnt1_otlt_n_ox_reading_stable: Aftrtrtmnt1OtltNOxReadingStable2565869566,
+        #[doc = "Read Aftrtrtmnt1OtletGasSensorAtTemp signal from can frame"]
         aftrtrtmnt1_otlet_gas_sensor_at_temp: Aftrtrtmnt1OtletGasSensorAtTemp2565869566,
+        #[doc = "Read Aftrtrtmnt1OtltGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt1_otlt_gs_snsr_pwr_in_range: Aftrtrtmnt1OtltGsSnsrPwrInRange2565869566,
     },
+    #[doc = "Aftertreatment 1 Outlet Gas 2"]
     At1o2 {
+        #[doc = "Read Aftrtrtmnt1PrtcltTrpOtltExhstGsT signal from can frame"]
         aftrtrtmnt1_prtclt_trp_otlt_exhst_gs_t_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt1ExhstGsTmp3PrlmnryFMI signal from can frame"]
         aftrtrtmnt1_exhst_gs_tmp3_prlmnry_fmi_raw_value: u8,
+        #[doc = "Temperature of engine combustion byproducts leaving the particulate trap exhaust in exhaust bank 1.\nUnit: deg"]
         aftrtrtmnt1_prtclt_trp_otlt_gas_temp_raw_value: f64,
+        #[doc = "Read Aftertreatment1ExhaustGasTemp3 signal from can frame\nUnit: deg"]
         aftertreatment1_exhaust_gas_temp3_raw_value: f64,
     },
+    #[doc = "Aftertreatment 2 Intake Gas 1"]
     At2i1 {
+        #[doc = "Read Aftrtrtmnt2IntkOxygnSnsrPrlmnryF signal from can frame"]
         aftrtrtmnt2_intk_oxygn_snsr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2IntkNOxSnsrPrlmnryFMI signal from can frame"]
         aftrtrtmnt2_intk_n_ox_snsr_prlmnry_fmi_raw_value: u8,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt2_intk_gs_snsr_heater_ctrl_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2IntkGsSnsrHtrPrlmnryF signal from can frame"]
         aftrtrtmnt2_intk_gs_snsr_htr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2IntkWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt2_intk_wd_rng_o2_rdng_stble_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2IntkNOxReadingStable signal from can frame"]
         aftrtrtmnt2_intk_n_ox_reading_stable_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2IntkeGasSensorAtTemp signal from can frame"]
         aftrtrtmnt2_intke_gas_sensor_at_temp_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2IntkGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt2_intk_gs_snsr_pwr_in_range_raw_value: u8,
+        #[doc = "The actual oxidation factor (%O2) of the gas within the exhaust stream.\nUnit: %"]
         aftertreatment2_intake_o2_raw_value: f64,
+        #[doc = "Read Aftertreatment2IntakeNOx signal from can frame\nUnit: ppm"]
         aftertreatment2_intake_n_ox_raw_value: f64,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt2_intk_gs_snsr_heater_ctrl: Aftrtrtmnt2IntkGsSnsrHeaterCtrl2565869822,
+        #[doc = "Read Aftrtrtmnt2IntkWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt2_intk_wd_rng_o2_rdng_stble: Aftrtrtmnt2IntkWdRngO2RdngStble2565869822,
+        #[doc = "Read Aftrtrtmnt2IntkNOxReadingStable signal from can frame"]
         aftrtrtmnt2_intk_n_ox_reading_stable: Aftrtrtmnt2IntkNOxReadingStable2565869822,
+        #[doc = "Read Aftrtrtmnt2IntkeGasSensorAtTemp signal from can frame"]
         aftrtrtmnt2_intke_gas_sensor_at_temp: Aftrtrtmnt2IntkeGasSensorAtTemp2565869822,
+        #[doc = "Read Aftrtrtmnt2IntkGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt2_intk_gs_snsr_pwr_in_range: Aftrtrtmnt2IntkGsSnsrPwrInRange2565869822,
     },
+    #[doc = "Aftertreatment 2 Intake Gas 2"]
     At2i2 {
+        #[doc = "Read Aftrtrtmnt2PrtcltTrpIntkGsTmpPrl signal from can frame"]
         aftrtrtmnt2_prtclt_trp_intk_gs_tmp_prl_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2ExhstGsTmp1PrlmnryFMI signal from can frame"]
         aftrtrtmnt2_exhst_gs_tmp1_prlmnry_fmi_raw_value: u8,
+        #[doc = "Temperature of engine combustion byproducts entering the particulate trap in exhaust bank 2.\nUnit: deg"]
         aftrtrtmnt2_prtclt_trp_intk_gas_temp_raw_value: f64,
+        #[doc = "The reading from the exhaust gas temperature sensor located farthest upstream in the aftertreatment system in exhaust bank 2.\nUnit: deg"]
         aftertreatment2_exhaust_gas_temp1_raw_value: f64,
     },
+    #[doc = "Aftertreatment 2 Outlet Gas 1"]
     At2o1 {
+        #[doc = "Read Aftrtrtmnt2OtltOxygnSnsrPrlmnryF signal from can frame"]
         aftrtrtmnt2_otlt_oxygn_snsr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2OtltNOxSnsrPrlmnryFMI signal from can frame"]
         aftrtrtmnt2_otlt_n_ox_snsr_prlmnry_fmi_raw_value: u8,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt2_otlt_gs_snsr_heater_ctrl_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2OtltGsSnsrHtrPrlmnryF signal from can frame"]
         aftrtrtmnt2_otlt_gs_snsr_htr_prlmnry_f_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2OtltWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt2_otlt_wd_rng_o2_rdng_stble_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2OtltNOxReadingStable signal from can frame"]
         aftrtrtmnt2_otlt_n_ox_reading_stable_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2OtletGasSensorAtTemp signal from can frame"]
         aftrtrtmnt2_otlet_gas_sensor_at_temp_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2OtltGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt2_otlt_gs_snsr_pwr_in_range_raw_value: u8,
+        #[doc = "The actual oxidation factor (%O2) of the gas within the exhaust stream.\nUnit: %"]
         aftertreatment2_outlet_o2_raw_value: f64,
+        #[doc = "Read Aftertreatment2OutletNOx signal from can frame\nUnit: ppm"]
         aftertreatment2_outlet_n_ox_raw_value: f64,
+        #[doc = "Indicates the heater status in the warm-up process."]
         aftrtrtmnt2_otlt_gs_snsr_heater_ctrl: Aftrtrtmnt2OtltGsSnsrHeaterCtrl2565870078,
+        #[doc = "Read Aftrtrtmnt2OtltWdRngO2RdngStble signal from can frame"]
         aftrtrtmnt2_otlt_wd_rng_o2_rdng_stble: Aftrtrtmnt2OtltWdRngO2RdngStble2565870078,
+        #[doc = "Read Aftrtrtmnt2OtltNOxReadingStable signal from can frame"]
         aftrtrtmnt2_otlt_n_ox_reading_stable: Aftrtrtmnt2OtltNOxReadingStable2565870078,
+        #[doc = "Read Aftrtrtmnt2OtletGasSensorAtTemp signal from can frame"]
         aftrtrtmnt2_otlet_gas_sensor_at_temp: Aftrtrtmnt2OtletGasSensorAtTemp2565870078,
+        #[doc = "Read Aftrtrtmnt2OtltGsSnsrPwrInRange signal from can frame"]
         aftrtrtmnt2_otlt_gs_snsr_pwr_in_range: Aftrtrtmnt2OtltGsSnsrPwrInRange2565870078,
     },
+    #[doc = "Aftertreatment 2 Outlet Gas 2"]
     At2o2 {
+        #[doc = "Read Aftrtrtmnt2PrtcltTrpExhstGsTmpPr signal from can frame"]
         aftrtrtmnt2_prtclt_trp_exhst_gs_tmp_pr_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2ExhstGsTmp3PrlmnryFMI signal from can frame"]
         aftrtrtmnt2_exhst_gs_tmp3_prlmnry_fmi_raw_value: u8,
+        #[doc = "Temperature of engine combustion byproducts leaving the particulate trap exhaust in exhaust bank 2.\nUnit: deg"]
         aftrtrtmnt2_prtclt_trp_otlt_gas_temp_raw_value: f64,
+        #[doc = "Read Aftertreatment2ExhaustGasTemp3 signal from can frame\nUnit: deg"]
         aftertreatment2_exhaust_gas_temp3_raw_value: f64,
     },
+    #[doc = "Aftertreatment 1 Gas Parameters"]
     Atgp1 {
+        #[doc = "Read ParticulateTrapOutletPress1 signal from can frame\nUnit: kPa"]
         particulate_trap_outlet_press1_raw_value: f64,
+        #[doc = "Read ParticulateTrapIntakePress1 signal from can frame\nUnit: kPa"]
         particulate_trap_intake_press1_raw_value: f64,
     },
+    #[doc = "Aftertreatment 2 Gas Parameters"]
     Atgp2 {
+        #[doc = "Read ParticulateTrapOutletPress2 signal from can frame\nUnit: kPa"]
         particulate_trap_outlet_press2_raw_value: f64,
+        #[doc = "Read ParticulateTrapIntakePress2 signal from can frame\nUnit: kPa"]
         particulate_trap_intake_press2_raw_value: f64,
     },
+    #[doc = "Aftertreatment 2 Intermediate Gas"]
     Atm2 {
+        #[doc = "Read Aftrtrtmnt2PrtcltTrpDltPrssPrlmn signal from can frame"]
         aftrtrtmnt2_prtclt_trp_dlt_prss_prlmn_raw_value: u8,
+        #[doc = "Read Aftrtrtmnt2ExhstGsTmp2PrlmnryFMI signal from can frame"]
         aftrtrtmnt2_exhst_gs_tmp2_prlmnry_fmi_raw_value: u8,
+        #[doc = "Exhaust differential pressure measured between the intake and exhaust of a particulate trap in exhaust bank 2.\nUnit: kPa"]
         aftrtrtmnt2_prtclte_trap_diff_press_raw_value: f64,
+        #[doc = "Read Aftrtrtmnt2PrtcltTrpIntrmdtGsTmp signal from can frame\nUnit: deg"]
         aftrtrtmnt2_prtclt_trp_intrmdt_gs_tmp_raw_value: f64,
+        #[doc = "Read Aftertreatment2ExhaustGasTemp2 signal from can frame\nUnit: deg"]
         aftertreatment2_exhaust_gas_temp2_raw_value: f64,
     },
+    #[doc = "Aftertreatment 1 Service"]
     Ats1 {
+        #[doc = "Indicates the time since the last active regeneration event of particulate trap 1.\nUnit: s"]
         prtclt_trp1_tm_snc_lst_actv_rgnration_raw_value: u32,
+        #[doc = "Indicates the ash load percent of particulate trap 1.\nUnit: %"]
         particulate_trap1_ash_load_percent_raw_value: u8,
+        #[doc = "Indicates the soot load percent of particulate trap 1.\nUnit: %"]
         particulate_trap1_soot_load_percent_raw_value: u8,
+        #[doc = "Indicates the ash load percent of particulate trap 1.\nUnit: %"]
         particulate_trap1_ash_load_percent: ParticulateTrap1AshLoadPercent2566749182,
+        #[doc = "Indicates the soot load percent of particulate trap 1.\nUnit: %"]
         particulate_trap1_soot_load_percent: ParticulateTrap1SootLoadPercent2566749182,
     },
+    #[doc = "Aftertreatment 2 Service"]
     Ats2 {
+        #[doc = "Indicates the time since the last active regeneration event of particulate trap 2.\nUnit: s"]
         prtclt_trp2_tm_snc_lst_actv_rgnration_raw_value: u32,
+        #[doc = "Indicates the ash load percent of particulate trap 2.\nUnit: %"]
         particulate_trap2_ash_load_percent_raw_value: u8,
+        #[doc = "Indicates the soot load percent of particulate trap 2.\nUnit: %"]
         particulate_trap2_soot_load_percent_raw_value: u8,
+        #[doc = "Indicates the ash load percent of particulate trap 2.\nUnit: %"]
         particulate_trap2_ash_load_percent: ParticulateTrap2AshLoadPercent2566748926,
+        #[doc = "Indicates the soot load percent of particulate trap 2.\nUnit: %"]
         particulate_trap2_soot_load_percent: ParticulateTrap2SootLoadPercent2566748926,
     },
+    #[doc = "Auxiliary Input/Output Status 1"]
     Auxio1 {
+        #[doc = "Auxiliary channel of data (16 bit) read by the ECU.\nUnit: counts"]
         aux_i_o_channel2_raw_value: u16,
+        #[doc = "Auxiliary channel of data (16 bit) read by the ECU.\nUnit: counts"]
         aux_i_o_channel1_raw_value: u16,
     },
+    #[doc = "Auxiliary Input/Output Status 2"]
     Auxio2 {
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o45_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o46_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o47_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o48_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o41_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o42_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o43_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o44_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o37_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o38_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o39_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o40_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o33_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o34_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o35_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o36_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o29_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o30_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o31_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o32_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o25_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o26_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o27_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o28_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o21_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o22_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o23_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o24_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o17_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o18_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o19_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o20_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o45: AuxIO452561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o46: AuxIO462561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o47: AuxIO472561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o48: AuxIO482561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o41: AuxIO412561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o42: AuxIO422561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o43: AuxIO432561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o44: AuxIO442561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o37: AuxIO372561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o38: AuxIO382561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o39: AuxIO392561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o40: AuxIO402561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o33: AuxIO332561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o34: AuxIO342561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o35: AuxIO352561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o36: AuxIO362561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o29: AuxIO292561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o30: AuxIO302561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o31: AuxIO312561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o32: AuxIO322561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o25: AuxIO252561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o26: AuxIO262561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o27: AuxIO272561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o28: AuxIO282561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o21: AuxIO212561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o22: AuxIO222561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o23: AuxIO232561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o24: AuxIO242561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o17: AuxIO172561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o18: AuxIO182561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o19: AuxIO192561146622,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o20: AuxIO202561146622,
     },
+    #[doc = "Auxiliary Input/Output Status 3"]
     Auxio3 {
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o77_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o78_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o79_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o80_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o73_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o74_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o75_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o76_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o69_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o70_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o71_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o72_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o65_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o66_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o67_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o68_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o61_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o62_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o63_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o64_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o57_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o58_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o59_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o60_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o53_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o54_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o55_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o56_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o49_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o50_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o51_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o52_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o77: AuxIO772561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o78: AuxIO782561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o79: AuxIO792561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o80: AuxIO802561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o73: AuxIO732561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o74: AuxIO742561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o75: AuxIO752561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o76: AuxIO762561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o69: AuxIO692561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o70: AuxIO702561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o71: AuxIO712561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o72: AuxIO722561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o65: AuxIO652561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o66: AuxIO662561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o67: AuxIO672561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o68: AuxIO682561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o61: AuxIO612561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o62: AuxIO622561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o63: AuxIO632561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o64: AuxIO642561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o57: AuxIO572561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o58: AuxIO582561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o59: AuxIO592561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o60: AuxIO602561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o53: AuxIO532561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o54: AuxIO542561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o55: AuxIO552561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o56: AuxIO562561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o49: AuxIO492561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o50: AuxIO502561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o51: AuxIO512561081086,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o52: AuxIO522561081086,
     },
+    #[doc = "Auxiliary Input/Output Status 4"]
     Auxio4 {
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o92_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o85_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o86_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o87_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o88_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o81_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o82_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o83_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o84_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o109_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o110_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o111_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o112_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o105_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o106_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o107_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o108_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o101_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o102_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o103_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o104_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o97_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o98_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o99_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o100_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o93_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o94_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o95_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o96_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o89_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o90_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o91_raw_value: u8,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o92: AuxIO922561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o85: AuxIO852561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o86: AuxIO862561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o87: AuxIO872561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o88: AuxIO882561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o81: AuxIO812561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o82: AuxIO822561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o83: AuxIO832561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o84: AuxIO842561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o109: AuxIO1092561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o110: AuxIO1102561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o111: AuxIO1112561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o112: AuxIO1122561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o105: AuxIO1052561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o106: AuxIO1062561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o107: AuxIO1072561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o108: AuxIO1082561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o101: AuxIO1012561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o102: AuxIO1022561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o103: AuxIO1032561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o104: AuxIO1042561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o97: AuxIO972561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o98: AuxIO982561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o99: AuxIO992561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o100: AuxIO1002561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o93: AuxIO932561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o94: AuxIO942561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o95: AuxIO952561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o96: AuxIO962561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o89: AuxIO892561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o90: AuxIO902561015550,
+        #[doc = "Identifies the current status of auxiliary input/output functions that are configured uniquely per application."]
         aux_i_o91: AuxIO912561015550,
     },
+    #[doc = "Brake actuator stroke status"]
     Bsa {
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 5."]
         trailer_brake_stroke_axle5_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 5."]
         trailer_brake_stroke_axle5_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 4."]
         trailer_brake_stroke_axle4_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 4."]
         trailer_brake_stroke_axle4_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 3."]
         trailer_brake_stroke_axle3_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 3."]
         trailer_brake_stroke_axle3_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 2."]
         trailer_brake_stroke_axle2_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 2."]
         trailer_brake_stroke_axle2_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 1."]
         trailer_brake_stroke_axle1_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on trailerr axle 1."]
         trailer_brake_stroke_axle1_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 5."]
         tractor_brake_stroke_axle5_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 5."]
         tractor_brake_stroke_axle5_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 4."]
         tractor_brake_stroke_axle4_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 4."]
         tractor_brake_stroke_axle4_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 3."]
         tractor_brake_stroke_axle3_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 3."]
         tractor_brake_stroke_axle3_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 2."]
         tractor_brake_stroke_axle2_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 2."]
         tractor_brake_stroke_axle2_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 1."]
         tractor_brake_stroke_axle1_right_raw_value: u8,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 1."]
         tractor_brake_stroke_axle1_left_raw_value: u8,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 5."]
         trailer_brake_stroke_axle5_right: TrailerBrakeStrokeAxle5Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 5."]
         trailer_brake_stroke_axle5_left: TrailerBrakeStrokeAxle5Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 4."]
         trailer_brake_stroke_axle4_right: TrailerBrakeStrokeAxle4Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 4."]
         trailer_brake_stroke_axle4_left: TrailerBrakeStrokeAxle4Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 3."]
         trailer_brake_stroke_axle3_right: TrailerBrakeStrokeAxle3Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 3."]
         trailer_brake_stroke_axle3_left: TrailerBrakeStrokeAxle3Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 2."]
         trailer_brake_stroke_axle2_right: TrailerBrakeStrokeAxle2Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on trailer axle 2."]
         trailer_brake_stroke_axle2_left: TrailerBrakeStrokeAxle2Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on trailer axle 1."]
         trailer_brake_stroke_axle1_right: TrailerBrakeStrokeAxle1Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on trailerr axle 1."]
         trailer_brake_stroke_axle1_left: TrailerBrakeStrokeAxle1Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 5."]
         tractor_brake_stroke_axle5_right: TractorBrakeStrokeAxle5Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 5."]
         tractor_brake_stroke_axle5_left: TractorBrakeStrokeAxle5Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 4."]
         tractor_brake_stroke_axle4_right: TractorBrakeStrokeAxle4Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 4."]
         tractor_brake_stroke_axle4_left: TractorBrakeStrokeAxle4Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 3."]
         tractor_brake_stroke_axle3_right: TractorBrakeStrokeAxle3Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 3."]
         tractor_brake_stroke_axle3_left: TractorBrakeStrokeAxle3Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 2."]
         tractor_brake_stroke_axle2_right: TractorBrakeStrokeAxle2Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 2."]
         tractor_brake_stroke_axle2_left: TractorBrakeStrokeAxle2Left2566746622,
+        #[doc = "Brake stroke status for right brake actuator on tractor axle 1."]
         tractor_brake_stroke_axle1_right: TractorBrakeStrokeAxle1Right2566746622,
+        #[doc = "Brake stroke status for left brake actuator on tractor axle 1."]
         tractor_brake_stroke_axle1_left: TractorBrakeStrokeAxle1Left2566746622,
     },
+    #[doc = "Ambient Conditions"]
     Amb {
+        #[doc = "Indicated temperature of road surface over which vehicle is operating.\nUnit: deg"]
         road_surface_temp_raw_value: f64,
+        #[doc = "Temperature of air entering vehicle air induction system.\nUnit: deg"]
         eng_air_inlet_temp_raw_value: f64,
+        #[doc = "Temperature of air surrounding vehicle.\nUnit: deg"]
         ambient_air_temp_raw_value: f64,
+        #[doc = "Temperature of air inside the part of the vehicle that encloses the driver and vehicle operating controls.\nUnit: deg"]
         cab_interior_temp_raw_value: f64,
+        #[doc = "Absolute air pressure of the atmosphere.\nUnit: kPa"]
         barometric_press_raw_value: f64,
     },
+    #[doc = "Air Start Pressure"]
     Air2 {
+        #[doc = "Read EngAirStartPress signal from can frame\nUnit: kPa"]
         eng_air_start_press_raw_value: f64,
     },
+    #[doc = "Air Supply Pressure"]
     Air1 {
+        #[doc = "Indicates whether the air compressor is actively compressing air."]
         air_compressor_status_raw_value: u8,
+        #[doc = "The pneumatic pressure in the circuit for the electronically controlled air suspension system.\nUnit: kPa"]
         air_suspension_supply_press_raw_value: f64,
+        #[doc = "The pneumatic pressure in the auxiliary circuit.\nUnit: kPa"]
         aux_equipment_supply_press_raw_value: f64,
+        #[doc = "The pneumatic pressure in the service brake circuit or reservoir #2.\nUnit: kPa"]
         service_brake_air_press_circuit2_raw_value: f64,
+        #[doc = "The pneumatic pressure in the service brake circuit or reservoir #1.\nUnit: kPa"]
         service_brake_air_press_circuit1_raw_value: f64,
+        #[doc = "The pneumatic pressure in the circuit or reservoir for the parking brake and/or the trailer supply.\nUnit: kPa"]
         parking_and_or_trailer_air_press_raw_value: f64,
+        #[doc = "The pneumatic pressure in the main reservoir, sometimes referred to as the wet tank.\nUnit: kPa"]
         pneumatic_supply_press_raw_value: f64,
+        #[doc = "Indicates whether the air compressor is actively compressing air."]
         air_compressor_status: AirCompressorStatus2566827774,
     },
+    #[doc = "Axle Information"]
     Ai {
+        #[doc = "The steering axle lubricant pressure.\nUnit: kPa"]
         steer_axle_lube_press_raw_value: f64,
+        #[doc = "Temperature of lubricant in steering axle.\nUnit: deg"]
         steer_axle_temp_raw_value: f64,
+        #[doc = "The drive axle lubricant pressure with location determined by Drive Axle Location (SPN 930).\nUnit: kPa"]
         drive_axle_lube_press_raw_value: f64,
+        #[doc = "Temperature of axle lubricant in drive axle.\nUnit: deg"]
         drive_axle_temp_raw_value: f64,
+        #[doc = "Gage pressure of air in system that utilizes compressed air to provide force between axle and frame.\nUnit: kPa"]
         drive_axle_lift_air_press_raw_value: f64,
+        #[doc = "To identify to which of several similar devices (such as tires or fuel tanks) the information applies."]
         drive_axle_location_raw_value: u8,
     },
+    #[doc = "Alternate Fuel 2"]
     Af2 {
+        #[doc = "The position of the turbocharger wastegate valve (not the electronic wastegate control valve).\nUnit: %"]
         eng_turbo_wastegate_valve_pos_raw_value: f64,
+        #[doc = "Read EngGsMssFlwSnsrFelingCorrection signal from can frame\nUnit: %"]
         eng_gs_mss_flw_snsr_feling_correction_raw_value: f64,
+        #[doc = "The desired absolute intake manifold pressure of the engine.\nUnit: kPa"]
         eng_dsired_abs_intake_manifold_press_raw_value: f64,
+        #[doc = "A correction to a predefined gaseous fuel energy (expressed in energy per unit volume) represented as a percentage.\nUnit: %"]
         eng_gas_fuel_correction_factor_raw_value: u8,
     },
+    #[doc = "Adaptive Cruise Control, Operator Input"]
     Acc2 {
+        #[doc = "The Requested Distance Control Mode to the ACC system from the operators interface."]
         rqed_acc_distance_mode_raw_value: u8,
+        #[doc = "The Requested Distance Control Mode to the ACC system from the operators interface."]
         rqed_acc_distance_mode: RqedAccDistanceMode2566803966,
     },
+    #[doc = "Adaptive Cruise Control"]
     Acc1 {
+        #[doc = "Signal to indicate to the operator that the ACC system is not able to maintain the distance to the target."]
         acc_distance_alert_signal_raw_value: u8,
+        #[doc = "Signal to warn the driver of system deactivation due to non-driver actions."]
         acc_system_shutoff_warning_raw_value: u8,
+        #[doc = "Signal to indicate to the driver that the ACC system has detected a target."]
         acc_target_detected_raw_value: u8,
+        #[doc = "Estimated value of the current road curvature for use by the adaptive cruise control system.\nUnit: 1/km"]
         road_curvature_raw_value: f64,
+        #[doc = "Selected distance mode for adaptive cruise control."]
         adptve_cruise_ctrl_set_distance_mode_raw_value: u8,
+        #[doc = "This parameter is used to indicate the current state, or mode, of operation by the Adaptive Cruise Control (ACC) device."]
         adaptive_cruise_ctrl_mode_raw_value: u8,
+        #[doc = "Value of the desired (chosen) velocity of the adaptive cruise control system.\nUnit: km/h"]
         adaptive_cruise_ctrl_set_speed_raw_value: u8,
+        #[doc = "Distance to the preceding vehicle situated within 250 m in the same lane and moving in the same direction.\nUnit: m"]
         distance_to_forward_vehicle_raw_value: u8,
+        #[doc = "Absolute velocity of the preceding vehicle situated within 250 m in the same lane and moving in the same direction.\nUnit: km/h"]
         speed_of_forward_vehicle_raw_value: u8,
+        #[doc = "Signal to indicate to the operator that the ACC system is not able to maintain the distance to the target."]
         acc_distance_alert_signal: AccDistanceAlertSignal2432593918,
+        #[doc = "Signal to warn the driver of system deactivation due to non-driver actions."]
         acc_system_shutoff_warning: AccSystemShutoffWarning2432593918,
+        #[doc = "Signal to indicate to the driver that the ACC system has detected a target."]
         acc_target_detected: AccTargetDetected2432593918,
+        #[doc = "Selected distance mode for adaptive cruise control."]
         adptve_cruise_ctrl_set_distance_mode: AdptveCruiseCtrlSetDistanceMode2432593918,
+        #[doc = "This parameter is used to indicate the current state, or mode, of operation by the Adaptive Cruise Control (ACC) device."]
         adaptive_cruise_ctrl_mode: AdaptiveCruiseCtrlMode2432593918,
     },
+    #[doc = "Articulation Control"]
     Ac {
+        #[doc = "Angle of deflection of an articulated transit vehicle.\nUnit: deg"]
         articulation_angle_raw_value: f64,
     },
+    #[doc = "Auxiliary Analog Information"]
     Aai {
+        #[doc = "Level measured by a sensor.\nUnit: mm"]
         aux_level_raw_value: f64,
+        #[doc = "Pressure measured by auxiliary pressure sensor #2.\nUnit: kPa"]
         aux_press2_raw_value: f64,
+        #[doc = "Pressure measured by auxiliary pressure sensor #1.\nUnit: kPa"]
         aux_press1_raw_value: f64,
+        #[doc = "Temperature measured by auxiliary temperature sensor #2.\nUnit: deg"]
         aux_temp2_raw_value: f64,
+        #[doc = "Temperature measured by auxiliary temperature sensor #1.\nUnit: deg"]
         aux_temp1_raw_value: f64,
     },
+    #[doc = "Alternate Fuel 1"]
     A1 {
+        #[doc = "Relative position of the blower bypass valve.\nUnit: %"]
         eng_blower_bypass_valve_pos_raw_value: f64,
+        #[doc = "Gage pressure of gas supply to fuel metering device.\nUnit: kPa"]
         eng_gas_supply_press_raw_value: f64,
     },
+    #[doc = "Acknowledgment Message"]
     Ackm {
+        #[doc = "Read AddressBusy signal from can frame"]
         address_busy_raw_value: Option<u8>,
+        #[doc = "Read ControlByte signal from can frame"]
         control_byte_raw_value: u8,
+        #[doc = "PGN which is requested by Request2 message"]
         parameter_group_number_raw_value: u32,
+        #[doc = "Group Function of PGN being acknowledged. This field identifies for a device the specific group function of a PGN being acknowledged or declined.  This field is not used if the PGN being acknowledged or declined is not a group function PGN."]
         group_function_value_raw_value: u8,
+        #[doc = "Read AddressAccessDenied signal from can frame"]
         address_access_denied_raw_value: Option<u8>,
+        #[doc = "Read AddressNegativeAcknowledgement signal from can frame"]
         address_negative_acknowledgement_raw_value: Option<u8>,
+        #[doc = "Read AddressAcknowledged signal from can frame"]
         address_acknowledged_raw_value: Option<u8>,
+        #[doc = "Read ControlByte signal from can frame"]
         control_byte: ControlByte2565406462,
     },
+    #[doc = "After Treatment Intermediate Gas 1"]
     Atm1 {
+        #[doc = "Read PrtcltTrpIntrmdtGsTmpPrlmnryFMI signal from can frame"]
         prtclt_trp_intrmdt_gs_tmp_prlmnry_fmi_raw_value: u8,
+        #[doc = "Read PrtcltTrpDltPressPreliminaryFMI signal from can frame"]
         prtclt_trp_dlt_press_preliminary_fmi_raw_value: u8,
+        #[doc = "Read ExhaustGasTemp2PreliminaryFMI signal from can frame"]
         exhaust_gas_temp2_preliminary_fmi_raw_value: u8,
+        #[doc = "Exhaust differential pressure measured between the intake and exhaust of a particulate trap.\nUnit: kPa"]
         particulate_trap_diff_press_raw_value: f64,
+        #[doc = "Temperature of engine combustion byproducts at a mid-point in the particulate trap.\nUnit: deg"]
         prtclate_trap_intermediate_gas_temp_raw_value: f64,
+        #[doc = "Read ExhaustGasTemp2 signal from can frame\nUnit: deg"]
         exhaust_gas_temp2_raw_value: f64,
     },
+    #[doc = "Door Control 1"]
     Dc1 {
+        #[doc = "Composite indication of all bus door statuses."]
         status2_of_doors_raw_value: u8,
+        #[doc = "Signal which indicates the actual position of the ramp / wheel chair lift."]
         ramp_wheel_chair_lift_pos_raw_value: u8,
+        #[doc = "Signal which indicates the actual position of the doors."]
         pos_of_doors_raw_value: u8,
+        #[doc = "Composite indication of all bus door statuses."]
         status2_of_doors: Status2OfDoors2566803198,
+        #[doc = "Signal which indicates the actual position of the ramp / wheel chair lift."]
         ramp_wheel_chair_lift_pos: RampWheelChairLiftPos2566803198,
+        #[doc = "Signal which indicates the actual position of the doors."]
         pos_of_doors: PosOfDoors2566803198,
     },
+    #[doc = "Fifth Wheel Smart Systems 1"]
     Fwss1 {
+        #[doc = "Indicates to the vehicle operator that the roll moment has exceeded a preset limit."]
         fifth_wheel_roll_warning_indicator_raw_value: u8,
+        #[doc = "Fifth wheel roll moment force.\nUnit: N"]
         fifth_wheel_roll_moment_raw_value: f64,
+        #[doc = "Fifth wheel drawbar force.\nUnit: N"]
         fifth_wheel_drawbar_force_raw_value: f64,
+        #[doc = "Fifth wheel vertical force.\nUnit: N"]
         fifth_wheel_vertical_force_raw_value: f64,
+        #[doc = "Indicates to the vehicle operator that the roll moment has exceeded a preset limit."]
         fifth_wheel_roll_warning_indicator: FifthWheelRollWarningIndicator2565870334,
     },
+    #[doc = "Fifth Wheel Smart Systems 2"]
     Fwss2 {
+        #[doc = "Indicates to vehicle operator that the fifth wheel slider is in position and locked."]
         fifth_wheel_slider_lock_indicator_raw_value: u8,
+        #[doc = "Slider position measurement.\nUnit: mm"]
         fifth_wheel_slider_pos_raw_value: f64,
+        #[doc = "Indicates results of coupling operation to the vehicle operator."]
         ffth_whl_lck_couple_status_indicator_raw_value: u8,
+        #[doc = "Indicates to the vehicle operator that the fifth wheel lock is open and ready to couple."]
         ffth_whl_lck_rady_to_couple_indicator_raw_value: u8,
+        #[doc = "Fifth wheel error state conveys information when coupling status is incomplete or bad."]
         fifth_wheel_error_status_raw_value: u8,
+        #[doc = "Indicates to vehicle operator that the fifth wheel slider is in position and locked."]
         fifth_wheel_slider_lock_indicator: FifthWheelSliderLockIndicator2566762238,
+        #[doc = "Indicates results of coupling operation to the vehicle operator."]
         ffth_whl_lck_couple_status_indicator: FfthWhlLckCoupleStatusIndicator2566762238,
+        #[doc = "Indicates to the vehicle operator that the fifth wheel lock is open and ready to couple."]
         ffth_whl_lck_rady_to_couple_indicator: FfthWhlLckRadyToCoupleIndicator2566762238,
+        #[doc = "Fifth wheel error state conveys information when coupling status is incomplete or bad."]
         fifth_wheel_error_status: FifthWheelErrorStatus2566762238,
     },
+    #[doc = "Slope Sensor Information"]
     Ssi {
+        #[doc = "The estimated measurement latency of the measurement.\nUnit: ms"]
         roll_and_pitch_measurement_latency_raw_value: f64,
+        #[doc = "Compensated mode for the pitch and roll measurements."]
         pitch_and_roll_compensated_raw_value: u8,
+        #[doc = "Figure of merit for the pitch rate measurement."]
         pitch_rate_figure_of_merit_raw_value: u8,
+        #[doc = "Figure of merit for roll angle measurement."]
         roll_angle_figure_of_merit_raw_value: u8,
+        #[doc = "Figure of merit for pitch angle measurement."]
         pitch_angle_figure_of_merit_raw_value: u8,
+        #[doc = "Read PitchRate signal from can frame\nUnit: deg/sec"]
         pitch_rate_raw_value: f64,
+        #[doc = "The angle between the vehicle y-axis and the ground plane.\nUnit: deg"]
         roll_angle_raw_value: f64,
+        #[doc = "The angle between the vehicle x-axis and the ground plane.\nUnit: deg"]
         pitch_angle_raw_value: f64,
+        #[doc = "Compensated mode for the pitch and roll measurements."]
         pitch_and_roll_compensated: PitchAndRollCompensated2364543998,
+        #[doc = "Figure of merit for the pitch rate measurement."]
         pitch_rate_figure_of_merit: PitchRateFigureOfMerit2364543998,
+        #[doc = "Figure of merit for roll angle measurement."]
         roll_angle_figure_of_merit: RollAngleFigureOfMerit2364543998,
+        #[doc = "Figure of merit for pitch angle measurement."]
         pitch_angle_figure_of_merit: PitchAngleFigureOfMerit2364543998,
     },
+    #[doc = "Transmission Fluids 1"]
     Trf1 {
+        #[doc = "Read TransOilLevelMeasurementStatus signal from can frame"]
         trans_oil_level_measurement_status_raw_value: u8,
+        #[doc = "Read TransOilLevelCountdownTimer signal from can frame"]
         trans_oil_level_countdown_timer_raw_value: u8,
+        #[doc = "Amount of current volume of transmission sump oil compared to recommended volume.\nUnit: L"]
         trans_oil_level_high_low_raw_value: f64,
+        #[doc = "Temperature of the transmission lubricant.\nUnit: deg"]
         trans_oil_temp_raw_value: f64,
+        #[doc = "Gage pressure of lubrication fluid in transmission, measured after pump.\nUnit: kPa"]
         trans_oil_press_raw_value: f64,
+        #[doc = "Read TransFilterDiffPress signal from can frame\nUnit: kPa"]
         trans_filter_diff_press_raw_value: f64,
+        #[doc = "Ratio of volume of transmission sump oil to recommended volume.\nUnit: %"]
         trans_oil_level_raw_value: f64,
+        #[doc = "Gage pressure of oil within a wet clutch.\nUnit: kPa"]
         clutch_press_raw_value: f64,
+        #[doc = "Read TransOilLevelMeasurementStatus signal from can frame"]
         trans_oil_level_measurement_status: TransOilLevelMeasurementStatus2566846718,
+        #[doc = "Read TransOilLevelCountdownTimer signal from can frame"]
         trans_oil_level_countdown_timer: TransOilLevelCountdownTimer2566846718,
     },
+    #[doc = "Vehicle Electrical Power #1"]
     Vep1 {
+        #[doc = "Electrical potential measured at the input of the electronic control unit supplied through a switching device.\nUnit: V"]
         battery_potential_switched_raw_value: f64,
+        #[doc = "Measured electrical potential of the battery.\nUnit: V"]
         electrical_potential_raw_value: f64,
+        #[doc = "Electrical potential measured at the charging system output.\nUnit: V"]
         charging_system_potential_raw_value: f64,
+        #[doc = "Measure of electrical current flow from the alternator.\nUnit: A"]
         alt_current_raw_value: u8,
+        #[doc = "Net flow of electrical current into/out of the battery or batteries.\nUnit: A"]
         net_battery_current_raw_value: f64,
     },
+    #[doc = "Wireless Communications Message 2"]
     Wcm2 {
+        #[doc = "Read WrlessCommunicationNetworkType2 signal from can frame"]
         wrless_communication_network_type2_raw_value: u8,
+        #[doc = "Indicates the signal strength for the wireless communications network type.\nUnit: %"]
         network_signal_strength2_raw_value: f64,
+        #[doc = "Read NetworkAntennaStatus2 signal from can frame"]
         network_antenna_status2_raw_value: u8,
+        #[doc = "Read NetworkServiceStatus2 signal from can frame"]
         network_service_status2_raw_value: u8,
+        #[doc = "Read NetworkTransceiverStatus2 signal from can frame"]
         network_transceiver_status2_raw_value: u8,
+        #[doc = "Read WrlessCommunicationNetworkType2 signal from can frame"]
         wrless_communication_network_type2: WrlessCommunicationNetworkType22566760702,
+        #[doc = "Read NetworkAntennaStatus2 signal from can frame"]
         network_antenna_status2: NetworkAntennaStatus22566760702,
+        #[doc = "Read NetworkServiceStatus2 signal from can frame"]
         network_service_status2: NetworkServiceStatus22566760702,
+        #[doc = "Read NetworkTransceiverStatus2 signal from can frame"]
         network_transceiver_status2: NetworkTransceiverStatus22566760702,
     },
+    #[doc = "Wireless Communications Message 1"]
     Wcm1 {
+        #[doc = "Read WrlessCommunicationNetworkType1 signal from can frame"]
         wrless_communication_network_type1_raw_value: u8,
+        #[doc = "Indicates the signal strength for the wireless communications network type.\nUnit: %"]
         network_signal_strength1_raw_value: f64,
+        #[doc = "Read NetworkAntennaStatus1 signal from can frame"]
         network_antenna_status1_raw_value: u8,
+        #[doc = "Read NetworkServiceStatus1 signal from can frame"]
         network_service_status1_raw_value: u8,
+        #[doc = "Read NetworkTransceiverStatus1 signal from can frame"]
         network_transceiver_status1_raw_value: u8,
+        #[doc = "Read WrlessCommunicationNetworkType1 signal from can frame"]
         wrless_communication_network_type1: WrlessCommunicationNetworkType12566760958,
+        #[doc = "Read NetworkAntennaStatus1 signal from can frame"]
         network_antenna_status1: NetworkAntennaStatus12566760958,
+        #[doc = "Read NetworkServiceStatus1 signal from can frame"]
         network_service_status1: NetworkServiceStatus12566760958,
+        #[doc = "Read NetworkTransceiverStatus1 signal from can frame"]
         network_transceiver_status1: NetworkTransceiverStatus12566760958,
     },
+    #[doc = "Voltage Regulator Operating Mode"]
     Vrom {
+        #[doc = "State signal indicating the Voltage regulator enabled."]
         voltage_regulator_enabled_raw_value: u8,
+        #[doc = "State signal indicating the mode of the Voltage regulator soft start function."]
         voltage_regulator_soft_start_state_raw_value: u8,
+        #[doc = "State signal indicating the operating mode for underfrequency compensation."]
         vltg_rgltr_undrfrqncy_cmpnstn_enbld_raw_value: u8,
+        #[doc = "Read VltgRgltrVAr_PwrFctrOprtingMode signal from can frame"]
         vltg_rgltr_v_ar_pwr_fctr_oprting_mode_raw_value: u8,
+        #[doc = "State signal indicating the voltage regulator load compensation mode."]
         vltg_rglator_load_compensation_mode_raw_value: u8,
+        #[doc = "State signal indicating the Voltage regulator enabled."]
         voltage_regulator_enabled: VoltageRegulatorEnabled2633869310,
+        #[doc = "State signal indicating the mode of the Voltage regulator soft start function."]
         voltage_regulator_soft_start_state: VoltageRegulatorSoftStartState2633869310,
+        #[doc = "State signal indicating the operating mode for underfrequency compensation."]
         vltg_rgltr_undrfrqncy_cmpnstn_enbld: VltgRgltrUndrfrqncyCmpnstnEnbld2633869310,
+        #[doc = "Read VltgRgltrVAr_PwrFctrOprtingMode signal from can frame"]
         vltg_rgltr_v_ar_pwr_fctr_oprting_mode: VltgRgltrVArPwrFctrOprtingMode2633869310,
+        #[doc = "State signal indicating the voltage regulator load compensation mode."]
         vltg_rglator_load_compensation_mode: VltgRglatorLoadCompensationMode2633869310,
     },
+    #[doc = "Voltage regulator excitation status"]
     Vrep {
+        #[doc = "Read GnrtrOtputVoltageBiasPercentage signal from can frame\nUnit: %"]
         gnrtr_otput_voltage_bias_percentage_raw_value: f64,
+        #[doc = "Measured signal that represents the generator excitation field current.\nUnit: A"]
         generator_excitation_field_current_raw_value: f64,
+        #[doc = "Measured signal that represents the generator excitation field voltage.\nUnit: V"]
         generator_excitation_field_voltage_raw_value: f64,
     },
 }
@@ -31883,7 +35659,7 @@ impl DecodedFrameStream {
     }
     pub fn stream(self) -> impl futures::Stream<Item = Result<DecodedFrame, std::io::Error>> {
         self.can_socket.map_ok(|frame| match frame.id() {
-            2561212158u32 => {
+            413728510u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let text_display_index_raw_value: u8 = ((frame_payload >> 16) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -31896,7 +35672,7 @@ impl DecodedFrameStream {
                     text_display_instructions,
                 }
             }
-            2566746366u32 => {
+            419262718u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let movement_status_of_ramp3_raw_value: u8 = ((frame_payload >> 20) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -31954,7 +35730,7 @@ impl DecodedFrameStream {
                     retract_status_of_ramp1,
                 }
             }
-            2566750206u32 => {
+            419266558u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let max_crank_attempts_per_start_attempt_raw_value: u8 =
                     (frame_payload & 255) as u8;
@@ -31962,7 +35738,7 @@ impl DecodedFrameStream {
                     max_crank_attempts_per_start_attempt_raw_value,
                 }
             }
-            2566755582u32 => {
+            419271934u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhst_gs_rcirculation_valve2_pos_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.0025;
@@ -31974,7 +35750,7 @@ impl DecodedFrameStream {
                     eng_exhst_gs_recirculation_valve_pos_raw_value,
                 }
             }
-            2566746110u32 => {
+            419262462u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhst_gs_rcrculation_valve2_ctrl_raw_value: f64 =
                     (frame_payload & 65535) as f64 * 0.0025;
@@ -31982,7 +35758,7 @@ impl DecodedFrameStream {
                     eng_exhst_gs_rcrculation_valve2_ctrl_raw_value,
                 }
             }
-            2566752510u32 => {
+            419268862u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intk_vlv_actton_oil_press_for_cyl4_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -32002,7 +35778,7 @@ impl DecodedFrameStream {
                     eng_intk_vlv_actton_oil_press_for_cyl1_raw_value,
                 }
             }
-            2566752254u32 => {
+            419268606u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intk_vlv_actton_oil_press_for_cyl8_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -32022,7 +35798,7 @@ impl DecodedFrameStream {
                     eng_intk_vlv_actton_oil_press_for_cyl5_raw_value,
                 }
             }
-            2566751998u32 => {
+            419268350u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intk_vlv_acttn_oil_press_for_cyl12_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -32042,7 +35818,7 @@ impl DecodedFrameStream {
                     eng_intk_vlv_actton_oil_press_for_cyl9_raw_value,
                 }
             }
-            2566751742u32 => {
+            419268094u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intk_vlv_acttn_oil_press_for_cyl16_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -32062,7 +35838,7 @@ impl DecodedFrameStream {
                     eng_intk_vlv_acttn_oil_press_for_cyl13_raw_value,
                 }
             }
-            2566751486u32 => {
+            419267838u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intk_vlv_acttn_oil_press_for_cyl20_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -32082,7 +35858,7 @@ impl DecodedFrameStream {
                     eng_intk_vlv_acttn_oil_press_for_cyl17_raw_value,
                 }
             }
-            2499641854u32 => {
+            352158206u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let egr_cooler_bypass_actuator_postion_raw_value: f64 =
                     (frame_payload & 255) as f64 * 0.4;
@@ -32090,7 +35866,7 @@ impl DecodedFrameStream {
                     egr_cooler_bypass_actuator_postion_raw_value,
                 }
             }
-            2566748158u32 => {
+            419264510u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_spark_plug4_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32106,7 +35882,7 @@ impl DecodedFrameStream {
                     eng_spark_plug1_raw_value,
                 }
             }
-            2566747902u32 => {
+            419264254u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_spark_plug8_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32122,7 +35898,7 @@ impl DecodedFrameStream {
                     eng_spark_plug5_raw_value,
                 }
             }
-            2566747646u32 => {
+            419263998u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_spark_plug12_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32138,7 +35914,7 @@ impl DecodedFrameStream {
                     eng_spark_plug9_raw_value,
                 }
             }
-            2566747390u32 => {
+            419263742u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_spark_plug16_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32154,7 +35930,7 @@ impl DecodedFrameStream {
                     eng_spark_plug13_raw_value,
                 }
             }
-            2566747134u32 => {
+            419263486u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_spark_plug20_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32170,7 +35946,7 @@ impl DecodedFrameStream {
                     eng_spark_plug17_raw_value,
                 }
             }
-            2566746878u32 => {
+            419263230u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_spark_plug24_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32186,7 +35962,7 @@ impl DecodedFrameStream {
                     eng_spark_plug21_raw_value,
                 }
             }
-            2561277694u32 => {
+            413794046u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let lane_departure_warning_enable_cmd_raw_value: u8 = (frame_payload & 3) as u8;
                 let lane_departure_warning_enable_cmd =
@@ -32198,7 +35974,7 @@ impl DecodedFrameStream {
                     lane_departure_warning_enable_cmd,
                 }
             }
-            2633861886u32 => {
+            486378238u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let j2012dtc_occurrence_count_raw_value: u8 = ((frame_payload >> 49) & 127) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32213,7 +35989,7 @@ impl DecodedFrameStream {
                     j2012dtc_status,
                 }
             }
-            2566749438u32 => {
+            419265790u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let prtclt_trp_actv_rgnrtn_inhbtd_dt_vhcl_s_raw_value: u8 =
                     ((frame_payload >> 30) & 3) as u8;
@@ -32319,7 +36095,7 @@ impl DecodedFrameStream {
                     particulate_trap_lamp_cmd,
                 }
             }
-            2565873150u32 => {
+            418389502u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let message_checksum_raw_value: u8 = ((frame_payload >> 60) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32365,7 +36141,7 @@ impl DecodedFrameStream {
                     steer_wheel_angle_range_counter_type,
                 }
             }
-            2566745854u32 => {
+            419262206u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let cmded_catalyst_reagent_consumption_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.05;
@@ -32377,7 +36153,7 @@ impl DecodedFrameStream {
                     avrge_catalyst_reagent_consumption_raw_value,
                 }
             }
-            2566751230u32 => {
+            419267582u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let transfer_case_status_raw_value: u8 = (frame_payload & 7) as u8;
                 let transfer_case_status =
@@ -32387,7 +36163,7 @@ impl DecodedFrameStream {
                     transfer_case_status,
                 }
             }
-            2566755838u32 => {
+            419272190u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_oil_level_switch_raw_value: u8 = ((frame_payload >> 2) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32405,7 +36181,7 @@ impl DecodedFrameStream {
                     trans_oil_filter_restriction_switch,
                 }
             }
-            2566752766u32 => {
+            419269118u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let vehicle_roll_raw_value: f64 =
                     (frame_payload & 65535) as f64 * 0.0078125 + -200.0;
@@ -32413,7 +36189,7 @@ impl DecodedFrameStream {
                     vehicle_roll_raw_value,
                 }
             }
-            2633938942u32 => {
+            486455294u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_eng_cruise_time_raw_value: f64 =
                     ((frame_payload >> 48) & 4294967295) as f64 * 0.05;
@@ -32436,7 +36212,7 @@ impl DecodedFrameStream {
                     trip_max_eng_speed_raw_value,
                 }
             }
-            2566799614u32 => {
+            419315966u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let implement_rear_work_light_raw_value: u8 = ((frame_payload >> 62) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32654,7 +36430,7 @@ impl DecodedFrameStream {
                     running_light,
                 }
             }
-            2365473278u32 => {
+            217989630u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let implement_rear_work_light_cmd_raw_value: u8 = ((frame_payload >> 62) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32893,7 +36669,7 @@ impl DecodedFrameStream {
                     running_light_cmd,
                 }
             }
-            2365485822u32 => {
+            218002174u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let blade_ctrl_mode_raw_value: u8 = ((frame_payload >> 16) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -32906,7 +36682,7 @@ impl DecodedFrameStream {
                     blade_ctrl_mode,
                 }
             }
-            2633926654u32 => {
+            486443006u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_actual_ignt_timing_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -200.0;
@@ -32926,7 +36702,7 @@ impl DecodedFrameStream {
                     eng_desired_ignt_timing1_raw_value,
                 }
             }
-            2633926398u32 => {
+            486442750u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl20_ignt_timing_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -200.0;
@@ -32946,7 +36722,7 @@ impl DecodedFrameStream {
                     eng_cyl17_ignt_timing_raw_value,
                 }
             }
-            2633926142u32 => {
+            486442494u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl16_ignt_timing_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -200.0;
@@ -32966,7 +36742,7 @@ impl DecodedFrameStream {
                     eng_cyl13_ignt_timing_raw_value,
                 }
             }
-            2633925886u32 => {
+            486442238u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl12_ignt_timing_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -200.0;
@@ -32986,7 +36762,7 @@ impl DecodedFrameStream {
                     eng_cyl9_ignt_timing_raw_value,
                 }
             }
-            2633925630u32 => {
+            486441982u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl8_ignt_timing_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -200.0;
@@ -33006,7 +36782,7 @@ impl DecodedFrameStream {
                     eng_cyl5_ignt_timing_raw_value,
                 }
             }
-            2633925374u32 => {
+            486441726u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl4_ignt_timing_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -200.0;
@@ -33026,7 +36802,7 @@ impl DecodedFrameStream {
                     eng_cyl1_ignt_timing_raw_value,
                 }
             }
-            2633927422u32 => {
+            486443774u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl20_ignt_trans_second_output_raw_value: f64 =
                     ((frame_payload >> 24) & 255) as f64 + -125.0;
@@ -33046,7 +36822,7 @@ impl DecodedFrameStream {
                     eng_cyl17_ignt_trans_second_output_raw_value,
                 }
             }
-            2633927166u32 => {
+            486443518u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl16_ignt_trans_second_output_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -33082,7 +36858,7 @@ impl DecodedFrameStream {
                     eng_cyl9_ignt_trans_second_output_raw_value,
                 }
             }
-            2633926910u32 => {
+            486443262u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl8_ignt_trans_second_output_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -33118,7 +36894,7 @@ impl DecodedFrameStream {
                     eng_cyl1_ignt_trans_second_output_raw_value,
                 }
             }
-            2566768894u32 => {
+            419285246u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_oprtr_prmry_intrmdt_spd_slct_stte_raw_value: u8 =
                     (frame_payload & 15) as u8;
@@ -33131,7 +36907,7 @@ impl DecodedFrameStream {
                     eng_oprtr_prmry_intrmdt_spd_slct_stte,
                 }
             }
-            2566769406u32 => {
+            419285758u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_oprtr_prmry_intrmdt_speed_select_raw_value: u8 = (frame_payload & 15) as u8;
                 let eng_oprtr_prmry_intrmdt_speed_select =
@@ -33143,7 +36919,7 @@ impl DecodedFrameStream {
                     eng_oprtr_prmry_intrmdt_speed_select,
                 }
             }
-            2566839550u32 => {
+            419355902u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_total_idle_hours_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.05;
@@ -33155,7 +36931,7 @@ impl DecodedFrameStream {
                     eng_total_idle_fuel_used_raw_value,
                 }
             }
-            2633934334u32 => {
+            486450686u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intake_manifold6_temp_raw_value: f64 =
                     ((frame_payload >> 32) & 255) as f64 + -40.0;
@@ -33178,7 +36954,7 @@ impl DecodedFrameStream {
                     eng_intake_manifold2_temp_raw_value,
                 }
             }
-            2566825726u32 => {
+            419342078u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_boost_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.125;
@@ -33197,7 +36973,7 @@ impl DecodedFrameStream {
                     eng_turbo1_boost_press_raw_value,
                 }
             }
-            2566770942u32 => {
+            419287294u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_air_filter4_diff_press_raw_value: f64 =
                     ((frame_payload >> 16) & 255) as f64 * 0.05;
@@ -33220,7 +36996,7 @@ impl DecodedFrameStream {
                     eng_intake_manifold1_abs_press_raw_value,
                 }
             }
-            2566846206u32 => {
+            419362558u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_coolant_filter_diff_press_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.5;
@@ -33251,7 +37027,7 @@ impl DecodedFrameStream {
                     eng_particulate_trap_inlet_press_raw_value,
                 }
             }
-            2566811134u32 => {
+            419327486u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let cab_heating_zone_raw_value: u8 = ((frame_payload >> 38) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -33296,7 +37072,7 @@ impl DecodedFrameStream {
                     aux_heater_mode,
                 }
             }
-            2298375934u32 => {
+            150892286u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rear_axle_right_wheel_speed_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.00390625;
@@ -33316,7 +37092,7 @@ impl DecodedFrameStream {
                     front_axle_left_wheel_speed_raw_value,
                 }
             }
-            2565867774u32 => {
+            418384126u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let fire_apparatus_pump_engagement_raw_value: u8 =
                     ((frame_payload >> 20) & 3) as u8;
@@ -33347,7 +37123,7 @@ impl DecodedFrameStream {
                     eng_hyd_prss_governor_mode_indicator,
                 }
             }
-            2566841854u32 => {
+            419358206u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_total_revolutions_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 1000.0;
@@ -33359,7 +37135,7 @@ impl DecodedFrameStream {
                     eng_total_hours_of_operation_raw_value,
                 }
             }
-            2365449982u32 => {
+            217966334u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let hyd_brake_fluid_level_switch_raw_value: u8 = ((frame_payload >> 26) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -33422,7 +37198,7 @@ impl DecodedFrameStream {
                     hyd_brk_press_warning_state_circuit1,
                 }
             }
-            2633939198u32 => {
+            486455550u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_pto_moving_fuel_used_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.5;
@@ -33433,7 +37209,7 @@ impl DecodedFrameStream {
                     trip_drive_fuel_used_raw_value,
                 }
             }
-            2633927678u32 => {
+            486444030u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_valve1_outlet_abs_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -33453,7 +37229,7 @@ impl DecodedFrameStream {
                     eng_fuel_valve_inlet_abs_press_raw_value,
                 }
             }
-            2633925118u32 => {
+            486441470u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_flow_rate2_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.1;
@@ -33478,7 +37254,7 @@ impl DecodedFrameStream {
                     eng_fuel_valve1_pos_raw_value,
                 }
             }
-            2633937662u32 => {
+            486454014u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_specific_gravity_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0001;
@@ -33494,14 +37270,14 @@ impl DecodedFrameStream {
                     total_eng_pto_fuel_used_raw_value,
                 }
             }
-            2566804990u32 => {
+            419321342u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let specific_heat_ratio_raw_value: f64 = (frame_payload & 65535) as f64 * 0.001;
                 DecodedFrame::Gfd {
                     specific_heat_ratio_raw_value,
                 }
             }
-            2633936894u32 => {
+            486453246u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_fuel_used_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.5;
@@ -33512,7 +37288,7 @@ impl DecodedFrameStream {
                     trip_fuel_raw_value,
                 }
             }
-            2566757630u32 => {
+            419273982u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sensor_supply_voltage6_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.05;
@@ -33523,7 +37299,7 @@ impl DecodedFrameStream {
                     sensor_supply_voltage5_raw_value,
                 }
             }
-            2566757886u32 => {
+            419274238u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sensor_supply_voltage4_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.05;
@@ -33542,7 +37318,7 @@ impl DecodedFrameStream {
                     sensor_supply_voltage1_raw_value,
                 }
             }
-            2566759678u32 => {
+            419276030u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let enggmnt_sttus_trans_input_shaft_pto1_raw_value: u8 =
                     ((frame_payload >> 38) & 3) as u8;
@@ -33653,7 +37429,7 @@ impl DecodedFrameStream {
                     enbl_swtch_trnsfr_cs_output_shaft_pto,
                 }
             }
-            2432541438u32 => {
+            285057790u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_valve2_outlet_abs_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -33672,7 +37448,7 @@ impl DecodedFrameStream {
                     eng_fuel_valve2_inlet_abs_press_raw_value,
                 }
             }
-            2566761214u32 => {
+            419277566u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_centrifugal_oil_filter_speed_raw_value: f64 =
                     ((frame_payload >> 24) & 65535) as f64 * 4.0;
@@ -33704,7 +37480,7 @@ impl DecodedFrameStream {
                     eng_aftercooler_coolant_level_raw_value,
                 }
             }
-            2432541694u32 => {
+            285058046u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_vrable_geometry_turbo_actuator1_raw_value: f64 =
                     ((frame_payload >> 16) & 255) as f64 * 0.4;
@@ -33723,7 +37499,7 @@ impl DecodedFrameStream {
                     eng_turbo_compressor_ctrl,
                 }
             }
-            2566759934u32 => {
+            419276286u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let enable_status_of_door10_raw_value: u8 = ((frame_payload >> 58) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -33907,7 +37683,7 @@ impl DecodedFrameStream {
                     lock_status_of_door1,
                 }
             }
-            2566757374u32 => {
+            419273726u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let catalyst_reagent_type_raw_value: u8 = ((frame_payload >> 40) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -33936,7 +37712,7 @@ impl DecodedFrameStream {
                     catalyst_reagent_type,
                 }
             }
-            2566756862u32 => {
+            419273214u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftr_trtmnt2_ttal_regeneration_time_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -33948,7 +37724,7 @@ impl DecodedFrameStream {
                     after_treatment2_total_fuel_used_raw_value,
                 }
             }
-            2566758654u32 => {
+            419275006u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtratment2_fuel_enable_actuator_raw_value: u8 =
                     ((frame_payload >> 54) & 3) as u8;
@@ -33988,7 +37764,7 @@ impl DecodedFrameStream {
                     aftertreatment2_ignt,
                 }
             }
-            2566758910u32 => {
+            419275262u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtratment1_fuel_enable_actuator_raw_value: u8 =
                     ((frame_payload >> 54) & 3) as u8;
@@ -34028,7 +37804,7 @@ impl DecodedFrameStream {
                     aftertreatment1_ignt,
                 }
             }
-            2566758142u32 => {
+            419274494u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtreatment2_air_enable_actuator_raw_value: u8 =
                     ((frame_payload >> 62) & 3) as u8;
@@ -34084,7 +37860,7 @@ impl DecodedFrameStream {
                     aftertreatment2_air_system_relay,
                 }
             }
-            2566758398u32 => {
+            419274750u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtreatment1_air_enable_actuator_raw_value: u8 =
                     ((frame_payload >> 62) & 3) as u8;
@@ -34140,7 +37916,7 @@ impl DecodedFrameStream {
                     aftertreatment1_air_system_relay,
                 }
             }
-            2566756606u32 => {
+            419272958u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftr_trtmnt1_ttal_regeneration_time_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -34152,7 +37928,7 @@ impl DecodedFrameStream {
                     after_treatment1_total_fuel_used_raw_value,
                 }
             }
-            2364546302u32 => {
+            217062654u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rqd_gnrtr_avrg_lne_line_acrms_voltage_raw_value: f64 =
                     (frame_payload & 4294967295) as f64 * 0.0078125;
@@ -34160,7 +37936,7 @@ impl DecodedFrameStream {
                     rqd_gnrtr_avrg_lne_line_acrms_voltage_raw_value,
                 }
             }
-            2431654654u32 => {
+            284171006u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_throttle_actuator2_ctrl_cmd_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.0025;
@@ -34180,7 +37956,7 @@ impl DecodedFrameStream {
                     eng_fuel_actuator1_ctrl_cmd_raw_value,
                 }
             }
-            2364545534u32 => {
+            217061886u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl24_knock_level_raw_value: u8 = ((frame_payload >> 56) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34208,7 +37984,7 @@ impl DecodedFrameStream {
                     eng_cyl17_knock_level_raw_value,
                 }
             }
-            2364545278u32 => {
+            217061630u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl15_knock_level_raw_value: u8 = ((frame_payload >> 48) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34236,7 +38012,7 @@ impl DecodedFrameStream {
                     eng_cyl16_knock_level_raw_value,
                 }
             }
-            2364545022u32 => {
+            217061374u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl8_knock_level_raw_value: u8 = ((frame_payload >> 56) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34264,7 +38040,7 @@ impl DecodedFrameStream {
                     eng_cyl1_knock_level_raw_value,
                 }
             }
-            2364544766u32 => {
+            217061118u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl9_combustion_status_raw_value: u8 = ((frame_payload >> 16) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34412,7 +38188,7 @@ impl DecodedFrameStream {
                     eng_cyl10_combustion_status,
                 }
             }
-            2364544510u32 => {
+            217060862u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rq_gen_overall_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -34433,7 +38209,7 @@ impl DecodedFrameStream {
                     rq_gen_overall_power_factor_lagging,
                 }
             }
-            2364544254u32 => {
+            217060606u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let blade_rotation_angle_figure_of_merit_raw_value: u8 =
                     ((frame_payload >> 42) & 3) as u8;
@@ -34466,7 +38242,7 @@ impl DecodedFrameStream {
                     rel_blade_height_figure_of_merit,
                 }
             }
-            2349006590u32 => {
+            201522942u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let retarder_demand_value_raw_value: f64 =
                     ((frame_payload >> 40) & 255) as f64 + -125.0;
@@ -34518,7 +38294,7 @@ impl DecodedFrameStream {
                     vehicle_abs_active,
                 }
             }
-            2566834686u32 => {
+            419351038u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let road_curvature_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.0078125 + -250.0;
@@ -34552,7 +38328,7 @@ impl DecodedFrameStream {
                     vehicle_retarder_ctrl_active,
                 }
             }
-            2550398718u32 => {
+            402915070u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let wheel_speed_diff_main_axle_raw_value: f64 =
                     ((frame_payload >> 40) & 65535) as f64 * 0.00390625 + -125.0;
@@ -34606,7 +38382,7 @@ impl DecodedFrameStream {
                     vehicle_abs_active,
                 }
             }
-            2566833406u32 => {
+            419349758u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let reference_retarder_torque_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -34706,7 +38482,7 @@ impl DecodedFrameStream {
                     vehicle_abs_active,
                 }
             }
-            2365507326u32 => {
+            218023678u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let pneumatic_supply_pressure_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 5.0;
@@ -34783,7 +38559,7 @@ impl DecodedFrameStream {
                     tyre_pressure_sufficient,
                 }
             }
-            2565013246u32 => {
+            417529598u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let odd_request_raw_value: u8 = ((frame_payload >> 10) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34803,7 +38579,7 @@ impl DecodedFrameStream {
                     vehicle_type,
                 }
             }
-            2566807038u32 => {
+            419323390u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let max_vehicle_speed_limit_raw_value: u8 = ((frame_payload >> 32) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34818,7 +38594,7 @@ impl DecodedFrameStream {
                     engine_speed_lower_limit_raw_value,
                 }
             }
-            2365480958u32 => {
+            217997310u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let engine_torque_mode_raw_value: u8 = (frame_payload & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34858,7 +38634,7 @@ impl DecodedFrameStream {
                     engine_control_allowed,
                 }
             }
-            2566808062u32 => {
+            419324414u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let clutch_indptd_pto_feedback_raw_value: u8 = ((frame_payload >> 20) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34934,7 +38710,7 @@ impl DecodedFrameStream {
                     first_clutch_dpdt_pto_feedback,
                 }
             }
-            2566808574u32 => {
+            419324926u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let reference_engine_torque_raw_value: u16 = ((frame_payload >> 40) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -34970,7 +38746,7 @@ impl DecodedFrameStream {
                     engine_coolant_temp_warning,
                 }
             }
-            2566809086u32 => {
+            419325438u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let ambient_air_temperature_raw_value: f64 =
                     (frame_payload & 65535) as f64 * 0.03125 + -273.0;
@@ -34978,7 +38754,7 @@ impl DecodedFrameStream {
                     ambient_air_temperature_raw_value,
                 }
             }
-            2564947710u32 => {
+            417464062u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let vehicle_type_raw_value: u8 = (frame_payload & 3) as u8;
                 let vehicle_type = VehicleType2564947710::from(vehicle_type_raw_value);
@@ -34987,7 +38763,7 @@ impl DecodedFrameStream {
                     vehicle_type,
                 }
             }
-            2566834430u32 => {
+            419350782u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let body_pressure_raw_value: f64 = ((frame_payload >> 48) & 255) as f64 * 0.1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35016,7 +38792,7 @@ impl DecodedFrameStream {
                     odd_status,
                 }
             }
-            2365481214u32 => {
+            217997566u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let req_engine_speed_upper_lim_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.125;
@@ -35038,7 +38814,7 @@ impl DecodedFrameStream {
                     req_engine_speed_raw_value,
                 }
             }
-            2566808318u32 => {
+            419324670u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sec_engine_mtd_pto_switch_raw_value: u8 = ((frame_payload >> 30) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35106,7 +38882,7 @@ impl DecodedFrameStream {
                     clutch_indpdt_pto_switch,
                 }
             }
-            2566808830u32 => {
+            419325182u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trailer_left_side_marker_light_raw_value: u8 =
                     ((frame_payload >> 20) & 3) as u8;
@@ -35260,7 +39036,7 @@ impl DecodedFrameStream {
                     trailer_left_stop_light,
                 }
             }
-            2564554494u32 => {
+            417070846u32 => {
                 todo!();
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sn_raw_value: Option<u8> = Some((frame_payload & 15) as u8);
@@ -35299,7 +39075,7 @@ impl DecodedFrameStream {
                     protocol_ctrl_information,
                 }
             }
-            2564488958u32 => {
+            417005310u32 => {
                 todo!();
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sn_raw_value: Option<u8> = Some((frame_payload & 15) as u8);
@@ -35338,7 +39114,7 @@ impl DecodedFrameStream {
                     protocol_ctrl_information,
                 }
             }
-            2565734142u32 => {
+            418250494u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let control_byte_raw_value: u8 = (frame_payload & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35358,7 +39134,7 @@ impl DecodedFrameStream {
                     filter_mode,
                 }
             }
-            2565144318u32 => {
+            417660670u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let parking_and_trailer_air_press_raw_value: f64 =
                     ((frame_payload >> 40) & 255) as f64 * 8.0;
@@ -35438,7 +39214,7 @@ impl DecodedFrameStream {
                     ride_height_request,
                 }
             }
-            2565209854u32 => {
+            417726206u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let level_control_raw_value: u8 = ((frame_payload >> 2) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35524,7 +39300,7 @@ impl DecodedFrameStream {
                     level_ctrl_sys_ride_height_level,
                 }
             }
-            2566806782u32 => {
+            419323134u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rel_veh_body_level_rear_axle_raw_value: u16 =
                     ((frame_payload >> 16) & 65535) as u16;
@@ -35536,7 +39312,7 @@ impl DecodedFrameStream {
                     rel_veh_body_level_front_axle_raw_value,
                 }
             }
-            2566807294u32 => {
+            419323646u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let tyre_press_threshold_detect_raw_value: u8 = ((frame_payload >> 40) & 7) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35572,7 +39348,7 @@ impl DecodedFrameStream {
                     tyre_wheel_identification1,
                 }
             }
-            2566764798u32 => {
+            419281150u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let misfire_monitoring_complete_raw_value: bool = ((frame_payload >> 28) & 1) == 1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35767,7 +39543,7 @@ impl DecodedFrameStream {
                     fuel_system_monitoring_complete,
                 }
             }
-            2564095742u32 => {
+            416612094u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let security_entity_length_high_raw_value: u8 = ((frame_payload >> 12) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35783,7 +39559,7 @@ impl DecodedFrameStream {
                     security_entity_type,
                 }
             }
-            2349137662u32 => {
+            201654014u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let xbr_message_checksum_raw_value: u8 = ((frame_payload >> 60) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35812,7 +39588,7 @@ impl DecodedFrameStream {
                     xbrebi_mode,
                 }
             }
-            2566848510u32 => {
+            419364862u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let water_in_fuel_indicator_raw_value: u8 = (frame_payload & 3) as u8;
                 let water_in_fuel_indicator =
@@ -35822,7 +39598,7 @@ impl DecodedFrameStream {
                     water_in_fuel_indicator,
                 }
             }
-            2566843134u32 => {
+            419359486u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let cargo_weight_raw_value: f64 = ((frame_payload >> 40) & 65535) as f64 * 2.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35838,7 +39614,7 @@ impl DecodedFrameStream {
                     axle_location_raw_value,
                 }
             }
-            2566804222u32 => {
+            419320574u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let net_battery_current_hi_res_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.05 + -1600.0;
@@ -35850,7 +39626,7 @@ impl DecodedFrameStream {
                     alt_current_hi_res_raw_value,
                 }
             }
-            2633928190u32 => {
+            486444542u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let battery2_potential_raw_value: f64 = (frame_payload & 65535) as f64 * 0.05;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35873,7 +39649,7 @@ impl DecodedFrameStream {
                     battery_potential_power_input2_raw_value,
                 }
             }
-            2566845438u32 => {
+            419361790u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let longitude_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.0000001 + -210.0;
@@ -35885,8 +39661,8 @@ impl DecodedFrameStream {
                     latitude_raw_value,
                 }
             }
-            2566843646u32 => DecodedFrame::Vi {},
-            2566842366u32 => {
+            419359998u32 => DecodedFrame::Vi {},
+            419358718u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_power_takeoff_hours_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.05;
@@ -35897,7 +39673,7 @@ impl DecodedFrameStream {
                     total_vehicle_hours_raw_value,
                 }
             }
-            2566809854u32 => {
+            419326206u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let winch_oil_press_switch_raw_value: u8 = ((frame_payload >> 10) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -35922,7 +39698,7 @@ impl DecodedFrameStream {
                     hyd_oil_filter_restriction_switch,
                 }
             }
-            2566842622u32 => {
+            419358974u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let altitude_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.125 + -2500.0;
@@ -35941,7 +39717,7 @@ impl DecodedFrameStream {
                     compass_bearing_raw_value,
                 }
             }
-            2566832638u32 => {
+            419348990u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let high_resolution_trip_distance_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.005;
@@ -35953,7 +39729,7 @@ impl DecodedFrameStream {
                     hgh_rslution_total_vehicle_distance_raw_value,
                 }
             }
-            2565868030u32 => {
+            418384382u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let longitudinal_acceleration_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.1 + -12.5;
@@ -35984,7 +39760,7 @@ impl DecodedFrameStream {
                     steer_wheel_angle_sensor_type,
                 }
             }
-            2566803454u32 => {
+            419319806u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let yc_brake_ctrl_active_raw_value: u8 = ((frame_payload >> 14) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36030,7 +39806,7 @@ impl DecodedFrameStream {
                     vdc_information_signal,
                 }
             }
-            2566840574u32 => {
+            419356926u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_vehicle_distance_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.125;
@@ -36041,7 +39817,7 @@ impl DecodedFrameStream {
                     trip_distance_raw_value,
                 }
             }
-            2633938686u32 => {
+            486455038u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_cruise_distance_raw_value: f64 =
                     ((frame_payload >> 16) & 4294967295) as f64 * 0.125;
@@ -36053,7 +39829,7 @@ impl DecodedFrameStream {
                     trip_max_vehicle_speed_raw_value,
                 }
             }
-            2633937150u32 => {
+            486453502u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_pto_time_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.05;
@@ -36064,7 +39840,7 @@ impl DecodedFrameStream {
                     trip_cruise_time_raw_value,
                 }
             }
-            2633938174u32 => {
+            486454526u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_time_in_top_gear_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.05;
@@ -36075,7 +39851,7 @@ impl DecodedFrameStream {
                     trip_time_in_vsl_raw_value,
                 }
             }
-            2633938430u32 => {
+            486454782u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_sudden_decelerations_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -36094,7 +39870,7 @@ impl DecodedFrameStream {
                     trip_number_of_hot_shutdowns_raw_value,
                 }
             }
-            2348875518u32 => {
+            201391870u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let control_purpose_raw_value: u8 = ((frame_payload >> 35) & 31) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36136,7 +39912,7 @@ impl DecodedFrameStream {
                     eng_override_ctrl_mode,
                 }
             }
-            2566766846u32 => {
+            419283198u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let transit_run_status_raw_value: u8 = ((frame_payload >> 20) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36167,7 +39943,7 @@ impl DecodedFrameStream {
                     type_of_passenger_count,
                 }
             }
-            2566765310u32 => {
+            419281662u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let farebox_alarm_identifier_raw_value: u8 = ((frame_payload >> 8) & 127) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36183,7 +39959,7 @@ impl DecodedFrameStream {
                     farebox_emergency_status,
                 }
             }
-            2566765566u32 => {
+            419281918u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let transfer_sold_raw_value: u8 = ((frame_payload >> 56) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36230,7 +40006,7 @@ impl DecodedFrameStream {
                     transaction_type,
                 }
             }
-            2566765822u32 => {
+            419282174u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let assigned_route_raw_value: u16 = ((frame_payload >> 56) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36262,7 +40038,7 @@ impl DecodedFrameStream {
                     farebox_service_status,
                 }
             }
-            2566766078u32 => {
+            419282430u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let vehicle_id_raw_value: u16 = ((frame_payload >> 16) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36310,7 +40086,7 @@ impl DecodedFrameStream {
                     range_code_enable,
                 }
             }
-            2566766590u32 => {
+            419282942u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let nmbr_of_byts_in_mlpst_identification_raw_value: u8 =
                     (frame_payload & 255) as u8;
@@ -36318,7 +40094,7 @@ impl DecodedFrameStream {
                     nmbr_of_byts_in_mlpst_identification_raw_value,
                 }
             }
-            2566766334u32 => {
+            419282686u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let agency_raw_value: u8 = (frame_payload & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36337,7 +40113,7 @@ impl DecodedFrameStream {
                     nmbr_of_byts_in_trnst_assgnd_rt_idntty_raw_value,
                 }
             }
-            2561605374u32 => {
+            414121726u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let reference_tire_press_setting_raw_value: f64 =
                     ((frame_payload >> 8) & 255) as f64 * 8.0;
@@ -36348,7 +40124,7 @@ impl DecodedFrameStream {
                     tire_location_raw_value,
                 }
             }
-            2566765054u32 => {
+            419281406u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let reference_tire_press_raw_value: f64 = ((frame_payload >> 8) & 255) as f64 * 8.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36358,7 +40134,7 @@ impl DecodedFrameStream {
                     tire_location_raw_value,
                 }
             }
-            2633923326u32 => {
+            486439678u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let steer_channel_tire_press_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.5;
@@ -36374,7 +40150,7 @@ impl DecodedFrameStream {
                     trailer_tag_push_channel_tire_press_raw_value,
                 }
             }
-            2633923070u32 => {
+            486439422u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let steer_channel_tire_press_target_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.5;
@@ -36390,7 +40166,7 @@ impl DecodedFrameStream {
                     trlr_tg_psh_channel_tire_press_target_raw_value,
                 }
             }
-            2633922814u32 => {
+            486439166u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let pcu_supply_solenoid_status_raw_value: u8 = ((frame_payload >> 36) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36462,7 +40238,7 @@ impl DecodedFrameStream {
                     pcu_trailer_tag_push_solenoid_status,
                 }
             }
-            2566845694u32 => {
+            419362046u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let tire_press_threshold_detection_raw_value: u8 =
                     ((frame_payload >> 61) & 7) as u8;
@@ -36507,7 +40283,7 @@ impl DecodedFrameStream {
                     cti_wheel_sensor_status,
                 }
             }
-            2566805246u32 => {
+            419321598u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let catalyst_tank_temp_raw_value: f64 = ((frame_payload >> 8) & 255) as f64 + -40.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36525,7 +40301,7 @@ impl DecodedFrameStream {
                     catalyst_tank_level2_raw_value,
                 }
             }
-            2633939966u32 => {
+            486456318u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_fan_on_time_raw_value: f64 = (frame_payload & 4294967295) as f64 * 0.05;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36536,7 +40312,7 @@ impl DecodedFrameStream {
                     trip_fan_on_time_due_to_eng_system_raw_value,
                 }
             }
-            2633939710u32 => {
+            486456062u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_gear_down_distance_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.125;
@@ -36548,7 +40324,7 @@ impl DecodedFrameStream {
                     trip_distance_on_vsl_raw_value,
                 }
             }
-            2564161278u32 => {
+            416677630u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let adjust_local_hour_offset_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -36578,7 +40354,7 @@ impl DecodedFrameStream {
                     adjust_seconds_raw_value,
                 }
             }
-            2566842110u32 => {
+            419358462u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let local_hour_offset_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -36608,7 +40384,7 @@ impl DecodedFrameStream {
                     seconds_raw_value,
                 }
             }
-            2566821630u32 => {
+            419337982u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_trb_wstgt_actuator_ctrl_air_press_raw_value: f64 =
                     ((frame_payload >> 32) & 255) as f64 * 4.0;
@@ -36631,7 +40407,7 @@ impl DecodedFrameStream {
                     eng_turbo1_wastegate_drive_raw_value,
                 }
             }
-            2365484286u32 => {
+            218000638u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let tachograph_vehicle_speed_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.00390625;
@@ -36712,7 +40488,7 @@ impl DecodedFrameStream {
                     driver1_working_state,
                 }
             }
-            2566771710u32 => {
+            419288062u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_compressor_outlet_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -36732,7 +40508,7 @@ impl DecodedFrameStream {
                     eng_turbo1_compressor_outlet_temp_raw_value,
                 }
             }
-            2566821886u32 => {
+            419338238u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_turbine_outlet_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -36752,7 +40528,7 @@ impl DecodedFrameStream {
                     eng_turbo1_turbine_outlet_temp_raw_value,
                 }
             }
-            2566822142u32 => {
+            419338494u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_turbine_inlet_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -36772,7 +40548,7 @@ impl DecodedFrameStream {
                     eng_turbo1_turbine_inlet_temp_raw_value,
                 }
             }
-            2566822398u32 => {
+            419338750u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_compressor_inlet_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.0078125 + -250.0;
@@ -36792,7 +40568,7 @@ impl DecodedFrameStream {
                     eng_turbo1_compressor_inlet_press_raw_value,
                 }
             }
-            2566822654u32 => {
+            419339006u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_compressor_inlet_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -36812,7 +40588,7 @@ impl DecodedFrameStream {
                     eng_turbo1_compressor_inlet_temp_raw_value,
                 }
             }
-            2633931774u32 => {
+            486448126u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo4_speed_raw_value: f64 = ((frame_payload >> 40) & 65535) as f64 * 4.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36828,14 +40604,14 @@ impl DecodedFrameStream {
                     eng_turbo_lube_oil_press2_raw_value,
                 }
             }
-            2566802430u32 => {
+            419318782u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_torque_limit_raw_value: u16 = (frame_payload & 65535) as u16;
                 DecodedFrame::Tcfg2 {
                     trans_torque_limit_raw_value,
                 }
             }
-            2566841086u32 => {
+            419357438u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_gear_ratio_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.001;
@@ -36850,7 +40626,7 @@ impl DecodedFrameStream {
                     number_of_reverse_gear_ratios_raw_value,
                 }
             }
-            2348941054u32 => {
+            201457406u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trns_shft_slctor_display_mode_switch_raw_value: u8 =
                     ((frame_payload >> 54) & 3) as u8;
@@ -36975,7 +40751,7 @@ impl DecodedFrameStream {
                     trans_gear_shift_inhibit_rq,
                 }
             }
-            2566839806u32 => {
+            419356158u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo_oil_level_switch_raw_value: u8 = ((frame_payload >> 30) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -36988,7 +40764,7 @@ impl DecodedFrameStream {
                     eng_turbo_lube_oil_press1_raw_value,
                 }
             }
-            2633911806u32 => {
+            486428158u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_total_average_fuel_economy_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.00195313;
@@ -37000,7 +40776,7 @@ impl DecodedFrameStream {
                     eng_total_average_fuel_rate_raw_value,
                 }
             }
-            2566775550u32 => {
+            419291902u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let air_suspension_supply_press_rq_raw_value: f64 =
                     ((frame_payload >> 40) & 255) as f64 * 8.0;
@@ -37027,7 +40803,7 @@ impl DecodedFrameStream {
                     pneumatic_supply_press_rq_raw_value,
                 }
             }
-            2566819838u32 => {
+            419336190u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_extl_shutdown_air_supply_press_raw_value: f64 =
                     (frame_payload & 65535) as f64 * 0.5;
@@ -37035,14 +40811,14 @@ impl DecodedFrameStream {
                     eng_extl_shutdown_air_supply_press_raw_value,
                 }
             }
-            2566839038u32 => {
+            419355390u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let nmbr_of_sftwr_identification_fields_raw_value: u8 = (frame_payload & 255) as u8;
                 DecodedFrame::Soft {
                     nmbr_of_sftwr_identification_fields_raw_value,
                 }
             }
-            2566841598u32 => {
+            419357950u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_overspeed_test_raw_value: u8 = ((frame_payload >> 54) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37179,7 +40955,7 @@ impl DecodedFrameStream {
                     eng_idle_shutdown_has_shutdown_eng,
                 }
             }
-            2566832382u32 => {
+            419348734u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let service_component_identification_b_raw_value: u8 =
                     ((frame_payload >> 24) & 255) as u8;
@@ -37206,7 +40982,7 @@ impl DecodedFrameStream {
                     service_component_identification_raw_value,
                 }
             }
-            2633928446u32 => {
+            486444798u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let time_since_last_service_raw_value: f64 =
                     ((frame_payload >> 8) & 65535) as f64 + -32127.0;
@@ -37217,7 +40993,7 @@ impl DecodedFrameStream {
                     service_component_identification_raw_value,
                 }
             }
-            2566804478u32 => {
+            419320830u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let max_continuous_retarder_torque_raw_value: f64 =
                     ((frame_payload >> 48) & 255) as f64 + -125.0;
@@ -37253,7 +41029,7 @@ impl DecodedFrameStream {
                     min_continuous_retarder_torque_raw_value,
                 }
             }
-            2566847486u32 => {
+            419363838u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let hyd_retarder_oil_temp_raw_value: f64 =
                     ((frame_payload >> 8) & 255) as f64 + -40.0;
@@ -37264,7 +41040,7 @@ impl DecodedFrameStream {
                     hyd_retarder_press_raw_value,
                 }
             }
-            2631859966u32 => {
+            484376318u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_build_hours_reset_raw_value: u8 = ((frame_payload >> 16) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37289,7 +41065,7 @@ impl DecodedFrameStream {
                     trip_group1,
                 }
             }
-            2566840830u32 => {
+            419357182u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let percent_torque_at_max_speed_point2_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -37323,7 +41099,7 @@ impl DecodedFrameStream {
                     retarder_type,
                 }
             }
-            2633930238u32 => {
+            486446590u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_operation_time_since_rebuild_raw_value: u32 =
                     (frame_payload & 4294967295) as u32;
@@ -37331,7 +41107,7 @@ impl DecodedFrameStream {
                     eng_operation_time_since_rebuild_raw_value,
                 }
             }
-            2566844670u32 => {
+            419361022u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let operator_pto_memory_select_switch_raw_value: u8 =
                     ((frame_payload >> 56) & 3) as u8;
@@ -37420,7 +41196,7 @@ impl DecodedFrameStream {
                     aux_input_ignore_switch,
                 }
             }
-            2566770174u32 => {
+            419286526u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rear_washer_function_raw_value: u8 = ((frame_payload >> 53) & 7) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37476,7 +41252,7 @@ impl DecodedFrameStream {
                     front_nonoperator_wiper_switch,
                 }
             }
-            2566769662u32 => {
+            419286014u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_alt_droop_aux_input_select_raw_value: u8 =
                     ((frame_payload >> 28) & 15) as u8;
@@ -37533,7 +41309,7 @@ impl DecodedFrameStream {
                     eng_aux_governor_switch,
                 }
             }
-            2566768638u32 => {
+            419284990u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_alt_droop_aux_input_select_state_raw_value: u8 =
                     ((frame_payload >> 28) & 15) as u8;
@@ -37598,7 +41374,7 @@ impl DecodedFrameStream {
                     eng_aux_governor_state,
                 }
             }
-            2365443326u32 => {
+            217959678u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let oprtrs_desired_delayed_lamp_off_time_raw_value: u16 =
                     ((frame_payload >> 24) & 65535) as u16;
@@ -37640,7 +41416,7 @@ impl DecodedFrameStream {
                     work_light_switch,
                 }
             }
-            2566776318u32 => {
+            419292670u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let applied_vehicle_speed_limit_raw_value: u8 = ((frame_payload >> 56) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37668,7 +41444,7 @@ impl DecodedFrameStream {
                     max_vehicle_speed_limit1_raw_value,
                 }
             }
-            2566802686u32 => {
+            419319038u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let oprtrs_blck_out_intensity_selection_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.4;
@@ -37726,7 +41502,7 @@ impl DecodedFrameStream {
                     rear_black_out_marker_select,
                 }
             }
-            2566774014u32 => {
+            419290366u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let slow_vessel_mode_status_raw_value: u8 = ((frame_payload >> 6) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37750,7 +41526,7 @@ impl DecodedFrameStream {
                     eng_thrttl_synchrnztion_mode_status,
                 }
             }
-            2566823166u32 => {
+            419339518u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_main_bearing11_temp_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.03125 + -273.0;
@@ -37766,7 +41542,7 @@ impl DecodedFrameStream {
                     eng_main_bearing9_temp_raw_value,
                 }
             }
-            2566823422u32 => {
+            419339774u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_main_bearing8_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -37786,7 +41562,7 @@ impl DecodedFrameStream {
                     eng_main_bearing5_temp_raw_value,
                 }
             }
-            2566823678u32 => {
+            419340030u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_main_bearing4_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -37806,7 +41582,7 @@ impl DecodedFrameStream {
                     eng_main_bearing1_temp_raw_value,
                 }
             }
-            2432595710u32 => {
+            285112062u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let display_deadbands_raw_value: u8 = ((frame_payload >> 20) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37839,7 +41615,7 @@ impl DecodedFrameStream {
                     led_display_data1,
                 }
             }
-            2365486590u32 => {
+            218002942u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let abs_laser_strike_position_raw_value: f64 =
                     ((frame_payload >> 40) & 65535) as f64 * 0.1;
@@ -37861,7 +41637,7 @@ impl DecodedFrameStream {
                     laser_receiver_type,
                 }
             }
-            2365485566u32 => {
+            218001918u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let laser_tracer_information_raw_value: u8 = ((frame_payload >> 48) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -37889,7 +41665,7 @@ impl DecodedFrameStream {
                     led_display_data2,
                 }
             }
-            2633939454u32 => {
+            486455806u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_pto_moving_fuel_used_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.5;
@@ -37900,7 +41676,7 @@ impl DecodedFrameStream {
                     trip_drive_fuel_used_raw_value,
                 }
             }
-            2365486334u32 => {
+            218002686u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bld_height_set_point_high_resolution_raw_value: f64 =
                     ((frame_payload >> 16) & 4294967295) as f64 * 0.1 + -209.7152;
@@ -37912,7 +41688,7 @@ impl DecodedFrameStream {
                     modify_set_point_raw_value,
                 }
             }
-            2364542462u32 => {
+            217058814u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sdshft_dsrd_bld_offset_operator_ctrl_raw_value: u8 =
                     ((frame_payload >> 32) & 15) as u8;
@@ -37988,12 +41764,12 @@ impl DecodedFrameStream {
                     blade_ctrl_mode_switch,
                 }
             }
-            2365486078u32 => {
+            218002430u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let mast_pos_raw_value: f64 = (frame_payload & 65535) as f64 * 0.1 + -3200.0;
                 DecodedFrame::Lmp { mast_pos_raw_value }
             }
-            2633937918u32 => {
+            486454270u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_average_fuel_rate_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.05;
@@ -38005,7 +41781,7 @@ impl DecodedFrameStream {
                     total_eng_pto_fuel_used_raw_value,
                 }
             }
-            2566845182u32 => {
+            419361534u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_average_fuel_economy_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.001953125;
@@ -38026,7 +41802,7 @@ impl DecodedFrameStream {
                     eng_throttle_pos_raw_value,
                 }
             }
-            2566842878u32 => {
+            419359230u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_total_fuel_used_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.5;
@@ -38037,7 +41813,7 @@ impl DecodedFrameStream {
                     eng_trip_fuel_raw_value,
                 }
             }
-            2633883646u32 => {
+            486399998u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let front_wheel_drive_actuator_status_raw_value: u8 = (frame_payload & 3) as u8;
                 let front_wheel_drive_actuator_status =
@@ -38049,7 +41825,7 @@ impl DecodedFrameStream {
                     front_wheel_drive_actuator_status,
                 }
             }
-            2633880062u32 => {
+            486396414u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let fm_sstandard_s_wversion_supported_raw_value: u32 =
                     ((frame_payload >> 8) & 4294967295) as u32;
@@ -38071,7 +41847,7 @@ impl DecodedFrameStream {
                     fm_sstandard_diagnostics_supported,
                 }
             }
-            2566806526u32 => {
+            419322878u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let ln_dprture_indication_enable_status_raw_value: u8 =
                     ((frame_payload >> 6) & 3) as u8;
@@ -38099,7 +41875,7 @@ impl DecodedFrameStream {
                     lane_tracking_status_right_side,
                 }
             }
-            2431649790u32 => {
+            284166142u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let lane_departure_imminent_left_side_raw_value: u8 =
                     ((frame_payload >> 6) & 3) as u8;
@@ -38121,7 +41897,7 @@ impl DecodedFrameStream {
                     lane_departure_imminent_right_side,
                 }
             }
-            2633929214u32 => {
+            486445566u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_leakage2_raw_value: u8 = ((frame_payload >> 2) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -38137,7 +41913,7 @@ impl DecodedFrameStream {
                     eng_fuel_leakage1,
                 }
             }
-            2566831614u32 => {
+            419347966u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let fan_speed_raw_value: f64 = ((frame_payload >> 16) & 65535) as f64 * 0.125;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -38152,7 +41928,7 @@ impl DecodedFrameStream {
                     fan_drive_state,
                 }
             }
-            2566820094u32 => {
+            419336446u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let calib_record_start_month_raw_value: u8 = ((frame_payload >> 56) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -38172,7 +41948,7 @@ impl DecodedFrameStream {
                     number_of_eng_torque_history_records_raw_value,
                 }
             }
-            2364542206u32 => {
+            217058558u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_torque_converter_ratio_raw_value: f64 =
                     (frame_payload & 65535) as f64 * 0.001;
@@ -38180,7 +41956,7 @@ impl DecodedFrameStream {
                     trans_torque_converter_ratio_raw_value,
                 }
             }
-            2566802174u32 => {
+            419318526u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_rqed_gear_feedback_raw_value: f64 =
                     ((frame_payload >> 24) & 255) as f64 + -125.0;
@@ -38258,7 +42034,7 @@ impl DecodedFrameStream {
                     trans_rqed_range_display_blank_state,
                 }
             }
-            2633935870u32 => {
+            486452222u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let clutch_life_remaining_raw_value: f64 =
                     ((frame_payload >> 24) & 255) as f64 * 0.4;
@@ -38277,7 +42053,7 @@ impl DecodedFrameStream {
                     recommended_gear_raw_value,
                 }
             }
-            2633942014u32 => {
+            486458366u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_forward_direction_switch_raw_value: u8 =
                     ((frame_payload >> 12) & 3) as u8;
@@ -38316,7 +42092,7 @@ impl DecodedFrameStream {
                     trans_high_range_sense_switch,
                 }
             }
-            2633942526u32 => {
+            486458878u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_synchronizer_brake_value_raw_value: f64 =
                     ((frame_payload >> 8) & 255) as f64 * 0.4;
@@ -38328,7 +42104,7 @@ impl DecodedFrameStream {
                     trans_synchronizer_clutch_value_raw_value,
                 }
             }
-            2633943038u32 => {
+            486459390u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_inertia_brake_actuator_raw_value: u8 = ((frame_payload >> 46) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -38457,7 +42233,7 @@ impl DecodedFrameStream {
                     trns_shift_finger_neutral_indicator,
                 }
             }
-            2565867006u32 => {
+            418383358u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_current_range_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -38478,7 +42254,7 @@ impl DecodedFrameStream {
                     trans_selected_gear_raw_value,
                 }
             }
-            2364539646u32 => {
+            217055998u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let src_addrss_of_ctrllng_dvc_fr_trns_ctrl_raw_value: u8 =
                     ((frame_payload >> 56) & 255) as u8;
@@ -38531,7 +42307,7 @@ impl DecodedFrameStream {
                     trans_driveline_engaged,
                 }
             }
-            2566810110u32 => {
+            419326462u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_charge_air_cooler_outlet_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38551,7 +42327,7 @@ impl DecodedFrameStream {
                     eng_intake_manifold1_air_temp_raw_value,
                 }
             }
-            2566825214u32 => {
+            419341566u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhaust_gas_recirculation_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38571,7 +42347,7 @@ impl DecodedFrameStream {
                     eng_oil_temp2_raw_value,
                 }
             }
-            2566844158u32 => {
+            419360510u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_intercooler_thermostat_opening_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.4;
@@ -38597,7 +42373,7 @@ impl DecodedFrameStream {
                     eng_coolant_temp_raw_value,
                 }
             }
-            2566785022u32 => {
+            419301374u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhst_exhst_gs_temp_left_manifold_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.03125 + -273.0;
@@ -38609,7 +42385,7 @@ impl DecodedFrameStream {
                     eng_exhst_exhst_gs_tmp_right_manifold_raw_value,
                 }
             }
-            2565868542u32 => {
+            418384894u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sterable_lift_axle_lowering_inhibit_raw_value: u8 =
                     ((frame_payload >> 28) & 3) as u8;
@@ -38652,7 +42428,7 @@ impl DecodedFrameStream {
                     status_of_steer_axle,
                 }
             }
-            2633941758u32 => {
+            486458110u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_output_retarder_raw_value: u8 = (frame_payload & 3) as u8;
                 let trans_output_retarder =
@@ -38662,7 +42438,7 @@ impl DecodedFrameStream {
                     trans_output_retarder,
                 }
             }
-            2565865726u32 => {
+            418382078u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let retarder_selection_non_eng_raw_value: f64 =
                     ((frame_payload >> 48) & 255) as f64 * 0.4;
@@ -38720,7 +42496,7 @@ impl DecodedFrameStream {
                     retarder_enable_brake_assist_switch,
                 }
             }
-            2633932798u32 => {
+            486449150u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhaust_gas_port20_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38740,7 +42516,7 @@ impl DecodedFrameStream {
                     eng_exhaust_gas_port17_temp_raw_value,
                 }
             }
-            2566824190u32 => {
+            419340542u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhaust_gas_port16_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38760,7 +42536,7 @@ impl DecodedFrameStream {
                     eng_exhaust_gas_port13_temp_raw_value,
                 }
             }
-            2633933310u32 => {
+            486449662u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhaust_gas_port12_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38780,7 +42556,7 @@ impl DecodedFrameStream {
                     eng_exhaust_gas_port9_temp_raw_value,
                 }
             }
-            2633933566u32 => {
+            486449918u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhaust_gas_port8_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38800,7 +42576,7 @@ impl DecodedFrameStream {
                     eng_exhaust_gas_port5_temp_raw_value,
                 }
             }
-            2633933822u32 => {
+            486450174u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhaust_gas_port4_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -38820,14 +42596,14 @@ impl DecodedFrameStream {
                     eng_exhaust_gas_port1_temp_raw_value,
                 }
             }
-            2566776062u32 => {
+            419292414u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let payload_percentage_raw_value: u8 = (frame_payload & 255) as u8;
                 DecodedFrame::Epd {
                     payload_percentage_raw_value,
                 }
             }
-            2566771454u32 => {
+            419287806u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let data_memory_usage_raw_value: f64 = ((frame_payload >> 16) & 255) as f64 * 0.4;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -38837,14 +42613,14 @@ impl DecodedFrameStream {
                     keep_alive_battery_consumption_raw_value,
                 }
             }
-            2566775806u32 => {
+            419292158u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let travel_velocity_ctrl_pos_raw_value: f64 = (frame_payload & 255) as f64 + -125.0;
                 DecodedFrame::Eoac {
                     travel_velocity_ctrl_pos_raw_value,
                 }
             }
-            2633935358u32 => {
+            486451710u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhst_gs_oxygn_snsr_clsd_lp_oprton_raw_value: u8 =
                     ((frame_payload >> 62) & 3) as u8;
@@ -38873,7 +42649,7 @@ impl DecodedFrameStream {
                     eng_exhst_gs_oxygn_snsr_clsd_lp_oprton,
                 }
             }
-            2365447166u32 => {
+            217963518u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let jystck3_grip_x_axis_detent_pos_status_raw_value: u8 =
                     ((frame_payload >> 54) & 3) as u8;
@@ -38996,7 +42772,7 @@ impl DecodedFrameStream {
                     jystck3_grp_x_axis_neutral_pos_status,
                 }
             }
-            2365446654u32 => {
+            217963006u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let jystck2_grip_x_axis_detent_pos_status_raw_value: u8 =
                     ((frame_payload >> 54) & 3) as u8;
@@ -39119,7 +42895,7 @@ impl DecodedFrameStream {
                     jystck2_grp_x_axis_neutral_pos_status,
                 }
             }
-            2365446142u32 => {
+            217962494u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let jystck1_grip_x_axis_detent_pos_status_raw_value: u8 =
                     ((frame_payload >> 54) & 3) as u8;
@@ -39242,7 +43018,7 @@ impl DecodedFrameStream {
                     jystck1_grp_x_axis_neutral_pos_status,
                 }
             }
-            2633929470u32 => {
+            486445822u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_rack_pos_raw_value: f64 = ((frame_payload >> 24) & 255) as f64 * 0.4;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -39263,7 +43039,7 @@ impl DecodedFrameStream {
                     eng_prefilter_oil_press_raw_value,
                 }
             }
-            2633937406u32 => {
+            486453758u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_ecu_run_time_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.05;
@@ -39274,7 +43050,7 @@ impl DecodedFrameStream {
                     total_ecu_distance_raw_value,
                 }
             }
-            2364541694u32 => {
+            217058046u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_inlet_air_mass_flow_rate_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.05;
@@ -39286,7 +43062,7 @@ impl DecodedFrameStream {
                     eng_exhst_gs_rcrcltion_mass_flow_rate_raw_value,
                 }
             }
-            2566810366u32 => {
+            419326718u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_fuel_filter_suc_side_diff_press_raw_value: f64 =
                     ((frame_payload >> 16) & 255) as f64 * 2.0;
@@ -39344,7 +43120,7 @@ impl DecodedFrameStream {
                     eng_coolant_preheated_state,
                 }
             }
-            2566767102u32 => {
+            419283454u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_exhst_gs_rcrculation_inlet_press_raw_value: f64 =
                     ((frame_payload >> 16) & 255) as f64 * 2.0;
@@ -39356,7 +43132,7 @@ impl DecodedFrameStream {
                     eng_intk_vlv_acttion_system_oil_press_raw_value,
                 }
             }
-            2566839294u32 => {
+            419355646u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_injector_metering_rail2_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.00390625;
@@ -39376,7 +43152,7 @@ impl DecodedFrameStream {
                     eng_injection_ctrl_press_raw_value,
                 }
             }
-            2566844414u32 => {
+            419360766u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_coolant_level_raw_value: f64 = ((frame_payload >> 56) & 255) as f64 * 0.4;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -39403,7 +43179,7 @@ impl DecodedFrameStream {
                     eng_fuel_delivery_press_raw_value,
                 }
             }
-            2633929726u32 => {
+            486446078u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let turning_gear_engaged_raw_value: u8 = ((frame_payload >> 18) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -39422,7 +43198,7 @@ impl DecodedFrameStream {
                     safety_wire_status,
                 }
             }
-            2566772222u32 => {
+            419288574u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_vrbl_gometry_turbo1_actuator_pos_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.4;
@@ -39451,7 +43227,7 @@ impl DecodedFrameStream {
                     eng_vrbl_gmtry_trb_ar_ctrl_shtff_valve,
                 }
             }
-            2633940734u32 => {
+            486457086u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_rotation_direction_raw_value: u8 = ((frame_payload >> 32) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -39471,7 +43247,7 @@ impl DecodedFrameStream {
                     eng_rotation_direction,
                 }
             }
-            2566840318u32 => {
+            419356670u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let exhaust_gas_mass_raw_value: f64 = ((frame_payload >> 40) & 65535) as f64 * 2.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -39502,7 +43278,7 @@ impl DecodedFrameStream {
                     nominal_friction_percent_torque_raw_value,
                 }
             }
-            2364539902u32 => {
+            217056254u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let act_max_avail_eng_percent_torque_raw_value: f64 =
                     ((frame_payload >> 48) & 255) as f64 * 0.4;
@@ -39559,7 +43335,7 @@ impl DecodedFrameStream {
                     accel_pedal1_low_idle_switch,
                 }
             }
-            2364540158u32 => {
+            217056510u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_demand_percent_torque_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -39592,8 +43368,8 @@ impl DecodedFrameStream {
                     eng_torque_mode,
                 }
             }
-            2566768126u32 => DecodedFrame::Ecuid {},
-            2566804734u32 => {
+            419284478u32 => DecodedFrame::Ecuid {},
+            419321086u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_min_continuous_torque_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -39629,7 +43405,7 @@ impl DecodedFrameStream {
                     eng_lw_lmt_thrshhld_fr_max_rpm_from_eng_raw_value,
                 }
             }
-            2566841342u32 => {
+            419357694u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_speed_at_point3_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.125;
@@ -39653,7 +43429,7 @@ impl DecodedFrameStream {
                     eng_speed_at_idle_point1_raw_value,
                 }
             }
-            2566767870u32 => {
+            419284222u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let brake_temp_warning_raw_value: u8 = (frame_payload & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -39694,7 +43470,7 @@ impl DecodedFrameStream {
                     halt_brake_mode,
                 }
             }
-            2633936126u32 => {
+            486452478u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let brk_lnng_rmnng_rear_axle3_right_wheel_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.4;
@@ -39730,7 +43506,7 @@ impl DecodedFrameStream {
                     brk_lnng_rmning_front_axle_left_wheel_raw_value,
                 }
             }
-            2566827518u32 => {
+            419343870u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let brk_app_prss_hgh_rng_rr_axl3_rght_wheel_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 5.0;
@@ -39766,7 +43542,7 @@ impl DecodedFrameStream {
                     brk_app_prss_hgh_rng_frnt_axl_lft_wheel_raw_value,
                 }
             }
-            2566832126u32 => {
+            419348478u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rlative_speed_rear_axle2_right_wheel_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.0625 + -7.8125;
@@ -39797,7 +43573,7 @@ impl DecodedFrameStream {
                     front_axle_speed_raw_value,
                 }
             }
-            2565865982u32 => {
+            418382334u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let src_addrss_of_ctrllng_dvc_fr_brk_cntrl_raw_value: u8 =
                     ((frame_payload >> 48) & 255) as u8;
@@ -39930,7 +43706,7 @@ impl DecodedFrameStream {
                     asr_eng_ctrl_active,
                 }
             }
-            2565867262u32 => {
+            418383614u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rear_axle_group_engagement_status_raw_value: u8 =
                     ((frame_payload >> 26) & 3) as u8;
@@ -39999,7 +43775,7 @@ impl DecodedFrameStream {
                     diff_lock_state_front_axle1,
                 }
             }
-            2566821118u32 => {
+            419337470u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sea_water_pump_outlet_press_raw_value: f64 =
                     ((frame_payload >> 16) & 255) as f64 * 2.0;
@@ -40014,8 +43790,8 @@ impl DecodedFrameStream {
                     eng_aux_coolant_press_raw_value,
                 }
             }
-            2566810622u32 => DecodedFrame::Di {},
-            2566847742u32 => {
+            419326974u32 => DecodedFrame::Di {},
+            419364094u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let cargo_ambient_temp_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.03125 + -273.0;
@@ -40037,7 +43813,7 @@ impl DecodedFrameStream {
                     washer_fluid_level_raw_value,
                 }
             }
-            2566768382u32 => {
+            419284734u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_start_enable_device2_config_raw_value: u8 =
                     ((frame_payload >> 12) & 15) as u8;
@@ -40069,7 +43845,7 @@ impl DecodedFrameStream {
                     eng_start_enable_device1,
                 }
             }
-            2566811902u32 => {
+            419328254u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let powered_vehicle_weight_raw_value: f64 = (frame_payload & 65535) as f64 * 10.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -40080,7 +43856,7 @@ impl DecodedFrameStream {
                     gross_combination_vehicle_weight_raw_value,
                 }
             }
-            2563768062u32 => {
+            416284414u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let mx_cntnuous_retarder_torque_limit_rq_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 + -125.0;
@@ -40116,7 +43892,7 @@ impl DecodedFrameStream {
                     eng_speed_limit_rq_min_continuous_raw_value,
                 }
             }
-            2633924862u32 => {
+            486441214u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_average_combustion_time_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.01;
@@ -40128,7 +43904,7 @@ impl DecodedFrameStream {
                     eng_desired_combustion_time_raw_value,
                 }
             }
-            2633924606u32 => {
+            486440958u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl20_combustion_time_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.01;
@@ -40148,7 +43924,7 @@ impl DecodedFrameStream {
                     eng_cyl17_combustion_time_raw_value,
                 }
             }
-            2633924350u32 => {
+            486440702u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl16_combustion_time_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.01;
@@ -40168,7 +43944,7 @@ impl DecodedFrameStream {
                     eng_cyl13_combustion_time_raw_value,
                 }
             }
-            2633924094u32 => {
+            486440446u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl12_combustion_time_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.01;
@@ -40187,7 +43963,7 @@ impl DecodedFrameStream {
                     eng_cyl9_combustion_time_raw_value,
                 }
             }
-            2633923838u32 => {
+            486440190u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl8_combustion_time_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.01;
@@ -40206,7 +43982,7 @@ impl DecodedFrameStream {
                     eng_cyl5_combustion_time_raw_value,
                 }
             }
-            2633923582u32 => {
+            486439934u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_cyl4_combustion_time_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.01;
@@ -40225,7 +44001,7 @@ impl DecodedFrameStream {
                     eng_cyl1_combustion_time_raw_value,
                 }
             }
-            2633878014u32 => {
+            486394366u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_count_of_config_changes_made_raw_value: u16 =
                     (frame_payload & 65535) as u16;
@@ -40233,7 +44009,7 @@ impl DecodedFrameStream {
                     total_count_of_config_changes_made_raw_value,
                 }
             }
-            2566771966u32 => {
+            419288318u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_oil_level_rq_raw_value: u8 = ((frame_payload >> 16) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -40265,7 +44041,7 @@ impl DecodedFrameStream {
                     transfer_case_selector_switch,
                 }
             }
-            2564882174u32 => {
+            417398526u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let selected_max_vehicle_speed_limit_raw_value: u8 =
                     ((frame_payload >> 56) & 255) as u8;
@@ -40343,7 +44119,7 @@ impl DecodedFrameStream {
                     aux_heater_coolant_pump_rq,
                 }
             }
-            2563833598u32 => {
+            416349950u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let illumination_brightness_percent_raw_value: f64 =
                     (frame_payload & 255) as f64 * 0.4;
@@ -40351,8 +44127,8 @@ impl DecodedFrameStream {
                     illumination_brightness_percent_raw_value,
                 }
             }
-            2566843390u32 => DecodedFrame::Ci {},
-            2566844926u32 => {
+            419359742u32 => DecodedFrame::Ci {},
+            419361278u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let park_brake_release_inhibit_rq_raw_value: u8 = ((frame_payload >> 6) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -40466,7 +44242,7 @@ impl DecodedFrameStream {
                     two_speed_axle_switch,
                 }
             }
-            2566843902u32 => {
+            419360254u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let cruise_ctrl_low_set_limit_speed_raw_value: u8 =
                     ((frame_payload >> 16) & 255) as u8;
@@ -40481,7 +44257,7 @@ impl DecodedFrameStream {
                     max_vehicle_speed_limit_raw_value,
                 }
             }
-            2566809598u32 => {
+            419325950u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_heater_max_output_power_raw_value: f64 =
                     (frame_payload & 65535) as f64 * 2.0;
@@ -40489,7 +44265,7 @@ impl DecodedFrameStream {
                     aux_heater_max_output_power_raw_value,
                 }
             }
-            2633940222u32 => {
+            486456574u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trip_compression_brake_distance_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 * 0.125;
@@ -40501,7 +44277,7 @@ impl DecodedFrameStream {
                     total_compression_brake_distance_raw_value,
                 }
             }
-            2566775294u32 => {
+            419291646u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let cb_a_c_rfrgrnt_cmprssor_outlet_press_raw_value: f64 =
                     (frame_payload & 255) as f64 * 16.0;
@@ -40509,7 +44285,7 @@ impl DecodedFrameStream {
                     cb_a_c_rfrgrnt_cmprssor_outlet_press_raw_value,
                 }
             }
-            2566803710u32 => {
+            419320062u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let battery2_temp_raw_value: f64 = ((frame_payload >> 8) & 255) as f64 + -40.0;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -40519,7 +44295,7 @@ impl DecodedFrameStream {
                     battery1_temp_raw_value,
                 }
             }
-            2566809342u32 => {
+            419325694u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let battery_main_switch_hold_state_raw_value: u8 = (frame_payload & 3) as u8;
                 let battery_main_switch_hold_state = BatteryMainSwitchHoldState2566809342::from(
@@ -40530,7 +44306,7 @@ impl DecodedFrameStream {
                     battery_main_switch_hold_state,
                 }
             }
-            2365446910u32 => {
+            217963262u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let joystick3_x_axis_detent_pos_status_raw_value: u8 =
                     ((frame_payload >> 38) & 3) as u8;
@@ -40721,7 +44497,7 @@ impl DecodedFrameStream {
                     joystick3_button4_pressed_status,
                 }
             }
-            2365446398u32 => {
+            217962750u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let joystick2_x_axis_detent_pos_status_raw_value: u8 =
                     ((frame_payload >> 38) & 3) as u8;
@@ -40912,7 +44688,7 @@ impl DecodedFrameStream {
                     joystick2_button4_pressed_status,
                 }
             }
-            2365445886u32 => {
+            217962238u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let joystick1_x_axis_detent_pos_status_raw_value: u8 =
                     ((frame_payload >> 38) & 3) as u8;
@@ -41103,7 +44879,7 @@ impl DecodedFrameStream {
                     joystick1_x_axis_neutral_pos_status,
                 }
             }
-            2566847230u32 => {
+            419363582u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let parking_brake_red_warning_signal_raw_value: u8 =
                     ((frame_payload >> 26) & 3) as u8;
@@ -41139,14 +44915,14 @@ impl DecodedFrameStream {
                     parking_brake_actuator,
                 }
             }
-            2566848254u32 => {
+            419364606u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_pump_press_raw_value: f64 = (frame_payload & 255) as f64 * 16.0;
                 DecodedFrame::Awpp {
                     aux_pump_press_raw_value,
                 }
             }
-            2631728894u32 => {
+            484245246u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let antitheft_random_number_raw_value: u64 =
                     ((frame_payload >> 8) & 72057594037927935) as u64;
@@ -41184,7 +44960,7 @@ impl DecodedFrameStream {
                     antitheft_pwd_valid_indicator,
                 }
             }
-            2631794430u32 => {
+            484310782u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let antitheft_password_representation_raw_value: u64 =
                     ((frame_payload >> 8) & 72057594037927935) as u64;
@@ -41216,7 +44992,7 @@ impl DecodedFrameStream {
                     antthft_encrypton_indicator_states,
                 }
             }
-            2633934846u32 => {
+            486451198u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_alt_winding3_temp_raw_value: f64 =
                     ((frame_payload >> 32) & 255) as f64 + -40.0;
@@ -41239,7 +45015,7 @@ impl DecodedFrameStream {
                     eng_alt_bearing1_temp_raw_value,
                 }
             }
-            2362572542u32 => {
+            215088894u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let level_preset_rear_axle_right_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1 + -3200.0;
@@ -41259,7 +45035,7 @@ impl DecodedFrameStream {
                     level_preset_front_axle_left_raw_value,
                 }
             }
-            2365478910u32 => {
+            217995262u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let elctrnc_shck_absrbr_ctrl_md_lft_tg_axl_raw_value: u8 =
                     ((frame_payload >> 28) & 3) as u8;
@@ -41301,7 +45077,7 @@ impl DecodedFrameStream {
                     elctrnc_shck_absrbr_ctrl_md_frnt_axle,
                 }
             }
-            2566805758u32 => {
+            419322110u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bellow_press_rear_axle_right_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -41321,7 +45097,7 @@ impl DecodedFrameStream {
                     bellow_press_front_axle_left_raw_value,
                 }
             }
-            2566806014u32 => {
+            419322366u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let relative_level_rear_axle_right_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1 + -3200.0;
@@ -41341,7 +45117,7 @@ impl DecodedFrameStream {
                     relative_level_front_axle_left_raw_value,
                 }
             }
-            2362638078u32 => {
+            215154430u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let prohibit_air_suspension_ctrl_raw_value: u8 = ((frame_payload >> 52) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41430,7 +45206,7 @@ impl DecodedFrameStream {
                     lift_axle1_pos_cmd,
                 }
             }
-            2365479678u32 => {
+            217996030u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sspension_ctrl_refusal_information_raw_value: u8 =
                     ((frame_payload >> 56) & 15) as u8;
@@ -41572,7 +45348,7 @@ impl DecodedFrameStream {
                     lift_axle1_pos,
                 }
             }
-            2566837758u32 => {
+            419354110u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let alt4_status_raw_value: u8 = ((frame_payload >> 22) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41599,7 +45375,7 @@ impl DecodedFrameStream {
                     alt1_status,
                 }
             }
-            2633922558u32 => {
+            486438910u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_abs_press_reading_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.5;
@@ -41614,7 +45390,7 @@ impl DecodedFrameStream {
                     aux_vacuum_press_reading_raw_value,
                 }
             }
-            2566775038u32 => {
+            419291390u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let solar_sensor_max_raw_value: f64 = ((frame_payload >> 8) & 255) as f64 * 0.4;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41624,7 +45400,7 @@ impl DecodedFrameStream {
                     solar_intensity_percent_raw_value,
                 }
             }
-            2633895166u32 => {
+            486411518u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let arbitrary_address_capable_raw_value: bool = ((frame_payload >> 63) & 1) == 1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41657,7 +45433,7 @@ impl DecodedFrameStream {
                     industry_group,
                 }
             }
-            2566836478u32 => {
+            419352830u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let test_limit_minimum_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41676,14 +45452,14 @@ impl DecodedFrameStream {
                     test_identifier_raw_value,
                 }
             }
-            2565078782u32 => {
+            417595134u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let test_identifier_raw_value: u8 = (frame_payload & 255) as u8;
                 DecodedFrame::Dm7 {
                     test_identifier_raw_value,
                 }
             }
-            2566836222u32 => {
+            419352574u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41760,7 +45536,7 @@ impl DecodedFrameStream {
                     protect_lamp_status,
                 }
             }
-            2566835966u32 => {
+            419352318u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let misfire_monitoring_support_raw_value: bool = ((frame_payload >> 24) & 1) == 1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41945,7 +45721,7 @@ impl DecodedFrameStream {
                     fuel_system_monitoring_support,
                 }
             }
-            2566835710u32 => {
+            419352062u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let occurence_count1_raw_value: u8 = ((frame_payload >> 32) & 127) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -41982,8 +45758,8 @@ impl DecodedFrameStream {
                     eng_torque_mode,
                 }
             }
-            2566835454u32 => DecodedFrame::Dm3 {},
-            2566764542u32 => {
+            419351806u32 => DecodedFrame::Dm3 {},
+            419280894u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let occurence_count1_raw_value: u8 = ((frame_payload >> 32) & 127) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42008,7 +45784,7 @@ impl DecodedFrameStream {
                     failure_mode_identifier1,
                 }
             }
-            2566764286u32 => {
+            419280638u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn_supported1_high_raw_value: u8 = ((frame_payload >> 21) & 7) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42066,7 +45842,7 @@ impl DecodedFrameStream {
                     spn_support_type_eff1,
                 }
             }
-            2555576062u32 => {
+            408092414u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let flash_red_stop_lamp_raw_value: u8 = ((frame_payload >> 12) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42143,7 +45919,7 @@ impl DecodedFrameStream {
                     protect_lamp_status,
                 }
             }
-            2562981630u32 => {
+            415497982u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let individual_dtc_clear_control_byte_raw_value: u8 = (frame_payload & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42166,7 +45942,7 @@ impl DecodedFrameStream {
                     failure_mode_identifier1,
                 }
             }
-            2562850558u32 => {
+            415366910u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let time_since_dt_cs_cleared_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42185,7 +45961,7 @@ impl DecodedFrameStream {
                     distance_while_mi_lis_activated_raw_value,
                 }
             }
-            2562916094u32 => {
+            415432446u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let appl_sys_monitor_numerator_raw_value: u16 =
                     ((frame_payload >> 56) & 65535) as u16;
@@ -42204,7 +45980,7 @@ impl DecodedFrameStream {
                     ignition_cycle_counter_raw_value,
                 }
             }
-            2566835198u32 => {
+            419351550u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42281,7 +46057,7 @@ impl DecodedFrameStream {
                     flash_amber_warning_lamp,
                 }
             }
-            2564030206u32 => {
+            416546558u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let calibration_id1_raw_value: u32 = ((frame_payload >> 32) & 4294967295) as u32;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42292,15 +46068,15 @@ impl DecodedFrameStream {
                     calibration_verification_number_raw_value,
                 }
             }
-            2564226814u32 => DecodedFrame::Dm17 {},
-            2564292350u32 => {
+            416743166u32 => DecodedFrame::Dm17 {},
+            416808702u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let number_of_occurance_raw_value: u8 = (frame_payload & 255) as u8;
                 DecodedFrame::Dm16 {
                     number_of_occurance_raw_value,
                 }
             }
-            2564357886u32 => {
+            416874238u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let number_allowed_raw_value: u8 = (frame_payload & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42330,7 +46106,7 @@ impl DecodedFrameStream {
                     status,
                 }
             }
-            2564423422u32 => {
+            416939774u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let key_or_user_level_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42364,7 +46140,7 @@ impl DecodedFrameStream {
                     pointer_type,
                 }
             }
-            2564816638u32 => {
+            417332990u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let hold_signal_raw_value: u8 = ((frame_payload >> 28) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42428,7 +46204,7 @@ impl DecodedFrameStream {
                     suspend_signal,
                 }
             }
-            2566837502u32 => {
+            419353854u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42505,8 +46281,8 @@ impl DecodedFrameStream {
                     flash_amber_warning_lamp,
                 }
             }
-            2566837246u32 => DecodedFrame::Dm11 {},
-            2566836990u32 => {
+            419353598u32 => DecodedFrame::Dm11 {},
+            419353342u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let test_identifier_supported_raw_value: u64 =
                     (frame_payload & 18446744073709551614) as u64;
@@ -42514,7 +46290,7 @@ impl DecodedFrameStream {
                     test_identifier_supported_raw_value,
                 }
             }
-            2566834942u32 => {
+            419351294u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -42591,7 +46367,7 @@ impl DecodedFrameStream {
                     protect_lamp_status,
                 }
             }
-            2566780926u32 => {
+            419297278u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utlity_overall_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42607,7 +46383,7 @@ impl DecodedFrameStream {
                     utility_total_reactive_power_raw_value,
                 }
             }
-            2566781182u32 => {
+            419297534u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_total_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42619,7 +46395,7 @@ impl DecodedFrameStream {
                     utility_total_real_power_raw_value,
                 }
             }
-            2566778366u32 => {
+            419294718u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_total_kw_hours_import_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -42631,7 +46407,7 @@ impl DecodedFrameStream {
                     utility_total_kw_hours_export_raw_value,
                 }
             }
-            2566778622u32 => {
+            419294974u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_c_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42647,7 +46423,7 @@ impl DecodedFrameStream {
                     utility_phase_c_reactive_power_raw_value,
                 }
             }
-            2566778878u32 => {
+            419295230u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_c_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42659,7 +46435,7 @@ impl DecodedFrameStream {
                     utility_phase_c_real_power_raw_value,
                 }
             }
-            2566779134u32 => {
+            419295486u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_cacrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42679,7 +46455,7 @@ impl DecodedFrameStream {
                     utlty_phse_ca_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566779390u32 => {
+            419295742u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_b_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42695,7 +46471,7 @@ impl DecodedFrameStream {
                     utility_phase_b_reactive_power_raw_value,
                 }
             }
-            2566779646u32 => {
+            419295998u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_b_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42707,7 +46483,7 @@ impl DecodedFrameStream {
                     utility_phase_b_real_power_raw_value,
                 }
             }
-            2566779902u32 => {
+            419296254u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_bacrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42727,7 +46503,7 @@ impl DecodedFrameStream {
                     utlty_phse_bc_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566780158u32 => {
+            419296510u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_a_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42743,7 +46519,7 @@ impl DecodedFrameStream {
                     utility_phase_a_reactive_power_raw_value,
                 }
             }
-            2566780414u32 => {
+            419296766u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_a_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42755,7 +46531,7 @@ impl DecodedFrameStream {
                     utility_phase_a_real_power_raw_value,
                 }
             }
-            2566780670u32 => {
+            419297022u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_phase_aacrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42775,7 +46551,7 @@ impl DecodedFrameStream {
                     utlty_phse_ab_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566781438u32 => {
+            419297790u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let utility_average_acrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42795,7 +46571,7 @@ impl DecodedFrameStream {
                     utlty_avrage_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566784254u32 => {
+            419300606u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let gnrtor_overall_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42811,7 +46587,7 @@ impl DecodedFrameStream {
                     generator_total_reactive_power_raw_value,
                 }
             }
-            2566784510u32 => {
+            419300862u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_total_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42823,7 +46599,7 @@ impl DecodedFrameStream {
                     generator_total_real_power_raw_value,
                 }
             }
-            2566781694u32 => {
+            419298046u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_total_kw_hours_import_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -42835,7 +46611,7 @@ impl DecodedFrameStream {
                     generator_total_kw_hours_export_raw_value,
                 }
             }
-            2566781950u32 => {
+            419298302u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let gnrator_phase_c_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42851,7 +46627,7 @@ impl DecodedFrameStream {
                     generator_phase_c_reactive_power_raw_value,
                 }
             }
-            2566782206u32 => {
+            419298558u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_phase_c_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42863,7 +46639,7 @@ impl DecodedFrameStream {
                     generator_phase_c_real_power_raw_value,
                 }
             }
-            2566782462u32 => {
+            419298814u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_phase_cacrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42883,7 +46659,7 @@ impl DecodedFrameStream {
                     gnrtr_phse_ca_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566782718u32 => {
+            419299070u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let gnrator_phase_b_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42899,7 +46675,7 @@ impl DecodedFrameStream {
                     generator_phase_b_reactive_power_raw_value,
                 }
             }
-            2566782974u32 => {
+            419299326u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_phase_b_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42911,7 +46687,7 @@ impl DecodedFrameStream {
                     generator_phase_b_real_power_raw_value,
                 }
             }
-            2566783230u32 => {
+            419299582u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_phase_bacrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42931,7 +46707,7 @@ impl DecodedFrameStream {
                     gnrtr_phse_bc_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566783486u32 => {
+            419299838u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let gnrator_phase_a_power_factor_lagging_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -42947,7 +46723,7 @@ impl DecodedFrameStream {
                     generator_phase_a_reactive_power_raw_value,
                 }
             }
-            2566783742u32 => {
+            419300094u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_phase_a_apparent_power_raw_value: f64 =
                     ((frame_payload >> 32) & 4294967295) as f64 + -2000000000.0;
@@ -42959,7 +46735,7 @@ impl DecodedFrameStream {
                     generator_phase_a_real_power_raw_value,
                 }
             }
-            2566783998u32 => {
+            419300350u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_phase_aacrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42979,7 +46755,7 @@ impl DecodedFrameStream {
                     gnrtr_phse_ab_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566784766u32 => {
+            419301118u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let generator_average_acrms_current_raw_value: u16 =
                     ((frame_payload >> 48) & 65535) as u16;
@@ -42999,7 +46775,7 @@ impl DecodedFrameStream {
                     gnrtr_avrage_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566776830u32 => {
+            419293182u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bus1_utility_ac_phase_difference_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 + -200.0;
@@ -43022,7 +46798,7 @@ impl DecodedFrameStream {
                     bus1_utility_dead_bus_raw_value,
                 }
             }
-            2566777342u32 => {
+            419293694u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bus1_phase_cac_frequency_raw_value: u16 =
                     ((frame_payload >> 32) & 65535) as u16;
@@ -43038,7 +46814,7 @@ impl DecodedFrameStream {
                     bus1_phase_ca_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566777598u32 => {
+            419293950u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bus1_phase_bac_frequency_raw_value: u16 =
                     ((frame_payload >> 32) & 65535) as u16;
@@ -43054,7 +46830,7 @@ impl DecodedFrameStream {
                     bus1_phase_bc_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566777854u32 => {
+            419294206u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bus1_phase_aac_frequency_raw_value: u16 =
                     ((frame_payload >> 32) & 65535) as u16;
@@ -43070,7 +46846,7 @@ impl DecodedFrameStream {
                     bus1_phase_ab_line_line_acrms_voltage_raw_value,
                 }
             }
-            2566777086u32 => {
+            419293438u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bus1_generator_ac_phase_difference_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 + -200.0;
@@ -43093,7 +46869,7 @@ impl DecodedFrameStream {
                     bus1_generator_dead_bus_raw_value,
                 }
             }
-            2566778110u32 => {
+            419294462u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let bus1_average_ac_frequency_raw_value: u16 =
                     ((frame_payload >> 32) & 65535) as u16;
@@ -43109,14 +46885,14 @@ impl DecodedFrameStream {
                     bus1_average_line_line_acrms_voltage_raw_value,
                 }
             }
-            2633895422u32 => {
+            486411774u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let number_of_members_raw_value: u8 = (frame_payload & 255) as u8;
                 DecodedFrame::Wsmstr {
                     number_of_members_raw_value,
                 }
             }
-            2566838526u32 => {
+            419354878u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let arbitrary_address_capable_raw_value: bool = ((frame_payload >> 63) & 1) == 1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43149,7 +46925,7 @@ impl DecodedFrameStream {
                     industry_group,
                 }
             }
-            2565799678u32 => {
+            418316030u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let arbitrary_address_capable_raw_value: bool = ((frame_payload >> 63) & 1) == 1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43182,7 +46958,7 @@ impl DecodedFrameStream {
                     industry_group,
                 }
             }
-            2563440382u32 => {
+            415956734u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let shrt_name_of_actual_reporting_device_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -43197,14 +46973,14 @@ impl DecodedFrameStream {
                     pg_nof_requsted_information_raw_value,
                 }
             }
-            2565603070u32 => {
+            418119422u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let sequence_number_raw_value: u8 = (frame_payload & 255) as u8;
                 DecodedFrame::Tpdt {
                     sequence_number_raw_value,
                 }
             }
-            2565668606u32 => {
+            418184958u32 => {
                 todo!();
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let total_number_of_packets_eo_ma_raw_value: Option<u8> =
@@ -43268,7 +47044,7 @@ impl DecodedFrameStream {
                     control_byte,
                 }
             }
-            2563374846u32 => {
+            415891198u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let use_transfer_mode_raw_value: u8 = ((frame_payload >> 24) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43281,14 +47057,14 @@ impl DecodedFrameStream {
                     use_transfer_mode,
                 }
             }
-            2565537534u32 => {
+            418053886u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let parameter_group_number_raw_value: u32 = (frame_payload & 16777215) as u32;
                 DecodedFrame::Rqst {
                     parameter_group_number_raw_value,
                 }
             }
-            2560556798u32 => {
+            413073150u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let permanent_dt_cs_raw_value: u8 = ((frame_payload >> 32) & 255) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43307,7 +47083,7 @@ impl DecodedFrameStream {
                     pending_dt_cs_raw_value,
                 }
             }
-            2566750462u32 => {
+            419266814u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43384,7 +47160,7 @@ impl DecodedFrameStream {
                     protect_lamp_status,
                 }
             }
-            2566750974u32 => {
+            419267326u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let spn2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43461,7 +47237,7 @@ impl DecodedFrameStream {
                     protect_lamp_status,
                 }
             }
-            2566748414u32 => {
+            419264766u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt2_trp_actv_rgnration_time_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -43473,7 +47249,7 @@ impl DecodedFrameStream {
                     aftertreatment2_trip_fuel_used_raw_value,
                 }
             }
-            2566748670u32 => {
+            419265022u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt1_trp_actv_rgnration_time_raw_value: u32 =
                     ((frame_payload >> 32) & 4294967295) as u32;
@@ -43485,7 +47261,7 @@ impl DecodedFrameStream {
                     aftertreatment1_trip_fuel_used_raw_value,
                 }
             }
-            2566745598u32 => {
+            419261950u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftertreatment1_second_air_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -43505,7 +47281,7 @@ impl DecodedFrameStream {
                     aftrtratment1_second_air_diff_press_raw_value,
                 }
             }
-            2566745342u32 => {
+            419261694u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftertreatment2_second_air_press_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.1;
@@ -43525,7 +47301,7 @@ impl DecodedFrameStream {
                     aftrtratment2_second_air_diff_press_raw_value,
                 }
             }
-            2566754558u32 => {
+            419270910u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let number_of_aetc_data_points_raw_value: u8 = ((frame_payload >> 4) & 15) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -43539,7 +47315,7 @@ impl DecodedFrameStream {
                     aetc_data_collection_standard,
                 }
             }
-            2566749950u32 => {
+            419266302u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let right_headlamp_light_distribution_raw_value: u8 =
                     ((frame_payload >> 12) & 15) as u8;
@@ -43578,7 +47354,7 @@ impl DecodedFrameStream {
                     left_headlamp_dynamic_bending_light,
                 }
             }
-            2565869310u32 => {
+            418385662u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt1_intk_oxygn_snsr_prlmnry_f_raw_value: u8 =
                     ((frame_payload >> 56) & 31) as u8;
@@ -43642,7 +47418,7 @@ impl DecodedFrameStream {
                     aftrtrtmnt1_intk_gs_snsr_pwr_in_range,
                 }
             }
-            2566763774u32 => {
+            419280126u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt1_prtclt_trp_intk_gs_tmp_prl_raw_value: u8 =
                     ((frame_payload >> 40) & 31) as u8;
@@ -43662,7 +47438,7 @@ impl DecodedFrameStream {
                     aftertreatment1_exhaust_gas_temp1_raw_value,
                 }
             }
-            2565869566u32 => {
+            418385918u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt1_otlt_oxygn_snsr_prlmnry_f_raw_value: u8 =
                     ((frame_payload >> 56) & 31) as u8;
@@ -43731,7 +47507,7 @@ impl DecodedFrameStream {
                     aftrtrtmnt1_otlt_gs_snsr_pwr_in_range,
                 }
             }
-            2566763518u32 => {
+            419279870u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt1_prtclt_trp_otlt_exhst_gs_t_raw_value: u8 =
                     ((frame_payload >> 40) & 31) as u8;
@@ -43751,7 +47527,7 @@ impl DecodedFrameStream {
                     aftertreatment1_exhaust_gas_temp3_raw_value,
                 }
             }
-            2565869822u32 => {
+            418386174u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt2_intk_oxygn_snsr_prlmnry_f_raw_value: u8 =
                     ((frame_payload >> 56) & 31) as u8;
@@ -43820,7 +47596,7 @@ impl DecodedFrameStream {
                     aftrtrtmnt2_intk_gs_snsr_pwr_in_range,
                 }
             }
-            2566763006u32 => {
+            419279358u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt2_prtclt_trp_intk_gs_tmp_prl_raw_value: u8 =
                     ((frame_payload >> 40) & 31) as u8;
@@ -43840,7 +47616,7 @@ impl DecodedFrameStream {
                     aftertreatment2_exhaust_gas_temp1_raw_value,
                 }
             }
-            2565870078u32 => {
+            418386430u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt2_otlt_oxygn_snsr_prlmnry_f_raw_value: u8 =
                     ((frame_payload >> 56) & 31) as u8;
@@ -43909,7 +47685,7 @@ impl DecodedFrameStream {
                     aftrtrtmnt2_otlt_gs_snsr_pwr_in_range,
                 }
             }
-            2566762750u32 => {
+            419279102u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt2_prtclt_trp_exhst_gs_tmp_pr_raw_value: u8 =
                     ((frame_payload >> 40) & 31) as u8;
@@ -43929,7 +47705,7 @@ impl DecodedFrameStream {
                     aftertreatment2_exhaust_gas_temp3_raw_value,
                 }
             }
-            2566753534u32 => {
+            419269886u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let particulate_trap_outlet_press1_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.1;
@@ -43941,7 +47717,7 @@ impl DecodedFrameStream {
                     particulate_trap_intake_press1_raw_value,
                 }
             }
-            2566753278u32 => {
+            419269630u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let particulate_trap_outlet_press2_raw_value: f64 =
                     ((frame_payload >> 16) & 65535) as f64 * 0.1;
@@ -43953,7 +47729,7 @@ impl DecodedFrameStream {
                     particulate_trap_intake_press2_raw_value,
                 }
             }
-            2566762494u32 => {
+            419278846u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aftrtrtmnt2_prtclt_trp_dlt_prss_prlmn_raw_value: u8 =
                     ((frame_payload >> 53) & 31) as u8;
@@ -43977,7 +47753,7 @@ impl DecodedFrameStream {
                     aftertreatment2_exhaust_gas_temp2_raw_value,
                 }
             }
-            2566749182u32 => {
+            419265534u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let prtclt_trp1_tm_snc_lst_actv_rgnration_raw_value: u32 =
                     ((frame_payload >> 16) & 4294967295) as u32;
@@ -44002,7 +47778,7 @@ impl DecodedFrameStream {
                     particulate_trap1_soot_load_percent,
                 }
             }
-            2566748926u32 => {
+            419265278u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let prtclt_trp2_tm_snc_lst_actv_rgnration_raw_value: u32 =
                     ((frame_payload >> 16) & 4294967295) as u32;
@@ -44027,7 +47803,7 @@ impl DecodedFrameStream {
                     particulate_trap2_soot_load_percent,
                 }
             }
-            2566838782u32 => {
+            419355134u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_i_o_channel2_raw_value: u16 = ((frame_payload >> 48) & 65535) as u16;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44037,7 +47813,7 @@ impl DecodedFrameStream {
                     aux_i_o_channel1_raw_value,
                 }
             }
-            2561146622u32 => {
+            413662974u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_i_o45_raw_value: u8 = ((frame_payload >> 62) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44201,7 +47977,7 @@ impl DecodedFrameStream {
                     aux_i_o20,
                 }
             }
-            2561081086u32 => {
+            413597438u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_i_o77_raw_value: u8 = ((frame_payload >> 62) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44365,7 +48141,7 @@ impl DecodedFrameStream {
                     aux_i_o52,
                 }
             }
-            2561015550u32 => {
+            413531902u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_i_o92_raw_value: u8 = ((frame_payload >> 16) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44529,7 +48305,7 @@ impl DecodedFrameStream {
                     aux_i_o91,
                 }
             }
-            2566746622u32 => {
+            419262974u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trailer_brake_stroke_axle5_right_raw_value: u8 =
                     ((frame_payload >> 57) & 7) as u8;
@@ -44692,7 +48468,7 @@ impl DecodedFrameStream {
                     tractor_brake_stroke_axle1_left,
                 }
             }
-            2566845950u32 => {
+            419362302u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let road_surface_temp_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.03125 + -273.0;
@@ -44715,14 +48491,14 @@ impl DecodedFrameStream {
                     barometric_press_raw_value,
                 }
             }
-            2566840062u32 => {
+            419356414u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_air_start_press_raw_value: f64 = (frame_payload & 255) as f64 * 4.0;
                 DecodedFrame::Air2 {
                     eng_air_start_press_raw_value,
                 }
             }
-            2566827774u32 => {
+            419344126u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let air_compressor_status_raw_value: u8 = ((frame_payload >> 48) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44755,7 +48531,7 @@ impl DecodedFrameStream {
                     air_compressor_status,
                 }
             }
-            2566846974u32 => {
+            419363326u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let steer_axle_lube_press_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 4.0;
@@ -44780,7 +48556,7 @@ impl DecodedFrameStream {
                     drive_axle_location_raw_value,
                 }
             }
-            2633935614u32 => {
+            486451966u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_turbo_wastegate_valve_pos_raw_value: f64 =
                     ((frame_payload >> 24) & 255) as f64 * 0.4;
@@ -44799,7 +48575,7 @@ impl DecodedFrameStream {
                     eng_gas_fuel_correction_factor_raw_value,
                 }
             }
-            2566803966u32 => {
+            419320318u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let rqed_acc_distance_mode_raw_value: u8 = ((frame_payload >> 5) & 7) as u8;
                 let rqed_acc_distance_mode =
@@ -44809,7 +48585,7 @@ impl DecodedFrameStream {
                     rqed_acc_distance_mode,
                 }
             }
-            2432593918u32 => {
+            285110270u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let acc_distance_alert_signal_raw_value: u8 = ((frame_payload >> 52) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44860,14 +48636,14 @@ impl DecodedFrameStream {
                     adaptive_cruise_ctrl_mode,
                 }
             }
-            2633935102u32 => {
+            486451454u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let articulation_angle_raw_value: f64 = (frame_payload & 255) as f64 + -125.0;
                 DecodedFrame::Ac {
                     articulation_angle_raw_value,
                 }
             }
-            2633927934u32 => {
+            486444286u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let aux_level_raw_value: f64 = ((frame_payload >> 32) & 65535) as f64 * 0.1;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44886,7 +48662,7 @@ impl DecodedFrameStream {
                     aux_temp1_raw_value,
                 }
             }
-            2566847998u32 => {
+            419364350u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let eng_blower_bypass_valve_pos_raw_value: f64 = (frame_payload & 255) as f64 * 0.4;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44897,7 +48673,7 @@ impl DecodedFrameStream {
                     eng_gas_supply_press_raw_value,
                 }
             }
-            2565406462u32 => {
+            417922814u32 => {
                 todo!();
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let address_busy_raw_value: Option<u8> = Some(((frame_payload >> 32) & 255) as u8);
@@ -44932,7 +48708,7 @@ impl DecodedFrameStream {
                     control_byte,
                 }
             }
-            2566763262u32 => {
+            419279614u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let prtclt_trp_intrmdt_gs_tmp_prlmnry_fmi_raw_value: u8 =
                     ((frame_payload >> 58) & 31) as u8;
@@ -44960,7 +48736,7 @@ impl DecodedFrameStream {
                     exhaust_gas_temp2_raw_value,
                 }
             }
-            2566803198u32 => {
+            419319550u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let status2_of_doors_raw_value: u8 = ((frame_payload >> 6) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -44980,7 +48756,7 @@ impl DecodedFrameStream {
                     pos_of_doors,
                 }
             }
-            2565870334u32 => {
+            418386686u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let fifth_wheel_roll_warning_indicator_raw_value: u8 =
                     ((frame_payload >> 48) & 3) as u8;
@@ -45005,7 +48781,7 @@ impl DecodedFrameStream {
                     fifth_wheel_roll_warning_indicator,
                 }
             }
-            2566762238u32 => {
+            419278590u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let fifth_wheel_slider_lock_indicator_raw_value: u8 =
                     ((frame_payload >> 16) & 3) as u8;
@@ -45046,7 +48822,7 @@ impl DecodedFrameStream {
                     fifth_wheel_error_status,
                 }
             }
-            2364543998u32 => {
+            217060350u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let roll_and_pitch_measurement_latency_raw_value: f64 =
                     ((frame_payload >> 56) & 255) as f64 * 0.5;
@@ -45089,7 +48865,7 @@ impl DecodedFrameStream {
                     pitch_angle_figure_of_merit,
                 }
             }
-            2566846718u32 => {
+            419363070u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let trans_oil_level_measurement_status_raw_value: u8 =
                     ((frame_payload >> 60) & 15) as u8;
@@ -45131,7 +48907,7 @@ impl DecodedFrameStream {
                     trans_oil_level_countdown_timer,
                 }
             }
-            2566846462u32 => {
+            419362814u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let battery_potential_switched_raw_value: f64 =
                     ((frame_payload >> 48) & 65535) as f64 * 0.05;
@@ -45153,7 +48929,7 @@ impl DecodedFrameStream {
                     net_battery_current_raw_value,
                 }
             }
-            2566760702u32 => {
+            419277054u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let wrless_communication_network_type2_raw_value: u8 =
                     ((frame_payload >> 32) & 255) as u8;
@@ -45189,7 +48965,7 @@ impl DecodedFrameStream {
                     network_transceiver_status2,
                 }
             }
-            2566760958u32 => {
+            419277310u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let wrless_communication_network_type1_raw_value: u8 =
                     ((frame_payload >> 32) & 255) as u8;
@@ -45225,7 +49001,7 @@ impl DecodedFrameStream {
                     network_transceiver_status1,
                 }
             }
-            2633869310u32 => {
+            486385662u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let voltage_regulator_enabled_raw_value: u8 = ((frame_payload >> 10) & 3) as u8;
                 let frame_payload: u64 = LE::read_u64(frame.data());
@@ -45270,7 +49046,7 @@ impl DecodedFrameStream {
                     vltg_rglator_load_compensation_mode,
                 }
             }
-            2365433598u32 => {
+            217949950u32 => {
                 let frame_payload: u64 = LE::read_u64(frame.data());
                 let gnrtr_otput_voltage_bias_percentage_raw_value: f64 =
                     ((frame_payload >> 32) & 65535) as f64 * 0.1 + -100.0;
