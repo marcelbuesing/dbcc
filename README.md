@@ -1,4 +1,6 @@
-# dbcc [![Build Status](https://travis-ci.org/marcelbuesing/dbcc.svg?branch=dev)](https://travis-ci.org/marcelbuesing/dbcc)
+# dbcc 
+[![Build Status](https://travis-ci.org/marcelbuesing/dbcc.svg?branch=dev)](https://travis-ci.org/marcelbuesing/dbcc)
+[![cargo-deny](https://img.shields.io/badge/cargo--deny-%E2%9C%93-blueviolet)](https://github.com/EmbarkStudios/cargo-deny)
 =============
 
 dbcc can translate `data base CAN` files into Rust code.
