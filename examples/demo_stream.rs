@@ -22,7 +22,6 @@ use crate::gen::j1939::{DecodedFrame, DecodedFrameStream};
 
 use futures_util::stream::StreamExt;
 use std::io;
-use std::time::Duration;
 use tokio_socketcan::CANSocket;
 
 #[tokio::main]
@@ -34,16 +33,7 @@ async fn main() -> io::Result<()> {
         // Signal indicates the selected position of the operator's hazard light switch.
         match decoded_frame {
             frame @ DecodedFrame::Oel { .. } => {
-                println!("{:?}", frame);
-                // j1939::HazardLightSwitch2365443326::HazardLampsToBeFlashing => {
-                //     println!("Hazard Lamps To Be Flashing")
-                // }
-                // j1939::HazardLightSwitch2365443326::HazardLampsToBeOff => {
-                //     println!("Hazard Lamps To Be Off")
-                // }
-                // j1939::HazardLightSwitch2365443326::NotAvailable => println!("Not available"),
-                // j1939::HazardLightSwitch2365443326::Error => println!("Error"),
-                // j1939::HazardLightSwitch2365443326::XValue(_) => unreachable!(),
+                println!("{:#?}", frame);
             }
             _ => (), // Just ignore the rest
         }
