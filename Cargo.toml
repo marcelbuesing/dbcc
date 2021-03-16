@@ -17,6 +17,7 @@ path = "src/main.rs"
 name = "dbcc"
 
 [badges]
+maintenance = { status = "deprecated" }
 travis-ci = { repository = "marcelbuesing/dbcc", branch = "dev" }
 
 [dependencies]

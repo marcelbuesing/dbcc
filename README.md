@@ -3,6 +3,10 @@
 [![cargo-deny](https://img.shields.io/badge/cargo--deny-%E2%9C%93-blueviolet)](https://github.com/EmbarkStudios/cargo-deny)
 =============
 
+**NO LONGER MAINTAINED**
+Notice, this crate is no longer maintained.
+Please see the [dbc-codegen](https://github.com/technocreatives/dbc-codegen) for a better maintained alternative.
+
 dbcc can translate `data base CAN` files into Rust code.
 The generated code allows interacting with CAN signals in a type safe manner by e.g. matching against signal value enum types.
 Furthermore it provides a convenient way to use [SocketCAN BCM Sockets](https://crates.io/crates/tokio-socketcan-bcm), via [tokio](https://crates.io/crates/tokio) streams, to filter for a specified message by can identifier.
